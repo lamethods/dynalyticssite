@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dynasite — Package Network (chord)</title>
+<style>
+  :root{ --fg:#111; --fg2:#555; --fg3:#8a8a8a; --line:#e6e6e6; --bg:#fff; --hover:#fafafa;
+         --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+         --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace; }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 28px 80px;}
+  header{padding:36px 0 14px;border-bottom:1px solid var(--fg);}
+  h1{font-size:26px;font-weight:700;letter-spacing:-.02em;margin:0;}
+  .sub{color:var(--fg3);font-size:14px;margin-top:4px;}
+  .back{font-family:var(--mono);font-size:12px;color:var(--fg2);display:inline-block;margin:14px 0 0;}
+  .back:hover{text-decoration:underline;}
+  .ex{margin:44px 0 0;}
+  .ex .kick{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3);}
+  .ex h2{font-size:20px;font-weight:700;margin:2px 0 2px;}
+  .ex p{color:var(--fg2);font-size:14px;margin:0 0 14px;max-width:74ch;}
+  .panel{border:1px solid var(--line);padding:18px 10px;}
+
+  /* chord (after saqr.me chord2) */
+  .chord-svg{display:block;width:100%;height:auto;max-width:720px;margin:0 auto;}
+  .chord2-ribbon{fill-opacity:.5;transition:fill-opacity .2s;cursor:pointer;stroke-width:.5;stroke-opacity:.25;}
+  .chord2-arc{transition:opacity .2s;}
+  .chord2-arc path{cursor:pointer;}
+  .chord2-sub-label{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--fg);}
+  .chord2-leader{fill:none;stroke:var(--fg);stroke-opacity:.2;stroke-width:.8;}
+  .chord2-tooltip{position:fixed;pointer-events:none;opacity:0;transform:translateY(6px) scale(.98);transition:opacity .16s ease,transform .16s ease;z-index:50;}
+  .chord2-tooltip.show{opacity:1;transform:none;}
+  .pcard{width:300px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 38px rgba(0,0,0,.17);overflow:hidden;}
+  .pcard-accent{height:4px;background:var(--c,#111);}
+  .pcard-body{padding:14px 15px;}
+  .pcard-top{display:flex;align-items:center;gap:11px;}
+  .pcard-ico{width:42px;height:42px;border-radius:10px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fafafa;border:1px solid #eee;}
+  .pcard-ico img{max-width:100%;max-height:100%;object-fit:contain;}
+  .pcard-ico.mono{background:var(--c,#111);border:none;color:#fff;font-family:var(--mono);font-weight:700;font-size:18px;}
+  .pcard-who{min-width:0;}
+  .pcard-name{font-size:17px;font-weight:700;letter-spacing:-.01em;}
+  .pcard-fam{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--c,#111);margin-top:1px;}
+  .pcard-fam .dot{width:8px;height:8px;border-radius:50%;background:var(--c,#111);}
+  .pcard-cran{margin-left:auto;align-self:flex-start;font-family:var(--mono);font-size:10px;color:#1a7f37;border:1px solid #cfe8d4;border-radius:5px;padding:2px 6px;white-space:nowrap;}
+  .pcard-sub{font-size:13px;color:var(--fg2);margin-top:9px;font-weight:600;}
+  .pcard-desc{font-size:12.5px;color:var(--fg2);line-height:1.5;margin-top:7px;}
+  .pcard-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px;}
+  .chip{font-size:10.5px;font-family:var(--mono);color:#555;background:#f2f2f2;border-radius:999px;padding:3px 9px;}
+  .chip.sh{background:var(--c,#111);color:#fff;}
+  .pcard-foot{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--fg3);margin-top:12px;border-top:1px solid #f0f0f0;padding-top:9px;}
+  .pcard-go{color:var(--c,#111);font-weight:600;white-space:nowrap;}
+  .pcard-rel{display:flex;align-items:center;gap:9px;justify-content:center;}
+  .pcard-rel .pcard-ico{width:34px;height:34px;}
+  .pcard-rel .pcard-name{font-size:16px;}
+  .pcard-rel .ar{color:var(--fg3);font-size:15px;}
+  .chord2-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.4rem;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);}
+  .chord2-legend-item{display:flex;align-items:center;gap:.4rem;font-size:12.5px;color:var(--fg2);}
+  .chord2-legend-swatch{width:11px;height:11px;border-radius:2px;flex-shrink:0;}
+
+  /* matrix */
+  .mtx{display:grid;font-family:var(--mono);font-size:10px;max-width:680px;margin:0 auto;}
+  .mtx .cell{aspect-ratio:1;border:1px solid #f0f0f0;display:flex;align-items:center;justify-content:center;color:#bbb;}
+  .mtx .rl{justify-content:flex-end;padding-right:6px;color:var(--fg2);border:none;}
+  .mtx .cl{align-items:flex-end;justify-content:center;color:var(--fg2);border:none;writing-mode:vertical-rl;transform:rotate(180deg);padding-bottom:4px;}
+  .mtx .cell.v{color:#fff;}
+  .note{margin-top:40px;padding:16px;border:1px solid var(--line);background:var(--hover);font-size:14px;color:var(--fg2);}
+  .err{padding:40px;color:var(--fg3);font-family:var(--mono);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Package Network — chord diagram</h1>
+    <div class="sub">Packages grouped by conceptual focus — Networks, Dynamics, Sequences — linked by shared focus areas. Styled after the chord diagram on saqr.me.</div>
+    <a class="back" href="../index.html">← back to Dynasite</a>
+  </header>
+  <div id="root"><div class="err">Loading…</div></div>
+  <div class="note">
+    Arcs are packages, coloured by their <b>conceptual focus</b> (Networks · Dynamics · Sequences · Utilities);
+    ribbons connect packages that share a focus area (thicker = more shared). Hover an arc or ribbon to highlight
+    and inspect; click to open the package. The matrix below is the same data, exact. Tell me to wire the chord
+    into the site (and where), and I will.
+  </div>
+</div>
+
+<script src="../assets/d3.min.js"></script>
+<script src="../assets/catalog.js"></script>
+<script src="../assets/chord.js"></script>
+<script>
+(function(){
+  "use strict";
+  var cat=window.CATALOG, root=document.getElementById("root");
+  if(!cat||!cat.entries){ root.innerHTML='<div class="err">Could not load ../assets/catalog.js — run Rscript build/harvest.R</div>'; return; }
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function tagsOf(e){var t=e.tags;return !t?[]:(Array.isArray(t)?t:[t]);}
+  var packages=cat.entries.filter(function(e){return e.type==="package";});
+
+  root.innerHTML=
+    '<section class="ex"><div class="kick">chord · shared focus · grouped by concept</div>'
+    +'<h2>The ecosystem at a glance</h2>'
+    +'<p>Every package as an arc, coloured by what it does — Networks, Dynamics, Sequences, Utilities. Ribbons join packages that share a focus (e.g. both do dynamics and sequences).</p>'
+    +'<div class="panel"><div id="chord"></div></div></section>'
+    +'<section class="ex"><div class="kick">adjacency matrix · exact</div>'
+    +'<h2>The same relationships, exact</h2>'
+    +'<p>Cell darkness = number of shared focus areas between two packages. No layout — precise and dense.</p>'
+    +'<div class="panel"><div id="mtx"></div></div></section>';
+
+  window.renderChord(document.getElementById("chord"), packages, {
+    width:720, height:720,
+    onClick:function(id){ location.href="../index.html#/pkg/"+encodeURIComponent(id); }
+  });
+
+  // matrix — uses the same conceptual focus taxonomy as the chord
+  (function(){
+    var foc=window.Dyna?window.Dyna.focusOf:function(){return [];};
+    var n=packages.length, M=[], maxV=1;
+    for(var i=0;i<n;i++){M[i]=[];for(var j=0;j<n;j++)M[i][j]=0;}
+    for(i=0;i<n;i++)for(j=0;j<n;j++){ if(i===j)continue;
+      var a=foc(packages[i].id), b=foc(packages[j].id);
+      var w=a.filter(function(t){return b.indexOf(t)>=0;}).length; M[i][j]=w; if(w>maxV)maxV=w;
+    }
+    var html='<div class="mtx" style="grid-template-columns:84px repeat('+n+',1fr);"><div class="cell" style="border:none;"></div>';
+    packages.forEach(function(p){html+='<div class="cl">'+esc(p.id)+'</div>';});
+    for(var r=0;r<n;r++){ html+='<div class="rl">'+esc(packages[r].id)+'</div>';
+      for(var c=0;c<n;c++){ if(r===c){html+='<div class="cell" style="background:#f6f6f6;"></div>';continue;}
+        var v=M[r][c], al=v?(0.16+0.84*v/maxV):0;
+        html+='<div class="cell'+(al>0.55?" v":"")+'" style="background:rgba(17,17,17,'+al.toFixed(2)+');">'+(v||"")+'</div>';
+      } }
+    document.getElementById("mtx").innerHTML=html+'</div>';
+  })();
+})();
+</script>
+</body>
+</html>

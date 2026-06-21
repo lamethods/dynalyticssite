@@ -1,0 +1,597 @@
+{
+  "_comment": "Curated seed for harvest.R. Packages are auto-read from local DESCRIPTION; this file supplies canonical doc-site URLs, CRAN flags, owners, tags, the tutorials list, and the lamethods book volumes. verify_links.R validates every URL live, so any drift here is caught at build time.",
+  "workspace_root": "..",
+  "exclude_dirs": [
+    "tna-dev"
+  ],
+  "about": {
+    "title": "Dynalytics",
+    "tagline": "A framework for the rigorous analytics of dynamical systems.",
+    "lead": "Dynalytics is an overarching framework and methodological ecosystem for the analysis and rigorous validation of the dynamics of dynamical systems. It encompasses a diverse family of models — transition networks, co-occurrence networks, psychological networks, and higher-order networks — unified by a single philosophy of scientific rigour. The R, Python, and JavaScript libraries catalogued here are its software layer.",
+    "more": "What sets Dynalytics apart is that analysis and validation are inseparable. A multi-level confirmatory testing battery validates every supported model and every analytical claim: split-half reliability for internal consistency, bootstrapping for edge-level stability, case-dropping for centrality stability, and permutation-based comparisons for groups, conditions, and temporal phases. Where most methods stop at describing a pattern, Dynalytics asks whether that pattern would survive rigorous statistical scrutiny — and supplies the tools to find out.",
+    "closing": "The conceptual groundwork applies to any network or process derived from observed interactions, sequences, or co-occurrence: social, behavioural, cognitive. Its value is not a single technique but a unified theoretical and methodological language for describing change and stability in any dynamic system.",
+    "paper": {
+      "label": "Read the paper",
+      "href": "papers/dynalytics-2026.pdf"
+    },
+    "pipeline": [
+      "Data ingestion",
+      "Estimation",
+      "Confirmatory testing",
+      "Analysis",
+      "Software"
+    ],
+    "points": [
+      {
+        "h": "The scientific contract",
+        "t": "Every analytical claim must be matched by evidence appropriate to the structure, scope, and complexity of the inference being made — the complexity of the evidence must match the complexity of the claim."
+      },
+      {
+        "h": "A family of models",
+        "t": "Transition networks (TNA, FTNA, ATNA), co-occurrence networks (CNA, WTNA), heterogeneous (HTNA) and multilayer (MCML) networks, psychological networks, and higher-order networks (HON) — each named for the structure it estimates."
+      },
+      {
+        "h": "A confirmatory testing battery",
+        "t": "Split-half reliability for internal consistency, bootstrapping for edge stability, case-dropping for centrality stability, and permutation tests for group comparison — so findings reflect genuine system behaviour, not noise or chance."
+      },
+      {
+        "h": "An open software ecosystem",
+        "t": "Implemented across open-source R, Python, and JavaScript libraries plus web and desktop applications — the packages indexed below."
+      }
+    ],
+    "citation": "Saqr, M., López-Pernas, S., & Misiejuk, K. (2026). Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems. Preprint."
+  },
+  "papers": [
+    {
+      "title": "Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems",
+      "authors": "Saqr, López-Pernas & Misiejuk",
+      "year": "2026",
+      "venue": "Preprint",
+      "url": "papers/dynalytics-2026.pdf",
+      "blurb": "Introduces the Dynalytics framework — its family of models, the multi-level confirmatory testing battery, and the scientific-contract philosophy that ties the whole ecosystem together."
+    }
+  ],
+  "packages": [
+    {
+      "name": "tna",
+      "dir": "tna",
+      "owner": "sonsoleslp",
+      "docs": "https://sonsoles.me/tna/",
+      "cran": true,
+      "tags": [
+        "network",
+        "sequence",
+        "TNA",
+        "transition",
+        "centrality",
+        "bootstrap"
+      ],
+      "logo": "https://sonsoles.me/tna/logo.png"
+    },
+    {
+      "name": "cograph",
+      "dir": "cograph",
+      "owner": "sonsoleslp",
+      "docs": "https://sonsoles.me/cograph/",
+      "cran": true,
+      "tags": [
+        "network",
+        "visualization",
+        "graph",
+        "multilayer"
+      ],
+      "logo": "https://sonsoles.me/cograph/logo.png"
+    },
+    {
+      "name": "htna",
+      "dir": "htna",
+      "owner": "sonsoleslp",
+      "docs": "https://sonsoles.me/htna/",
+      "cran": false,
+      "tags": [
+        "network",
+        "TNA",
+        "heterogeneous",
+        "human-AI"
+      ],
+      "logo": "https://sonsoles.me/htna/logo.png"
+    },
+    {
+      "name": "Nestimate",
+      "dir": "Nestimate",
+      "owner": "mohsaqr",
+      "docs": "https://saqr.me/Nestimate/",
+      "cran": true,
+      "tags": [
+        "network",
+        "estimation",
+        "bootstrap",
+        "psychometric",
+        "TNA"
+      ],
+      "exclude_articles": [
+        "nestimate-complete-tutorial"
+      ],
+      "logo": "https://raw.githubusercontent.com/mohsaqr/Nestimate/main/man/figures/logo.png"
+    },
+    {
+      "name": "snakeplot",
+      "dir": "Snakeplot",
+      "owner": "mohsaqr",
+      "docs": "https://saqr.me/Snakeplot/",
+      "cran": true,
+      "tags": [
+        "visualization",
+        "sequence",
+        "survey",
+        "ESM",
+        "serpentine"
+      ]
+    },
+    {
+      "name": "cooccure",
+      "dir": "cooccure",
+      "owner": "mohsaqr",
+      "docs": "https://saqr.me/cooccure/",
+      "cran": true,
+      "tags": [
+        "network",
+        "co-occurrence",
+        "similarity",
+        "jaccard"
+      ],
+      "logo": "https://saqr.me/cooccure/logo.png"
+    },
+    {
+      "name": "bibnets",
+      "dir": "bibnets",
+      "owner": "mohsaqr",
+      "docs": "https://saqr.me/bibnets-pkg/",
+      "cran": true,
+      "tags": [
+        "bibliometric",
+        "network",
+        "scopus",
+        "openalex",
+        "citation"
+      ]
+    },
+    {
+      "name": "transitiontrees",
+      "dir": "transitiontrees",
+      "owner": "mohsaqr",
+      "docs": null,
+      "cran": true,
+      "tags": [
+        "sequence",
+        "suffix-tree",
+        "transition",
+        "trajectory"
+      ]
+    },
+    {
+      "name": "codyna",
+      "dir": "CodynaJS",
+      "owner": "santikka",
+      "docs": null,
+      "cran": true,
+      "tags": [
+        "complexity",
+        "dynamics",
+        "sequence",
+        "early-warning",
+        "time-series"
+      ]
+    },
+    {
+      "name": "lagseq",
+      "dir": "lagseq",
+      "owner": "mohsaqr",
+      "docs": null,
+      "cran": false,
+      "tags": [
+        "sequence",
+        "lag-sequential",
+        "transition",
+        "tidy"
+      ]
+    },
+    {
+      "name": "Saqrmisc",
+      "dir": "Saqrmisc",
+      "owner": "mohsaqr",
+      "docs": null,
+      "cran": false,
+      "tags": [
+        "utilities",
+        "clustering",
+        "visualization",
+        "MoEClust"
+      ]
+    },
+    {
+      "name": "Saqrlab",
+      "dir": "Saqrlab",
+      "owner": null,
+      "docs": null,
+      "cran": false,
+      "tags": [
+        "simulation",
+        "TNA",
+        "synthetic-data",
+        "markov"
+      ]
+    },
+    {
+      "name": "psychnet",
+      "dir": "psychnet",
+      "owner": "mohsaqr",
+      "docs": null,
+      "cran": false,
+      "tags": [
+        "psychometric",
+        "network",
+        "GLASSO",
+        "ising",
+        "base-r"
+      ]
+    },
+    {
+      "name": "tsn",
+      "dir": "tsn-main",
+      "owner": "santikka",
+      "docs": null,
+      "cran": false,
+      "tags": [
+        "time-series",
+        "network",
+        "discretization",
+        "kNN"
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
+      "url": "https://sonsoles.me/posts/tna-tutorial/index.html",
+      "desc": "A modern approach to rigorous analysis of behavioral processes.",
+      "packages": [
+        "tna"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "TNA Data Preparation: A Guide to prepare_data()",
+      "url": "https://sonsoles.me/posts/tna-data/index.html",
+      "desc": "A comprehensive guide to preparing data with prepare_data() for transition network analysis.",
+      "packages": [
+        "tna"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "TNA Group Analysis: Comparison of Groups",
+      "url": "https://sonsoles.me/posts/tna-group/index.html",
+      "desc": "Analysis and comparison of groups in transition network analysis.",
+      "packages": [
+        "tna"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "TNA Clustering: Discovering and Analysing Clusters",
+      "url": "https://sonsoles.me/posts/tna-clustering/index.html",
+      "desc": "Discovering and analysing clusters in transition network analysis.",
+      "packages": [
+        "tna",
+        "codyna"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "TNA Model Comparison: A Guide to Network Comparison",
+      "url": "https://sonsoles.me/posts/tna-compare/index.html",
+      "desc": "A comprehensive guide to comparing transition networks.",
+      "packages": [
+        "tna",
+        "Nestimate"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
+      "url": "https://sonsoles.me/posts/codyna-seq-tutorial/index.html",
+      "desc": "Sequence pattern indices, outcomes, and regression with codyna.",
+      "packages": [
+        "codyna"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "The VaSSTra Method",
+      "url": "https://sonsoles.me/posts/vasstra/index.html",
+      "desc": "From Variables to States to Sequences to Trajectories.",
+      "packages": [
+        "tna",
+        "codyna"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "Alluvial Plots for Transition Analysis",
+      "url": "https://sonsoles.me/posts/alluvial/index.html",
+      "desc": "Generating transition plots in R with ggalluvial.",
+      "packages": [
+        "tna"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "Data Visualization for Research",
+      "url": "https://sonsoles.me/posts/visualization/index.html",
+      "desc": "Favourite research figures and how they were created.",
+      "packages": [
+        "cograph"
+      ],
+      "source": "sonsoles.me",
+      "kind": "tutorial"
+    },
+    {
+      "title": "cograph: Complex Network Analysis and Visualization",
+      "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
+      "desc": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
+      "packages": [
+        "cograph"
+      ],
+      "source": "saqr.me",
+      "kind": "blog"
+    },
+    {
+      "title": "Human–AI Interaction: A Transition Network Analysis with cograph",
+      "url": "https://saqr.me/blog/2026/human-ai-interaction-cograph/",
+      "desc": "Sequential analysis of 13,002 turns across 429 human–AI coding sessions, mapped with TNA and cograph.",
+      "packages": [
+        "tna",
+        "cograph"
+      ],
+      "source": "saqr.me",
+      "kind": "blog"
+    },
+    {
+      "title": "JTNA for Transition Network Analysis",
+      "url": "https://saqr.me/blog/2026/jtna-transition-network-analysis/",
+      "desc": "Statistical rigour for sequential behavioural analysis — now in jamovi via JTNA.",
+      "packages": [
+        "tna"
+      ],
+      "source": "saqr.me",
+      "kind": "blog"
+    },
+    {
+      "title": "Precision Education is the Answer",
+      "url": "https://saqr.me/blog/2026/precision-education/",
+      "desc": "Beyond group averages: a case for precision education.",
+      "packages": [
+        "general"
+      ],
+      "source": "saqr.me",
+      "kind": "blog"
+    },
+    {
+      "title": "Rohy: AI-Powered Virtual Patient Simulator",
+      "url": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/",
+      "desc": "An open-source medical simulation platform with AI-driven patient conversations.",
+      "packages": [
+        "general"
+      ],
+      "source": "saqr.me",
+      "kind": "blog"
+    },
+    {
+      "title": "Book: Learning Analytics Methods and Tutorials",
+      "url": "https://sonsoles.me/posts/labook/index.html",
+      "desc": "Learning Analytics Methods and Tutorials: a practical guide using R.",
+      "packages": [
+        "general"
+      ],
+      "source": "sonsoles.me",
+      "kind": "news"
+    },
+    {
+      "title": "ISILA — Funding from Erasmus+",
+      "url": "https://sonsoles.me/posts/isila/index.html",
+      "desc": "Early-intervention learning-analytics methods for quality and sustainability.",
+      "packages": [
+        "general"
+      ],
+      "source": "sonsoles.me",
+      "kind": "news"
+    },
+    {
+      "title": "IGLUE — New Funding from Erasmus+",
+      "url": "https://sonsoles.me/posts/iglue/index.html",
+      "desc": "Game-based learning using escape rooms.",
+      "packages": [
+        "general"
+      ],
+      "source": "sonsoles.me",
+      "kind": "news"
+    },
+    {
+      "title": "CRETIC — Funding from the Research Council of Finland",
+      "url": "https://sonsoles.me/posts/cretic/index.html",
+      "desc": "Optimising clinical reasoning in time-critical scenarios.",
+      "packages": [
+        "general"
+      ],
+      "source": "sonsoles.me",
+      "kind": "news"
+    }
+  ],
+  "chapter_packages": {
+    "ch10-sequence-analysis": [
+      "codyna"
+    ],
+    "ch11-vasstra": [
+      "tna",
+      "codyna"
+    ],
+    "ch12-markov": [
+      "tna"
+    ],
+    "ch15-sna": [
+      "cograph"
+    ],
+    "ch16-community": [
+      "cograph"
+    ],
+    "ch17-temporal-networks": [
+      "tna"
+    ],
+    "ch19-psychological-networks": [
+      "psychnet"
+    ],
+    "ch12-cds": [
+      "codyna"
+    ],
+    "ch15-tna": [
+      "tna"
+    ],
+    "ch16-ftna": [
+      "tna",
+      "Nestimate"
+    ],
+    "ch17-tna-clusters": [
+      "tna",
+      "codyna"
+    ]
+  },
+  "book_volumes": [
+    {
+      "id": "book1",
+      "title": "Vol 1 — LA Methods & Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "base": "https://lamethods.github.io/book1/",
+      "sitemap": "https://lamethods.github.io/book1/sitemap.xml",
+      "titles": {
+        "ch01-intro": "Introduction",
+        "ch02-data": "Learning Analytics Data",
+        "ch03-intro-r": "Introduction to R",
+        "ch04-data-cleaning": "Data Cleaning",
+        "ch05-basic-stats": "Basic Statistics",
+        "ch06-data-visualization": "Data Visualization",
+        "ch07-prediction": "Predictive Modeling",
+        "ch08-clustering": "Dissimilarity-based Clustering",
+        "ch09-model-based-clustering": "Model-based Clustering",
+        "ch10-sequence-analysis": "Sequence Analysis",
+        "ch11-vasstra": "VaSSTra Method",
+        "ch12-markov": "Markov Models",
+        "ch13-multichannel": "Multi-channel Sequences",
+        "ch14-process-mining": "Process Mining",
+        "ch15-sna": "Social Network Analysis",
+        "ch16-community": "Community Detection",
+        "ch17-temporal-networks": "Temporal Networks (TNA)",
+        "ch18-ena-ona": "Epistemic Network Analysis",
+        "ch19-psychological-networks": "Psychological Networks",
+        "ch20-factor-analysis": "Factor Analysis",
+        "ch21-sem": "Structural Equation Modeling",
+        "ch22-conclusion": "Future of Learning Analytics"
+      }
+    },
+    {
+      "id": "book2",
+      "title": "Vol 2 — Advanced LA Methods",
+      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "base": "https://lamethods.github.io/book2/",
+      "sitemap": "https://lamethods.github.io/book2/sitemap.xml",
+      "titles": {
+        "ch01-intro": "Introduction",
+        "ch02-AIxAI": "AI and Explainable AI",
+        "ch03-prediction": "Prediction",
+        "ch04-classification": "Classification",
+        "ch05-regularization": "Regularization",
+        "ch06-xai-global": "Global XAI",
+        "ch07-xai-local": "Local XAI",
+        "ch08-llms": "Large Language Models",
+        "ch09-nlp": "Natural Language Processing",
+        "ch10-bert": "Classification with BERT",
+        "ch11-llmsxai": "Automated Feedback with XAI & LLMs",
+        "ch12-cds": "Complex Dynamic Systems",
+        "ch13-ega": "Exploratory Graph Analysis",
+        "ch14-rqa": "Recurrence Quantification Analysis",
+        "ch15-tna": "Transition Network Analysis",
+        "ch16-ftna": "Frequency-based TNA",
+        "ch17-tna-clusters": "TNA Clusters",
+        "ch18-idio": "Within-person Analysis",
+        "ch19-three-levels": "Three Levels of Analysis",
+        "ch20-var": "VAR and uSEM",
+        "ch21-mle": "Maximum Likelihood Estimator",
+        "ch22-automl": "Automated Machine Learning"
+      }
+    }
+  ],
+  "extra_links": [
+    {
+      "id": "htna-index",
+      "type": "docsite",
+      "title": "htna — documentation site (index)",
+      "blurb": "Heterogeneous Transition Network Analysis pkgdown site.",
+      "url": "https://sonsoles.me/htna/index.html",
+      "owner": "sonsoleslp",
+      "tags": [
+        "network",
+        "TNA",
+        "heterogeneous"
+      ]
+    },
+    {
+      "id": "lamethods-home",
+      "type": "book",
+      "title": "lamethods.org — book home",
+      "blurb": "Landing page for the Learning Analytics Methods book series.",
+      "url": "https://lamethods.org/",
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "home"
+      ]
+    },
+    {
+      "id": "saqr-site",
+      "type": "site",
+      "title": "saqr.me — Mohammed Saqr",
+      "blurb": "Personal academic site: software, publications, blog.",
+      "url": "https://saqr.me/",
+      "owner": "mohsaqr",
+      "tags": [
+        "site",
+        "saqr",
+        "software",
+        "publications"
+      ]
+    },
+    {
+      "id": "sonsoles-site",
+      "type": "site",
+      "title": "sonsoles.me — Sonsoles López-Pernas",
+      "blurb": "Personal site: software, publications, tutorials.",
+      "url": "https://sonsoles.me/",
+      "owner": "sonsoleslp",
+      "tags": [
+        "site",
+        "sonsoles",
+        "software",
+        "tutorials"
+      ]
+    }
+  ]
+}

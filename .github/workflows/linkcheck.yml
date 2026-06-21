@@ -1,0 +1,53 @@
+name: linkcheck
+
+# Verify every URL in catalog.json stays reachable. Weekly + on demand + on changes
+# to the catalog or build scripts. Node build (no R toolchain needed).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"   # 06:17 UTC every Monday
+  push:
+    paths:
+      - "catalog.json"
+      - "build/**"
+      - ".github/workflows/linkcheck.yml"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verify-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify links
+        run: node build/verify_links.mjs | tee linkcheck.out
+
+      - name: Open issue on broken links
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = 'Automated link check failed. Broken links detected in `catalog.json`.\n\n';
+            try { body += '```\n' + fs.readFileSync('linkcheck.out','utf8').slice(-6000) + '\n```'; } catch (e) {}
+            const title = 'Broken links detected by weekly linkcheck';
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'linkrot'
+            });
+            if (existing.data.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.data[0].number, body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['linkrot']
+              });
+            }

@@ -1,0 +1,14 @@
+# session artifacts (local-only, never committed)
+HANDOFF.md
+LEARNINGS.md
+CHANGES.md
+AGENTS.md
+AGENT-NOTE-*.md
+cran-comments.md
+README.html
+
+# tooling
+node_modules/
+.DS_Store
+*.log
+tmp/
