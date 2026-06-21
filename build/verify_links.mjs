@@ -24,6 +24,17 @@ async function once(url, method) {
   } catch (e) { return { error: e.message || String(e) }; } finally { clearTimeout(t); }
 }
 async function checkUrl(url) {
+  // DOIs: doi.org 30x-redirects to the publisher, which often 403s bots even though the
+  // DOI itself is valid. A redirect from doi.org means it resolves — don't follow into the block.
+  if (/^https?:\/\/(dx\.)?doi\.org\//i.test(url)) {
+    const ac = new AbortController();
+    const t = setTimeout(() => ac.abort(), 20000);
+    try {
+      const r = await fetch(url, { method: "GET", headers: { "User-Agent": UA }, redirect: "manual", signal: ac.signal });
+      clearTimeout(t);
+      return r.status < 400 ? { status: "VERIFIED", code: r.status } : { status: "BROKEN", detail: r.status };
+    } catch (e) { clearTimeout(t); return { status: "BROKEN", detail: e.message || String(e) }; }
+  }
   let r = await once(url, "HEAD");
   if (r.error || [403, 405, 501].includes(r.status)) {
     const g = await once(url, "GET");

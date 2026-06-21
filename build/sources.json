@@ -49,6 +49,88 @@
       "venue": "Preprint",
       "url": "papers/dynalytics-2026.pdf",
       "blurb": "Introduces the Dynalytics framework — its family of models, the multi-level confirmatory testing battery, and the scientific-contract philosophy that ties the whole ecosystem together."
+    },
+    {
+      "title": "Transition Network Analysis: A Novel Framework for Modeling, Visualizing, and Identifying the Temporal Patterns of Learners and Learning Processes",
+      "authors": "Saqr, López-Pernas, Törmänen, Kaliisa, Misiejuk & Tikka",
+      "year": "2025",
+      "venue": "LAK ’25 · ACM",
+      "url": "https://doi.org/10.1145/3706468.3706513",
+      "blurb": "The foundational TNA paper — introduces the framework for modelling, visualising, and identifying temporal patterns in learning processes."
+    },
+    {
+      "title": "tna: An R Package for Transition Network Analysis",
+      "authors": "Tikka, López-Pernas & Saqr",
+      "year": "2025",
+      "venue": "Applied Psychological Measurement",
+      "url": "https://doi.org/10.1177/01466216251348840",
+      "blurb": "The official software paper for the tna R package — cite this when you use the package."
+    },
+    {
+      "title": "Mapping Relational Dynamics with Transition Network Analysis: A Primer and Tutorial",
+      "authors": "Saqr, López-Pernas & Tikka",
+      "year": "2025",
+      "venue": "Advanced Learning Analytics Methods · Springer",
+      "url": "https://lamethods.org/book2/chapters/ch15-tna/ch15-tna.html",
+      "blurb": "A book-chapter primer that models transitions between events as a weighted directed network to capture temporal dynamics and relational patterns in learning."
+    },
+    {
+      "title": "Capturing the Breadth and Dynamics of Temporal Processes with Frequency Transition Network Analysis: A Primer and Tutorial",
+      "authors": "Saqr, López-Pernas & Tikka",
+      "year": "2025",
+      "venue": "Advanced Learning Analytics Methods · Springer",
+      "url": "https://lamethods.org/book2/chapters/ch16-ftna/ch16-ftna.html",
+      "blurb": "Companion chapter on Frequency Transition Network Analysis (FTNA) — models transition frequencies directly, without Markov assumptions."
+    },
+    {
+      "title": "Mining Patterns and Clusters with Transition Network Analysis: A Heterogeneity Approach",
+      "authors": "López-Pernas, Tikka & Saqr",
+      "year": "2025",
+      "venue": "Advanced Learning Analytics Methods · Springer",
+      "url": "https://lamethods.org/book2/chapters/ch17-tna-clusters/ch17-tna-clusters.html",
+      "blurb": "Uses mixture Markov models to identify subgroups with distinct transition patterns."
+    }
+  ],
+  "tools": [
+    {
+      "id": "tnapy",
+      "kind": "Python",
+      "title": "tnapy — Transition Network Analysis for Python",
+      "blurb": "A Python implementation of Transition Network Analysis for users working outside the R ecosystem.",
+      "url": "https://github.com/mohsaqr/tnapy",
+      "links": { "github": "https://github.com/mohsaqr/tnapy" },
+      "owner": "mohsaqr",
+      "tags": ["python", "TNA", "networks"]
+    },
+    {
+      "id": "jtna",
+      "kind": "jamovi module",
+      "title": "JTNA — Transition Network Analysis in jamovi",
+      "blurb": "A point-and-click jamovi module for TNA: build, plot, and statistically test transition networks with no code.",
+      "url": "https://sonsoles.me/extra/JTNA.html",
+      "links": { "guide": "https://sonsoles.me/extra/JTNA.html", "github": "https://github.com/SONsoleslp/JTNA" },
+      "owner": "sonsoleslp",
+      "tags": ["jamovi", "TNA", "gui", "no-code"]
+    },
+    {
+      "id": "dynalytics-app",
+      "kind": "Shiny app",
+      "title": "Dynalytics — interactive web app",
+      "blurb": "A browser-based Shiny application for the Dynalytics framework — run the analyses in the browser, no installation required.",
+      "url": "https://sonsoleslp.shinyapps.io/dynalytics/",
+      "links": { "app": "https://sonsoleslp.shinyapps.io/dynalytics/" },
+      "owner": "sonsoleslp",
+      "tags": ["shiny", "app", "dynalytics", "no-code"]
+    },
+    {
+      "id": "tna-app",
+      "kind": "Shiny app",
+      "title": "TNA — interactive web app",
+      "blurb": "A browser-based Shiny application for Transition Network Analysis.",
+      "url": "https://sonsoleslp.shinyapps.io/tna-app/",
+      "links": { "app": "https://sonsoleslp.shinyapps.io/tna-app/" },
+      "owner": "sonsoleslp",
+      "tags": ["shiny", "app", "TNA", "no-code"]
     }
   ],
   "packages": [
@@ -376,6 +458,16 @@
       "kind": "blog"
     },
     {
+      "title": "TNA Bern Workshop Resources",
+      "url": "https://saqr.me/tutorials/tna-bern/",
+      "desc": "Workshop resources for Transition Network Analysis — slides, code, and the R, Python, jamovi, and Shiny tools.",
+      "packages": [
+        "tna"
+      ],
+      "source": "saqr.me",
+      "kind": "tutorial"
+    },
+    {
       "title": "Precision Education is the Answer",
       "url": "https://saqr.me/blog/2026/precision-education/",
       "desc": "Beyond group averages: a case for precision education.",
@@ -479,6 +571,8 @@
       "id": "book1",
       "title": "Vol 1 — LA Methods & Tutorials",
       "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "code_repo": "lamethods/code",
+      "springer_doi_base": "10.1007/978-3-031-54464-4",
       "base": "https://lamethods.github.io/book1/",
       "sitemap": "https://lamethods.github.io/book1/sitemap.xml",
       "titles": {
@@ -510,6 +604,7 @@
       "id": "book2",
       "title": "Vol 2 — Advanced LA Methods",
       "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "code_repo": "lamethods/code2",
       "base": "https://lamethods.github.io/book2/",
       "sitemap": "https://lamethods.github.io/book2/sitemap.xml",
       "titles": {

@@ -28,6 +28,33 @@ async function fetchText(url) {
   } catch { return null; } finally { clearTimeout(t); }
 }
 
+// reachability check (HEAD, then GET) — used to include only resolving chapter PDFs
+async function urlOk(url) {
+  for (const method of ["HEAD", "GET"]) {
+    const ac = new AbortController();
+    const t = setTimeout(() => ac.abort(), 20000);
+    try {
+      const r = await fetch(url, { method, headers: { "User-Agent": UA }, redirect: "follow", signal: ac.signal });
+      clearTimeout(t);
+      if (r.status < 400) return true;
+      if (![403, 405, 501].includes(r.status)) return false;  // definitive failure; don't bother with GET
+    } catch { clearTimeout(t); }
+  }
+  return false;
+}
+
+// per-repo top-level directory names (cached) — to map chapters to their code folder
+const repoDirCache = {};
+async function getRepoDirs(repo) {
+  if (!repo) return new Set();
+  if (repoDirCache[repo]) return repoDirCache[repo];
+  const body = await fetchText(`https://api.github.com/repos/${repo}/contents`);
+  const set = new Set();
+  if (body) { try { for (const it of JSON.parse(body)) if (it.type === "dir") set.add(it.name); } catch {} }
+  repoDirCache[repo] = set;
+  return set;
+}
+
 // --- DESCRIPTION (DCF) parsing ---
 function parseDcf(text) {
   const out = {}; let key = null;
@@ -48,6 +75,69 @@ function githubFromUrls(urls) {
 }
 const homepageFromUrls = (urls) =>
   urls.find((u) => !/github\.com|cran\.r-project|r-project\.org|r-universe/i.test(u)) || null;
+
+// --- chapter description scraping ---
+// boilerplate paragraphs that appear in the Quarto chapter template nav/footer
+const CHAP_BOILER = /download code|check out our new book|©\s*20\d\d|^the authors$|all rights reserved|this content is licensed|table of contents/i;
+function decodeEntities(s) {
+  return s
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"').replace(/&#3[49];|&rsquo;|&lsquo;|&apos;/g, "'")
+    .replace(/&ldquo;|&rdquo;/g, '"').replace(/&nbsp;/g, " ").replace(/&hellip;/g, "…")
+    .replace(/&mdash;/g, "—").replace(/&ndash;/g, "–");
+}
+// trim to ~200 chars at a word boundary, keeping 1–2 sentences
+function trimDescription(text) {
+  // drop bracketed bibliography markers ([1], [1, 2], [1–3]) — no bibliography here
+  text = text.replace(/\s*\[\d+(?:\s*[,–-]\s*\d+)*\]/g, "");
+  text = text.replace(/\s+([,.;:])/g, "$1").replace(/\s+/g, " ").trim();
+  if (text.length <= 220) return text;
+  // prefer cutting after the first sentence if it lands in range
+  const firstStop = text.search(/[.!?]\s/);
+  if (firstStop >= 90 && firstStop <= 220) return text.slice(0, firstStop + 1);
+  const cut = text.slice(0, 200);
+  const lastSpace = cut.lastIndexOf(" ");
+  return cut.slice(0, lastSpace > 120 ? lastSpace : 200).replace(/[\s,;:–—-]+$/, "") + "…";
+}
+// fetch a chapter page and extract a concise description (meta or first real paragraph)
+async function chapterDescription(url) {
+  const html = await fetchText(url);
+  if (!html) return null;
+  // 1) <meta name="description"> if present and meaningful
+  const meta = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i)
+            || html.match(/<meta[^>]*content=["']([^"']+)["'][^>]*name=["']description["']/i);
+  if (meta) {
+    const d = decodeEntities(meta[1].replace(/<[^>]*>/g, "")).replace(/\s+/g, " ").trim();
+    if (d.length >= 40) return trimDescription(d);
+  }
+  // 2) first substantive paragraph of the chapter body
+  let body = (html.match(/<main[\s\S]*?<\/main>/i) || [html])[0];
+  body = body.replace(/<(script|style|figure|figcaption|table|nav)[\s\S]*?<\/\1>/gi, "");
+  const paras = [...body.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => decodeEntities(m[1].replace(/<[^>]*>/g, "")).replace(/\s+/g, " ").trim())
+    .filter((p) => p.length >= 60 && !CHAP_BOILER.test(p));
+  return paras.length ? trimDescription(paras[0]) : null;
+}
+// the authoritative chapter summary is the published abstract — via CrossRef JSON
+// (Springer's own page redirects bots to a consent wall; CrossRef is clean & reliable).
+// Uses the polite-pool mailto UA + retries so bursts don't get rate-limited to a fallback.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+async function chapterAbstract(doiBase, num) {
+  const url = `https://api.crossref.org/works/${doiBase}_${num}`;
+  const headers = { "User-Agent": "dynasite/1.0 (+https://dynalytics.lamethods.org; mailto:hamada@saqr.me)" };
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try {
+      const r = await fetch(url, { headers });
+      if (r.status === 429 || r.status >= 500) { await sleep(800 * (attempt + 1)); continue; }
+      if (!r.ok) return null;
+      const a = (await r.json())?.message?.abstract;
+      if (!a) return null;
+      let d = decodeEntities(a.replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim().replace(/^abstract[:\s]+/i, "");
+      return d.length >= 60 ? trimDescription(d) : null;
+    } catch { await sleep(500); }
+  }
+  return null;
+}
 
 function cleanBlurb(x) {
   if (!x) return "";
@@ -189,19 +279,32 @@ async function buildVolume(vol) {
     rows.push({ slug: m[1], loc });
   }
   rows.sort((a, b) => a.slug.localeCompare(b.slug));
-  return rows.map(({ slug, loc }) => {
+  const codeDirs = await getRepoDirs(vol.code_repo);
+  const out = await Promise.all(rows.map(async ({ slug, loc }) => {
     const title = vol.titles[slug] || slug.replace(/-/g, " ");
     const rel = loc.replace(/.*?(chapters\/.*)$/, "$1");
     const url = vol.base + rel;
+    const links = { read: url };
+    if (codeDirs.has(slug)) links.code = `https://github.com/${vol.code_repo}/tree/main/${slug}`;
+    const num = vol.springer_doi_base ? (slug.match(/ch0*([0-9]+)/) || [])[1] : null;
+    let abstract = null;
+    if (num) {
+      const pdf = `https://link.springer.com/content/pdf/${vol.springer_doi_base}_${num}.pdf`;
+      if (await urlOk(pdf)) links.pdf = pdf;     // only include if the open-access PDF resolves
+      abstract = await chapterAbstract(vol.springer_doi_base, num);   // the real chapter abstract
+    }
+    // prefer the Springer abstract; fall back to the chapter page's first paragraph
+    const desc = abstract || await chapterDescription(url);
     return {
       id: `${vol.id}::${slug}`, type: "chapter",
       title: `${slug.replace(/^ch0?/, "Ch ").replace(/-.*$/, "")} — ${title}`,
-      blurb: `${vol.title} chapter.`, url, links: { chapter: url },
+      blurb: desc || `${vol.title} chapter.`, url, links,
       owner: "saqr/lopez-pernas/tikka", tags: ["lamethods", vol.id, "chapter", "book"],
       packages: src.chapter_packages?.[slug] || [], volume: vol.title,
       status: "UNVERIFIED", last_checked: null
     };
-  });
+  }));
+  return out;
 }
 
 // --- run ---
@@ -211,19 +314,20 @@ const packageEntries = pkgArrays.flat();
 
 const chapterEntries = (await Promise.all(src.book_volumes.map(buildVolume))).flat();
 
-const bookEntries = src.book_volumes.map((v) => ({
-  id: v.id, type: "book", title: v.title, blurb: v.blurb, url: v.base, links: { book: v.base },
-  owner: "saqr/lopez-pernas/tikka", tags: ["book", "lamethods"], status: "UNVERIFIED", last_checked: null
-}));
-
 const paperEntries = (src.papers || []).map((p, i) => ({
   id: `paper::${i + 1}`, type: "paper", title: p.title, blurb: p.blurb, url: p.url, links: { paper: p.url },
   authors: p.authors, year: p.year, venue: p.venue, status: "UNVERIFIED", last_checked: null
 }));
 
+const toolEntries = (src.tools || []).map((t) => ({
+  id: `tool::${t.id}`, type: "tool", kind: t.kind, title: t.title, blurb: t.blurb,
+  url: t.url, links: t.links, owner: t.owner ?? null, tags: t.tags,
+  status: "UNVERIFIED", last_checked: null
+}));
+
 const extraEntries = (src.extra_links || []).map((e) => ({ ...e, links: { link: e.url }, status: "UNVERIFIED", last_checked: null }));
 
-const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...bookEntries, ...paperEntries, ...extraEntries];
+const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...extraEntries];
 const count = (t) => entries.filter((e) => e.type === t).length;
 const catalog = {
   generated_at: today,

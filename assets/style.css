@@ -32,6 +32,47 @@ a { color: inherit; text-decoration: none; }
 .statline { font-family: var(--mono); font-size: 12px; color: var(--fg3); display: flex; gap: 18px; flex-wrap: wrap; margin-top: 16px; }
 .statline b { color: var(--fg); font-weight: 600; }
 
+/* top-level nav */
+.nav { display: flex; gap: 26px; flex-wrap: wrap; margin-top: 18px; }
+.navlink { font-family: var(--mono); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg3); padding: 4px 0; border-bottom: 2px solid transparent; }
+.navlink:hover { color: var(--fg); }
+.navlink.active { color: var(--fg); border-bottom-color: var(--fg); }
+
+/* ---------- chapters view ---------- */
+.vol { margin-top: 34px; }
+.vol + .vol { margin-top: 52px; }
+.vol-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-bottom: 2px solid var(--fg); padding-bottom: 12px; }
+.vol-lead { font-size: 23px; font-weight: 700; letter-spacing: -.02em; color: var(--fg); }
+.vol-name { font-size: 15px; color: var(--fg2); flex: 1 1 auto; }
+.vol-count { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--fg3); white-space: nowrap; }
+
+/* two-column chapter grid */
+.chap-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; margin-top: 6px; }
+@media (max-width: 680px) { .chap-grid { grid-template-columns: 1fr; column-gap: 0; } }
+
+.chap { padding: 20px 0 22px; border-top: 1px solid var(--line); }
+.chap-top { display: flex; align-items: baseline; gap: 12px; }
+.chap-no { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--accent); flex: 0 0 auto; min-width: 22px; }
+.chap-title { font-size: 18px; font-weight: 700; letter-spacing: -.015em; line-height: 1.25; color: var(--fg);
+  background-image: linear-gradient(var(--fg), var(--fg)); background-size: 0% 1.5px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .22s ease; }
+.chap-title:hover { background-size: 100% 1.5px; }
+.chap-desc { color: var(--fg2); font-size: 14px; line-height: 1.55; margin: 8px 0 0 34px; max-width: 46ch;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.chap-links { display: flex; align-items: center; gap: 16px; margin: 12px 0 0 34px; flex-wrap: wrap; }
+.chlink { font-family: var(--mono); font-size: 11.5px; letter-spacing: .02em; color: var(--fg3); }
+.chlink .m { color: inherit; }
+.chlink:hover { color: var(--fg); }
+.chlink.primary { color: var(--fg); }
+.chlink.primary:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* compact single-column variant inside the dossier "In the Book" group */
+.chap.compact { border-top: 1px solid var(--line2); }
+.chap.compact .chap-desc, .chap.compact .chap-links { margin-left: 34px; max-width: 70ch; }
+
+@media (max-width: 680px) {
+  .chap-desc, .chap-links { margin-left: 0; max-width: none; }
+}
+
 /* ---------- about / Dynalytics ---------- */
 .about { padding: 30px 0 8px; border-bottom: 1px solid var(--line); }
 .about h2 { font-size: 21px; font-weight: 700; margin: 0; letter-spacing: -.01em; }
