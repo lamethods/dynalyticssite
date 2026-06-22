@@ -228,11 +228,9 @@
       '<p class="lead">' + esc(a.lead || "") + "</p>" +
       (a.more ? '<p class="amore">' + esc(a.more) + "</p>" : "") +
       '<div class="points">' + pts + "</div>" +
-      (a.closing ? '<p class="amore">' + esc(a.closing) + "</p>" : "") +
-      '<div class="cite-row">' +
-        (a.citation ? '<span class="cite">' + esc(a.citation) + "</span>" : "") +
-        (a.paper ? '<a class="paper-btn" href="' + esc(a.paper.href) + '" target="_blank" rel="noopener">' + esc(a.paper.label) + " →</a>" : "") +
-      "</div>";
+      (a.closing ? '<p class="amore">' + esc(a.closing) +
+        (a.paper ? ' <a class="paper-link" href="' + esc(a.paper.href) + '" target="_blank" rel="noopener">' + esc(a.paper.label) + " →</a>" : "") +
+      "</p>" : "");
     body.appendChild(box);
     var fig = box.querySelector(".layers-fig");
     if (fig) {
