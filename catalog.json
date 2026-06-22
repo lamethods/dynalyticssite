@@ -38,7 +38,7 @@
     "citation": "Saqr, M., López-Pernas, S., & Misiejuk, K. (2026). Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems. Preprint."
   },
   "counts": {
-    "total": 143,
+    "total": 145,
     "packages": 14,
     "vignettes": 42,
     "posts": 19,
@@ -2237,7 +2237,7 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-06-22"
     },
     {
@@ -2990,6 +2990,48 @@
       "last_checked": "2026-06-22"
     },
     {
+      "id": "book::book1",
+      "type": "book",
+      "title": "Vol 1 — LA Methods & Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
+      "url": "https://lamethods.github.io/book1/",
+      "links": {
+        "read": "https://lamethods.github.io/book1/",
+        "code": "https://github.com/lamethods/code"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book1"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-22"
+    },
+    {
+      "id": "book::book2",
+      "type": "book",
+      "title": "Vol 2 — Advanced LA Methods",
+      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "cover": "https://lamethods.org/book2/cover2.jpg",
+      "url": "https://lamethods.github.io/book2/",
+      "links": {
+        "read": "https://lamethods.github.io/book2/",
+        "code": "https://github.com/lamethods/code2"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book2"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-22"
+    },
+    {
       "id": "person::saqr",
       "type": "person",
       "title": "Mohammed Saqr",
@@ -3130,8 +3172,8 @@
   ],
   "verified_at": "2026-06-22",
   "link_summary": {
-    "verified": 180,
-    "redirect": 57,
+    "verified": 183,
+    "redirect": 60,
     "broken": 0
   }
 }

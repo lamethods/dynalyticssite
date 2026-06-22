@@ -47,7 +47,7 @@ async function checkUrl(url) {
 }
 
 function entryUrls(e) {
-  const us = [e.url, e.logo, e.photo, ...Object.values(e.links || {})].filter((u) => u && typeof u === "string");
+  const us = [e.url, e.logo, e.photo, e.cover, ...Object.values(e.links || {})].filter((u) => u && typeof u === "string");
   return [...new Set(us)];
 }
 

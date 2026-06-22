@@ -130,7 +130,86 @@
     var body = el("div");
     renderAbout(body);
     renderMap(body);
+    renderBrowse(body);
     view.appendChild(body);
+  }
+
+  /* ---------- overview "browse" strip: mini preview cards per section ---------- */
+  function miniLogo(p) {
+    var d = el("div", "mini-logo");
+    if (p.logo) {
+      var img = el("img"); img.src = p.logo; img.alt = ""; img.loading = "lazy";
+      img.onerror = function () { d.classList.add("mono"); d.textContent = ""; d.innerHTML = monogram(p.id); };
+      d.appendChild(img);
+    } else { d.classList.add("mono"); d.innerHTML = monogram(p.id); }
+    return d;
+  }
+  function miniFace(p) {
+    var d = el("div", "mini-face");
+    var img = el("img"); img.src = p.photo; img.alt = ""; img.loading = "lazy";
+    img.onerror = function () { d.classList.add("mono"); d.textContent = monogram(p.name); };
+    d.appendChild(img);
+    return d;
+  }
+  function miniDoc() { return el("div", "mini-doc", '<i></i><i></i><i class="s"></i>'); }
+  function miniCover(b) {
+    var d = el("div", "mini-cover");
+    if (b.cover) { var img = el("img"); img.src = b.cover; img.alt = b.title; img.loading = "lazy"; img.onerror = function () { d.style.display = "none"; }; d.appendChild(img); }
+    return d;
+  }
+  function browseCard(opts) {
+    var a = el("a", "bcard"); a.href = "#/" + opts.route;
+    var head = el("div", "bcard-head");
+    head.appendChild(el("span", "bcard-label", esc(opts.label)));
+    head.appendChild(el("span", "bcard-count", opts.count + ""));
+    a.appendChild(head);
+    var minis = el("div", "bcard-minis " + opts.miniClass);
+    opts.minis.forEach(function (m) { minis.appendChild(m); });
+    if (opts.extra > 0) minis.appendChild(el("span", "mini-more", "+" + opts.extra));
+    a.appendChild(minis);
+    a.appendChild(el("div", "bcard-sub", esc(opts.sub)));
+    a.appendChild(el("div", "bcard-cta", esc(opts.cta) + " →"));
+    return a;
+  }
+  function renderBrowse(body) {
+    var people = ofType("person"), papers = ofType("paper");
+    var books = ofType("book").filter(function (b) { return b.cover; });  // the two volumes (not the book-home link)
+    if (!S.packages.length && !people.length) return;
+    body.appendChild(secHead("", "Browse the ecosystem", "miniatures — open a section to see it all"));
+    var grid = el("div", "browse");
+
+    var pk = S.packages.slice(0, 5);
+    grid.appendChild(browseCard({
+      route: "packages", label: "Packages", count: S.packages.length,
+      miniClass: "row-logos", minis: pk.map(miniLogo), extra: S.packages.length - pk.length,
+      sub: "R packages for transition, co-occurrence & psychological networks, sequences and bootstrapped validation.",
+      cta: "All packages"
+    }));
+
+    grid.appendChild(browseCard({
+      route: "chapters", label: "Books", count: books.length,
+      miniClass: "row-covers", minis: books.map(miniCover), extra: 0,
+      sub: "Two open-access volumes of Learning Analytics Methods — read online, with code, chapter by chapter.",
+      cta: "All chapters"
+    }));
+
+    var pp = papers.slice(0, 5);
+    grid.appendChild(browseCard({
+      route: "papers", label: "Papers", count: papers.length,
+      miniClass: "row-docs", minis: pp.map(miniDoc), extra: papers.length - pp.length,
+      sub: "The foundational and applied papers behind the framework — TNA, FTNA, ATNA, HTNA and the human–AI studies.",
+      cta: "All papers"
+    }));
+
+    var pe = people.slice(0, 4);
+    grid.appendChild(browseCard({
+      route: "people", label: "People", count: people.length,
+      miniClass: "row-faces", minis: pe.map(miniFace), extra: people.length - pe.length,
+      sub: "The researchers who build and maintain the Dynalytics toolkit across UEF, Hagen and Melbourne.",
+      cta: "Meet the team"
+    }));
+
+    body.appendChild(grid);
   }
 
   function renderAbout(body) {
@@ -140,8 +219,10 @@
       return '<div class="pt"><div class="ph">' + esc(p.h) + '</div><div class="pb">' + esc(p.t) + "</div></div>";
     }).join("");
     box.innerHTML =
-      "<h2>" + esc(a.title) + "</h2>" +
-      '<div class="atag">' + esc(a.tagline || "") + "</div>" +
+      '<figure class="layers-fig" tabindex="0" role="button" aria-label="Enlarge the Dynalytics layers diagram">' +
+        '<img src="assets/dynalytics-layers.png" alt="Overview of Dynalytics’ layers" loading="lazy">' +
+        '<figcaption>Overview of Dynalytics’ layers<span class="zoom">⤢</span></figcaption>' +
+      "</figure>" +
       '<p class="lead">' + esc(a.lead || "") + "</p>" +
       (a.more ? '<p class="amore">' + esc(a.more) + "</p>" : "") +
       '<div class="points">' + pts + "</div>" +
@@ -151,6 +232,26 @@
         (a.paper ? '<a class="paper-btn" href="' + esc(a.paper.href) + '" target="_blank" rel="noopener">' + esc(a.paper.label) + " →</a>" : "") +
       "</div>";
     body.appendChild(box);
+    var fig = box.querySelector(".layers-fig");
+    if (fig) {
+      var open = function () { openLightbox("assets/dynalytics-layers.png", "Overview of Dynalytics’ layers"); };
+      fig.addEventListener("click", open);
+      fig.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
+    }
+  }
+
+  // full-screen image overlay; closes on click or Esc
+  function openLightbox(src, caption) {
+    var ov = el("div", "lightbox");
+    ov.innerHTML =
+      '<button class="lb-close" aria-label="Close">×</button>' +
+      "<figure><img src=\"" + esc(src) + "\" alt=\"" + esc(caption) + "\"><figcaption>" + esc(caption) + "</figcaption></figure>";
+    function close() { document.removeEventListener("keydown", onKey); ov.remove(); }
+    function onKey(e) { if (e.key === "Escape") close(); }
+    ov.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+    document.body.appendChild(ov);
+    requestAnimationFrame(function () { ov.classList.add("show"); });
   }
 
   function renderMap(body) {

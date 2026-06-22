@@ -325,6 +325,19 @@ const toolEntries = (src.tools || []).map((t) => ({
   status: "UNVERIFIED", last_checked: null
 }));
 
+// --- books (one entry per volume; cover from lamethods.org) ---
+const bookEntries = (src.book_volumes || []).map((v) => {
+  const links = { read: v.base };
+  if (v.code_repo) links.code = `https://github.com/${v.code_repo}`;
+  return {
+    id: `book::${v.id}`, type: "book", title: v.title, blurb: v.blurb,
+    cover: v.cover || null, url: v.base, links,
+    chapters: chapterEntries.filter((c) => c.volume === v.title).length,
+    owner: "saqr/lopez-pernas", tags: ["book", "lamethods", v.id],
+    status: "UNVERIFIED", last_checked: null
+  };
+});
+
 const peopleEntries = (src.people || []).map((p) => ({
   id: `person::${p.id}`, type: "person", title: p.name, name: p.name,
   role: p.role, affiliation: p.affiliation, blurb: p.blurb,
@@ -334,7 +347,7 @@ const peopleEntries = (src.people || []).map((p) => ({
 
 const extraEntries = (src.extra_links || []).map((e) => ({ ...e, links: { link: e.url }, status: "UNVERIFIED", last_checked: null }));
 
-const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...peopleEntries, ...extraEntries];
+const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...bookEntries, ...peopleEntries, ...extraEntries];
 const count = (t) => entries.filter((e) => e.type === t).length;
 const catalog = {
   generated_at: today,
