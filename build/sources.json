@@ -14,6 +14,14 @@
       "label": "Read the paper",
       "href": "https://doi.org/10.2139/ssrn.6832584"
     },
+    "newsletter": {
+      "heading": "Get Dynalytics updates",
+      "blurb": "New packages, releases, papers, and tutorials — occasional, no spam.",
+      "cta": "Subscribe",
+      "note": "We'll only email about the ecosystem catalogued here.",
+      "form": null,
+      "email": "hamada@saqr.me"
+    },
     "pipeline": [
       "Data ingestion",
       "Estimation",
@@ -136,6 +144,50 @@
       "venue": "arXiv preprint",
       "url": "https://arxiv.org/abs/2508.10919",
       "blurb": "A critical examination of human–AI collaboration and the 'instruct, serve, repeat' dynamic."
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-06-21",
+      "tag": "Paper",
+      "title": "The Dynalytics framework paper is out",
+      "blurb": "The preprint introducing Dynalytics — its family of models, the confirmatory testing battery, and the scientific-contract philosophy — is now available on SSRN.",
+      "url": "https://doi.org/10.2139/ssrn.6832584"
+    },
+    {
+      "date": "2026-02-01",
+      "tag": "Paper",
+      "title": "Cognitive offloading in student–AI collaboration",
+      "blurb": "A longitudinal analysis of prompting strategies and cognitive offloading in student–AI collaboration, published in Computers in Human Behavior Reports.",
+      "url": "https://doi.org/10.1016/j.chbr.2026.101130"
+    },
+    {
+      "date": "2026-01-10",
+      "tag": "Software",
+      "title": "JTNA brings Transition Network Analysis to jamovi",
+      "blurb": "A point-and-click desktop module puts the full TNA workflow — build, plot, and statistically test transition networks — in the hands of non-programmers.",
+      "url": "https://sonsoles.me/extra/JTNA.html"
+    },
+    {
+      "date": "2025-09-15",
+      "tag": "Funding",
+      "title": "CRETIC funded by the Research Council of Finland",
+      "blurb": "A new project on optimising clinical reasoning in time-critical scenarios, using learning-analytics methods from the ecosystem.",
+      "url": "https://sonsoles.me/posts/cretic/index.html"
+    },
+    {
+      "date": "2025-06-10",
+      "tag": "Funding",
+      "title": "ISILA and IGLUE: two new Erasmus+ projects",
+      "blurb": "Erasmus+ funding for early-intervention learning analytics (ISILA) and game-based escape-room learning (IGLUE).",
+      "url": "https://sonsoles.me/posts/isila/index.html"
+    },
+    {
+      "date": "2025-03-30",
+      "tag": "Paper",
+      "title": "Transition Network Analysis introduced at LAK ’25",
+      "blurb": "The foundational TNA paper — a framework for modelling, visualising, and identifying the temporal patterns of learners and learning processes.",
+      "url": "https://doi.org/10.1145/3706468.3706513"
     }
   ],
   "tools": [

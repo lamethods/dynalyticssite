@@ -338,6 +338,14 @@ const bookEntries = (src.book_volumes || []).map((v) => {
   };
 });
 
+// --- news (curated; verified like any other entry via its url) ---
+const newsEntries = (src.news || []).map((n, i) => ({
+  id: `news::${i + 1}`, type: "news", date: n.date, tag: n.tag || null,
+  title: n.title, blurb: n.blurb, url: n.url, links: { read: n.url },
+  tags: ["news", ...(n.tag ? [n.tag.toLowerCase()] : [])],
+  status: "UNVERIFIED", last_checked: null
+}));
+
 const peopleEntries = (src.people || []).map((p) => ({
   id: `person::${p.id}`, type: "person", title: p.name, name: p.name,
   role: p.role, affiliation: p.affiliation, blurb: p.blurb,
@@ -347,12 +355,12 @@ const peopleEntries = (src.people || []).map((p) => ({
 
 const extraEntries = (src.extra_links || []).map((e) => ({ ...e, links: { link: e.url }, status: "UNVERIFIED", last_checked: null }));
 
-const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...bookEntries, ...peopleEntries, ...extraEntries];
+const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...bookEntries, ...newsEntries, ...peopleEntries, ...extraEntries];
 const count = (t) => entries.filter((e) => e.type === t).length;
 const catalog = {
   generated_at: today,
   about: src.about,
-  counts: { total: entries.length, packages: count("package"), vignettes: count("vignette"), posts: count("post"), chapters: count("chapter") },
+  counts: { total: entries.length, packages: count("package"), vignettes: count("vignette"), posts: count("post"), chapters: count("chapter"), news: count("news") },
   entries
 };
 

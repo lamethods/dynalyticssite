@@ -8,11 +8,12 @@
   var SOURCE_LABEL = { "saqr.me": "saqr.me", "sonsoles.me": "sonsoles.me" };
   var NAV = [
     { route: "", label: "Overview" },
+    { route: "people", label: "People" },
     { route: "packages", label: "Packages" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
     { route: "papers", label: "Papers" },
-    { route: "people", label: "People" }
+    { route: "news", label: "News" }
   ];
 
   var S = { all: [], byId: {}, packages: [], about: null };
@@ -23,6 +24,9 @@
   function by(type, id) { return S.all.filter(function (e) { return e.type === type && pkgsOf(e).indexOf(id) >= 0; }); }
   function ofType(t) { return S.all.filter(function (e) { return e.type === t; }); }
   function subtitleOf(p) { var t = p.title || ""; var i = t.indexOf("—"); return i >= 0 ? t.slice(i + 1).trim() : (p.blurb || ""); }
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function fmtDate(d) { var m = String(d || "").match(/^(\d{4})-(\d{2})/); return m ? MONTHS[(+m[2]) - 1] + " " + m[1] : (d || ""); }
+  function newsSorted() { return ofType("news").slice().sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); }); }
   function monogram(id) { var m = (id || "?").replace(/[^a-z0-9]/gi, ""); return esc((m.slice(0, 1) || "?").toUpperCase()); }
   function makeIcon(p) {
     var ico = el("div", "pkg-ico");
@@ -84,6 +88,7 @@
     else if (r === "tools") renderTools(view);
     else if (r === "chapters") renderChapters(view);
     else if (r === "papers") renderPapers(view);
+    else if (r === "news") renderNews(view);
     else if (r === "people") renderPeople(view);
     else renderOverview(view);
   }
@@ -133,6 +138,7 @@
     renderAbout(body);
     renderMap(body);
     renderBrowse(body);
+    body.appendChild(newsletterBlock());
     view.appendChild(body);
   }
 
@@ -154,6 +160,13 @@
     return d;
   }
   function miniDoc() { return el("div", "mini-doc", '<i></i><i></i><i class="s"></i>'); }
+  function miniNews(n) {
+    var d = el("div", "mini-news");
+    d.appendChild(el("span", "mini-news-tag", esc(n.tag || "News")));
+    d.appendChild(el("span", "mini-news-date", esc(fmtDate(n.date))));
+    return d;
+  }
+  function miniTool(t) { return el("div", "mini-tool", esc(t.kind || "Tool")); }
   function miniCover(b) {
     var d = el("div", "mini-cover");
     if (b.cover) { var img = el("img"); img.src = b.cover; img.alt = b.title; img.loading = "lazy"; img.onerror = function () { d.style.display = "none"; }; d.appendChild(img); }
@@ -174,11 +187,19 @@
     return a;
   }
   function renderBrowse(body) {
-    var people = ofType("person"), papers = ofType("paper");
+    var people = ofType("person"), papers = ofType("paper"), tools = ofType("tool");
     var books = ofType("book").filter(function (b) { return b.cover; });  // the two volumes (not the book-home link)
     if (!S.packages.length && !people.length) return;
     body.appendChild(secHead("", "Browse the ecosystem", "miniatures — open a section to see it all"));
     var grid = el("div", "browse");
+
+    var pe = people.slice(0, 4);
+    grid.appendChild(browseCard({
+      route: "people", label: "People", count: people.length,
+      miniClass: "row-faces", minis: pe.map(miniFace), extra: people.length - pe.length,
+      sub: "The researchers who build and maintain the Dynalytics toolkit across UEF, Hagen and Melbourne.",
+      cta: "Meet the team"
+    }));
 
     var pk = S.packages.slice(0, 5);
     grid.appendChild(browseCard({
@@ -186,6 +207,13 @@
       miniClass: "row-logos", minis: pk.map(miniLogo), extra: S.packages.length - pk.length,
       sub: "R packages for transition, co-occurrence & psychological networks, sequences and bootstrapped validation.",
       cta: "All packages"
+    }));
+
+    grid.appendChild(browseCard({
+      route: "tools", label: "Tools", count: tools.length,
+      miniClass: "row-tools", minis: tools.slice(0, 5).map(miniTool), extra: Math.max(0, tools.length - 5),
+      sub: "Beyond R — point-and-click jamovi (JTNA), a Python port (tnapy), and browser-based Shiny apps.",
+      cta: "All tools"
     }));
 
     grid.appendChild(browseCard({
@@ -203,13 +231,16 @@
       cta: "All papers"
     }));
 
-    var pe = people.slice(0, 4);
-    grid.appendChild(browseCard({
-      route: "people", label: "People", count: people.length,
-      miniClass: "row-faces", minis: pe.map(miniFace), extra: people.length - pe.length,
-      sub: "The researchers who build and maintain the Dynalytics toolkit across UEF, Hagen and Melbourne.",
-      cta: "Meet the team"
-    }));
+    var news = newsSorted();
+    if (news.length) {
+      var nn = news.slice(0, 3);
+      grid.appendChild(browseCard({
+        route: "news", label: "News", count: news.length,
+        miniClass: "row-news", minis: nn.map(miniNews), extra: news.length - nn.length,
+        sub: "Releases, papers, funding and events from across the Dynalytics ecosystem.",
+        cta: "All news"
+      }));
+    }
 
     body.appendChild(grid);
   }
@@ -375,6 +406,56 @@
       l.appendChild(linkItem(kick, e.title, e.blurb, e.url, "Read →"));
     });
     view.appendChild(l);
+  }
+
+  function renderNews(view) {
+    view.innerHTML = "";
+    var news = newsSorted();
+    view.appendChild(secHead("", "News", news.length + " updates — releases, papers, funding & events"));
+    if (news.length) {
+      var l = el("div", "news");
+      news.forEach(function (e) {
+        var a = el("a", "news-item"); a.href = e.url; a.target = "_blank"; a.rel = "noopener";
+        a.innerHTML =
+          '<div class="news-when"><span class="news-date">' + esc(fmtDate(e.date)) + "</span>" +
+            (e.tag ? '<span class="news-tag">' + esc(e.tag) + "</span>" : "") + "</div>" +
+          '<div class="news-main"><div class="news-title">' + esc(e.title) + "</div>" +
+            (e.blurb ? '<div class="news-blurb">' + esc(e.blurb) + "</div>" : "") + "</div>" +
+          '<div class="news-go">↗</div>';
+        l.appendChild(a);
+      });
+      view.appendChild(l);
+    } else {
+      view.appendChild(el("div", "empty", "No news yet — check back soon."));
+    }
+    view.appendChild(newsletterBlock());
+  }
+
+  // newsletter signup — static site, so hands off to a Google Form (when set) or mailto.
+  function newsletterBlock() {
+    var n = (S.about && S.about.newsletter) || {};
+    var box = el("div", "newsletter");
+    var txt = el("div", "nl-text");
+    txt.appendChild(el("div", "nl-head", esc(n.heading || "Get updates")));
+    if (n.blurb) txt.appendChild(el("div", "nl-sub", esc(n.blurb)));
+    box.appendChild(txt);
+
+    var form = el("form", "nl-form");
+    form.innerHTML =
+      '<input class="nl-input" type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>' +
+      '<button class="nl-btn" type="submit">' + esc(n.cta || "Subscribe") + " →</button>";
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      if (n.form) { window.open(n.form, "_blank", "noopener"); return; }
+      var input = form.querySelector(".nl-input");
+      var email = (input && input.value || "").trim();
+      var subject = encodeURIComponent("Subscribe to Dynalytics updates");
+      var bodyText = encodeURIComponent("Please add me to the Dynalytics updates list" + (email ? ": " + email : "") + ".");
+      window.location.href = "mailto:" + esc(n.email || "") + "?subject=" + subject + "&body=" + bodyText;
+    });
+    box.appendChild(form);
+    if (n.note) box.appendChild(el("div", "nl-note", esc(n.note)));
+    return box;
   }
 
   /* ---------- package dossier ---------- */
