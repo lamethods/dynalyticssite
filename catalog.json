@@ -38,7 +38,7 @@
     "citation": "Saqr, M., López-Pernas, S., & Misiejuk, K. (2026). Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems. Preprint."
   },
   "counts": {
-    "total": 133,
+    "total": 139,
     "packages": 14,
     "vignettes": 42,
     "posts": 19,
@@ -1763,7 +1763,7 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-06-21"
     },
     {
@@ -2733,29 +2733,29 @@
       "id": "paper::1",
       "type": "paper",
       "title": "Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems",
-      "blurb": "Introduces the Dynalytics framework — its family of models, the multi-level confirmatory testing battery, and the scientific-contract philosophy that ties the whole ecosystem together.",
-      "url": "papers/dynalytics-2026.pdf",
+      "blurb": "Introduces the Dynalytics framework — a family of models, a multi-level confirmatory testing battery, and the scientific-contract philosophy that ties the ecosystem together.",
+      "url": "https://doi.org/10.2139/ssrn.6832584",
       "links": {
-        "paper": "papers/dynalytics-2026.pdf"
+        "paper": "https://doi.org/10.2139/ssrn.6832584"
       },
       "authors": "Saqr, López-Pernas & Misiejuk",
       "year": "2026",
-      "venue": "Preprint",
-      "status": "LOCAL",
+      "venue": "SSRN preprint",
+      "status": "VERIFIED",
       "last_checked": "2026-06-21"
     },
     {
       "id": "paper::2",
       "type": "paper",
       "title": "Transition Network Analysis: A Novel Framework for Modeling, Visualizing, and Identifying the Temporal Patterns of Learners and Learning Processes",
-      "blurb": "The foundational TNA paper — introduces the framework for modelling, visualising, and identifying temporal patterns in learning processes.",
+      "blurb": "The canonical, foundational TNA paper — introduces the framework for modelling, visualising, and identifying the temporal patterns of learners and learning processes.",
       "url": "https://doi.org/10.1145/3706468.3706513",
       "links": {
         "paper": "https://doi.org/10.1145/3706468.3706513"
       },
       "authors": "Saqr, López-Pernas, Törmänen, Kaliisa, Misiejuk & Tikka",
       "year": "2025",
-      "venue": "LAK ’25 · ACM",
+      "venue": "LAK ’25 · ACM (pp. 351–361)",
       "status": "VERIFIED",
       "last_checked": "2026-06-21"
     },
@@ -2770,52 +2770,142 @@
       },
       "authors": "Tikka, López-Pernas & Saqr",
       "year": "2025",
-      "venue": "Applied Psychological Measurement",
+      "venue": "Applied Psychological Measurement (pp. 326–328)",
       "status": "VERIFIED",
       "last_checked": "2026-06-21"
     },
     {
       "id": "paper::4",
       "type": "paper",
-      "title": "Mapping Relational Dynamics with Transition Network Analysis: A Primer and Tutorial",
-      "blurb": "A book-chapter primer that models transitions between events as a weighted directed network to capture temporal dynamics and relational patterns in learning.",
-      "url": "https://lamethods.org/book2/chapters/ch15-tna/ch15-tna.html",
+      "title": "Capturing the Process of Students' AI Interactions When Creating and Learning Complex Network Structures",
+      "blurb": "Captures the process of students' AI interactions while creating and learning complex network structures.",
+      "url": "https://doi.org/10.1109/TLT.2025.3568599",
       "links": {
-        "paper": "https://lamethods.org/book2/chapters/ch15-tna/ch15-tna.html"
+        "paper": "https://doi.org/10.1109/TLT.2025.3568599"
       },
-      "authors": "Saqr, López-Pernas & Tikka",
+      "authors": "López-Pernas, Misiejuk, Kaliisa & Saqr",
       "year": "2025",
-      "venue": "Advanced Learning Analytics Methods · Springer",
+      "venue": "IEEE Transactions on Learning Technologies",
       "status": "VERIFIED",
       "last_checked": "2026-06-21"
     },
     {
       "id": "paper::5",
       "type": "paper",
-      "title": "Capturing the Breadth and Dynamics of Temporal Processes with Frequency Transition Network Analysis: A Primer and Tutorial",
-      "blurb": "Companion chapter on Frequency Transition Network Analysis (FTNA) — models transition frequencies directly, without Markov assumptions.",
-      "url": "https://lamethods.org/book2/chapters/ch16-ftna/ch16-ftna.html",
+      "title": "The Dynamics of the Self-Regulation Process in Student-AI Interactions: The Case of Problem-Solving in Programming Education",
+      "blurb": "Models the dynamics of self-regulation in student–AI interactions during programming problem-solving.",
+      "url": "https://doi.org/10.1145/3769994.3770043",
       "links": {
-        "paper": "https://lamethods.org/book2/chapters/ch16-ftna/ch16-ftna.html"
+        "paper": "https://doi.org/10.1145/3769994.3770043"
       },
-      "authors": "Saqr, López-Pernas & Tikka",
+      "authors": "López-Pernas, Misiejuk, Oliveira & Saqr",
       "year": "2025",
-      "venue": "Advanced Learning Analytics Methods · Springer",
+      "venue": "Koli Calling ’25 · ACM",
       "status": "VERIFIED",
       "last_checked": "2026-06-21"
     },
     {
       "id": "paper::6",
       "type": "paper",
-      "title": "Mining Patterns and Clusters with Transition Network Analysis: A Heterogeneity Approach",
-      "blurb": "Uses mixture Markov models to identify subgroups with distinct transition patterns.",
-      "url": "https://lamethods.org/book2/chapters/ch17-tna-clusters/ch17-tna-clusters.html",
+      "title": "Cognitive Offloading in Student–AI Collaboration: A Longitudinal Analysis of Prompting Strategies",
+      "blurb": "A longitudinal analysis of prompting strategies and cognitive offloading in student–AI collaboration.",
+      "url": "https://doi.org/10.1016/j.chbr.2026.101130",
       "links": {
-        "paper": "https://lamethods.org/book2/chapters/ch17-tna-clusters/ch17-tna-clusters.html"
+        "paper": "https://doi.org/10.1016/j.chbr.2026.101130"
       },
-      "authors": "López-Pernas, Tikka & Saqr",
+      "authors": "Misiejuk, López-Pernas, Kaliisa & Saqr",
+      "year": "2026",
+      "venue": "Computers in Human Behavior Reports",
+      "status": "VERIFIED",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "paper::7",
+      "type": "paper",
+      "title": "Frequency Transition Network Analysis (FTNA)",
+      "blurb": "Introduces Frequency Transition Network Analysis (FTNA) — modelling observed transition frequencies directly, without Markov assumptions.",
+      "url": "https://doi.org/10.22318/cscl2025.901997",
+      "links": {
+        "paper": "https://doi.org/10.22318/cscl2025.901997"
+      },
+      "authors": "Saqr, Misiejuk, Törmänen, Kaliisa, Tikka & López-Pernas",
       "year": "2025",
-      "venue": "Advanced Learning Analytics Methods · Springer",
+      "venue": "CSCL 2025 · ISLS (pp. 276–280)",
+      "status": "VERIFIED",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "paper::8",
+      "type": "paper",
+      "title": "JTNA: A Desktop Software for Transition Network Analysis",
+      "blurb": "A point-and-click desktop (jamovi) software bringing Transition Network Analysis to non-programmers.",
+      "url": "https://sonsoles.me/extra/JTNA.html",
+      "links": {
+        "paper": "https://sonsoles.me/extra/JTNA.html"
+      },
+      "authors": "López-Pernas, Girault, Tikka & Saqr",
+      "year": "2026",
+      "venue": "ICSLE 2025",
+      "status": "VERIFIED",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "paper::9",
+      "type": "paper",
+      "title": "Expanding the Quantitative Ethnography Toolkit with Transition Network Analysis: Exploring Methodological Synergies and Boundaries",
+      "blurb": "Brings Transition Network Analysis into the Quantitative Ethnography toolkit — methodological synergies and boundaries.",
+      "url": "https://doi.org/10.1007/978-3-032-12229-2_10",
+      "links": {
+        "paper": "https://doi.org/10.1007/978-3-032-12229-2_10"
+      },
+      "authors": "Misiejuk, Kaliisa, López-Pernas & Saqr",
+      "year": "2025",
+      "venue": "ICQE 2025 · Springer (pp. 147–161)",
+      "status": "VERIFIED",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "paper::10",
+      "type": "paper",
+      "title": "Role Dynamics in Student-AI Collaboration: A Heterogeneous Transition Network Analysis Approach",
+      "blurb": "Uses heterogeneous TNA to model role dynamics in student–AI collaboration.",
+      "url": "https://doi.org/10.2139/ssrn.6082190",
+      "links": {
+        "paper": "https://doi.org/10.2139/ssrn.6082190"
+      },
+      "authors": "López-Pernas, Misiejuk, Tikka & Saqr",
+      "year": "2025",
+      "venue": "SSRN preprint",
+      "status": "VERIFIED",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "paper::11",
+      "type": "paper",
+      "title": "Modeling the Dynamics and Impact of Human-AI Interactions with Attention Transition Network Analysis",
+      "blurb": "Applies Attention Transition Network Analysis (ATNA) to the dynamics and impact of human–AI interactions.",
+      "url": "https://doi.org/10.2139/ssrn.6187958",
+      "links": {
+        "paper": "https://doi.org/10.2139/ssrn.6187958"
+      },
+      "authors": "López-Pernas, Tikka, Misiejuk, Oliveira & Saqr",
+      "year": "2025",
+      "venue": "SSRN preprint",
+      "status": "VERIFIED",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "paper::12",
+      "type": "paper",
+      "title": "Human-AI Collaboration or Obedient and Often Clueless AI in Instruct, Serve, Repeat Dynamics?",
+      "blurb": "A critical examination of human–AI collaboration and the 'instruct, serve, repeat' dynamic.",
+      "url": "https://arxiv.org/abs/2508.10919",
+      "links": {
+        "paper": "https://arxiv.org/abs/2508.10919"
+      },
+      "authors": "Saqr, Misiejuk & López-Pernas",
+      "year": "2025",
+      "venue": "arXiv preprint",
       "status": "VERIFIED",
       "last_checked": "2026-06-21"
     },
@@ -2976,8 +3066,8 @@
   ],
   "verified_at": "2026-06-21",
   "link_summary": {
-    "verified": 161,
-    "redirect": 62,
+    "verified": 173,
+    "redirect": 56,
     "broken": 0
   }
 }
