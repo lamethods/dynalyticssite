@@ -12,7 +12,7 @@
     "closing": "The conceptual groundwork applies to any network or process derived from observed interactions, sequences, or co-occurrence: social, behavioural, cognitive. Its value is not a single technique but a unified theoretical and methodological language for describing change and stability in any dynamic system.",
     "paper": {
       "label": "Read the paper",
-      "href": "papers/dynalytics-2026.pdf"
+      "href": "https://doi.org/10.2139/ssrn.6832584"
     },
     "pipeline": [
       "Data ingestion",
@@ -38,8 +38,7 @@
         "h": "An open software ecosystem",
         "t": "Implemented across open-source R, Python, and JavaScript libraries plus web and desktop applications — the packages indexed below."
       }
-    ],
-    "citation": "Saqr, M., López-Pernas, S., & Misiejuk, K. (2026). Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems. Preprint."
+    ]
   },
   "papers": [
     {
