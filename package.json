@@ -8,7 +8,8 @@
     "build": "node build/harvest.mjs",
     "verify": "node build/verify_links.mjs",
     "all": "node build/harvest.mjs && node build/verify_links.mjs",
-    "serve": "python3 -m http.server 8777"
+    "serve": "python3 -m http.server 8777",
+    "studio": "node server.mjs"
   },
   "engines": { "node": ">=18" }
 }

@@ -8,6 +8,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { dirname, resolve, join, basename } from "node:path";
 import { fileURLToPath } from "node:url";
+import { paperEntries as buildPapers, toolEntries as buildTools, newsEntries as buildNews, peopleEntries as buildPeople } from "./curated.mjs";
 
 const BUILD = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(BUILD, "..");
@@ -314,16 +315,9 @@ const packageEntries = pkgArrays.flat();
 
 const chapterEntries = (await Promise.all(src.book_volumes.map(buildVolume))).flat();
 
-const paperEntries = (src.papers || []).map((p, i) => ({
-  id: `paper::${i + 1}`, type: "paper", title: p.title, blurb: p.blurb, url: p.url, links: { paper: p.url },
-  authors: p.authors, year: p.year, venue: p.venue, status: "UNVERIFIED", last_checked: null
-}));
+const paperEntries = buildPapers(src.papers);
 
-const toolEntries = (src.tools || []).map((t) => ({
-  id: `tool::${t.id}`, type: "tool", kind: t.kind, title: t.title, blurb: t.blurb,
-  url: t.url, links: t.links, owner: t.owner ?? null, tags: t.tags,
-  status: "UNVERIFIED", last_checked: null
-}));
+const toolEntries = buildTools(src.tools);
 
 // --- books (one entry per volume; cover from lamethods.org) ---
 const bookEntries = (src.book_volumes || []).map((v) => {
@@ -338,20 +332,10 @@ const bookEntries = (src.book_volumes || []).map((v) => {
   };
 });
 
-// --- news (curated; verified like any other entry via its url) ---
-const newsEntries = (src.news || []).map((n, i) => ({
-  id: `news::${i + 1}`, type: "news", date: n.date, tag: n.tag || null,
-  title: n.title, blurb: n.blurb, url: n.url, links: { read: n.url },
-  tags: ["news", ...(n.tag ? [n.tag.toLowerCase()] : [])],
-  status: "UNVERIFIED", last_checked: null
-}));
+// --- news + people (curated; verified like any other entry via its url) ---
+const newsEntries = buildNews(src.news);
 
-const peopleEntries = (src.people || []).map((p) => ({
-  id: `person::${p.id}`, type: "person", title: p.name, name: p.name,
-  role: p.role, affiliation: p.affiliation, blurb: p.blurb,
-  url: p.url, photo: p.photo, links: { site: p.url },
-  status: "UNVERIFIED", last_checked: null
-}));
+const peopleEntries = buildPeople(src.people);
 
 const extraEntries = (src.extra_links || []).map((e) => ({ ...e, links: { link: e.url }, status: "UNVERIFIED", last_checked: null }));
 

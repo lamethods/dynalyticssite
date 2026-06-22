@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynalytics Studio</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="/assets/style.css?v=7" />
+  <link rel="stylesheet" href="/studio/studio.css?v=1" />
+</head>
+<body>
+  <!-- login gate -->
+  <div id="gate" class="gate" hidden>
+    <form id="login" class="gate-card">
+      <div class="gate-brand">Dynalytics <span>Studio</span></div>
+      <p class="gate-sub">Sign in to edit the site.</p>
+      <input id="pw" type="password" placeholder="Editor password" autocomplete="current-password" aria-label="Editor password" />
+      <button type="submit" class="nl-btn">Sign in →</button>
+      <div id="gate-err" class="gate-err" hidden></div>
+    </form>
+  </div>
+
+  <!-- editor -->
+  <div id="app" class="studio" hidden>
+    <header class="st-head">
+      <div class="st-brand">Dynalytics <span>Studio</span></div>
+      <div class="st-meta" id="st-meta"></div>
+      <div class="st-actions">
+        <a class="st-link" href="/" target="_blank" rel="noopener">Preview ↗</a>
+        <button id="reharvest" class="st-ghost" title="Full network re-harvest of packages, chapters & links">Re-harvest</button>
+        <button id="save" class="st-solid">Save</button>
+        <button id="publish" class="st-solid pub">Publish</button>
+        <button id="logout" class="st-ghost">Log out</button>
+      </div>
+    </header>
+
+    <nav class="st-tabs" id="tabs"></nav>
+    <main class="st-body" id="body"></main>
+    <div id="toast" class="st-toast" hidden></div>
+  </div>
+
+  <script src="/studio/studio.js?v=1"></script>
+</body>
+</html>

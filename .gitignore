@@ -12,3 +12,6 @@ node_modules/
 .DS_Store
 *.log
 tmp/
+
+# studio (local editor) — secret/credentials never committed
+.studio-auth.json
