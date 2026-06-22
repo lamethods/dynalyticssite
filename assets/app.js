@@ -11,7 +11,8 @@
     { route: "packages", label: "Packages" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
-    { route: "papers", label: "Papers" }
+    { route: "papers", label: "Papers" },
+    { route: "people", label: "People" }
   ];
 
   var S = { all: [], byId: {}, packages: [], about: null };
@@ -81,6 +82,7 @@
     else if (r === "tools") renderTools(view);
     else if (r === "chapters") renderChapters(view);
     else if (r === "papers") renderPapers(view);
+    else if (r === "people") renderPeople(view);
     else renderOverview(view);
   }
 
@@ -240,6 +242,27 @@
       g.appendChild(list);
       view.appendChild(g);
     });
+  }
+
+  function renderPeople(view) {
+    view.innerHTML = "";
+    view.appendChild(secHead("", "People", "the team behind the toolkit"));
+    var grid = el("div", "people");
+    ofType("person").forEach(function (p) {
+      var card = el("a", "person"); card.href = p.url; card.target = "_blank"; card.rel = "noopener";
+      var ph = el("div", "person-photo");
+      var img = el("img"); img.src = p.photo; img.alt = p.name; img.loading = "lazy";
+      img.onerror = function () { ph.classList.add("mono"); ph.textContent = monogram(p.name); };
+      ph.appendChild(img); card.appendChild(ph);
+      var main = el("div", "person-main");
+      main.innerHTML =
+        '<div class="person-name">' + esc(p.name) + "</div>" +
+        '<div class="person-role">' + esc(p.role) + " · " + esc(p.affiliation) + "</div>" +
+        '<div class="person-blurb">' + esc(p.blurb) + "</div>";
+      card.appendChild(main);
+      grid.appendChild(card);
+    });
+    view.appendChild(grid);
   }
 
   function renderPapers(view) {

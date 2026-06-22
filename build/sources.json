@@ -764,5 +764,43 @@
         "tutorials"
       ]
     }
+  ],
+  "people": [
+    {
+      "id": "saqr",
+      "name": "Mohammed Saqr",
+      "role": "Professor of Learning Analytics and AI",
+      "affiliation": "University of Eastern Finland",
+      "blurb": "Research on precision education, transition network analysis, and complex systems in learning.",
+      "url": "https://saqr.me",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/prof_pic-480-copy.png"
+    },
+    {
+      "id": "lopez-pernas",
+      "name": "Sonsoles López-Pernas",
+      "role": "Academy Research Fellow",
+      "affiliation": "University of Eastern Finland",
+      "blurb": "Learning analytics, sequence and network methods, and reproducible research software.",
+      "url": "https://sonsoles.me",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/headshot.jpg"
+    },
+    {
+      "id": "misiejuk",
+      "name": "Kamila Misiejuk",
+      "role": "Postdoctoral Researcher (CATALPA)",
+      "affiliation": "FernUniversität in Hagen",
+      "blurb": "Studies human–AI collaboration, quantitative ethnography, and learning analytics methods.",
+      "url": "https://kamilamisiejuk.com/",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/kamila-misiejuk-hw_500x600.jpg"
+    },
+    {
+      "id": "oliveira",
+      "name": "Eduardo Oliveira",
+      "role": "Senior Lecturer",
+      "affiliation": "The University of Melbourne",
+      "blurb": "Research on AI in education and learning analytics at the Melbourne School of Education.",
+      "url": "https://www.eduoliveira.com/",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2026/03/image.png"
+    }
   ]
 }

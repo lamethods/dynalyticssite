@@ -325,9 +325,16 @@ const toolEntries = (src.tools || []).map((t) => ({
   status: "UNVERIFIED", last_checked: null
 }));
 
+const peopleEntries = (src.people || []).map((p) => ({
+  id: `person::${p.id}`, type: "person", title: p.name, name: p.name,
+  role: p.role, affiliation: p.affiliation, blurb: p.blurb,
+  url: p.url, photo: p.photo, links: { site: p.url },
+  status: "UNVERIFIED", last_checked: null
+}));
+
 const extraEntries = (src.extra_links || []).map((e) => ({ ...e, links: { link: e.url }, status: "UNVERIFIED", last_checked: null }));
 
-const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...extraEntries];
+const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...peopleEntries, ...extraEntries];
 const count = (t) => entries.filter((e) => e.type === t).length;
 const catalog = {
   generated_at: today,
