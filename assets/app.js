@@ -43,6 +43,8 @@
     var gen = document.getElementById("generated");
     if (gen) gen.textContent = cat.verified_at || cat.generated_at || "";
     buildNav();
+    var logo = document.getElementById("logo");
+    if (logo) logo.addEventListener("click", function () { openLightbox("assets/logo-dynalytics.png", "Dynalytics"); });
     window.addEventListener("hashchange", route);
     route();
   }
