@@ -27,6 +27,12 @@
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   function fmtDate(d) { var m = String(d || "").match(/^(\d{4})-(\d{2})/); return m ? MONTHS[(+m[2]) - 1] + " " + m[1] : (d || ""); }
   function newsSorted() { return ofType("news").slice().sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); }); }
+  function normName(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim(); }
+  var _peopleByName = null;
+  function personByName(name) {
+    if (!_peopleByName) { _peopleByName = {}; ofType("person").forEach(function (p) { _peopleByName[normName(p.name)] = p; }); }
+    return _peopleByName[normName(name)] || null;
+  }
   function monogram(id) { var m = (id || "?").replace(/[^a-z0-9]/gi, ""); return esc((m.slice(0, 1) || "?").toUpperCase()); }
   function makeIcon(p) {
     var ico = el("div", "pkg-ico");
@@ -82,6 +88,8 @@
     window.scrollTo(0, 0);
     var m = h.match(/^pkg\/(.+)$/);
     if (m && S.byId[decodeURIComponent(m[1])]) { setActive(null); renderPackage(view, S.byId[decodeURIComponent(m[1])]); return; }
+    var mp = h.match(/^people\/(.+)$/);
+    if (mp) { setActive("people"); renderPeople(view, decodeURIComponent(mp[1])); return; }
     var r = (h === "" || h === "/") ? "" : h;
     setActive(r);
     if (r === "packages") renderPackages(view);
@@ -376,12 +384,13 @@
     });
   }
 
-  function renderPeople(view) {
+  function renderPeople(view, focusId) {
     view.innerHTML = "";
     view.appendChild(secHead("", "People", "the team behind the toolkit"));
     var grid = el("div", "people");
     ofType("person").forEach(function (p) {
       var card = el("a", "person"); card.href = p.url; card.target = "_blank"; card.rel = "noopener";
+      card.setAttribute("data-id", p.id);
       var ph = el("div", "person-photo");
       var img = el("img"); img.src = p.photo; img.alt = p.name; img.loading = "lazy";
       img.onerror = function () { ph.classList.add("mono"); ph.textContent = monogram(p.name); };
@@ -395,6 +404,14 @@
       grid.appendChild(card);
     });
     view.appendChild(grid);
+    if (focusId) {
+      var target = grid.querySelector('[data-id="' + focusId.replace(/"/g, '\\"') + '"]');
+      if (target) {
+        target.classList.add("focus");
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(function () { target.classList.remove("focus"); }, 2400);
+      }
+    }
   }
 
   function renderPapers(view) {
@@ -472,7 +489,11 @@
     var authors = Array.isArray(p.authors) ? p.authors : [];
     var authorFact = authors.length
       ? '<span class="by">by ' + authors.map(function (a, i) {
-          return '<span class="aut">' + esc(a) + (i < authors.length - 1 ? "," : "") + "</span>";
+          var label = esc(a) + (i < authors.length - 1 ? "," : "");
+          var person = personByName(a);
+          return person
+            ? '<a class="aut" href="#/people/' + encodeURIComponent(person.id) + '">' + label + "</a>"
+            : '<span class="aut">' + label + "</span>";
         }).join(" ") + "</span>"
       : "";
     head.innerHTML =
