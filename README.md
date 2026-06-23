@@ -62,6 +62,22 @@ npm run all       # build + verify
 To **view**, just open `index.html` (the catalog is embedded in `assets/catalog.js`,
 so no server is needed). `npm run serve` starts one if you prefer.
 
+## Updating content
+
+All content lives in `build/sources.json`; the site loads the compiled
+`assets/catalog.js`. Two ways to edit — see **[`docs/UPDATING.md`](docs/UPDATING.md)**
+for the full guide and section schemas:
+
+- **Studio (GUI):** `npm run studio` → http://localhost:8780/studio → edit
+  About / News / People / Papers / Tools → **Save** (compiles locally) →
+  **Publish** (commits + pushes). A local-only editor; nothing is hosted.
+- **By hand:** edit `build/sources.json`, recompile (`npm run all`, or for
+  curated-only edits `regenCurated()` — no network), commit `catalog.json` +
+  `assets/catalog.js`, push.
+
+There's also a Claude Code skill at
+`.claude/skills/update-dynalytics-site/` so an AI agent can do the above.
+
 ## Deploying — dynalytics.lamethods.org
 
 The site is fully static (served from the repo root). To publish on GitHub Pages
