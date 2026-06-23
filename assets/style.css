@@ -242,6 +242,8 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
 .facts > span + span::before { content: "·"; color: var(--line); margin-right: 16px; }
 .facts b { color: var(--fg); }
 .facts .cran b { color: var(--good); }
+.facts .by { color: var(--fg3); font-style: italic; }
+.facts .by .aut { color: var(--fg2); font-style: normal; }
 
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0 4px; }
 .btn { font-family: var(--mono); font-size: 12px; padding: 9px 16px; border: 1px solid var(--fg); color: var(--fg); transition: background .12s, color .12s; }

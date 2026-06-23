@@ -469,15 +469,19 @@
     var verFact = onCran
       ? '<span class="cran">● on CRAN <b>' + esc(p.cran_version || "") + "</b></span>" + (dev ? "<span>dev <b>" + esc(p.version) + "</b></span>" : "")
       : '<span>version <b>' + esc(p.version || "—") + "</b> · not on CRAN</span>";
-    var ok = p.status === "VERIFIED" || p.status === "REDIRECT";
-    var statusFact = '<span><span class="sdot ' + (ok ? "VERIFIED" : (p.status || "LOCAL")) + '"></span>' + (ok ? "links verified" : esc((p.status || "local").toLowerCase())) + "</span>";
+    var authors = Array.isArray(p.authors) ? p.authors : [];
+    var authorFact = authors.length
+      ? '<span class="by">by ' + authors.map(function (a, i) {
+          return '<span class="aut">' + esc(a) + (i < authors.length - 1 ? "," : "") + "</span>";
+        }).join(" ") + "</span>"
+      : "";
     head.innerHTML =
       (p.logo ? '<img class="dlogo" src="' + esc(p.logo) + '" alt="" onerror="this.style.display=\'none\'">' : "") +
       '<div class="kicker">R Package · maintained by ' + esc(p.owner || "") + "</div>" +
       "<h1>" + esc(p.id) + "</h1>" +
       '<div class="subtitle">' + esc(subtitleOf(p)) + "</div>" +
       '<div class="blurb">' + esc(p.blurb || "") + "</div>" +
-      '<div class="facts">' + verFact + statusFact + "</div>";
+      '<div class="facts">' + verFact + authorFact + "</div>";
     view.appendChild(head);
 
     if (p.links && Object.keys(p.links).length) {

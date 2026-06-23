@@ -9,6 +9,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { dirname, resolve, join, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 import { paperEntries as buildPapers, toolEntries as buildTools, newsEntries as buildNews, peopleEntries as buildPeople } from "./curated.mjs";
+import { parseAuthors } from "./authors.mjs";
 
 const BUILD = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(BUILD, "..");
@@ -217,6 +218,7 @@ async function buildPackage(pkg) {
     ...(pkg.logo ? { logo: pkg.logo } : {}),
     ...(pkg.cran ? { cran_version: cranv } : {}),
     version: d.Version || null,
+    authors: parseAuthors(d),
     owner: pkg.owner ?? null, tags: pkg.tags,
     ...(Object.keys(links).length === 0 ? { note: "Local / not yet published publicly" } : {}),
     status: "UNVERIFIED", last_checked: null
