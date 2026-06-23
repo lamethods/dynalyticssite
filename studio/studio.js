@@ -29,10 +29,12 @@
       { key: "blurb", type: "textarea", label: "Blurb" },
       { key: "cta", type: "text", label: "Button label" },
       { key: "note", type: "text", label: "Small note" },
-      { key: "action", type: "text", label: "EmailOctopus form action URL (.../members/embedded/.../add)" },
-      { key: "success", type: "text", label: "Success message (after subscribing)" },
-      { key: "form", type: "text", label: "Hosted form URL (used only if action is blank)" },
-      { key: "email", type: "text", label: "Fallback email (used only if both blank)" }
+      { key: "widget", type: "text", label: "EmailOctopus widget script URL (eomail*.com/form/ID.js)" },
+      { key: "widgetId", type: "text", label: "EmailOctopus form ID (data-form)" },
+      { key: "action", type: "text", label: "Inline form action URL (advanced; used if no widget)" },
+      { key: "success", type: "text", label: "Success message (inline mode only)" },
+      { key: "form", type: "text", label: "Hosted form URL (used only if widget + action blank)" },
+      { key: "email", type: "text", label: "Fallback email (used only if all blank)" }
     ] },
     { key: "points", type: "list", label: "Key points", singular: "point", item: [
       { key: "h", type: "text", label: "Heading" },

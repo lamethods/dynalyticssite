@@ -17,6 +17,8 @@
       "cta": "Subscribe",
       "note": "We'll only email about the ecosystem catalogued here. Unsubscribe anytime.",
       "provider": "emailoctopus",
+      "widget": "https://eomail5.com/form/93cb8f28-6f22-11f1-b685-870cf8a4b27e.js",
+      "widgetId": "93cb8f28-6f22-11f1-b685-870cf8a4b27e",
       "action": "",
       "success": "Thanks — please check your inbox to confirm your subscription.",
       "form": null,

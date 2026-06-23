@@ -552,6 +552,21 @@
   function newsletterBlock() {
     var n = (S.about && S.about.newsletter) || {};
     var box = el("div", "newsletter");
+    // EmailOctopus embeds via an async <script> widget that renders its own
+    // self-contained, titled card. Mount it standalone (its title/subtitle/button
+    // are edited in the EmailOctopus form designer) so we don't duplicate headings.
+    // The script must be a real element — innerHTML <script> doesn't execute.
+    if (n.widget) {
+      box.classList.add("has-embed");
+      var mount = el("div", "nl-embed");
+      var s = document.createElement("script");
+      s.async = true; s.src = n.widget;
+      if (n.widgetId) s.setAttribute("data-form", n.widgetId);
+      mount.appendChild(s);
+      box.appendChild(mount);
+      return box;
+    }
+
     var txt = el("div", "nl-text");
     txt.appendChild(el("div", "nl-head", esc(n.heading || "Get updates")));
     if (n.blurb) txt.appendChild(el("div", "nl-sub", esc(n.blurb)));
