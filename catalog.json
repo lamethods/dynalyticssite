@@ -2965,15 +2965,15 @@
       "type": "paper",
       "title": "Human-AI Collaboration or Obedient and Often Clueless AI in Instruct, Serve, Repeat Dynamics?",
       "blurb": "A critical examination of human–AI collaboration and the 'instruct, serve, repeat' dynamic.",
-      "url": "https://arxiv.org/abs/2508.10919",
+      "url": "https://doi.org/10.1016/j.iheduc.2026.101087",
       "links": {
-        "paper": "https://arxiv.org/abs/2508.10919"
+        "paper": "https://doi.org/10.1016/j.iheduc.2026.101087"
       },
       "authors": "Saqr, Misiejuk & López-Pernas",
-      "year": "2025",
-      "venue": "arXiv preprint",
-      "status": "VERIFIED",
-      "last_checked": "2026-06-23"
+      "year": "2026",
+      "venue": "The Internet and Higher Education, 70, 101087",
+      "status": "UNVERIFIED",
+      "last_checked": null
     },
     {
       "id": "tool::tnapy",
@@ -3053,48 +3053,6 @@
         "no-code"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-06-23"
-    },
-    {
-      "id": "book::book1",
-      "type": "book",
-      "title": "Vol 1 — LA Methods & Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
-      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
-      "url": "https://lamethods.github.io/book1/",
-      "links": {
-        "read": "https://lamethods.github.io/book1/",
-        "code": "https://github.com/lamethods/code"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book1"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-06-23"
-    },
-    {
-      "id": "book::book2",
-      "type": "book",
-      "title": "Vol 2 — Advanced LA Methods",
-      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
-      "cover": "https://lamethods.org/book2/cover2.jpg",
-      "url": "https://lamethods.github.io/book2/",
-      "links": {
-        "read": "https://lamethods.github.io/book2/",
-        "code": "https://github.com/lamethods/code2"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book2"
-      ],
-      "status": "REDIRECT",
       "last_checked": "2026-06-23"
     },
     {
@@ -3260,13 +3218,55 @@
       "name": "Eduardo Oliveira",
       "role": "Senior Lecturer",
       "affiliation": "The University of Melbourne",
-      "blurb": "Research on AI in education and learning analytics at the Melbourne School of Education.",
+      "blurb": "Research on AI in education, learning analytics and natural language processing.",
       "url": "https://www.eduoliveira.com/",
       "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2026/03/image.png",
       "links": {
         "site": "https://www.eduoliveira.com/"
       },
       "status": "VERIFIED",
+      "last_checked": "2026-06-23"
+    },
+    {
+      "id": "book::book1",
+      "type": "book",
+      "title": "Vol 1 — LA Methods & Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
+      "url": "https://lamethods.github.io/book1/",
+      "links": {
+        "read": "https://lamethods.github.io/book1/",
+        "code": "https://github.com/lamethods/code"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book1"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-23"
+    },
+    {
+      "id": "book::book2",
+      "type": "book",
+      "title": "Vol 2 — Advanced LA Methods",
+      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "cover": "https://lamethods.org/book2/cover2.jpg",
+      "url": "https://lamethods.github.io/book2/",
+      "links": {
+        "read": "https://lamethods.github.io/book2/",
+        "code": "https://github.com/lamethods/code2"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book2"
+      ],
+      "status": "REDIRECT",
       "last_checked": "2026-06-23"
     },
     {

@@ -205,7 +205,7 @@
     grid.appendChild(browseCard({
       route: "people", label: "People", count: people.length,
       miniClass: "row-faces", minis: pe.map(miniFace), extra: people.length - pe.length,
-      sub: "The researchers who build and maintain the Dynalytics toolkit across UEF, Hagen and Melbourne.",
+      sub: "The researchers who build and maintain the Dynalytics toolkit across University of Eastern Finland, FernUniversität in Hagen, and University of Melbourne.",
       cta: "Meet the team"
     }));
 

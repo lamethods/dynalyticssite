@@ -140,9 +140,9 @@
     {
       "title": "Human-AI Collaboration or Obedient and Often Clueless AI in Instruct, Serve, Repeat Dynamics?",
       "authors": "Saqr, Misiejuk & López-Pernas",
-      "year": "2025",
-      "venue": "arXiv preprint",
-      "url": "https://arxiv.org/abs/2508.10919",
+      "year": "2026",
+      "venue": "The Internet and Higher Education, 70, 101087",
+      "url": "https://doi.org/10.1016/j.iheduc.2026.101087",
       "blurb": "A critical examination of human–AI collaboration and the 'instruct, serve, repeat' dynamic."
     }
   ],
@@ -851,7 +851,7 @@
       "name": "Eduardo Oliveira",
       "role": "Senior Lecturer",
       "affiliation": "The University of Melbourne",
-      "blurb": "Research on AI in education and learning analytics at the Melbourne School of Education.",
+      "blurb": "Research on AI in education, learning analytics and natural language processing.",
       "url": "https://www.eduoliveira.com/",
       "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2026/03/image.png"
     }
