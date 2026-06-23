@@ -12,9 +12,11 @@
     { route: "packages", label: "Packages" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
+    { route: "writing", label: "Writing" },
     { route: "papers", label: "Papers" },
     { route: "news", label: "News" }
   ];
+  var TITLE_BASE = "Dynalytics";
 
   var S = { all: [], byId: {}, packages: [], about: null };
 
@@ -55,8 +57,28 @@
     buildNav();
     var logo = document.getElementById("logo");
     if (logo) logo.addEventListener("click", function () { openLightbox("assets/logo-dynalytics.png", "Dynalytics"); });
+    initTheme();
+    initSearch();
     window.addEventListener("hashchange", route);
     route();
+  }
+
+  /* ---------- theme toggle (opt-in dark mode; default light, never OS-driven) ---------- */
+  function setThemeColor(theme) {
+    var m = document.getElementById("theme-color");
+    if (m) m.setAttribute("content", theme === "dark" ? "#0c0c0d" : "#ffffff");
+  }
+  function initTheme() {
+    setThemeColor(document.documentElement.getAttribute("data-theme"));
+    var btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      var next = cur === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      setThemeColor(next);
+      try { localStorage.setItem("dyna-theme", next); } catch (e) {}
+    });
   }
   function load() {
     if (window.CATALOG && window.CATALOG.entries) { boot(window.CATALOG); return; }
@@ -82,19 +104,23 @@
     var links = document.querySelectorAll("#nav .navlink");
     for (var i = 0; i < links.length; i++) links[i].classList.toggle("active", links[i].getAttribute("data-route") === route);
   }
+  function setTitle(label) { document.title = label ? label + " — " + TITLE_BASE : TITLE_BASE + " — Rigorous analytics of dynamics"; }
   function route() {
     var h = location.hash.replace(/^#\/?/, "");
     var view = document.getElementById("view");
     window.scrollTo(0, 0);
     var m = h.match(/^pkg\/(.+)$/);
-    if (m && S.byId[decodeURIComponent(m[1])]) { setActive(null); renderPackage(view, S.byId[decodeURIComponent(m[1])]); return; }
+    if (m && S.byId[decodeURIComponent(m[1])]) { setActive(null); var pk = S.byId[decodeURIComponent(m[1])]; setTitle(pk.id); renderPackage(view, pk); return; }
     var mp = h.match(/^people\/(.+)$/);
-    if (mp) { setActive("people"); renderPeople(view, decodeURIComponent(mp[1])); return; }
+    if (mp) { setActive("people"); setTitle("People"); renderPeople(view, decodeURIComponent(mp[1])); return; }
     var r = (h === "" || h === "/") ? "" : h;
     setActive(r);
+    var labels = { packages: "Packages", tools: "Tools", chapters: "Book chapters", writing: "Writing", papers: "Papers", news: "News", people: "People" };
+    setTitle(labels[r] || "");
     if (r === "packages") renderPackages(view);
     else if (r === "tools") renderTools(view);
     else if (r === "chapters") renderChapters(view);
+    else if (r === "writing") renderWriting(view);
     else if (r === "papers") renderPapers(view);
     else if (r === "news") renderNews(view);
     else if (r === "people") renderPeople(view);
@@ -293,22 +319,94 @@
     requestAnimationFrame(function () { ov.classList.add("show"); });
   }
 
-  function renderMap(body) {
-    if (typeof window.renderChord !== "function" || !S.packages.length) return;
-    body.appendChild(secHead("", "The ecosystem map", "packages by focus, linked by what they share"));
-    var wrap = el("div", "mapwrap"); body.appendChild(wrap);
-    window.renderChord(wrap, S.packages, {
-      width: 760, height: 760,
-      onClick: function (id) { location.hash = "#/pkg/" + encodeURIComponent(id); }
+  // Load d3 + the chord renderer once, on demand (kept out of the critical path).
+  var _scripts = {};
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      if (_scripts[src]) return resolve();
+      var s = document.createElement("script");
+      s.src = src; s.async = true;
+      s.onload = function () { _scripts[src] = true; resolve(); };
+      s.onerror = function () { reject(new Error("failed to load " + src)); };
+      document.head.appendChild(s);
     });
   }
+  function renderMap(body) {
+    if (!S.packages.length) return;
+    var sec = el("div");
+    sec.appendChild(secHead("", "The ecosystem map", "packages by focus, linked by what they share"));
+    var wrap = el("div", "mapwrap"); sec.appendChild(wrap);
+    body.appendChild(sec);
+    loadScript("assets/d3.min.js")
+      .then(function () { return loadScript("assets/chord.js"); })
+      .then(function () {
+        if (typeof window.renderChord === "function") {
+          window.renderChord(wrap, S.packages, {
+            width: 760, height: 760,
+            onClick: function (id) { location.hash = "#/pkg/" + encodeURIComponent(id); }
+          });
+        }
+      })
+      .catch(function () { sec.remove(); });  // network-less / offline: drop the map quietly
+  }
 
+  var _pkgFilter = null;
   function renderPackages(view) {
     view.innerHTML = "";
     view.appendChild(secHead("", "Packages", S.packages.length + " R packages"));
+
+    // focus chips — tags shared by ≥2 packages, most common first
+    var freq = {};
+    S.packages.forEach(function (p) { (p.tags || []).forEach(function (t) { freq[t] = (freq[t] || 0) + 1; }); });
+    var tags = Object.keys(freq).filter(function (t) { return freq[t] >= 2; })
+      .sort(function (a, b) { return freq[b] - freq[a] || a.localeCompare(b); });
+    if (_pkgFilter && tags.indexOf(_pkgFilter) < 0) _pkgFilter = null;
+    if (tags.length) {
+      var bar = el("div", "filters");
+      var allChip = el("button", "filter-chip" + (_pkgFilter ? "" : " active"), 'All <span class="fc-n">' + S.packages.length + "</span>");
+      allChip.onclick = function () { _pkgFilter = null; renderPackages(view); };
+      bar.appendChild(allChip);
+      tags.forEach(function (t) {
+        var c = el("button", "filter-chip" + (_pkgFilter === t ? " active" : ""), esc(t) + ' <span class="fc-n">' + freq[t] + "</span>");
+        c.onclick = function () { _pkgFilter = (_pkgFilter === t ? null : t); renderPackages(view); };
+        bar.appendChild(c);
+      });
+      view.appendChild(bar);
+    }
+
+    var list = _pkgFilter ? S.packages.filter(function (p) { return (p.tags || []).indexOf(_pkgFilter) >= 0; }) : S.packages;
     var idx = el("div", "index");
-    S.packages.forEach(function (p) { idx.appendChild(packageRow(p)); });
+    list.forEach(function (p) { idx.appendChild(packageRow(p)); });
     view.appendChild(idx);
+  }
+
+  // Writing view — surfaces the 60+ tutorials, blog posts, and package vignettes
+  // that otherwise only live inside individual package dossiers.
+  function renderWriting(view) {
+    view.innerHTML = "";
+    var vignettes = ofType("vignette");
+    var posts = ofType("post").filter(function (e) { return e.kind !== "news"; });
+    view.appendChild(secHead("", "Writing", (vignettes.length + posts.length) + " tutorials, blog posts & articles"));
+
+    if (posts.length) {
+      var g1 = el("div", "write-group");
+      g1.appendChild(secHead("", "Tutorials & blog posts", "long-form guides on saqr.me & sonsoles.me"));
+      var l1 = el("div", "list");
+      posts.forEach(function (e) {
+        l1.appendChild(linkItem((KIND_LABEL[e.kind] || "Post") + " · " + (SOURCE_LABEL[e.source] || ""), e.title, e.blurb, e.url, "↗"));
+      });
+      g1.appendChild(l1); view.appendChild(g1);
+    }
+    if (vignettes.length) {
+      var g2 = el("div", "write-group");
+      g2.appendChild(secHead("", "Package articles & vignettes", vignettes.length + " reference articles from the package doc sites"));
+      var l2 = el("div", "list");
+      vignettes.forEach(function (e) {
+        var pk = pkgsOf(e)[0] || "";
+        l2.appendChild(linkItem(pk ? pk + " · Article" : "Article", e.title, e.blurb, e.url, "↗"));
+      });
+      g2.appendChild(l2); view.appendChild(g2);
+    }
   }
 
   function renderTools(view) {
@@ -473,6 +571,142 @@
     box.appendChild(form);
     if (n.note) box.appendChild(el("div", "nl-note", esc(n.note)));
     return box;
+  }
+
+  /* ---------- search command palette (⌘K / /) ---------- */
+  var TYPE_LABEL = {
+    package: "Package", person: "Person", paper: "Paper", news: "News",
+    tool: "Tool", vignette: "Article", post: "Tutorial", chapter: "Chapter",
+    book: "Book", docsite: "Doc site", site: "Site"
+  };
+  var TYPE_RANK = { package: 0, person: 1, paper: 2, tool: 3, post: 4, chapter: 5, vignette: 6, news: 7, book: 8, docsite: 9, site: 9 };
+  var TYPE_BOOST = { package: 1, person: 0.8, tool: 0.4, paper: 0.3 };
+  var _cmdkIndex = null, _cmdk = null, _cmdkActive = 0, _cmdkRows = [];
+
+  function buildSearchIndex() {
+    _cmdkIndex = S.all.map(function (e) {
+      var name = e.name || "";
+      var hay = [e.title, name, e.blurb, (e.tags || []).join(" "), e.type, e.kind, e.authors, e.owner]
+        .filter(Boolean).join(" ").toLowerCase();
+      return { e: e, hay: hay, title: (e.title || name || e.id || "").toLowerCase() };
+    });
+  }
+  function searchTarget(e) {
+    if (e.type === "package") return { hash: "#/pkg/" + encodeURIComponent(e.id) };
+    if (e.type === "person") return { hash: "#/people/" + encodeURIComponent(e.id) };
+    var url = (e.type === "chapter" && e.links && e.links.read) ? e.links.read : e.url;
+    return { url: url };
+  }
+  function searchSub(e) {
+    if (e.type === "package") return subtitleOf(e);
+    if (e.type === "person") return [e.role, e.affiliation].filter(Boolean).join(" · ");
+    if (e.type === "chapter") return e.volume ? e.volume.replace(/—.*/, "").trim() + " · " + (e.blurb || "") : (e.blurb || "");
+    return e.blurb || "";
+  }
+  function runSearch(q) {
+    q = (q || "").trim().toLowerCase();
+    var items;
+    if (!q) {
+      // empty query → a useful default browse: packages, then people, then tools
+      items = _cmdkIndex.filter(function (it) { return ["package", "person", "tool"].indexOf(it.e.type) >= 0; });
+    } else {
+      var toks = q.split(/\s+/);
+      items = _cmdkIndex.map(function (it) {
+        var score = 0;
+        for (var i = 0; i < toks.length; i++) {
+          var t = toks[i];
+          if (it.hay.indexOf(t) < 0) return null;        // AND across tokens
+          // widely spaced tiers so a title match always beats a blurb/tag match,
+          // and the small per-type boost only breaks near-ties.
+          score += it.title.indexOf(t) === 0 ? 10 : (it.title.indexOf(t) >= 0 ? 6 : 2);
+        }
+        return { it: it, score: score + (TYPE_BOOST[it.e.type] || 0) };
+      }).filter(Boolean)
+        .sort(function (a, b) { return b.score - a.score || (TYPE_RANK[a.it.e.type] - TYPE_RANK[b.it.e.type]); })
+        .map(function (x) { return x.it; });
+    }
+    return items.slice(0, 40);
+  }
+  function renderCmdkResults(q) {
+    var box = _cmdk.querySelector(".cmdk-results");
+    box.innerHTML = "";
+    _cmdkRows = []; _cmdkActive = 0;
+    var hits = runSearch(q);
+    if (!hits.length) { box.appendChild(el("div", "cmdk-empty", "No matches for “" + esc(q) + "”")); return; }
+    hits.forEach(function (it, i) {
+      var e = it.e, tgt = searchTarget(e);
+      var row = el("div", "cmdk-item" + (i === 0 ? " active" : ""));
+      row.innerHTML =
+        '<span class="ci-type">' + esc(TYPE_LABEL[e.type] || e.type) + "</span>" +
+        '<span class="ci-main"><span class="ci-title">' + esc(e.title || e.name || e.id) + "</span>" +
+        '<span class="ci-sub">' + esc(searchSub(e)) + "</span></span>" +
+        '<span class="ci-go">' + (tgt.hash ? "→" : "↗") + "</span>";
+      row.addEventListener("click", function () { activateTarget(tgt); });
+      row.addEventListener("mousemove", function () { setActiveRow(i); });
+      box.appendChild(row);
+      _cmdkRows.push({ row: row, tgt: tgt });
+    });
+  }
+  function setActiveRow(i) {
+    if (!_cmdkRows.length) return;
+    _cmdkActive = (i + _cmdkRows.length) % _cmdkRows.length;
+    _cmdkRows.forEach(function (r, j) { r.row.classList.toggle("active", j === _cmdkActive); });
+    _cmdkRows[_cmdkActive].row.scrollIntoView({ block: "nearest" });
+  }
+  function activateTarget(tgt) {
+    closeCmdK();
+    if (tgt.hash) location.hash = tgt.hash;
+    else if (tgt.url) window.open(tgt.url, "_blank", "noopener");
+  }
+  function openCmdK() {
+    if (!_cmdkIndex) buildSearchIndex();
+    if (!_cmdk) {
+      _cmdk = el("div", "cmdk");
+      _cmdk.innerHTML =
+        '<div class="cmdk-box" role="dialog" aria-label="Search">' +
+          '<div class="cmdk-inputwrap">' +
+            '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+            '<input class="cmdk-input" type="text" placeholder="Search packages, people, papers, chapters…" aria-label="Search" autocomplete="off" spellcheck="false">' +
+            '<span class="cmdk-hint">esc</span>' +
+          "</div>" +
+          '<div class="cmdk-results"></div>' +
+          '<div class="cmdk-foot"><span><b>↑↓</b> navigate</span><span><b>↵</b> open</span><span><b>esc</b> close</span></div>' +
+        "</div>";
+      document.body.appendChild(_cmdk);
+      var input = _cmdk.querySelector(".cmdk-input");
+      input.addEventListener("input", function () { renderCmdkResults(input.value); });
+      _cmdk.addEventListener("click", function (ev) { if (ev.target === _cmdk) closeCmdK(); });
+      _cmdk.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape") { ev.preventDefault(); closeCmdK(); }
+        else if (ev.key === "ArrowDown") { ev.preventDefault(); setActiveRow(_cmdkActive + 1); }
+        else if (ev.key === "ArrowUp") { ev.preventDefault(); setActiveRow(_cmdkActive - 1); }
+        else if (ev.key === "Enter") { ev.preventDefault(); if (_cmdkRows[_cmdkActive]) activateTarget(_cmdkRows[_cmdkActive].tgt); }
+      });
+    }
+    var inp = _cmdk.querySelector(".cmdk-input");
+    inp.value = "";
+    renderCmdkResults("");
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(function () { _cmdk.classList.add("show"); inp.focus(); });
+  }
+  function closeCmdK() {
+    if (!_cmdk) return;
+    _cmdk.classList.remove("show");
+    document.body.style.overflow = "";
+    setTimeout(function () { if (_cmdk && !_cmdk.classList.contains("show")) _cmdk.remove(); _cmdk = null; }, 160);
+  }
+  function initSearch() {
+    var btn = document.getElementById("search-open");
+    if (btn) btn.addEventListener("click", openCmdK);
+    document.addEventListener("keydown", function (ev) {
+      var mod = ev.metaKey || ev.ctrlKey;
+      if (mod && (ev.key === "k" || ev.key === "K")) { ev.preventDefault(); openCmdK(); return; }
+      if (ev.key === "/" && !_cmdk) {
+        var t = ev.target, tag = t && t.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA" || (t && t.isContentEditable)) return;
+        ev.preventDefault(); openCmdK();
+      }
+    });
   }
 
   /* ---------- package dossier ---------- */

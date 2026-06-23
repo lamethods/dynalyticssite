@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dynalytics — Rigorous analytics of dynamics</title>
   <meta name="description" content="A framework for the rigorous analytics of dynamical systems — the packages, tutorials, papers, and book chapters of the Saqr & López-Pernas ecosystem behind the Dynalytics framework." />
-  <!-- Web fonts enhance when online; local serif/mono fallbacks keep it intentional offline. -->
+  <meta name="theme-color" content="#ffffff" id="theme-color" />
+  <!-- Dark mode is opt-in only: light by default, dark only if the user has
+       explicitly chosen it (toggle saves to localStorage) or passes ?theme=dark.
+       Set before first paint to avoid a flash. The OS setting is never consulted. -->
+  <script>
+    (function () {
+      try {
+        var q = (location.search.match(/[?&]theme=(dark|light)/) || [])[1];
+        if (q) localStorage.setItem("dyna-theme", q);
+        var saved = q || localStorage.getItem("dyna-theme");
+        document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+      } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
+    })();
+  </script>
+  <!-- Editorial type: Fraunces (display) + Hanken Grotesk (body) + Space Mono (labels). -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=9" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css?v=a39d4e28" />
 </head>
 <body>
   <div class="wrap">
@@ -21,6 +35,12 @@
         <div class="brand-text">
           <h1 class="headline"><a href="#/" aria-label="Home">Dynalytics</a></h1>
           <p class="subhead">Rigorous analytics of dynamics.</p>
+        </div>
+        <div class="mast-tools">
+          <button class="icon-btn" id="search-open" type="button" aria-label="Search (press / or ⌘K)" title="Search — press / or ⌘K">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark"></button>
         </div>
       </div>
       <nav id="nav" class="nav"></nav>
@@ -35,8 +55,6 @@
   </div>
 
   <script src="assets/catalog.js"></script>
-  <script src="assets/d3.min.js"></script>
-  <script src="assets/chord.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js?v=2c2b9a11"></script>
 </body>
 </html>
