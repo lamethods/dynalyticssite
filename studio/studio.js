@@ -19,6 +19,7 @@
     { key: "lead", type: "textarea", label: "Lead paragraph" },
     { key: "more", type: "textarea", label: "Second paragraph" },
     { key: "closing", type: "textarea", label: "Closing paragraph" },
+    { key: "peopleIntro", type: "textarea", label: "People card blurb (homepage)" },
     { key: "paper", type: "object", label: "Paper link", fields: [
       { key: "label", type: "text", label: "Link label" },
       { key: "href", type: "text", label: "Paper URL" }
