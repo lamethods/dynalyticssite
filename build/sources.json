@@ -19,7 +19,10 @@
       "heading": "Get Dynalytics updates",
       "blurb": "New packages, releases, papers, and tutorials — occasional, no spam.",
       "cta": "Subscribe",
-      "note": "We'll only email about the ecosystem catalogued here.",
+      "note": "We'll only email about the ecosystem catalogued here. Unsubscribe anytime.",
+      "provider": "emailoctopus",
+      "action": "",
+      "success": "Thanks — please check your inbox to confirm your subscription.",
       "form": null,
       "email": "hamada@saqr.me"
     },

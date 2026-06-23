@@ -546,7 +546,9 @@
     view.appendChild(newsletterBlock());
   }
 
-  // newsletter signup — static site, so hands off to a Google Form (when set) or mailto.
+  // Newsletter signup. Static site, so the email is captured inline and POSTed
+  // straight to EmailOctopus's public embed endpoint (no API key in the page,
+  // no redirect). Order of preference: EmailOctopus action → hosted form → mailto.
   function newsletterBlock() {
     var n = (S.about && S.about.newsletter) || {};
     var box = el("div", "newsletter");
@@ -556,20 +558,45 @@
     box.appendChild(txt);
 
     var form = el("form", "nl-form");
+    form.setAttribute("novalidate", "");
     form.innerHTML =
-      '<input class="nl-input" type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>' +
+      '<input class="nl-input" type="email" name="email" placeholder="you@example.com" aria-label="Email address" autocomplete="email" required>' +
       '<button class="nl-btn" type="submit">' + esc(n.cta || "Subscribe") + " →</button>";
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      if (n.form) { window.open(n.form, "_blank", "noopener"); return; }
-      var input = form.querySelector(".nl-input");
-      var email = (input && input.value || "").trim();
-      var subject = encodeURIComponent("Subscribe to Dynalytics updates");
-      var bodyText = encodeURIComponent("Please add me to the Dynalytics updates list" + (email ? ": " + email : "") + ".");
-      window.location.href = "mailto:" + esc(n.email || "") + "?subject=" + subject + "&body=" + bodyText;
-    });
     box.appendChild(form);
     if (n.note) box.appendChild(el("div", "nl-note", esc(n.note)));
+
+    var status = el("div", "nl-status"); status.hidden = true; box.appendChild(status);
+    function setStatus(ok, msg) { status.hidden = false; status.className = "nl-status " + (ok ? "ok" : "err"); status.textContent = msg; }
+
+    var action = n.action && String(n.action).trim();
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var input = form.querySelector(".nl-input");
+      var btn = form.querySelector(".nl-btn");
+      var email = (input && input.value || "").trim();
+      if (!email || email.indexOf("@") < 1) { setStatus(false, "Please enter a valid email address."); if (input) input.focus(); return; }
+
+      if (action) {
+        btn.disabled = true; btn.textContent = "…";
+        var data = new FormData();
+        data.append(n.emailField || "field_0", email);
+        // EmailOctopus anti-bot honeypot field is "hp" + the list UUID in the action URL.
+        var uuid = (action.match(/lists\/([0-9a-fA-F-]+)/) || [])[1];
+        if (uuid) data.append("hp" + uuid, "");
+        // no-cors: the embed endpoint returns an opaque response we can't read, so we
+        // treat a completed request as success and only surface true network failures.
+        fetch(action, { method: "POST", mode: "no-cors", body: data })
+          .then(function () { form.reset(); setStatus(true, n.success || "Thanks — please check your inbox to confirm."); })
+          .catch(function () { setStatus(false, "Couldn’t reach the signup service — please try again in a moment."); })
+          .then(function () { btn.disabled = false; btn.innerHTML = esc(n.cta || "Subscribe") + " →"; });
+        return;
+      }
+      if (n.form) { window.open(n.form, "_blank", "noopener"); return; }
+      // last-resort fallback while no provider is configured
+      var subject = encodeURIComponent("Subscribe to Dynalytics updates");
+      var bodyText = encodeURIComponent("Please add me to the Dynalytics updates list: " + email + ".");
+      window.location.href = "mailto:" + (n.email || "") + "?subject=" + subject + "&body=" + bodyText;
+    });
     return box;
   }
 
