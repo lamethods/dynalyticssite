@@ -220,7 +220,7 @@ async function buildPackage(pkg) {
     version: d.Version || null,
     authors: parseAuthors(d),
     owner: pkg.owner ?? null, tags: pkg.tags,
-    ...(Object.keys(links).length === 0 ? { note: "Local / not yet published publicly" } : {}),
+    ...(Object.keys(links).length === 0 ? { note: "Coming soon" } : {}),
     status: "UNVERIFIED", last_checked: null
   };
 

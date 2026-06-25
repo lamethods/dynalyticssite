@@ -399,8 +399,8 @@
       ]
     },
     {
-      "name": "lagseq",
-      "dir": "lagseq",
+      "name": "lagdynamics",
+      "dir": "lagdynamics",
       "owner": "mohsaqr",
       "docs": null,
       "cran": false,
