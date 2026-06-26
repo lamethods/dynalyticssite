@@ -821,7 +821,6 @@
       : "";
     head.innerHTML =
       (p.logo ? '<img class="dlogo" src="' + esc(p.logo) + '" alt="" onerror="this.style.display=\'none\'">' : "") +
-      '<div class="kicker">R Package · maintained by ' + esc(p.owner || "") + "</div>" +
       "<h1>" + esc(p.id) + "</h1>" +
       '<div class="subtitle">' + esc(subtitleOf(p)) + "</div>" +
       '<div class="blurb">' + esc(p.blurb || "") + "</div>" +
