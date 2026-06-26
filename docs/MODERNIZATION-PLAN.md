@@ -14,6 +14,46 @@ _Audit date: 2026-06-23 · 151 catalog entries, 0 broken links._
 
 ---
 
+## Session log — 2026-06-26 (content + Readings + self-hosted tutorials)
+
+Work shipped after the Phase 0–2 spine. All live on `main`; catalog rebuilt and
+links verified (0 broken) each step.
+
+**Reading-room overhaul (the old "Writing" view).**
+- Renamed nav: **Papers → "Selected articles"**, **Writing → "Readings"** (routes
+  unchanged so links don't break).
+- Every reading — tutorial, vignette/article, blog post — now renders as a
+  **book-chapter-style card** across all packages (generalized `resourceCard()`),
+  not just tutorials. Replaces the old flat link lists.
+- **Secondary menu** under the main nav on the **Readings** page
+  (Tutorials · Articles · Blogs) and on each **package dossier**
+  (Tutorials · Articles · Blogs · In the Book): one category per view, so no
+  63-card scroll. Styled as faint green-blue bold tabs above a divider line.
+  Hash sub-routes: `#/writing/<cat>`, `#/pkg/<id>/<cat>`.
+- Dropped the "R Package · maintained by …" kicker from dossier headers.
+
+**Content.**
+- News: release items for **bibnets, cooccure, transitiontrees** + the two
+  **Heterogeneous TNA** papers (JCAL + arXiv "vibe coding", blog-style); later
+  release news for **psychnet, lagdynamics, htna, Nestimate, snakeplot, Saqrlab,
+  Saqrmisc** (psychnet/Saqrlab pulled — repos not public, broken links).
+- Selected articles: added the JCAL + arXiv HTNA papers; de-duplicated Koli.
+- **transitiontrees on CRAN:** taught `harvest.mjs` to surface a CRAN package's
+  vignettes from CRAN's own hosted vignette HTML when it has no pkgdown site
+  (`vignettesFromDir`); fixed its release news to the CRAN date/link. Also
+  surfaced codyna's article via the same path.
+
+**Self-hosted tutorials (the big one).** Tutorials moved from linked-out to
+hosted under `tutorials/<package>/`. Images optimized **247 MB → 61 MB**
+(`build/optimize_tutorial.py`; the bloat was retina-DPI base64 PNGs).
+**Auto-discovered** from the folder — no `sources.json` entries — with title +
+description read from each file's `<head>` (`tutorialEntries()` in `curated.mjs`;
+`npm run tutorials` rebuilds offline). Full guide: **[TUTORIALS.md](./TUTORIALS.md)**.
+Caveat: the original un-optimized snapshots remain in git history (would need a
+`filter-repo` + force-push to purge).
+
+---
+
 ## 1. What the site is today (snapshot)
 
 - **Stack:** single-page static app. `index.html` + `assets/app.js` (539 lines,
