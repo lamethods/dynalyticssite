@@ -76,9 +76,17 @@
       { key: "owner", type: "text", label: "Owner" },
       { key: "tags", type: "csv", label: "Tags (comma-separated)" },
       { key: "links", type: "kv", label: "Links (name → URL)", full: true }
+    ] },
+    posts: { label: "Blogs", kind: "list", singular: "blog/link", titleKey: "title", item: [
+      { key: "title", type: "text", label: "Title", full: true },
+      { key: "url", type: "text", label: "URL", full: true },
+      { key: "desc", type: "textarea", label: "Description", full: true },
+      { key: "kind", type: "text", label: "Kind (blog / article / news)" },
+      { key: "packages", type: "csv", label: "Packages (comma-separated, e.g. tna)" },
+      { key: "source", type: "text", label: "Source (sonsoles.me / saqr.me / …)" }
     ] }
   };
-  var ORDER = ["about", "news", "people", "papers", "tools"];
+  var ORDER = ["about", "news", "posts", "papers", "tools", "people"];
 
   // ---------- state ----------
   var model = {};     // editable sections, mirrors sources.json
@@ -248,7 +256,7 @@
       if (!r.ok) { toast(r.body.error || "Save failed", "err"); return false; }
       dirty = false;
       var c = r.body.counts || {};
-      toast("Saved — " + (c.news || 0) + " news · " + (c.papers || 0) + " papers · " + (c.tools || 0) + " tools · " + (c.people || 0) + " people. Preview is live.", "ok");
+      toast("Saved — " + (c.news || 0) + " news · " + (c.posts || 0) + " blogs · " + (c.papers || 0) + " papers · " + (c.tools || 0) + " tools · " + (c.people || 0) + " people. Preview is live.", "ok");
       return true;
     }).catch(function (e) { busy(btn, false); toast("Save failed: " + e.message, "err"); return false; });
   }

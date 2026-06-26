@@ -14,7 +14,7 @@ import { join } from "node:path";
 export const CURATED_TYPES = ["paper", "tool", "news", "person"];
 
 // the sources.json sections the Studio edits
-export const EDITABLE_SECTIONS = ["about", "papers", "tools", "news", "people"];
+export const EDITABLE_SECTIONS = ["about", "papers", "tools", "news", "people", "posts"];
 
 export const paperEntries = (papers = []) => papers.map((p, i) => ({
   id: `paper::${i + 1}`, type: "paper", title: p.title, blurb: p.blurb, url: p.url, links: { paper: p.url },
@@ -39,6 +39,18 @@ export const peopleEntries = (people = []) => people.map((p) => ({
   role: p.role, affiliation: p.affiliation, blurb: p.blurb,
   url: p.url, photo: p.photo, links: { site: p.url },
   status: "UNVERIFIED", last_checked: null
+}));
+
+// --- off-site blog / article / news links (sources.json posts[]) ---
+// Hand-curated, so they live in the instant-regen tier alongside papers/news —
+// NOT the network re-harvest. Tutorials are excluded here: they are self-hosted
+// and auto-discovered from the tutorials/ folder (see tutorialEntries below).
+const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 24);
+export const postEntries = (posts = []) => posts.filter((p) => p.kind !== "tutorial").map((p, i) => ({
+  id: `post::${i + 1}::${slug(p.title)}`, type: "post", kind: p.kind,
+  title: p.title, blurb: p.desc, url: p.url, links: { post: p.url },
+  owner: null, source: p.source || null, packages: p.packages || [],
+  tags: [p.kind, ...(p.packages || [])], status: "UNVERIFIED", last_checked: null
 }));
 
 // --- self-hosted tutorials: the tutorials/ folder IS the source of truth ---
@@ -82,6 +94,7 @@ export function buildCuratedEntries(src) {
     ...paperEntries(src.papers),
     ...toolEntries(src.tools),
     ...newsEntries(src.news),
+    ...postEntries(src.posts),
     ...peopleEntries(src.people)
   ];
 }
@@ -115,9 +128,10 @@ export function regenCurated(root) {
   const catalog = JSON.parse(readFileSync(catPath, "utf8"));
 
   const known = statusIndex(catalog.entries);
-  // drop curated types AND old auto-discovered tutorials — both are rebuilt below.
+  // drop curated types AND every post — curated posts (blog/news) are rebuilt
+  // from sources.json by buildCuratedEntries, tutorials from the folder by tuts.
   const kept = catalog.entries.filter((e) =>
-    !CURATED_TYPES.includes(e.type) && !(e.type === "post" && e.kind === "tutorial"));
+    !CURATED_TYPES.includes(e.type) && e.type !== "post");
   const fresh = applyKnownStatus(buildCuratedEntries(src), known);
   const tuts = applyKnownStatus(tutorialEntries(root), known);
 
@@ -134,7 +148,8 @@ export function regenCurated(root) {
   catalog.counts = {
     ...(catalog.counts || {}),
     total: catalog.entries.length,
-    news: catalog.entries.filter((e) => e.type === "news").length
+    news: catalog.entries.filter((e) => e.type === "news").length,
+    posts: catalog.entries.filter((e) => e.type === "post").length
   };
 
   writeFileSync(catPath, JSON.stringify(catalog, null, 2) + "\n");
@@ -142,6 +157,7 @@ export function regenCurated(root) {
   return {
     papers: src.papers?.length || 0, tools: src.tools?.length || 0,
     news: src.news?.length || 0, people: src.people?.length || 0,
+    posts: (src.posts || []).filter((p) => p.kind !== "tutorial").length,
     total: catalog.entries.length
   };
 }

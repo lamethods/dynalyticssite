@@ -13,10 +13,12 @@ Full reference: `docs/UPDATING.md`.
 ## Step 1 — classify the change
 
 - **Curated** (edit directly, recompiles instantly, no network):
-  `about`, `news`, `people`, `papers`, `tools`.
+  `about`, `news`, `people`, `papers`, `tools`, `posts` (off-site blog/article/
+  news links — the Studio's **Blogs** tab).
 - **Harvested-adjacent** (also in `sources.json`, but needs a full re-harvest to
-  reflect): `packages`, `posts`, `book_volumes`, `chapter_packages`,
-  `extra_links`.
+  reflect): `packages`, `book_volumes`, `chapter_packages`, `extra_links`.
+- **Self-hosted tutorials**: drop the HTML in `tutorials/<package>/` — auto-
+  discovered, no `sources.json` edit (see `docs/TUTORIALS.md`).
 
 ## Step 2 — edit `build/sources.json`
 
@@ -37,7 +39,7 @@ Keep entries valid JSON; match the existing style. News is auto-sorted newest-fi
 
 ## Step 3 — recompile the catalog
 
-- **Curated-only** change (About / News / People / Papers / Tools) — fast, offline:
+- **Curated-only** change (About / News / Blogs / Papers / Tools / People) — fast, offline:
   ```bash
   node --input-type=module -e 'import("./build/curated.mjs").then(m=>console.log(m.regenCurated(process.cwd())))'
   ```

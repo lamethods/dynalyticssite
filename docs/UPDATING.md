@@ -20,14 +20,14 @@ The **Studio** below is a *local* editing tool you run only while making changes
 
 | Kind | What | Where it comes from | Edit it? |
 |------|------|---------------------|----------|
-| **Curated** | About text, Newsletter, **News**, **People**, **Papers**, **Tools**, package seed metadata, blog **posts**, book volumes | hand-written in `build/sources.json` | ✅ yes — this is what you change |
+| **Curated** | About text, Newsletter, **News**, **People**, **Papers**, **Tools**, **Blogs** (off-site blog/article/news links) | hand-written in `build/sources.json` | ✅ yes — this is what you change, in the Studio or by hand |
 | **Self-hosted tutorials** | the tutorial HTML pages under `tutorials/<package>/` | auto-discovered from the folder (title/description read from each file's `<head>`) | ✅ yes — **drop a file in the folder**, see [TUTORIALS.md](./TUTORIALS.md) |
-| **Harvested** | package title/description/version, vignette/article lists, book **chapter** pages + abstracts | auto-pulled from local `DESCRIPTION` files, CRAN, and live `pkgdown` / `lamethods` sitemaps | ⚠️ only via a full re-harvest |
+| **Harvested** | package title/description/version, vignette/article lists, book **chapter** pages + abstracts, book volumes | auto-pulled from local `DESCRIPTION` files, CRAN, and live `pkgdown` / `lamethods` sitemaps | ⚠️ only via a full re-harvest |
 
-The five sections the Studio edits — **About, News, People, Papers, Tools** —
-are pure curated content and recompile **instantly with no network**. Anything
-touching packages or chapters needs a full **re-harvest** (hits the network and
-needs the sibling package repos checked out next to this one).
+The six sections the Studio edits — **About, News, Blogs, Papers, Tools,
+People** — are pure curated content and recompile **instantly with no network**.
+Anything touching packages or chapters needs a full **re-harvest** (hits the
+network and needs the sibling package repos checked out next to this one).
 
 **Tutorials are self-hosted**, not linked out: each `tutorials/<package>/<slug>.html`
 is auto-registered (no `sources.json` entry). To add one, drop the HTML in the
@@ -46,7 +46,7 @@ STUDIO_PASSWORD='choose-one' npm run studio
 
 Open **http://localhost:8780/studio**, sign in, then:
 
-1. Pick a tab: **About · News · People · Papers · Tools**.
+1. Pick a tab: **About · News · Blogs · Papers · Tools · People**.
 2. Edit fields; **+ Add** / **Remove** items.
 3. **Save** (or ⌘S) — compiles `catalog.js` locally, instantly. Click **Preview ↗**
    to see the result at `http://localhost:8780/`.
@@ -66,8 +66,8 @@ Best for bulk edits, programmatic changes, or when you're already in an editor.
 
 1. **Edit** the relevant array/section in `build/sources.json` (schemas below).
 2. **Compile** the catalog:
-   - **Curated-only change** (About / News / People / Papers / Tools) — instant,
-     no network:
+   - **Curated-only change** (About / News / Blogs / Papers / Tools / People) —
+     instant, no network:
      ```bash
      node --input-type=module -e 'import("./build/curated.mjs").then(m=>console.log(m.regenCurated(process.cwd())))'
      ```
@@ -139,7 +139,9 @@ Best for bulk edits, programmatic changes, or when you're already in an editor.
 Escape hatches: `"no_github": true`, `"exclude_articles": ["slug"]`,
 `"docs": null` (no pkgdown site).
 
-**Posts** (off-site blog / article / news links) — `posts[]`:
+**Blogs / posts** (off-site blog / article / news links) — `posts[]`. Edited in
+the Studio's **Blogs** tab; **curated and instant** (a curated-only regen rebuilds
+them, no re-harvest needed):
 ```json
 { "title": "…", "url": "https://…", "desc": "…",
   "packages": ["tna"], "source": "sonsoles.me", "kind": "blog" }

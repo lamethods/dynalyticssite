@@ -52,6 +52,17 @@ description read from each file's `<head>` (`tutorialEntries()` in `curated.mjs`
 Caveat: the original un-optimized snapshots remain in git history (would need a
 `filter-repo` + force-push to purge).
 
+**Editing made easy (Blogs in the Studio).** Off-site blog/article/news links
+(`sources.json` `posts[]`) were curated content stuck in the *harvested* tier —
+adding one meant a full network re-harvest or hand-editing JSON. Moved them into
+the **instant-regen curated tier** (`postEntries()` in `curated.mjs`;
+`EDITABLE_SECTIONS` now includes `posts`) and added a **Blogs** tab to the Studio
+(`studio/studio.js`). Now every hand-edited section — About, News, Blogs, Papers,
+Tools, People — is editable in the GUI, Save recompiles offline, Publish
+commits+pushes. Tutorials stay drop-a-file; packages/vignettes/chapters stay
+harvested. (Catalog reordered once as posts moved into the curated slice — pure
+normalization, no content change; rendering is order-independent.)
+
 ---
 
 ## 1. What the site is today (snapshot)

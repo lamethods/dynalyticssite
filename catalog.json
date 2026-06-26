@@ -1501,206 +1501,6 @@
       "last_checked": "2026-06-26"
     },
     {
-      "id": "post::10::cograph-complex-network",
-      "type": "post",
-      "kind": "blog",
-      "title": "cograph: Complex Network Analysis and Visualization",
-      "blurb": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
-      "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/cograph-network-visualization/"
-      },
-      "owner": "mohsaqr",
-      "source": "saqr.me",
-      "packages": [
-        "cograph"
-      ],
-      "tags": [
-        "blog",
-        "cograph"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::11::human-ai-interaction-a-",
-      "type": "post",
-      "kind": "blog",
-      "title": "Human–AI Interaction: A Transition Network Analysis with cograph",
-      "blurb": "Sequential analysis of 13,002 turns across 429 human–AI coding sessions, mapped with TNA and cograph.",
-      "url": "https://saqr.me/blog/2026/human-ai-interaction-cograph/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/human-ai-interaction-cograph/"
-      },
-      "owner": "mohsaqr",
-      "source": "saqr.me",
-      "packages": [
-        "tna",
-        "cograph"
-      ],
-      "tags": [
-        "blog",
-        "tna",
-        "cograph"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::12::jtna-for-transition-netw",
-      "type": "post",
-      "kind": "blog",
-      "title": "JTNA for Transition Network Analysis",
-      "blurb": "Statistical rigour for sequential behavioural analysis — now in jamovi via JTNA.",
-      "url": "https://saqr.me/blog/2026/jtna-transition-network-analysis/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/jtna-transition-network-analysis/"
-      },
-      "owner": "mohsaqr",
-      "source": "saqr.me",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "blog",
-        "tna"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::14::precision-education-is-t",
-      "type": "post",
-      "kind": "blog",
-      "title": "Precision Education is the Answer",
-      "blurb": "Beyond group averages: a case for precision education.",
-      "url": "https://saqr.me/blog/2026/precision-education/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/precision-education/"
-      },
-      "owner": "mohsaqr",
-      "source": "saqr.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "blog",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::15::rohy-ai-powered-virtual",
-      "type": "post",
-      "kind": "blog",
-      "title": "Rohy: AI-Powered Virtual Patient Simulator",
-      "blurb": "An open-source medical simulation platform with AI-driven patient conversations.",
-      "url": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/"
-      },
-      "owner": "mohsaqr",
-      "source": "saqr.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "blog",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::16::book-learning-analytics",
-      "type": "post",
-      "kind": "news",
-      "title": "Book: Learning Analytics Methods and Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R.",
-      "url": "https://sonsoles.me/posts/labook/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/labook/index.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::17::isila-funding-from-era",
-      "type": "post",
-      "kind": "news",
-      "title": "ISILA — Funding from Erasmus+",
-      "blurb": "Early-intervention learning-analytics methods for quality and sustainability.",
-      "url": "https://sonsoles.me/posts/isila/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/isila/index.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::18::iglue-new-funding-from",
-      "type": "post",
-      "kind": "news",
-      "title": "IGLUE — New Funding from Erasmus+",
-      "blurb": "Game-based learning using escape rooms.",
-      "url": "https://sonsoles.me/posts/iglue/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/iglue/index.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::19::cretic-funding-from-th",
-      "type": "post",
-      "kind": "news",
-      "title": "CRETIC — Funding from the Research Council of Finland",
-      "blurb": "Optimising clinical reasoning in time-critical scenarios.",
-      "url": "https://sonsoles.me/posts/cretic/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/cretic/index.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
       "id": "book1::ch01-intro",
       "type": "chapter",
       "title": "Ch 1 — Introduction",
@@ -3501,6 +3301,206 @@
       "tags": [
         "news",
         "paper"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::1::cograph-complex-network-",
+      "type": "post",
+      "kind": "blog",
+      "title": "cograph: Complex Network Analysis and Visualization",
+      "blurb": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
+      "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/cograph-network-visualization/"
+      },
+      "owner": null,
+      "source": "saqr.me",
+      "packages": [
+        "cograph"
+      ],
+      "tags": [
+        "blog",
+        "cograph"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::2::human-ai-interaction-a-t",
+      "type": "post",
+      "kind": "blog",
+      "title": "Human–AI Interaction: A Transition Network Analysis with cograph",
+      "blurb": "Sequential analysis of 13,002 turns across 429 human–AI coding sessions, mapped with TNA and cograph.",
+      "url": "https://saqr.me/blog/2026/human-ai-interaction-cograph/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/human-ai-interaction-cograph/"
+      },
+      "owner": null,
+      "source": "saqr.me",
+      "packages": [
+        "tna",
+        "cograph"
+      ],
+      "tags": [
+        "blog",
+        "tna",
+        "cograph"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::3::jtna-for-transition-netw",
+      "type": "post",
+      "kind": "blog",
+      "title": "JTNA for Transition Network Analysis",
+      "blurb": "Statistical rigour for sequential behavioural analysis — now in jamovi via JTNA.",
+      "url": "https://saqr.me/blog/2026/jtna-transition-network-analysis/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/jtna-transition-network-analysis/"
+      },
+      "owner": null,
+      "source": "saqr.me",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "blog",
+        "tna"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::4::precision-education-is-t",
+      "type": "post",
+      "kind": "blog",
+      "title": "Precision Education is the Answer",
+      "blurb": "Beyond group averages: a case for precision education.",
+      "url": "https://saqr.me/blog/2026/precision-education/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/precision-education/"
+      },
+      "owner": null,
+      "source": "saqr.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "blog",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::5::rohy-ai-powered-virtual-",
+      "type": "post",
+      "kind": "blog",
+      "title": "Rohy: AI-Powered Virtual Patient Simulator",
+      "blurb": "An open-source medical simulation platform with AI-driven patient conversations.",
+      "url": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/"
+      },
+      "owner": null,
+      "source": "saqr.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "blog",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::6::book-learning-analytics-",
+      "type": "post",
+      "kind": "news",
+      "title": "Book: Learning Analytics Methods and Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R.",
+      "url": "https://sonsoles.me/posts/labook/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/labook/index.html"
+      },
+      "owner": null,
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::7::isila-funding-from-erasm",
+      "type": "post",
+      "kind": "news",
+      "title": "ISILA — Funding from Erasmus+",
+      "blurb": "Early-intervention learning-analytics methods for quality and sustainability.",
+      "url": "https://sonsoles.me/posts/isila/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/isila/index.html"
+      },
+      "owner": null,
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::8::iglue-new-funding-from-e",
+      "type": "post",
+      "kind": "news",
+      "title": "IGLUE — New Funding from Erasmus+",
+      "blurb": "Game-based learning using escape rooms.",
+      "url": "https://sonsoles.me/posts/iglue/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/iglue/index.html"
+      },
+      "owner": null,
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "post::9::cretic-funding-from-the-",
+      "type": "post",
+      "kind": "news",
+      "title": "CRETIC — Funding from the Research Council of Finland",
+      "blurb": "Optimising clinical reasoning in time-critical scenarios.",
+      "url": "https://sonsoles.me/posts/cretic/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/cretic/index.html"
+      },
+      "owner": null,
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
       ],
       "status": "VERIFIED",
       "last_checked": "2026-06-26"
