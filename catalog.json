@@ -1506,9 +1506,9 @@
       "kind": "tutorial",
       "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
       "blurb": "A modern approach to rigorous analysis of behavioral processes.",
-      "url": "tutorials/tna-tutorial.html",
+      "url": "tutorials/tna/tna-tutorial.html",
       "links": {
-        "post": "tutorials/tna-tutorial.html"
+        "post": "tutorials/tna/tna-tutorial.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1528,9 +1528,9 @@
       "kind": "tutorial",
       "title": "TNA Data Preparation: A Guide to prepare_data()",
       "blurb": "A comprehensive guide to preparing data with prepare_data() for transition network analysis.",
-      "url": "tutorials/tna-data.html",
+      "url": "tutorials/tna/tna-data.html",
       "links": {
-        "post": "tutorials/tna-data.html"
+        "post": "tutorials/tna/tna-data.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1550,9 +1550,9 @@
       "kind": "tutorial",
       "title": "TNA Group Analysis: Comparison of Groups",
       "blurb": "Analysis and comparison of groups in transition network analysis.",
-      "url": "tutorials/tna-group.html",
+      "url": "tutorials/tna/tna-group.html",
       "links": {
-        "post": "tutorials/tna-group.html"
+        "post": "tutorials/tna/tna-group.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1572,9 +1572,9 @@
       "kind": "tutorial",
       "title": "TNA Clustering: Discovering and Analysing Clusters",
       "blurb": "Discovering and analysing clusters in transition network analysis.",
-      "url": "tutorials/tna-clustering.html",
+      "url": "tutorials/tna/tna-clustering.html",
       "links": {
-        "post": "tutorials/tna-clustering.html"
+        "post": "tutorials/tna/tna-clustering.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1596,9 +1596,9 @@
       "kind": "tutorial",
       "title": "TNA Model Comparison: A Guide to Network Comparison",
       "blurb": "A comprehensive guide to comparing transition networks.",
-      "url": "tutorials/tna-compare.html",
+      "url": "tutorials/tna/tna-compare.html",
       "links": {
-        "post": "tutorials/tna-compare.html"
+        "post": "tutorials/tna/tna-compare.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1620,9 +1620,9 @@
       "kind": "tutorial",
       "title": "Sequence Patterns, Outcomes, and Indices with codyna",
       "blurb": "Sequence pattern indices, outcomes, and regression with codyna.",
-      "url": "tutorials/codyna-seq-tutorial.html",
+      "url": "tutorials/codyna/codyna-seq-tutorial.html",
       "links": {
-        "post": "tutorials/codyna-seq-tutorial.html"
+        "post": "tutorials/codyna/codyna-seq-tutorial.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1642,9 +1642,9 @@
       "kind": "tutorial",
       "title": "The VaSSTra Method",
       "blurb": "From Variables to States to Sequences to Trajectories.",
-      "url": "tutorials/vasstra.html",
+      "url": "tutorials/tna/vasstra.html",
       "links": {
-        "post": "tutorials/vasstra.html"
+        "post": "tutorials/tna/vasstra.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1666,9 +1666,9 @@
       "kind": "tutorial",
       "title": "Alluvial Plots for Transition Analysis",
       "blurb": "Generating transition plots in R with ggalluvial.",
-      "url": "tutorials/alluvial.html",
+      "url": "tutorials/tna/alluvial.html",
       "links": {
-        "post": "tutorials/alluvial.html"
+        "post": "tutorials/tna/alluvial.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1688,9 +1688,9 @@
       "kind": "tutorial",
       "title": "Data Visualization for Research",
       "blurb": "Favourite research figures and how they were created.",
-      "url": "tutorials/visualization.html",
+      "url": "tutorials/cograph/visualization.html",
       "links": {
-        "post": "tutorials/visualization.html"
+        "post": "tutorials/cograph/visualization.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -1778,9 +1778,9 @@
       "kind": "tutorial",
       "title": "TNA Bern Workshop Resources",
       "blurb": "Workshop resources for Transition Network Analysis — slides, code, and the R, Python, jamovi, and Shiny tools.",
-      "url": "tutorials/tna-bern.html",
+      "url": "tutorials/tna/tna-bern.html",
       "links": {
-        "post": "tutorials/tna-bern.html"
+        "post": "tutorials/tna/tna-bern.html"
       },
       "owner": "sonsoleslp",
       "source": "dynasite",
@@ -3694,8 +3694,8 @@
   ],
   "verified_at": "2026-06-26",
   "link_summary": {
-    "verified": 183,
-    "redirect": 58,
+    "verified": 180,
+    "redirect": 61,
     "broken": 0
   }
 }
