@@ -170,6 +170,55 @@
   ],
   "news": [
     {
+      "date": "2026-06-20",
+      "tag": "Software",
+      "title": "psychnet: clean-room psychometric networks in base R",
+      "blurb": "A new base-R package for psychometric network models — correlation and partial correlation, the EBIC-regularized graphical lasso and its nonparanormal/stepwise variants, TMFG and LoGo filtering graphs, relative-importance, Ising and mixed graphical models — reimplemented from first principles with no compiled dependencies. Each regularised fit ships a self-verifying correctness certificate; it is the R counterpart to the psychaj library.",
+      "url": "https://github.com/mohsaqr/psychnet"
+    },
+    {
+      "date": "2026-05-13",
+      "tag": "Software",
+      "title": "lagdynamics: modern lag sequential analysis",
+      "blurb": "A tidy, pipe-friendly toolkit for lag sequential analysis of categorical event sequences. A single lsa() constructor fits classical, two-cell, bidirectional, and dominance engines; every result reads through a tidy verb; and a full confirmatory battery — bootstrap, Dirichlet–Multinomial certainty, split-half reliability, case-drop stability, permutation and Bayesian group comparison — quantifies the evidence behind each edge.",
+      "url": "https://github.com/mohsaqr/lagdynamics"
+    },
+    {
+      "date": "2026-04-25",
+      "tag": "Software",
+      "title": "htna: Heterogeneous Transition Network Analysis in R",
+      "blurb": "The R package behind the Heterogeneous TNA papers. It models sequences that mix two or more actor groups (e.g. human and AI) within one interaction — a thin API over the Nestimate and cograph engines builds a transition network across the combined sequence while preserving the actor partition, so bootstrap, permutation, reliability, centrality and plotting treat each actor's codes as a distinct node group.",
+      "url": "https://sonsoles.me/htna/"
+    },
+    {
+      "date": "2026-03-17",
+      "tag": "Software",
+      "title": "Nestimate: one engine for dynamic & psychological networks",
+      "blurb": "An R package to estimate, compare, and analyse dynamic and psychological networks through a unified interface — transition, frequency, co-occurrence and attention-weighted TNA estimation, psychometric methods (correlation, partial correlation, graphical lasso, Ising), and higher-order network methods — with bootstrap inference, permutation testing, split-half reliability, and centrality-stability analysis.",
+      "url": "https://github.com/mohsaqr/Nestimate"
+    },
+    {
+      "date": "2026-03-08",
+      "tag": "Software",
+      "title": "snakeplot: serpentine plots for long timelines",
+      "blurb": "A new R package for visualising long timelines, extended sequences, and temporally chained survey or experience-sampling data as intuitive serpentine ('snake') plots — with distribution bars, tick-mark plots, inter-item correlation arcs, faceted multi-construct panels, and time-of-day positioning for ecological momentary assessment data.",
+      "url": "https://github.com/mohsaqr/snakeplot"
+    },
+    {
+      "date": "2026-01-31",
+      "tag": "Software",
+      "title": "Saqrlab: ground-truth simulation for TNA research",
+      "blurb": "A new R package of simulation tools for transition network analysis research — generating synthetic datasets with known ground-truth parameters (Markov-chain sequences, latent profiles and classes, regression, factor analysis, and sequence cluster structures) for testing and validating statistical methods, each function returning the data alongside its JSON-serialisable ground truth.",
+      "url": "https://github.com/mohsaqr/Saqrlab"
+    },
+    {
+      "date": "2025-07-26",
+      "tag": "Software",
+      "title": "Saqrmisc: miscellaneous tools for data analysis",
+      "blurb": "A new R package of miscellaneous functions for data processing, statistical analysis, and visualisation — including model-based clustering with MoEClust, comparison plots with built-in statistical testing, and mosaic-plot analysis for categorical variables, wrapped in robust error handling and a friendly interface.",
+      "url": "https://github.com/mohsaqr/Saqrmisc"
+    },
+    {
       "date": "2026-06-24",
       "tag": "Paper",
       "title": "Heterogeneous TNA: how AI feedback helps or hinders learning",

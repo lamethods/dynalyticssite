@@ -51,12 +51,12 @@
     ]
   },
   "counts": {
-    "total": 158,
+    "total": 165,
     "packages": 14,
     "vignettes": 42,
     "posts": 19,
     "chapters": 44,
-    "news": 11
+    "news": 18
   },
   "entries": [
     {
@@ -3094,6 +3094,132 @@
     {
       "id": "news::1",
       "type": "news",
+      "date": "2026-06-20",
+      "tag": "Software",
+      "title": "psychnet: clean-room psychometric networks in base R",
+      "blurb": "A new base-R package for psychometric network models — correlation and partial correlation, the EBIC-regularized graphical lasso and its nonparanormal/stepwise variants, TMFG and LoGo filtering graphs, relative-importance, Ising and mixed graphical models — reimplemented from first principles with no compiled dependencies. Each regularised fit ships a self-verifying correctness certificate; it is the R counterpart to the psychaj library.",
+      "url": "https://github.com/mohsaqr/psychnet",
+      "links": {
+        "read": "https://github.com/mohsaqr/psychnet"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "UNVERIFIED",
+      "last_checked": null
+    },
+    {
+      "id": "news::2",
+      "type": "news",
+      "date": "2026-05-13",
+      "tag": "Software",
+      "title": "lagdynamics: modern lag sequential analysis",
+      "blurb": "A tidy, pipe-friendly toolkit for lag sequential analysis of categorical event sequences. A single lsa() constructor fits classical, two-cell, bidirectional, and dominance engines; every result reads through a tidy verb; and a full confirmatory battery — bootstrap, Dirichlet–Multinomial certainty, split-half reliability, case-drop stability, permutation and Bayesian group comparison — quantifies the evidence behind each edge.",
+      "url": "https://github.com/mohsaqr/lagdynamics",
+      "links": {
+        "read": "https://github.com/mohsaqr/lagdynamics"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::3",
+      "type": "news",
+      "date": "2026-04-25",
+      "tag": "Software",
+      "title": "htna: Heterogeneous Transition Network Analysis in R",
+      "blurb": "The R package behind the Heterogeneous TNA papers. It models sequences that mix two or more actor groups (e.g. human and AI) within one interaction — a thin API over the Nestimate and cograph engines builds a transition network across the combined sequence while preserving the actor partition, so bootstrap, permutation, reliability, centrality and plotting treat each actor's codes as a distinct node group.",
+      "url": "https://sonsoles.me/htna/",
+      "links": {
+        "read": "https://sonsoles.me/htna/"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::4",
+      "type": "news",
+      "date": "2026-03-17",
+      "tag": "Software",
+      "title": "Nestimate: one engine for dynamic & psychological networks",
+      "blurb": "An R package to estimate, compare, and analyse dynamic and psychological networks through a unified interface — transition, frequency, co-occurrence and attention-weighted TNA estimation, psychometric methods (correlation, partial correlation, graphical lasso, Ising), and higher-order network methods — with bootstrap inference, permutation testing, split-half reliability, and centrality-stability analysis.",
+      "url": "https://github.com/mohsaqr/Nestimate",
+      "links": {
+        "read": "https://github.com/mohsaqr/Nestimate"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::5",
+      "type": "news",
+      "date": "2026-03-08",
+      "tag": "Software",
+      "title": "snakeplot: serpentine plots for long timelines",
+      "blurb": "A new R package for visualising long timelines, extended sequences, and temporally chained survey or experience-sampling data as intuitive serpentine ('snake') plots — with distribution bars, tick-mark plots, inter-item correlation arcs, faceted multi-construct panels, and time-of-day positioning for ecological momentary assessment data.",
+      "url": "https://github.com/mohsaqr/snakeplot",
+      "links": {
+        "read": "https://github.com/mohsaqr/snakeplot"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::6",
+      "type": "news",
+      "date": "2026-01-31",
+      "tag": "Software",
+      "title": "Saqrlab: ground-truth simulation for TNA research",
+      "blurb": "A new R package of simulation tools for transition network analysis research — generating synthetic datasets with known ground-truth parameters (Markov-chain sequences, latent profiles and classes, regression, factor analysis, and sequence cluster structures) for testing and validating statistical methods, each function returning the data alongside its JSON-serialisable ground truth.",
+      "url": "https://github.com/mohsaqr/Saqrlab",
+      "links": {
+        "read": "https://github.com/mohsaqr/Saqrlab"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "UNVERIFIED",
+      "last_checked": null
+    },
+    {
+      "id": "news::7",
+      "type": "news",
+      "date": "2025-07-26",
+      "tag": "Software",
+      "title": "Saqrmisc: miscellaneous tools for data analysis",
+      "blurb": "A new R package of miscellaneous functions for data processing, statistical analysis, and visualisation — including model-based clustering with MoEClust, comparison plots with built-in statistical testing, and mosaic-plot analysis for categorical variables, wrapped in robust error handling and a friendly interface.",
+      "url": "https://github.com/mohsaqr/Saqrmisc",
+      "links": {
+        "read": "https://github.com/mohsaqr/Saqrmisc"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::8",
+      "type": "news",
       "date": "2026-06-24",
       "tag": "Paper",
       "title": "Heterogeneous TNA: how AI feedback helps or hinders learning",
@@ -3110,7 +3236,7 @@
       "last_checked": null
     },
     {
-      "id": "news::2",
+      "id": "news::9",
       "type": "news",
       "date": "2026-04-29",
       "tag": "Preprint",
@@ -3128,7 +3254,7 @@
       "last_checked": null
     },
     {
-      "id": "news::3",
+      "id": "news::10",
       "type": "news",
       "date": "2026-05-13",
       "tag": "Software",
@@ -3146,7 +3272,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::4",
+      "id": "news::11",
       "type": "news",
       "date": "2026-04-16",
       "tag": "Software",
@@ -3164,7 +3290,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::5",
+      "id": "news::12",
       "type": "news",
       "date": "2026-04-15",
       "tag": "Software",
@@ -3182,7 +3308,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::6",
+      "id": "news::13",
       "type": "news",
       "date": "2026-06-21",
       "tag": "Paper",
@@ -3200,7 +3326,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::7",
+      "id": "news::14",
       "type": "news",
       "date": "2026-02-01",
       "tag": "Paper",
@@ -3218,7 +3344,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::8",
+      "id": "news::15",
       "type": "news",
       "date": "2026-01-10",
       "tag": "Software",
@@ -3236,7 +3362,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::9",
+      "id": "news::16",
       "type": "news",
       "date": "2025-09-15",
       "tag": "Funding",
@@ -3254,7 +3380,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::10",
+      "id": "news::17",
       "type": "news",
       "date": "2025-06-10",
       "tag": "Funding",
@@ -3272,7 +3398,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::11",
+      "id": "news::18",
       "type": "news",
       "date": "2025-03-30",
       "tag": "Paper",
