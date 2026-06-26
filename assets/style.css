@@ -12,6 +12,8 @@
   --card: #ffffff;      /* raised surfaces (cards, tooltips, palette) */
   --tile: #ffffff;      /* light tiles that must stay legible for logos/diagrams */
   --accent: #111111;
+  --subnav-fg: #6fa0a3;     /* faint green-blue for the secondary menu */
+  --subnav-on: #2d797e;     /* active/hover green-blue */
   --good: #1a7f37;      /* CRAN/verified, used sparingly */
   --scrim: rgba(255,255,255,.93);
   --shadow: rgba(0,0,0,.14);
@@ -31,6 +33,8 @@
   --card: #161618;
   --tile: #e9e9e6;      /* soft off-white so logos/diagrams stay readable on dark */
   --accent: #f1f1ef;
+  --subnav-fg: #82b6b9;
+  --subnav-on: #a8dde0;
   --good: #3fb950;
   --scrim: rgba(10,10,11,.92);
   --shadow: rgba(0,0,0,.55);
@@ -418,15 +422,14 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 560px) { .cmdk-item .ci-type { display: none; } .cmdk { padding-top: 6vh; } }
 
 /* ---------- tag / focus filter (packages) ---------- */
-/* secondary menu (Readings categories / dossier sections) — clear tab buttons */
-.subnav { display: flex; gap: 10px; flex-wrap: wrap; margin: 6px 0 28px; }
-.subnav-link { font-family: var(--mono); font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase;
-  color: var(--fg2); padding: 9px 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--card);
-  transition: background .15s ease, color .15s ease, border-color .15s ease; }
-.subnav-link:hover { border-color: var(--fg); color: var(--fg); }
-.subnav-link.active { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.subnav-link .sn-n { opacity: .55; margin-left: 7px; font-weight: 700; }
-.subnav-link.active .sn-n { opacity: .7; }
+/* secondary menu (Readings categories / dossier sections) — a divider line
+   separates it from the menu/buttons above; faint green-blue, bold. */
+.subnav { display: flex; gap: 24px; flex-wrap: wrap; margin: 0 0 26px; padding-top: 18px; border-top: 1px solid var(--line); }
+.subnav-link { font-family: var(--mono); font-size: 13px; letter-spacing: .05em; text-transform: uppercase; font-weight: 700;
+  color: var(--subnav-fg); padding: 2px 0; border-bottom: 2px solid transparent; }
+.subnav-link:hover { color: var(--subnav-on); }
+.subnav-link.active { color: var(--subnav-on); border-bottom-color: var(--subnav-on); }
+.subnav-link .sn-n { opacity: .6; margin-left: 6px; }
 
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 2px; }
 .filter-chip { font-family: var(--mono); font-size: 11px; letter-spacing: .03em; color: var(--fg2);
