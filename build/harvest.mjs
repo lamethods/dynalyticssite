@@ -191,6 +191,29 @@ async function getSiteArticles(docs) {
   return out;
 }
 
+// Build vignette entries from a package's local vignettes/ dir, pointing each at
+// `baseUrl + <slug>.html`. Used as the fallback when a live pkgdown articles
+// index can't be scraped, and for CRAN packages that ship no pkgdown site
+// (then baseUrl is CRAN's own hosted vignette path).
+function vignettesFromDir(pkg, baseUrl, excl) {
+  const vdir = join(WORKSPACE, pkg.dir, "vignettes");
+  if (!existsSync(vdir)) return [];
+  const out = [];
+  for (const f of readdirSync(vdir).filter((f) => /\.(Rmd|qmd)$/i.test(f) && !/^_/.test(f))) {
+    const b = f.replace(/\.[^.]+$/, "");
+    if (excl.includes(b)) continue;
+    const url = baseUrl + b + ".html";
+    out.push({
+      id: `${pkg.name}::${b}`, type: "vignette", title: vignetteTitle(join(vdir, f)),
+      blurb: `Article from the ${pkg.name} package.`,
+      url, links: { article: url },
+      owner: pkg.owner ?? null, tags: [pkg.name, "article", pkg.tags[0]],
+      packages: [pkg.name], kind: "article", status: "UNVERIFIED", last_checked: null
+    });
+  }
+  return out;
+}
+
 // --- packages + articles ---
 async function buildPackage(pkg) {
   const descPath = join(WORKSPACE, pkg.dir, "DESCRIPTION");
@@ -225,37 +248,30 @@ async function buildPackage(pkg) {
   };
 
   const excl = pkg.exclude_articles || [];
-  const vig = [];
+  let vig = [];
   if (links.articles) {
     let arts = await getSiteArticles(docs);
     if (arts.length) {
       arts = arts.filter((a) => !excl.includes(basename(a.url).replace(/\.html$/, "")));
-      for (const a of arts) {
+      vig = arts.map((a) => {
         const b = basename(a.url).replace(/\.html$/, "");
-        vig.push({
+        return {
           id: `${pkg.name}::${b}`, type: "vignette", title: a.title,
           blurb: `Article on the ${pkg.name} documentation site.`,
           url: a.url, links: { article: a.url },
           owner: pkg.owner ?? null, tags: [pkg.name, "article", pkg.tags[0]],
           packages: [pkg.name], kind: "article", status: "UNVERIFIED", last_checked: null
-        });
-      }
+        };
+      });
     } else {
-      const vdir = join(WORKSPACE, pkg.dir, "vignettes");
-      if (existsSync(vdir)) {
-        for (const f of readdirSync(vdir).filter((f) => /\.(Rmd|qmd)$/i.test(f) && !/^_/.test(f))) {
-          const b = f.replace(/\.[^.]+$/, "");
-          if (excl.includes(b)) continue;
-          vig.push({
-            id: `${pkg.name}::${b}`, type: "vignette", title: vignetteTitle(join(vdir, f)),
-            blurb: `Article from the ${pkg.name} package.`,
-            url: links.articles + b + ".html", links: { article: links.articles + b + ".html" },
-            owner: pkg.owner ?? null, tags: [pkg.name, "article", pkg.tags[0]],
-            packages: [pkg.name], kind: "article", status: "UNVERIFIED", last_checked: null
-          });
-        }
-      }
+      // pkgdown site declared but its articles index couldn't be scraped — fall
+      // back to the local vignettes, addressed under the docs site's articles/.
+      vig = vignettesFromDir(pkg, links.articles, excl);
     }
+  } else if (pkg.cran) {
+    // No pkgdown site, but the package is on CRAN — CRAN renders and hosts the
+    // vignettes itself, so surface those.
+    vig = vignettesFromDir(pkg, `https://cran.r-project.org/web/packages/${pkg.name}/vignettes/`, excl);
   }
   return [pkgEntry, ...vig];
 }

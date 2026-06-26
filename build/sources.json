@@ -170,13 +170,6 @@
   ],
   "news": [
     {
-      "date": "2026-06-20",
-      "tag": "Software",
-      "title": "psychnet: clean-room psychometric networks in base R",
-      "blurb": "A new base-R package for psychometric network models — correlation and partial correlation, the EBIC-regularized graphical lasso and its nonparanormal/stepwise variants, TMFG and LoGo filtering graphs, relative-importance, Ising and mixed graphical models — reimplemented from first principles with no compiled dependencies. Each regularised fit ships a self-verifying correctness certificate; it is the R counterpart to the psychaj library.",
-      "url": "https://github.com/mohsaqr/psychnet"
-    },
-    {
       "date": "2026-05-13",
       "tag": "Software",
       "title": "lagdynamics: modern lag sequential analysis",
@@ -205,13 +198,6 @@
       "url": "https://github.com/mohsaqr/snakeplot"
     },
     {
-      "date": "2026-01-31",
-      "tag": "Software",
-      "title": "Saqrlab: ground-truth simulation for TNA research",
-      "blurb": "A new R package of simulation tools for transition network analysis research — generating synthetic datasets with known ground-truth parameters (Markov-chain sequences, latent profiles and classes, regression, factor analysis, and sequence cluster structures) for testing and validating statistical methods, each function returning the data alongside its JSON-serialisable ground truth.",
-      "url": "https://github.com/mohsaqr/Saqrlab"
-    },
-    {
       "date": "2025-07-26",
       "tag": "Software",
       "title": "Saqrmisc: miscellaneous tools for data analysis",
@@ -233,11 +219,11 @@
       "url": "https://arxiv.org/abs/2604.27134"
     },
     {
-      "date": "2026-05-13",
+      "date": "2026-06-18",
       "tag": "Software",
-      "title": "transitiontrees: variable-length transition trajectories in R",
-      "blurb": "A new R package for analysing how states follow one another and where pathways branch or converge. It models trajectories with variable-order prediction suffix trees — in both frequency- and prediction-based forms — and visualises them as transition trees, radial sunbursts, heatmaps, and forward-trajectory trees.",
-      "url": "https://github.com/mohsaqr/transitiontrees"
+      "title": "transitiontrees is on CRAN",
+      "blurb": "Now available from CRAN, transitiontrees analyses how states follow one another and where pathways branch or converge. It models trajectories with variable-order prediction suffix trees — in both frequency- and prediction-based forms — and visualises them as transition trees, radial sunbursts, heatmaps, and forward-trajectory trees.",
+      "url": "https://CRAN.R-project.org/package=transitiontrees"
     },
     {
       "date": "2026-04-16",
