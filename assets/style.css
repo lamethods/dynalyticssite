@@ -418,6 +418,13 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 560px) { .cmdk-item .ci-type { display: none; } .cmdk { padding-top: 6vh; } }
 
 /* ---------- tag / focus filter (packages) ---------- */
+/* secondary menu under the main nav (Readings categories) */
+.subnav { display: flex; gap: 24px; flex-wrap: wrap; margin: 2px 0 24px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.subnav-link { font-family: var(--mono); font-size: 12px; letter-spacing: .07em; text-transform: uppercase; color: var(--fg3); padding: 2px 0; border-bottom: 2px solid transparent; }
+.subnav-link:hover { color: var(--fg); }
+.subnav-link.active { color: var(--fg); border-bottom-color: var(--accent); }
+.subnav-link .sn-n { opacity: .5; margin-left: 5px; }
+
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 2px; }
 .filter-chip { font-family: var(--mono); font-size: 11px; letter-spacing: .03em; color: var(--fg2);
   border: 1px solid var(--line); border-radius: 999px; padding: 6px 13px; cursor: pointer; background: var(--bg);

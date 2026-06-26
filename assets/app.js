@@ -113,6 +113,8 @@
     if (m && S.byId[decodeURIComponent(m[1])]) { setActive(null); var pk = S.byId[decodeURIComponent(m[1])]; setTitle(pk.id); renderPackage(view, pk); return; }
     var mp = h.match(/^people\/(.+)$/);
     if (mp) { setActive("people"); setTitle("People"); renderPeople(view, decodeURIComponent(mp[1])); return; }
+    var mw = h.match(/^writing(?:\/(tutorials|articles|blogs))?$/);
+    if (mw) { setActive("writing"); setTitle("Readings"); renderWriting(view, mw[1] || "tutorials"); return; }
     var r = (h === "" || h === "/") ? "" : h;
     setActive(r);
     var labels = { packages: "Packages", tools: "Tools", chapters: "Book chapters", writing: "Readings", papers: "Selected articles", news: "News", people: "People" };
@@ -411,29 +413,47 @@
     return card;
   }
 
-  // Readings view — surfaces every tutorial, vignette/article, and blog post
-  // across all packages, each as a card. Ordered the way a learner reads:
-  // tutorials first, then reference vignettes, then blog posts & other writing —
-  // TNA leading each group, package shown on each card's badge.
-  function renderWriting(view) {
+  // Readings view — every tutorial, vignette/article, and blog post across all
+  // packages, as cards. A secondary menu (below the main nav) switches between
+  // categories so each page shows ONE category, not an endless scroll of all.
+  var READING_CATS = [
+    { key: "tutorials", label: "Tutorials", hint: "step-by-step guides — start here",
+      get: function () { return ofType("post").filter(function (e) { return e.kind === "tutorial"; }); },
+      opts: { read: "Read the tutorial" } },
+    { key: "articles", label: "Articles", hint: "reference articles & vignettes from the package doc sites and CRAN",
+      get: function () { return ofType("vignette"); },
+      opts: { read: "Read the article", foot: "Article" } },
+    { key: "blogs", label: "Blogs", hint: "longer-form writing on saqr.me & sonsoles.me",
+      get: function () { return ofType("post").filter(function (e) { return e.kind !== "news" && e.kind !== "tutorial"; }); },
+      opts: { read: "Read the post" } }
+  ];
+  function renderWriting(view, tab) {
     view.innerHTML = "";
-    var tutorials = ofType("post").filter(function (e) { return e.kind === "tutorial"; });
-    var vignettes = ofType("vignette");
-    var blogs = ofType("post").filter(function (e) { return e.kind !== "news" && e.kind !== "tutorial"; });
-    var total = tutorials.length + vignettes.length + blogs.length;
-    view.appendChild(secHead("", "Readings", total + " tutorials, vignettes & blog posts"));
+    var cats = READING_CATS.map(function (c) { return { c: c, items: c.get() }; });
+    var active = cats.filter(function (x) { return x.c.key === tab; })[0] || cats[0];
+    var total = cats.reduce(function (n, x) { return n + x.items.length; }, 0);
+    view.appendChild(secHead("", "Readings", total + " tutorials, articles & blog posts"));
 
-    function cardGroup(title, hint, items, opts) {
-      if (!items.length) return;
-      var g = el("div", "write-group");
-      g.appendChild(secHead("", title, hint));
+    // secondary menu — one card view per category
+    var sub = el("nav", "subnav");
+    cats.forEach(function (x) {
+      var a = el("a", "subnav-link" + (x === active ? " active" : ""));
+      a.href = "#/writing/" + x.c.key;
+      a.innerHTML = esc(x.c.label) + ' <span class="sn-n">' + x.items.length + "</span>";
+      sub.appendChild(a);
+    });
+    view.appendChild(sub);
+
+    var g = el("div", "write-group");
+    g.appendChild(secHead("", active.c.label, active.c.hint));
+    if (active.items.length) {
       var grid = el("div", "chap-grid");
-      tnaFirst(items).forEach(function (e) { grid.appendChild(resourceCard(e, opts)); });
-      g.appendChild(grid); view.appendChild(g);
+      tnaFirst(active.items).forEach(function (e) { grid.appendChild(resourceCard(e, active.c.opts)); });
+      g.appendChild(grid);
+    } else {
+      g.appendChild(el("div", "empty", "Nothing here yet."));
     }
-    cardGroup("Tutorials", "step-by-step guides — start here", tutorials, { read: "Read the tutorial" });
-    cardGroup("Vignettes & articles", vignettes.length + " reference articles from the package doc sites", vignettes, { read: "Read the article", foot: "Article" });
-    cardGroup("Blog posts & more", "longer-form writing on saqr.me & sonsoles.me", blogs, { read: "Read the post" });
+    view.appendChild(g);
   }
 
   function renderTools(view) {
