@@ -12,8 +12,8 @@
     { route: "packages", label: "Packages" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
-    { route: "writing", label: "Writing" },
-    { route: "papers", label: "Papers" },
+    { route: "writing", label: "Readings" },
+    { route: "papers", label: "Selected articles" },
     { route: "news", label: "News" }
   ];
   var TITLE_BASE = "Dynalytics";
@@ -115,7 +115,7 @@
     if (mp) { setActive("people"); setTitle("People"); renderPeople(view, decodeURIComponent(mp[1])); return; }
     var r = (h === "" || h === "/") ? "" : h;
     setActive(r);
-    var labels = { packages: "Packages", tools: "Tools", chapters: "Book chapters", writing: "Writing", papers: "Papers", news: "News", people: "People" };
+    var labels = { packages: "Packages", tools: "Tools", chapters: "Book chapters", writing: "Readings", papers: "Selected articles", news: "News", people: "People" };
     setTitle(labels[r] || "");
     if (r === "packages") renderPackages(view);
     else if (r === "tools") renderTools(view);
@@ -259,10 +259,10 @@
 
     var pp = papers.slice(0, 5);
     grid.appendChild(browseCard({
-      route: "papers", label: "Papers", count: papers.length,
+      route: "papers", label: "Selected articles", count: papers.length,
       miniClass: "row-docs", minis: pp.map(miniDoc), extra: papers.length - pp.length,
       sub: "The foundational and applied papers behind the framework — TNA, FTNA, ATNA, HTNA and the human–AI studies.",
-      cta: "All papers"
+      cta: "All articles"
     }));
 
     var news = newsSorted();
@@ -417,7 +417,7 @@
     var vignettes = ofType("vignette");
     var blogs = ofType("post").filter(function (e) { return e.kind !== "news" && e.kind !== "tutorial"; });
     var total = tutorials.length + vignettes.length + blogs.length;
-    view.appendChild(secHead("", "Writing", total + " tutorials, vignettes & blog posts"));
+    view.appendChild(secHead("", "Readings", total + " tutorials, vignettes & blog posts"));
 
     if (tutorials.length) {
       var g1 = el("div", "write-group");
@@ -552,7 +552,7 @@
 
   function renderPapers(view) {
     view.innerHTML = "";
-    view.appendChild(secHead("", "Key papers", ""));
+    view.appendChild(secHead("", "Selected articles", ""));
     var l = el("div", "list");
     ofType("paper").forEach(function (e) {
       var kick = [e.authors, e.year, e.venue].filter(Boolean).join(" · ");

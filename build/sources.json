@@ -150,9 +150,60 @@
       "venue": "The Internet and Higher Education, 70, 101087",
       "url": "https://doi.org/10.1016/j.iheduc.2026.101087",
       "blurb": "A critical examination of human–AI collaboration and the 'instruct, serve, repeat' dynamic."
+    },
+    {
+      "title": "How AI-Generated Feedback Hinders or Helps Learning: A Heterogeneous TNA Study of Learning Dynamics",
+      "authors": "López-Pernas, Misiejuk & Saqr",
+      "year": "2026",
+      "venue": "Journal of Computer Assisted Learning",
+      "url": "https://doi.org/10.1002/jcal.70285",
+      "blurb": "A heterogeneous TNA of how first-grade students engage with real-time AI feedback on multimodal mathematics tasks — when it supports learning and when it gets in the way."
+    },
+    {
+      "title": "The Dynamics of the Self-Regulation Process in Student–AI Interactions",
+      "authors": "López-Pernas, Misiejuk, Oliveira & Saqr",
+      "year": "2025",
+      "venue": "Koli Calling '25 — 25th Koli Calling Int. Conf. on Computing Education Research",
+      "url": "https://doi.org/10.1145/3769994.3770043",
+      "blurb": "A process-oriented look at how self-regulation unfolds as students interact with AI."
     }
   ],
   "news": [
+    {
+      "date": "2026-06-24",
+      "tag": "Paper",
+      "title": "Heterogeneous TNA: how AI feedback helps or hinders learning",
+      "blurb": "Out now in the Journal of Computer Assisted Learning. López-Pernas, Misiejuk & Saqr use Heterogeneous TNA to trace how first-grade students engage with real-time AI feedback while solving multimodal mathematics tasks — showing, process by process, when the feedback supports learning and when it gets in the way.",
+      "url": "https://doi.org/10.1002/jcal.70285"
+    },
+    {
+      "date": "2026-04-29",
+      "tag": "Preprint",
+      "title": "Heterogeneous TNA: unpacking ‘vibe coding’ in student–AI programming",
+      "blurb": "A new preprint applies Heterogeneous TNA to 19,418 interaction turns from 110 undergraduates, framing AI-assisted ‘vibe coding’ as help-seeking. Top performers engage in instrumental inquiry and exploration that elicits tutor-like AI responses, while low performers fall into more passive patterns — a process-level contrast only the heterogeneous model surfaces.",
+      "url": "https://arxiv.org/abs/2604.27134"
+    },
+    {
+      "date": "2026-05-13",
+      "tag": "Software",
+      "title": "transitiontrees: variable-length transition trajectories in R",
+      "blurb": "A new R package for analysing how states follow one another and where pathways branch or converge. It models trajectories with variable-order prediction suffix trees — in both frequency- and prediction-based forms — and visualises them as transition trees, radial sunbursts, heatmaps, and forward-trajectory trees.",
+      "url": "https://github.com/mohsaqr/transitiontrees"
+    },
+    {
+      "date": "2026-04-16",
+      "tag": "Software",
+      "title": "cooccure: co-occurrence networks from any data",
+      "blurb": "A new R package that builds co-occurrence networks from delimited fields, long/bipartite tables, binary matrices, or wide sequences. It returns tidy edge tables with eight similarity measures — including Jaccard, cosine, and association strength — plus scaling, thresholding, splitting, and multi-format export.",
+      "url": "https://github.com/mohsaqr/cooccure"
+    },
+    {
+      "date": "2026-04-15",
+      "tag": "Software",
+      "title": "bibnets: bibliometric networks in R",
+      "blurb": "A new R package for importing, constructing, and exporting bibliometric networks — reading Scopus, Web of Science, OpenAlex, Crossref, Lens, Dimensions, BibTeX and RIS exports. It goes beyond standard co-networks with attention-weighted edges, position-aware counting, temporal windows, disparity-filter backbones, and historiographs.",
+      "url": "https://github.com/mohsaqr/bibnets"
+    },
     {
       "date": "2026-06-21",
       "tag": "Paper",

@@ -51,12 +51,12 @@
     ]
   },
   "counts": {
-    "total": 151,
+    "total": 158,
     "packages": 14,
     "vignettes": 42,
     "posts": 19,
     "chapters": 44,
-    "news": 6
+    "news": 11
   },
   "entries": [
     {
@@ -2982,6 +2982,36 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "paper::13",
+      "type": "paper",
+      "title": "How AI-Generated Feedback Hinders or Helps Learning: A Heterogeneous TNA Study of Learning Dynamics",
+      "blurb": "A heterogeneous TNA of how first-grade students engage with real-time AI feedback on multimodal mathematics tasks — when it supports learning and when it gets in the way.",
+      "url": "https://doi.org/10.1002/jcal.70285",
+      "links": {
+        "paper": "https://doi.org/10.1002/jcal.70285"
+      },
+      "authors": "López-Pernas, Misiejuk & Saqr",
+      "year": "2026",
+      "venue": "Journal of Computer Assisted Learning",
+      "status": "UNVERIFIED",
+      "last_checked": null
+    },
+    {
+      "id": "paper::14",
+      "type": "paper",
+      "title": "The Dynamics of the Self-Regulation Process in Student–AI Interactions",
+      "blurb": "A process-oriented look at how self-regulation unfolds as students interact with AI.",
+      "url": "https://doi.org/10.1145/3769994.3770043",
+      "links": {
+        "paper": "https://doi.org/10.1145/3769994.3770043"
+      },
+      "authors": "López-Pernas, Misiejuk, Oliveira & Saqr",
+      "year": "2025",
+      "venue": "Koli Calling '25 — 25th Koli Calling Int. Conf. on Computing Education Research",
+      "status": "VERIFIED",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "tool::tnapy",
       "type": "tool",
       "kind": "Python",
@@ -3062,49 +3092,97 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "book::book1",
-      "type": "book",
-      "title": "Vol 1 — LA Methods & Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
-      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
-      "url": "https://lamethods.github.io/book1/",
-      "links": {
-        "read": "https://lamethods.github.io/book1/",
-        "code": "https://github.com/lamethods/code"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book1"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "book::book2",
-      "type": "book",
-      "title": "Vol 2 — Advanced LA Methods",
-      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
-      "cover": "https://lamethods.org/book2/cover2.jpg",
-      "url": "https://lamethods.github.io/book2/",
-      "links": {
-        "read": "https://lamethods.github.io/book2/",
-        "code": "https://github.com/lamethods/code2"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book2"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-06-25"
-    },
-    {
       "id": "news::1",
+      "type": "news",
+      "date": "2026-06-24",
+      "tag": "Paper",
+      "title": "Heterogeneous TNA: how AI feedback helps or hinders learning",
+      "blurb": "Out now in the Journal of Computer Assisted Learning. López-Pernas, Misiejuk & Saqr use Heterogeneous TNA to trace how first-grade students engage with real-time AI feedback while solving multimodal mathematics tasks — showing, process by process, when the feedback supports learning and when it gets in the way.",
+      "url": "https://doi.org/10.1002/jcal.70285",
+      "links": {
+        "read": "https://doi.org/10.1002/jcal.70285"
+      },
+      "tags": [
+        "news",
+        "paper"
+      ],
+      "status": "UNVERIFIED",
+      "last_checked": null
+    },
+    {
+      "id": "news::2",
+      "type": "news",
+      "date": "2026-04-29",
+      "tag": "Preprint",
+      "title": "Heterogeneous TNA: unpacking ‘vibe coding’ in student–AI programming",
+      "blurb": "A new preprint applies Heterogeneous TNA to 19,418 interaction turns from 110 undergraduates, framing AI-assisted ‘vibe coding’ as help-seeking. Top performers engage in instrumental inquiry and exploration that elicits tutor-like AI responses, while low performers fall into more passive patterns — a process-level contrast only the heterogeneous model surfaces.",
+      "url": "https://arxiv.org/abs/2604.27134",
+      "links": {
+        "read": "https://arxiv.org/abs/2604.27134"
+      },
+      "tags": [
+        "news",
+        "preprint"
+      ],
+      "status": "UNVERIFIED",
+      "last_checked": null
+    },
+    {
+      "id": "news::3",
+      "type": "news",
+      "date": "2026-05-13",
+      "tag": "Software",
+      "title": "transitiontrees: variable-length transition trajectories in R",
+      "blurb": "A new R package for analysing how states follow one another and where pathways branch or converge. It models trajectories with variable-order prediction suffix trees — in both frequency- and prediction-based forms — and visualises them as transition trees, radial sunbursts, heatmaps, and forward-trajectory trees.",
+      "url": "https://github.com/mohsaqr/transitiontrees",
+      "links": {
+        "read": "https://github.com/mohsaqr/transitiontrees"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::4",
+      "type": "news",
+      "date": "2026-04-16",
+      "tag": "Software",
+      "title": "cooccure: co-occurrence networks from any data",
+      "blurb": "A new R package that builds co-occurrence networks from delimited fields, long/bipartite tables, binary matrices, or wide sequences. It returns tidy edge tables with eight similarity measures — including Jaccard, cosine, and association strength — plus scaling, thresholding, splitting, and multi-format export.",
+      "url": "https://github.com/mohsaqr/cooccure",
+      "links": {
+        "read": "https://github.com/mohsaqr/cooccure"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::5",
+      "type": "news",
+      "date": "2026-04-15",
+      "tag": "Software",
+      "title": "bibnets: bibliometric networks in R",
+      "blurb": "A new R package for importing, constructing, and exporting bibliometric networks — reading Scopus, Web of Science, OpenAlex, Crossref, Lens, Dimensions, BibTeX and RIS exports. It goes beyond standard co-networks with attention-weighted edges, position-aware counting, temporal windows, disparity-filter backbones, and historiographs.",
+      "url": "https://github.com/mohsaqr/bibnets",
+      "links": {
+        "read": "https://github.com/mohsaqr/bibnets"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "news::6",
       "type": "news",
       "date": "2026-06-21",
       "tag": "Paper",
@@ -3122,7 +3200,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::2",
+      "id": "news::7",
       "type": "news",
       "date": "2026-02-01",
       "tag": "Paper",
@@ -3140,7 +3218,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::3",
+      "id": "news::8",
       "type": "news",
       "date": "2026-01-10",
       "tag": "Software",
@@ -3158,7 +3236,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::4",
+      "id": "news::9",
       "type": "news",
       "date": "2025-09-15",
       "tag": "Funding",
@@ -3176,7 +3254,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::5",
+      "id": "news::10",
       "type": "news",
       "date": "2025-06-10",
       "tag": "Funding",
@@ -3194,7 +3272,7 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "news::6",
+      "id": "news::11",
       "type": "news",
       "date": "2025-03-30",
       "tag": "Paper",
@@ -3273,6 +3351,48 @@
         "site": "https://www.eduoliveira.com/"
       },
       "status": "VERIFIED",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "book::book1",
+      "type": "book",
+      "title": "Vol 1 — LA Methods & Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
+      "url": "https://lamethods.github.io/book1/",
+      "links": {
+        "read": "https://lamethods.github.io/book1/",
+        "code": "https://github.com/lamethods/code"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book1"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "book::book2",
+      "type": "book",
+      "title": "Vol 2 — Advanced LA Methods",
+      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "cover": "https://lamethods.org/book2/cover2.jpg",
+      "url": "https://lamethods.github.io/book2/",
+      "links": {
+        "read": "https://lamethods.github.io/book2/",
+        "code": "https://github.com/lamethods/code2"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book2"
+      ],
+      "status": "REDIRECT",
       "last_checked": "2026-06-25"
     },
     {
