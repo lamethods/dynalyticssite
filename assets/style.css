@@ -418,12 +418,15 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 560px) { .cmdk-item .ci-type { display: none; } .cmdk { padding-top: 6vh; } }
 
 /* ---------- tag / focus filter (packages) ---------- */
-/* secondary menu under the main nav (Readings categories) */
-.subnav { display: flex; gap: 24px; flex-wrap: wrap; margin: 2px 0 24px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
-.subnav-link { font-family: var(--mono); font-size: 12px; letter-spacing: .07em; text-transform: uppercase; color: var(--fg3); padding: 2px 0; border-bottom: 2px solid transparent; }
-.subnav-link:hover { color: var(--fg); }
-.subnav-link.active { color: var(--fg); border-bottom-color: var(--accent); }
-.subnav-link .sn-n { opacity: .5; margin-left: 5px; }
+/* secondary menu (Readings categories / dossier sections) — clear tab buttons */
+.subnav { display: flex; gap: 10px; flex-wrap: wrap; margin: 6px 0 28px; }
+.subnav-link { font-family: var(--mono); font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--fg2); padding: 9px 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+  transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.subnav-link:hover { border-color: var(--fg); color: var(--fg); }
+.subnav-link.active { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.subnav-link .sn-n { opacity: .55; margin-left: 7px; font-weight: 700; }
+.subnav-link.active .sn-n { opacity: .7; }
 
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 2px; }
 .filter-chip { font-family: var(--mono); font-size: 11px; letter-spacing: .03em; color: var(--fg2);
