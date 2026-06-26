@@ -109,8 +109,8 @@
     var h = location.hash.replace(/^#\/?/, "");
     var view = document.getElementById("view");
     window.scrollTo(0, 0);
-    var m = h.match(/^pkg\/(.+)$/);
-    if (m && S.byId[decodeURIComponent(m[1])]) { setActive(null); var pk = S.byId[decodeURIComponent(m[1])]; setTitle(pk.id); renderPackage(view, pk); return; }
+    var m = h.match(/^pkg\/([^/]+)(?:\/(tutorials|articles|blogs|book))?$/);
+    if (m && S.byId[decodeURIComponent(m[1])]) { setActive(null); var pk = S.byId[decodeURIComponent(m[1])]; setTitle(pk.id); renderPackage(view, pk, m[2]); return; }
     var mp = h.match(/^people\/(.+)$/);
     if (mp) { setActive("people"); setTitle("People"); renderPeople(view, decodeURIComponent(mp[1])); return; }
     var mw = h.match(/^writing(?:\/(tutorials|articles|blogs))?$/);
@@ -799,7 +799,7 @@
   }
 
   /* ---------- package dossier ---------- */
-  function renderPackage(view, p) {
+  function renderPackage(view, p, tab) {
     view.innerHTML = "";
     var back = el("a", "back", "← Packages"); back.href = "#/packages"; view.appendChild(back);
 
@@ -840,37 +840,41 @@
       view.appendChild(el("div", "empty-note", p.note));
     }
 
+    // Resource categories for this package, shown one at a time via a secondary
+    // menu (like the Readings view) so the dossier doesn't stack every group.
     var posts = by("post", p.id);
-    // Same reading order as the Readings view, every group as cards: tutorials
-    // first, then vignettes/articles, then blog posts, then the book. Here the
-    // package is implied, so each card's badge shows the kind instead.
-    dcards(view, "Tutorials", "step-by-step guides — start here",
-      posts.filter(function (e) { return e.kind === "tutorial"; })
-        .map(function (e) { return resourceCard(e, { badge: "Tutorial", read: "Read the tutorial" }); }));
-    dcards(view, "Vignettes & articles", "from the package documentation site",
-      by("vignette", p.id).map(function (e) { return resourceCard(e, { badge: "Article", read: "Read the article", foot: "" }); }));
-    dcards(view, "Blog posts & more", "long-form guides on saqr.me & sonsoles.me",
-      posts.filter(function (e) { return e.kind !== "tutorial" && e.kind !== "news"; })
-        .map(function (e) { return resourceCard(e, { badge: KIND_LABEL[e.kind] || "Post", read: "Read the post" }); }));
-    dgroup(view, "In the Book", "relevant chapters of lamethods.org", by("chapter", p.id).map(chapterRow));
-  }
-  function dgroup(view, title, hint, items) {
-    if (!items.length) return;
+    var cardsGrid = function (cards) { var grid = el("div", "chap-grid"); cards.forEach(function (c) { grid.appendChild(c); }); return grid; };
+    var cats = [
+      { key: "tutorials", label: "Tutorials", hint: "step-by-step guides — start here",
+        items: posts.filter(function (e) { return e.kind === "tutorial"; }),
+        body: function (items) { return cardsGrid(items.map(function (e) { return resourceCard(e, { badge: "Tutorial", read: "Read the tutorial" }); })); } },
+      { key: "articles", label: "Articles", hint: "from the package documentation site & CRAN",
+        items: by("vignette", p.id),
+        body: function (items) { return cardsGrid(items.map(function (e) { return resourceCard(e, { badge: "Article", read: "Read the article", foot: "" }); })); } },
+      { key: "blogs", label: "Blogs", hint: "long-form guides on saqr.me & sonsoles.me",
+        items: posts.filter(function (e) { return e.kind !== "tutorial" && e.kind !== "news"; }),
+        body: function (items) { return cardsGrid(items.map(function (e) { return resourceCard(e, { badge: KIND_LABEL[e.kind] || "Post", read: "Read the post" }); })); } },
+      { key: "book", label: "In the Book", hint: "relevant chapters of lamethods.org",
+        items: by("chapter", p.id),
+        body: function (items) { var l = el("div", "list"); items.map(chapterRow).forEach(function (c) { l.appendChild(c); }); return l; } }
+    ];
+    var avail = cats.filter(function (c) { return c.items.length; });
+    if (!avail.length) return;
+    var active = avail.filter(function (c) { return c.key === tab; })[0] || avail[0];
+
+    var sub = el("nav", "subnav");
+    avail.forEach(function (c) {
+      var a = el("a", "subnav-link" + (c === active ? " active" : ""));
+      a.href = "#/pkg/" + encodeURIComponent(p.id) + "/" + c.key;
+      a.innerHTML = esc(c.label) + ' <span class="sn-n">' + c.items.length + "</span>";
+      sub.appendChild(a);
+    });
+    view.appendChild(sub);
+
     var g = el("div", "dgroup");
-    g.appendChild(el("h3", null, esc(title)));
-    g.appendChild(el("div", "ghint", esc(hint)));
-    var l = el("div", "list"); items.forEach(function (it) { l.appendChild(it); });
-    g.appendChild(l);
-    view.appendChild(g);
-  }
-  // like dgroup, but lays the items out as chapter-style cards (two-col grid)
-  function dcards(view, title, hint, cards) {
-    if (!cards.length) return;
-    var g = el("div", "dgroup");
-    g.appendChild(el("h3", null, esc(title)));
-    g.appendChild(el("div", "ghint", esc(hint)));
-    var grid = el("div", "chap-grid"); cards.forEach(function (c) { grid.appendChild(c); });
-    g.appendChild(grid);
+    g.appendChild(el("h3", null, esc(active.label)));
+    g.appendChild(el("div", "ghint", esc(active.hint)));
+    g.appendChild(active.body(active.items));
     view.appendChild(g);
   }
 
