@@ -380,32 +380,70 @@
     view.appendChild(idx);
   }
 
-  // Writing view — surfaces the 60+ tutorials, blog posts, and package vignettes
-  // that otherwise only live inside individual package dossiers.
+  // Order a list so TNA-related items lead, otherwise keeping the harvested order.
+  // "tna" is the flagship package, so its tutorials/vignettes/posts surface first.
+  function tnaFirst(list) {
+    return list.slice().sort(function (a, b) {
+      return (pkgsOf(a).indexOf("tna") >= 0 ? 0 : 1) - (pkgsOf(b).indexOf("tna") >= 0 ? 0 : 1);
+    });
+  }
+  // Tutorial card — same shape as a book-chapter card (chap/chap-grid), but the
+  // chapter-number slot carries the package badge instead.
+  function tutorialCard(e) {
+    var pk = pkgsOf(e)[0] || "";
+    var card = el("div", "chap");
+    var top = el("div", "chap-top");
+    if (pk) top.appendChild(el("span", "chap-no tut-badge", esc(pk)));
+    var a = el("a", "chap-title"); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; a.textContent = e.title;
+    top.appendChild(a);
+    card.appendChild(top);
+    if (e.blurb) card.appendChild(el("div", "chap-desc", esc(e.blurb)));
+    var cl = el("div", "chap-links");
+    var read = el("a", "chlink primary"); read.href = e.url; read.target = "_blank"; read.rel = "noopener";
+    read.innerHTML = 'Read the tutorial <span class="m">↗</span>';
+    cl.appendChild(read);
+    if (e.source) cl.appendChild(el("span", "chlink", esc(SOURCE_LABEL[e.source] || e.source)));
+    card.appendChild(cl);
+    return card;
+  }
+
+  // Writing view — surfaces the 60+ tutorials, vignettes, and blog posts that
+  // otherwise only live inside individual package dossiers. Ordered the way a
+  // learner reads: tutorials first (as cards), then reference vignettes, then
+  // blog posts & other writing — TNA leading each group.
   function renderWriting(view) {
     view.innerHTML = "";
+    var tutorials = ofType("post").filter(function (e) { return e.kind === "tutorial"; });
     var vignettes = ofType("vignette");
-    var posts = ofType("post").filter(function (e) { return e.kind !== "news"; });
-    view.appendChild(secHead("", "Writing", (vignettes.length + posts.length) + " tutorials, blog posts & articles"));
+    var blogs = ofType("post").filter(function (e) { return e.kind !== "news" && e.kind !== "tutorial"; });
+    var total = tutorials.length + vignettes.length + blogs.length;
+    view.appendChild(secHead("", "Writing", total + " tutorials, vignettes & blog posts"));
 
-    if (posts.length) {
+    if (tutorials.length) {
       var g1 = el("div", "write-group");
-      g1.appendChild(secHead("", "Tutorials & blog posts", "long-form guides on saqr.me & sonsoles.me"));
-      var l1 = el("div", "list");
-      posts.forEach(function (e) {
-        l1.appendChild(linkItem((KIND_LABEL[e.kind] || "Post") + " · " + (SOURCE_LABEL[e.source] || ""), e.title, e.blurb, e.url, "↗"));
-      });
-      g1.appendChild(l1); view.appendChild(g1);
+      g1.appendChild(secHead("", "Tutorials", "step-by-step guides — start here"));
+      var grid = el("div", "chap-grid");
+      tnaFirst(tutorials).forEach(function (e) { grid.appendChild(tutorialCard(e)); });
+      g1.appendChild(grid); view.appendChild(g1);
     }
     if (vignettes.length) {
       var g2 = el("div", "write-group");
-      g2.appendChild(secHead("", "Package articles & vignettes", vignettes.length + " reference articles from the package doc sites"));
+      g2.appendChild(secHead("", "Vignettes & articles", vignettes.length + " reference articles from the package doc sites"));
       var l2 = el("div", "list");
-      vignettes.forEach(function (e) {
+      tnaFirst(vignettes).forEach(function (e) {
         var pk = pkgsOf(e)[0] || "";
         l2.appendChild(linkItem(pk ? pk + " · Article" : "Article", e.title, e.blurb, e.url, "↗"));
       });
       g2.appendChild(l2); view.appendChild(g2);
+    }
+    if (blogs.length) {
+      var g3 = el("div", "write-group");
+      g3.appendChild(secHead("", "Blog posts & more", "longer-form writing on saqr.me & sonsoles.me"));
+      var l3 = el("div", "list");
+      tnaFirst(blogs).forEach(function (e) {
+        l3.appendChild(linkItem((KIND_LABEL[e.kind] || "Post") + " · " + (SOURCE_LABEL[e.source] || ""), e.title, e.blurb, e.url, "↗"));
+      });
+      g3.appendChild(l3); view.appendChild(g3);
     }
   }
 
@@ -793,12 +831,18 @@
       view.appendChild(el("div", "empty-note", p.note));
     }
 
-    dgroup(view, "Articles & Vignettes", "from the package documentation site", by("vignette", p.id).map(function (e) {
+    var posts = by("post", p.id);
+    // Same reading order as the Writing view: tutorials (as cards) first, then
+    // reference vignettes, then blog posts & other writing, then the book.
+    dcards(view, "Tutorials", "step-by-step guides — start here",
+      posts.filter(function (e) { return e.kind === "tutorial"; }).map(tutorialCard));
+    dgroup(view, "Vignettes & articles", "from the package documentation site", by("vignette", p.id).map(function (e) {
       return linkItem("Article", e.title, e.blurb, e.url, "↗");
     }));
-    dgroup(view, "Tutorials & Blog Posts", "long-form guides on saqr.me & sonsoles.me", by("post", p.id).map(function (e) {
-      return linkItem((KIND_LABEL[e.kind] || "Post") + " · " + (SOURCE_LABEL[e.source] || ""), e.title, e.blurb, e.url, "↗");
-    }));
+    dgroup(view, "Blog posts & more", "long-form guides on saqr.me & sonsoles.me",
+      posts.filter(function (e) { return e.kind !== "tutorial" && e.kind !== "news"; }).map(function (e) {
+        return linkItem((KIND_LABEL[e.kind] || "Post") + " · " + (SOURCE_LABEL[e.source] || ""), e.title, e.blurb, e.url, "↗");
+      }));
     dgroup(view, "In the Book", "relevant chapters of lamethods.org", by("chapter", p.id).map(chapterRow));
   }
   function dgroup(view, title, hint, items) {
@@ -808,6 +852,16 @@
     g.appendChild(el("div", "ghint", esc(hint)));
     var l = el("div", "list"); items.forEach(function (it) { l.appendChild(it); });
     g.appendChild(l);
+    view.appendChild(g);
+  }
+  // like dgroup, but lays the items out as chapter-style cards (two-col grid)
+  function dcards(view, title, hint, cards) {
+    if (!cards.length) return;
+    var g = el("div", "dgroup");
+    g.appendChild(el("h3", null, esc(title)));
+    g.appendChild(el("div", "ghint", esc(hint)));
+    var grid = el("div", "chap-grid"); cards.forEach(function (c) { grid.appendChild(c); });
+    g.appendChild(grid);
     view.appendChild(g);
   }
 

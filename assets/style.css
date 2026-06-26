@@ -102,6 +102,11 @@ a { color: inherit; text-decoration: none; }
 .chlink.primary { color: var(--fg); }
 .chlink.primary:hover { text-decoration: underline; text-underline-offset: 3px; }
 
+/* tutorial cards reuse .chap, but the number slot holds a package badge */
+.tut-badge { min-width: 0; font-size: 10.5px; letter-spacing: .04em; text-transform: lowercase;
+  padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg2);
+  align-self: center; line-height: 1.5; }
+
 /* compact single-column variant inside the dossier "In the Book" group */
 .chap.compact { border-top: 1px solid var(--line2); }
 .chap.compact .chap-desc, .chap.compact .chap-links { margin-left: 34px; max-width: 70ch; }
