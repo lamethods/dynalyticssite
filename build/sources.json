@@ -553,99 +553,6 @@
   ],
   "posts": [
     {
-      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
-      "url": "tutorials/tna/tna-tutorial.html",
-      "desc": "A modern approach to rigorous analysis of behavioral processes.",
-      "packages": [
-        "tna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "TNA Data Preparation: A Guide to prepare_data()",
-      "url": "tutorials/tna/tna-data.html",
-      "desc": "A comprehensive guide to preparing data with prepare_data() for transition network analysis.",
-      "packages": [
-        "tna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "TNA Group Analysis: Comparison of Groups",
-      "url": "tutorials/tna/tna-group.html",
-      "desc": "Analysis and comparison of groups in transition network analysis.",
-      "packages": [
-        "tna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "TNA Clustering: Discovering and Analysing Clusters",
-      "url": "tutorials/tna/tna-clustering.html",
-      "desc": "Discovering and analysing clusters in transition network analysis.",
-      "packages": [
-        "tna",
-        "codyna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "TNA Model Comparison: A Guide to Network Comparison",
-      "url": "tutorials/tna/tna-compare.html",
-      "desc": "A comprehensive guide to comparing transition networks.",
-      "packages": [
-        "tna",
-        "Nestimate"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
-      "url": "tutorials/codyna/codyna-seq-tutorial.html",
-      "desc": "Sequence pattern indices, outcomes, and regression with codyna.",
-      "packages": [
-        "codyna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "The VaSSTra Method",
-      "url": "tutorials/tna/vasstra.html",
-      "desc": "From Variables to States to Sequences to Trajectories.",
-      "packages": [
-        "tna",
-        "codyna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "Alluvial Plots for Transition Analysis",
-      "url": "tutorials/tna/alluvial.html",
-      "desc": "Generating transition plots in R with ggalluvial.",
-      "packages": [
-        "tna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
-      "title": "Data Visualization for Research",
-      "url": "tutorials/cograph/visualization.html",
-      "desc": "Favourite research figures and how they were created.",
-      "packages": [
-        "cograph"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
-    },
-    {
       "title": "cograph: Complex Network Analysis and Visualization",
       "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
       "desc": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
@@ -675,16 +582,6 @@
       ],
       "source": "saqr.me",
       "kind": "blog"
-    },
-    {
-      "title": "TNA Bern Workshop Resources",
-      "url": "tutorials/tna/tna-bern.html",
-      "desc": "Workshop resources for Transition Network Analysis — slides, code, and the R, Python, jamovi, and Shiny tools.",
-      "packages": [
-        "tna"
-      ],
-      "source": "dynasite",
-      "kind": "tutorial"
     },
     {
       "title": "Precision Education is the Answer",

@@ -8,7 +8,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { dirname, resolve, join, basename } from "node:path";
 import { fileURLToPath } from "node:url";
-import { paperEntries as buildPapers, toolEntries as buildTools, newsEntries as buildNews, peopleEntries as buildPeople } from "./curated.mjs";
+import { paperEntries as buildPapers, toolEntries as buildTools, newsEntries as buildNews, peopleEntries as buildPeople, tutorialEntries as buildTutorials } from "./curated.mjs";
 import { parseAuthors } from "./authors.mjs";
 
 const BUILD = dirname(fileURLToPath(import.meta.url));
@@ -278,7 +278,10 @@ async function buildPackage(pkg) {
 
 // --- posts ---
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-const postEntries = src.posts.map((p, i) => ({
+// tutorials are auto-discovered from the tutorials/ folder (see curated.mjs);
+// sources.json posts[] now only holds blog/article links that point off-site.
+const tutorialEntries = buildTutorials(ROOT);
+const postEntries = src.posts.filter((p) => p.kind !== "tutorial").map((p, i) => ({
   id: `post::${i + 1}::${slugify(p.title.slice(0, 24))}`, type: "post", kind: p.kind,
   title: p.title, blurb: p.desc, url: p.url, links: { post: p.url },
   owner: p.source === "saqr.me" ? "mohsaqr" : "sonsoleslp", source: p.source,
@@ -357,7 +360,7 @@ const peopleEntries = buildPeople(src.people);
 
 const extraEntries = (src.extra_links || []).map((e) => ({ ...e, links: { link: e.url }, status: "UNVERIFIED", last_checked: null }));
 
-const entries = [...packageEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...bookEntries, ...newsEntries, ...peopleEntries, ...extraEntries];
+const entries = [...packageEntries, ...tutorialEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...bookEntries, ...newsEntries, ...peopleEntries, ...extraEntries];
 const count = (t) => entries.filter((e) => e.type === t).length;
 const catalog = {
   generated_at: today,

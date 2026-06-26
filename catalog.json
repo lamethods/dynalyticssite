@@ -1501,210 +1501,6 @@
       "last_checked": "2026-06-26"
     },
     {
-      "id": "post::1::an-updated-comprehensive",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
-      "blurb": "A modern approach to rigorous analysis of behavioral processes.",
-      "url": "tutorials/tna/tna-tutorial.html",
-      "links": {
-        "post": "tutorials/tna/tna-tutorial.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::2::tna-data-preparation-a-",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Data Preparation: A Guide to prepare_data()",
-      "blurb": "A comprehensive guide to preparing data with prepare_data() for transition network analysis.",
-      "url": "tutorials/tna/tna-data.html",
-      "links": {
-        "post": "tutorials/tna/tna-data.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::3::tna-group-analysis-comp",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Group Analysis: Comparison of Groups",
-      "blurb": "Analysis and comparison of groups in transition network analysis.",
-      "url": "tutorials/tna/tna-group.html",
-      "links": {
-        "post": "tutorials/tna/tna-group.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::4::tna-clustering-discover",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Clustering: Discovering and Analysing Clusters",
-      "blurb": "Discovering and analysing clusters in transition network analysis.",
-      "url": "tutorials/tna/tna-clustering.html",
-      "links": {
-        "post": "tutorials/tna/tna-clustering.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna",
-        "codyna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna",
-        "codyna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::5::tna-model-comparison-a-",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Model Comparison: A Guide to Network Comparison",
-      "blurb": "A comprehensive guide to comparing transition networks.",
-      "url": "tutorials/tna/tna-compare.html",
-      "links": {
-        "post": "tutorials/tna/tna-compare.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna",
-        "Nestimate"
-      ],
-      "tags": [
-        "tutorial",
-        "tna",
-        "Nestimate"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::6::sequence-patterns-outco",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
-      "blurb": "Sequence pattern indices, outcomes, and regression with codyna.",
-      "url": "tutorials/codyna/codyna-seq-tutorial.html",
-      "links": {
-        "post": "tutorials/codyna/codyna-seq-tutorial.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "codyna"
-      ],
-      "tags": [
-        "tutorial",
-        "codyna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::7::the-vasstra-method",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "The VaSSTra Method",
-      "blurb": "From Variables to States to Sequences to Trajectories.",
-      "url": "tutorials/tna/vasstra.html",
-      "links": {
-        "post": "tutorials/tna/vasstra.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna",
-        "codyna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna",
-        "codyna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::8::alluvial-plots-for-trans",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Alluvial Plots for Transition Analysis",
-      "blurb": "Generating transition plots in R with ggalluvial.",
-      "url": "tutorials/tna/alluvial.html",
-      "links": {
-        "post": "tutorials/tna/alluvial.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::9::data-visualization-for-r",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Data Visualization for Research",
-      "blurb": "Favourite research figures and how they were created.",
-      "url": "tutorials/cograph/visualization.html",
-      "links": {
-        "post": "tutorials/cograph/visualization.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "cograph"
-      ],
-      "tags": [
-        "tutorial",
-        "cograph"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-06-26"
-    },
-    {
       "id": "post::10::cograph-complex-network",
       "type": "post",
       "kind": "blog",
@@ -1770,28 +1566,6 @@
         "tna"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "post::13::tna-bern-workshop-resour",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Bern Workshop Resources",
-      "blurb": "Workshop resources for Transition Network Analysis — slides, code, and the R, Python, jamovi, and Shiny tools.",
-      "url": "tutorials/tna/tna-bern.html",
-      "links": {
-        "post": "tutorials/tna/tna-bern.html"
-      },
-      "owner": "sonsoleslp",
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -2934,6 +2708,226 @@
       "last_checked": "2026-06-26"
     },
     {
+      "id": "tutorial::tna::alluvial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Alluvial plots for transition analysis",
+      "blurb": "Generating transition plots in R with ggalluvial",
+      "url": "tutorials/tna/alluvial.html",
+      "links": {
+        "post": "tutorials/tna/alluvial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::tna::tna-tutorial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
+      "blurb": "A modern approach to rigorous analysis of behavioral processes",
+      "url": "tutorials/tna/tna-tutorial.html",
+      "links": {
+        "post": "tutorials/tna/tna-tutorial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::cograph::visualization",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Data visualization for research",
+      "blurb": "My favorite figures from my papers that are my own creation",
+      "url": "tutorials/cograph/visualization.html",
+      "links": {
+        "post": "tutorials/cograph/visualization.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "cograph"
+      ],
+      "tags": [
+        "tutorial",
+        "cograph"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::codyna::codyna-seq-tutorial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
+      "blurb": "A Tutorial on dynamics of behavior with codyna",
+      "url": "tutorials/codyna/codyna-seq-tutorial.html",
+      "links": {
+        "post": "tutorials/codyna/codyna-seq-tutorial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "codyna"
+      ],
+      "tags": [
+        "tutorial",
+        "codyna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::tna::vasstra",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "The VaSSTra method",
+      "blurb": "From Variables to States to Sequences to Trajectories",
+      "url": "tutorials/tna/vasstra.html",
+      "links": {
+        "post": "tutorials/tna/vasstra.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::tna::tna-bern",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Bern Workshop Resources",
+      "blurb": "A curated hub of R packages, Python ports, interactive apps, hands-on tutorials, and references for the Bern Transition Network Analysis workshop.",
+      "url": "tutorials/tna/tna-bern.html",
+      "links": {
+        "post": "tutorials/tna/tna-bern.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::tna::tna-clustering",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Clustering: Discovering and Analysis of Clusters",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-clustering.html",
+      "links": {
+        "post": "tutorials/tna/tna-clustering.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::tna::tna-data",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Data Preparation: A Comprehensive Guide to prepare_data()",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-data.html",
+      "links": {
+        "post": "tutorials/tna/tna-data.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::tna::tna-group",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Group Analysis: Analysis and Comparison of Groups",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-group.html",
+      "links": {
+        "post": "tutorials/tna/tna-group.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "tutorial::tna::tna-compare",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Model Comparison: A Comprehensive Guide to Network Comparison",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-compare.html",
+      "links": {
+        "post": "tutorials/tna/tna-compare.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-06-26"
+    },
+    {
       "id": "paper::1",
       "type": "paper",
       "title": "Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems",
@@ -3224,48 +3218,6 @@
       "last_checked": "2026-06-26"
     },
     {
-      "id": "book::book1",
-      "type": "book",
-      "title": "Vol 1 — LA Methods & Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
-      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
-      "url": "https://lamethods.github.io/book1/",
-      "links": {
-        "read": "https://lamethods.github.io/book1/",
-        "code": "https://github.com/lamethods/code"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book1"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "book::book2",
-      "type": "book",
-      "title": "Vol 2 — Advanced LA Methods",
-      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
-      "cover": "https://lamethods.org/book2/cover2.jpg",
-      "url": "https://lamethods.github.io/book2/",
-      "links": {
-        "read": "https://lamethods.github.io/book2/",
-        "code": "https://github.com/lamethods/code2"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book2"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-06-26"
-    },
-    {
       "id": "news::1",
       "type": "news",
       "date": "2026-05-13",
@@ -3316,7 +3268,7 @@
         "news",
         "software"
       ],
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-06-26"
     },
     {
@@ -3334,7 +3286,7 @@
         "news",
         "software"
       ],
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-06-26"
     },
     {
@@ -3424,7 +3376,7 @@
         "news",
         "software"
       ],
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-06-26"
     },
     {
@@ -3442,7 +3394,7 @@
         "news",
         "software"
       ],
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-06-26"
     },
     {
@@ -3615,6 +3567,48 @@
         "site": "https://www.eduoliveira.com/"
       },
       "status": "VERIFIED",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "book::book1",
+      "type": "book",
+      "title": "Vol 1 — LA Methods & Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
+      "url": "https://lamethods.github.io/book1/",
+      "links": {
+        "read": "https://lamethods.github.io/book1/",
+        "code": "https://github.com/lamethods/code"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book1"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "book::book2",
+      "type": "book",
+      "title": "Vol 2 — Advanced LA Methods",
+      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "cover": "https://lamethods.org/book2/cover2.jpg",
+      "url": "https://lamethods.github.io/book2/",
+      "links": {
+        "read": "https://lamethods.github.io/book2/",
+        "code": "https://github.com/lamethods/code2"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book2"
+      ],
+      "status": "REDIRECT",
       "last_checked": "2026-06-26"
     },
     {

@@ -7,7 +7,7 @@
 // auto-harvested types (packages, chapters, vignettes, posts, books) are left
 // untouched from the last full harvest.
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 // the entry types the Studio owns and can rebuild offline
@@ -40,6 +40,41 @@ export const peopleEntries = (people = []) => people.map((p) => ({
   url: p.url, photo: p.photo, links: { site: p.url },
   status: "UNVERIFIED", last_checked: null
 }));
+
+// --- self-hosted tutorials: the tutorials/ folder IS the source of truth ---
+// Every tutorials/<package>/<slug>.html becomes a tutorial post automatically.
+// Title + description are read from the file's own <head> (the author writes
+// them in the qmd front-matter), so adding a tutorial is: drop the HTML in the
+// right package folder and rebuild — no sources.json editing.
+const SITE_SUFFIX = /\s*[–—|-]\s*(sonsoleslp|sonsoles(?:\.me)?|Mohammed Saqr|saqr\.me)\s*$/i;
+function metaFromHtml(html) {
+  const pick = (re) => { const m = html.match(re); return m ? m[1] : ""; };
+  const title = pick(/<title[^>]*>([\s\S]*?)<\/title>/i).replace(/\s+/g, " ").replace(SITE_SUFFIX, "").trim();
+  const desc = (pick(/<meta[^>]+name="description"[^>]+content="([^"]*)"/i)
+            || pick(/<meta[^>]+property="og:description"[^>]+content="([^"]*)"/i)).replace(/\s+/g, " ").trim();
+  return { title, desc };
+}
+export function tutorialEntries(root) {
+  const base = join(root, "tutorials");
+  if (!existsSync(base)) return [];
+  const out = [];
+  for (const pkg of readdirSync(base)) {
+    const dir = join(base, pkg);
+    if (!statSync(dir).isDirectory()) continue;                 // skip README.md etc.
+    for (const f of readdirSync(dir).filter((f) => /\.html$/i.test(f))) {
+      const slug = f.replace(/\.html$/i, "");
+      const { title, desc } = metaFromHtml(readFileSync(join(dir, f), "utf8"));
+      const url = `tutorials/${pkg}/${f}`;
+      out.push({
+        id: `tutorial::${pkg}::${slug}`, type: "post", kind: "tutorial",
+        title: title || slug, blurb: desc, url, links: { post: url },
+        owner: null, source: "dynasite", packages: [pkg],
+        tags: ["tutorial", pkg], status: "UNVERIFIED", last_checked: null
+      });
+    }
+  }
+  return out.sort((a, b) => a.title.localeCompare(b.title));
+}
 
 // build all curated entries for a sources object, in the canonical catalog order
 export function buildCuratedEntries(src) {
@@ -80,8 +115,11 @@ export function regenCurated(root) {
   const catalog = JSON.parse(readFileSync(catPath, "utf8"));
 
   const known = statusIndex(catalog.entries);
-  const kept = catalog.entries.filter((e) => !CURATED_TYPES.includes(e.type));
+  // drop curated types AND old auto-discovered tutorials — both are rebuilt below.
+  const kept = catalog.entries.filter((e) =>
+    !CURATED_TYPES.includes(e.type) && !(e.type === "post" && e.kind === "tutorial"));
   const fresh = applyKnownStatus(buildCuratedEntries(src), known);
+  const tuts = applyKnownStatus(tutorialEntries(root), known);
 
   // re-insert curated entries just before People-adjacent extras so order is stable:
   // keep packages/posts/chapters/books first, then curated, then person/extra tail.
@@ -92,7 +130,7 @@ export function regenCurated(root) {
   const curatedPerson = fresh.filter((e) => e.type === "person");
 
   catalog.about = src.about;
-  catalog.entries = [...head, ...curatedNonPerson, ...curatedPerson, ...tail];
+  catalog.entries = [...head, ...tuts, ...curatedNonPerson, ...curatedPerson, ...tail];
   catalog.counts = {
     ...(catalog.counts || {}),
     total: catalog.entries.length,

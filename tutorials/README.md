@@ -1,43 +1,53 @@
 # Tutorials
 
-Self-hosted tutorial pages, served by GitHub Pages at
+Self-hosted tutorials, served by GitHub Pages at
 `https://dynasite.org/tutorials/<package>/<slug>.html`.
 
-## Layout — one folder per package
+**The folder is the source of truth.** Every `tutorials/<package>/<slug>.html`
+is auto-registered as a tutorial — no `sources.json` editing. Its title and
+description are read from the file's own `<head>` (the `title:` and
+`description:`/`subtitle:` you wrote in the qmd front-matter).
 
-```
-tutorials/
-  tna/       …tutorials about the tna package
-  codyna/    …codyna
-  cograph/   …cograph
-  <package>/ …add a new folder when a package gets its first tutorial
-```
+## Add a tutorial — write & push
 
-Put each tutorial as a **single self-contained HTML file** (Quarto `embed-resources: true`,
-or rmarkdown `self_contained: true`) at `tutorials/<package>/<slug>.html`.
-
-## Adding a tutorial
-
-1. Drop the rendered HTML at `tutorials/<package>/<slug>.html`.
-2. **Slim the images** (Quarto exports plots as oversized retina PNGs — often
-   90%+ of the file):
+1. Render your tutorial to a **single self-contained HTML** (Quarto
+   `embed-resources: true`, or rmarkdown `self_contained: true`).
+2. Drop it in the package folder: `tutorials/<package>/<slug>.html`
+   (make a new folder when a package gets its first tutorial).
+3. Build & push:
    ```bash
-   python3 build/optimize_tutorial.py tutorials/<package>/<slug>.html
-   # add --quantize for ~2× more (256-colour palette; slight banding risk on
-   # smooth heatmap gradients), or --max-width N to change the 1600px cap.
-   ```
-3. Register it in `build/sources.json` under `posts[]`:
-   ```json
-   { "title": "…", "url": "tutorials/<package>/<slug>.html",
-     "desc": "…", "packages": ["<package>"], "source": "dynasite", "kind": "tutorial" }
-   ```
-4. Rebuild + verify + commit:
-   ```bash
-   npm run all
-   git add tutorials build/sources.json catalog.json assets/catalog.js
+   npm run tutorials      # offline rebuild — scans this folder, updates the catalog
+   git add tutorials catalog.json assets/catalog.js
    git commit -m "tutorials: add <slug>" && git push
    ```
 
-The card's package badge and the Readings/dossier menus pick it up automatically.
-Local `tutorials/…` URLs are skipped by the link verifier (it only checks http(s)),
-so they never block a build.
+That's it. The tutorial appears in the **Readings** menu and on its **package
+dossier** automatically, with its package badge.
+
+## Keep the files small (one-time habit, not a per-tutorial chore)
+
+Quarto exports plots at retina DPI, which can make a single file 50–75 MB. Two
+ways to avoid the bloat:
+
+- **Best — fix it at the source.** In your qmd front-matter:
+  ```yaml
+  format:
+    html:
+      fig-dpi: 120        # instead of the retina default that yields ~10,000px plots
+  ```
+  Then files render small (1–3 MB) and need nothing further.
+- **Backstop — slim an existing file** (no re-render needed):
+  ```bash
+  python3 build/optimize_tutorial.py tutorials/<package>/<slug>.html
+  # --quantize  : ~2× smaller (256-colour palette; slight banding risk on smooth heatmaps)
+  # --max-width N: change the 1600px downscale cap
+  ```
+
+## Notes
+
+- Title is auto-cleaned (a trailing " – sonsoleslp" / " | Mohammed Saqr" site
+  suffix is stripped). To control the title/description, set them in the qmd.
+- A tutorial belongs to the package whose folder it's in. For a multi-package
+  tutorial, put it in the primary package's folder.
+- Local `tutorials/…` URLs are skipped by the link verifier, so they never block
+  a build.

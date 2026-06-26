@@ -10,7 +10,10 @@
     "stamp": "node build/stamp-assets.mjs",
     "all": "node build/harvest.mjs && node build/verify_links.mjs && node build/stamp-assets.mjs",
     "serve": "python3 -m http.server 8777",
-    "studio": "node server.mjs"
+    "studio": "node server.mjs",
+    "tutorials": "node --input-type=module -e \"import('./build/curated.mjs').then(m=>console.log(m.regenCurated(process.cwd())))\""
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  }
 }
