@@ -5,7 +5,7 @@
   "use strict";
 
   var KIND_LABEL = { tutorial: "Tutorial", blog: "Blog", news: "News", article: "Article" };
-  var SOURCE_LABEL = { "saqr.me": "saqr.me", "sonsoles.me": "sonsoles.me" };
+  var SOURCE_LABEL = { "saqr.me": "saqr.me", "sonsoles.me": "sonsoles.me", "dynasite": "Dynalytics" };
   var NAV = [
     { route: "", label: "Overview" },
     { route: "people", label: "People" },

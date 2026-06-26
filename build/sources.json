@@ -554,95 +554,95 @@
   "posts": [
     {
       "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
-      "url": "https://sonsoles.me/posts/tna-tutorial/index.html",
+      "url": "tutorials/tna-tutorial.html",
       "desc": "A modern approach to rigorous analysis of behavioral processes.",
       "packages": [
         "tna"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "TNA Data Preparation: A Guide to prepare_data()",
-      "url": "https://sonsoles.me/posts/tna-data/index.html",
+      "url": "tutorials/tna-data.html",
       "desc": "A comprehensive guide to preparing data with prepare_data() for transition network analysis.",
       "packages": [
         "tna"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "TNA Group Analysis: Comparison of Groups",
-      "url": "https://sonsoles.me/posts/tna-group/index.html",
+      "url": "tutorials/tna-group.html",
       "desc": "Analysis and comparison of groups in transition network analysis.",
       "packages": [
         "tna"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "TNA Clustering: Discovering and Analysing Clusters",
-      "url": "https://sonsoles.me/posts/tna-clustering/index.html",
+      "url": "tutorials/tna-clustering.html",
       "desc": "Discovering and analysing clusters in transition network analysis.",
       "packages": [
         "tna",
         "codyna"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "TNA Model Comparison: A Guide to Network Comparison",
-      "url": "https://sonsoles.me/posts/tna-compare/index.html",
+      "url": "tutorials/tna-compare.html",
       "desc": "A comprehensive guide to comparing transition networks.",
       "packages": [
         "tna",
         "Nestimate"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "Sequence Patterns, Outcomes, and Indices with codyna",
-      "url": "https://sonsoles.me/posts/codyna-seq-tutorial/index.html",
+      "url": "tutorials/codyna-seq-tutorial.html",
       "desc": "Sequence pattern indices, outcomes, and regression with codyna.",
       "packages": [
         "codyna"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "The VaSSTra Method",
-      "url": "https://sonsoles.me/posts/vasstra/index.html",
+      "url": "tutorials/vasstra.html",
       "desc": "From Variables to States to Sequences to Trajectories.",
       "packages": [
         "tna",
         "codyna"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "Alluvial Plots for Transition Analysis",
-      "url": "https://sonsoles.me/posts/alluvial/index.html",
+      "url": "tutorials/alluvial.html",
       "desc": "Generating transition plots in R with ggalluvial.",
       "packages": [
         "tna"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
       "title": "Data Visualization for Research",
-      "url": "https://sonsoles.me/posts/visualization/index.html",
+      "url": "tutorials/visualization.html",
       "desc": "Favourite research figures and how they were created.",
       "packages": [
         "cograph"
       ],
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {
@@ -678,12 +678,12 @@
     },
     {
       "title": "TNA Bern Workshop Resources",
-      "url": "https://saqr.me/tutorials/tna-bern/",
+      "url": "tutorials/tna-bern.html",
       "desc": "Workshop resources for Transition Network Analysis — slides, code, and the R, Python, jamovi, and Shiny tools.",
       "packages": [
         "tna"
       ],
-      "source": "saqr.me",
+      "source": "dynasite",
       "kind": "tutorial"
     },
     {

@@ -1506,12 +1506,12 @@
       "kind": "tutorial",
       "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
       "blurb": "A modern approach to rigorous analysis of behavioral processes.",
-      "url": "https://sonsoles.me/posts/tna-tutorial/index.html",
+      "url": "tutorials/tna-tutorial.html",
       "links": {
-        "post": "https://sonsoles.me/posts/tna-tutorial/index.html"
+        "post": "tutorials/tna-tutorial.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "tna"
       ],
@@ -1519,7 +1519,7 @@
         "tutorial",
         "tna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1528,12 +1528,12 @@
       "kind": "tutorial",
       "title": "TNA Data Preparation: A Guide to prepare_data()",
       "blurb": "A comprehensive guide to preparing data with prepare_data() for transition network analysis.",
-      "url": "https://sonsoles.me/posts/tna-data/index.html",
+      "url": "tutorials/tna-data.html",
       "links": {
-        "post": "https://sonsoles.me/posts/tna-data/index.html"
+        "post": "tutorials/tna-data.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "tna"
       ],
@@ -1541,7 +1541,7 @@
         "tutorial",
         "tna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1550,12 +1550,12 @@
       "kind": "tutorial",
       "title": "TNA Group Analysis: Comparison of Groups",
       "blurb": "Analysis and comparison of groups in transition network analysis.",
-      "url": "https://sonsoles.me/posts/tna-group/index.html",
+      "url": "tutorials/tna-group.html",
       "links": {
-        "post": "https://sonsoles.me/posts/tna-group/index.html"
+        "post": "tutorials/tna-group.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "tna"
       ],
@@ -1563,7 +1563,7 @@
         "tutorial",
         "tna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1572,12 +1572,12 @@
       "kind": "tutorial",
       "title": "TNA Clustering: Discovering and Analysing Clusters",
       "blurb": "Discovering and analysing clusters in transition network analysis.",
-      "url": "https://sonsoles.me/posts/tna-clustering/index.html",
+      "url": "tutorials/tna-clustering.html",
       "links": {
-        "post": "https://sonsoles.me/posts/tna-clustering/index.html"
+        "post": "tutorials/tna-clustering.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "tna",
         "codyna"
@@ -1587,7 +1587,7 @@
         "tna",
         "codyna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1596,12 +1596,12 @@
       "kind": "tutorial",
       "title": "TNA Model Comparison: A Guide to Network Comparison",
       "blurb": "A comprehensive guide to comparing transition networks.",
-      "url": "https://sonsoles.me/posts/tna-compare/index.html",
+      "url": "tutorials/tna-compare.html",
       "links": {
-        "post": "https://sonsoles.me/posts/tna-compare/index.html"
+        "post": "tutorials/tna-compare.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "tna",
         "Nestimate"
@@ -1611,7 +1611,7 @@
         "tna",
         "Nestimate"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1620,12 +1620,12 @@
       "kind": "tutorial",
       "title": "Sequence Patterns, Outcomes, and Indices with codyna",
       "blurb": "Sequence pattern indices, outcomes, and regression with codyna.",
-      "url": "https://sonsoles.me/posts/codyna-seq-tutorial/index.html",
+      "url": "tutorials/codyna-seq-tutorial.html",
       "links": {
-        "post": "https://sonsoles.me/posts/codyna-seq-tutorial/index.html"
+        "post": "tutorials/codyna-seq-tutorial.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "codyna"
       ],
@@ -1633,7 +1633,7 @@
         "tutorial",
         "codyna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1642,12 +1642,12 @@
       "kind": "tutorial",
       "title": "The VaSSTra Method",
       "blurb": "From Variables to States to Sequences to Trajectories.",
-      "url": "https://sonsoles.me/posts/vasstra/index.html",
+      "url": "tutorials/vasstra.html",
       "links": {
-        "post": "https://sonsoles.me/posts/vasstra/index.html"
+        "post": "tutorials/vasstra.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "tna",
         "codyna"
@@ -1657,7 +1657,7 @@
         "tna",
         "codyna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1666,12 +1666,12 @@
       "kind": "tutorial",
       "title": "Alluvial Plots for Transition Analysis",
       "blurb": "Generating transition plots in R with ggalluvial.",
-      "url": "https://sonsoles.me/posts/alluvial/index.html",
+      "url": "tutorials/alluvial.html",
       "links": {
-        "post": "https://sonsoles.me/posts/alluvial/index.html"
+        "post": "tutorials/alluvial.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "tna"
       ],
@@ -1679,7 +1679,7 @@
         "tutorial",
         "tna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1688,12 +1688,12 @@
       "kind": "tutorial",
       "title": "Data Visualization for Research",
       "blurb": "Favourite research figures and how they were created.",
-      "url": "https://sonsoles.me/posts/visualization/index.html",
+      "url": "tutorials/visualization.html",
       "links": {
-        "post": "https://sonsoles.me/posts/visualization/index.html"
+        "post": "tutorials/visualization.html"
       },
       "owner": "sonsoleslp",
-      "source": "sonsoles.me",
+      "source": "dynasite",
       "packages": [
         "cograph"
       ],
@@ -1701,7 +1701,7 @@
         "tutorial",
         "cograph"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -1778,12 +1778,12 @@
       "kind": "tutorial",
       "title": "TNA Bern Workshop Resources",
       "blurb": "Workshop resources for Transition Network Analysis — slides, code, and the R, Python, jamovi, and Shiny tools.",
-      "url": "https://saqr.me/tutorials/tna-bern/",
+      "url": "tutorials/tna-bern.html",
       "links": {
-        "post": "https://saqr.me/tutorials/tna-bern/"
+        "post": "tutorials/tna-bern.html"
       },
-      "owner": "mohsaqr",
-      "source": "saqr.me",
+      "owner": "sonsoleslp",
+      "source": "dynasite",
       "packages": [
         "tna"
       ],
@@ -1791,7 +1791,7 @@
         "tutorial",
         "tna"
       ],
-      "status": "VERIFIED",
+      "status": "LOCAL",
       "last_checked": "2026-06-26"
     },
     {
@@ -3224,6 +3224,48 @@
       "last_checked": "2026-06-26"
     },
     {
+      "id": "book::book1",
+      "type": "book",
+      "title": "Vol 1 — LA Methods & Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
+      "url": "https://lamethods.github.io/book1/",
+      "links": {
+        "read": "https://lamethods.github.io/book1/",
+        "code": "https://github.com/lamethods/code"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book1"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-26"
+    },
+    {
+      "id": "book::book2",
+      "type": "book",
+      "title": "Vol 2 — Advanced LA Methods",
+      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "cover": "https://lamethods.org/book2/cover2.jpg",
+      "url": "https://lamethods.github.io/book2/",
+      "links": {
+        "read": "https://lamethods.github.io/book2/",
+        "code": "https://github.com/lamethods/code2"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book2"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-06-26"
+    },
+    {
       "id": "news::1",
       "type": "news",
       "date": "2026-05-13",
@@ -3274,7 +3316,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-06-26"
     },
     {
@@ -3292,7 +3334,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-06-26"
     },
     {
@@ -3382,7 +3424,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-06-26"
     },
     {
@@ -3400,7 +3442,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-06-26"
     },
     {
@@ -3576,48 +3618,6 @@
       "last_checked": "2026-06-26"
     },
     {
-      "id": "book::book1",
-      "type": "book",
-      "title": "Vol 1 — LA Methods & Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
-      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
-      "url": "https://lamethods.github.io/book1/",
-      "links": {
-        "read": "https://lamethods.github.io/book1/",
-        "code": "https://github.com/lamethods/code"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book1"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-06-26"
-    },
-    {
-      "id": "book::book2",
-      "type": "book",
-      "title": "Vol 2 — Advanced LA Methods",
-      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
-      "cover": "https://lamethods.org/book2/cover2.jpg",
-      "url": "https://lamethods.github.io/book2/",
-      "links": {
-        "read": "https://lamethods.github.io/book2/",
-        "code": "https://github.com/lamethods/code2"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book2"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-06-26"
-    },
-    {
       "id": "htna-index",
       "type": "docsite",
       "title": "htna — documentation site (index)",
@@ -3694,8 +3694,8 @@
   ],
   "verified_at": "2026-06-26",
   "link_summary": {
-    "verified": 192,
-    "redirect": 59,
+    "verified": 183,
+    "redirect": 58,
     "broken": 0
   }
 }
