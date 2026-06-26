@@ -43,7 +43,7 @@ function cookies(req) {
     const i = c.indexOf("="); return i < 0 ? [c.trim(), ""] : [c.slice(0, i).trim(), c.slice(i + 1).trim()];
   }).filter((p) => p[0]));
 }
-const authed = (req) => verifyToken(AUTH, cookies(req).dyn_session);
+const authed = (req) => AUTH.open === true || verifyToken(AUTH, cookies(req).dyn_session);
 
 function readBody(req, limit = 2_000_000) {
   return new Promise((res, rej) => {
@@ -77,6 +77,7 @@ async function handleApi(req, res, path) {
   // public: login + session probe
   if (path === "/api/me" && req.method === "GET") return json(res, 200, { authed: authed(req) });
   if (path === "/api/login" && req.method === "POST") {
+    if (AUTH.open === true) return json(res, 200, { ok: true });   // open mode: no password
     const body = JSON.parse((await readBody(req)) || "{}");
     if (!verifyPassword(AUTH, body.password)) return json(res, 401, { error: "Wrong password" });
     return json(res, 200, { ok: true }, {
@@ -144,8 +145,8 @@ createServer(async (req, res) => {
   } catch (e) {
     json(res, 500, { error: e.message });
   }
-}).listen(PORT, () => {
-  console.log(`\n  Dynasite Studio running`);
+}).listen(PORT, process.env.STUDIO_HOST || "127.0.0.1", () => {
+  console.log(`\n  Dynasite Studio running${AUTH.open ? " (open — no password)" : ""}`);
   console.log(`  Public site : http://localhost:${PORT}/`);
   console.log(`  Studio      : http://localhost:${PORT}/studio\n`);
 });

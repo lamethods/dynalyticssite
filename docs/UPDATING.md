@@ -39,12 +39,10 @@ package folder and run `npm run tutorials` (offline) — full guide in
 ## Way 1 — the Studio (GUI, recommended for content)
 
 ```bash
-npm run studio          # first run prints a generated password
-# or set your own:
-STUDIO_PASSWORD='choose-one' npm run studio
+npm run studio          # opens with NO password (local machine — see below)
 ```
 
-Open **http://localhost:8780/studio**, sign in, then:
+Open **http://localhost:8780/studio**, then:
 
 1. Pick a tab: **About · News · Blogs · Papers · Tools · People**.
 2. Edit fields; **+ Add** / **Remove** items.
@@ -55,8 +53,14 @@ Open **http://localhost:8780/studio**, sign in, then:
 5. **Re-harvest** — only when packages/chapters changed. Re-pulls from the
    network and re-verifies every link.
 
-The password is stored **hashed** in `.studio-auth.json` (gitignored). Delete
-that file to reset it.
+**Auth.** The Studio server is local-only (never deployed — Pages serves only the
+static files), so by default it runs **open with no password** and binds to
+`127.0.0.1`. To lock it (e.g. on a shared machine), set a password once:
+```bash
+STUDIO_PASSWORD='choose-one' npm run studio   # writes a hashed .studio-auth.json, then requires login
+```
+Once `.studio-auth.json` exists, login is required until you delete it. The
+password is stored **hashed** (gitignored), never in plaintext.
 
 ---
 
