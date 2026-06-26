@@ -387,30 +387,34 @@
       return (pkgsOf(a).indexOf("tna") >= 0 ? 0 : 1) - (pkgsOf(b).indexOf("tna") >= 0 ? 0 : 1);
     });
   }
-  // Tutorial card — same shape as a book-chapter card (chap/chap-grid), but the
-  // chapter-number slot carries the package badge instead.
-  function tutorialCard(e) {
-    var pk = pkgsOf(e)[0] || "";
+  // Resource card — a book-chapter-style card (chap/chap-grid) for ANY reading:
+  // tutorial, vignette/article, or blog post. The chapter-number slot carries a
+  // badge; opts let each context choose what the badge, read-label, and footer
+  // say. Default badge is the package (so the Readings view shows every package).
+  function resourceCard(e, opts) {
+    opts = opts || {};
+    var badge = opts.badge != null ? opts.badge : (pkgsOf(e)[0] || "");
     var card = el("div", "chap");
     var top = el("div", "chap-top");
-    if (pk) top.appendChild(el("span", "chap-no tut-badge", esc(pk)));
+    if (badge) top.appendChild(el("span", "chap-no tut-badge", esc(badge)));
     var a = el("a", "chap-title"); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; a.textContent = e.title;
     top.appendChild(a);
     card.appendChild(top);
     if (e.blurb) card.appendChild(el("div", "chap-desc", esc(e.blurb)));
     var cl = el("div", "chap-links");
     var read = el("a", "chlink primary"); read.href = e.url; read.target = "_blank"; read.rel = "noopener";
-    read.innerHTML = 'Read the tutorial <span class="m">↗</span>';
+    read.innerHTML = esc(opts.read || "Read") + ' <span class="m">↗</span>';
     cl.appendChild(read);
-    if (e.source) cl.appendChild(el("span", "chlink", esc(SOURCE_LABEL[e.source] || e.source)));
+    var foot = opts.foot != null ? opts.foot : (e.source ? (SOURCE_LABEL[e.source] || e.source) : "");
+    if (foot) cl.appendChild(el("span", "chlink", esc(foot)));
     card.appendChild(cl);
     return card;
   }
 
-  // Writing view — surfaces the 60+ tutorials, vignettes, and blog posts that
-  // otherwise only live inside individual package dossiers. Ordered the way a
-  // learner reads: tutorials first (as cards), then reference vignettes, then
-  // blog posts & other writing — TNA leading each group.
+  // Readings view — surfaces every tutorial, vignette/article, and blog post
+  // across all packages, each as a card. Ordered the way a learner reads:
+  // tutorials first, then reference vignettes, then blog posts & other writing —
+  // TNA leading each group, package shown on each card's badge.
   function renderWriting(view) {
     view.innerHTML = "";
     var tutorials = ofType("post").filter(function (e) { return e.kind === "tutorial"; });
@@ -419,32 +423,17 @@
     var total = tutorials.length + vignettes.length + blogs.length;
     view.appendChild(secHead("", "Readings", total + " tutorials, vignettes & blog posts"));
 
-    if (tutorials.length) {
-      var g1 = el("div", "write-group");
-      g1.appendChild(secHead("", "Tutorials", "step-by-step guides — start here"));
+    function cardGroup(title, hint, items, opts) {
+      if (!items.length) return;
+      var g = el("div", "write-group");
+      g.appendChild(secHead("", title, hint));
       var grid = el("div", "chap-grid");
-      tnaFirst(tutorials).forEach(function (e) { grid.appendChild(tutorialCard(e)); });
-      g1.appendChild(grid); view.appendChild(g1);
+      tnaFirst(items).forEach(function (e) { grid.appendChild(resourceCard(e, opts)); });
+      g.appendChild(grid); view.appendChild(g);
     }
-    if (vignettes.length) {
-      var g2 = el("div", "write-group");
-      g2.appendChild(secHead("", "Vignettes & articles", vignettes.length + " reference articles from the package doc sites"));
-      var l2 = el("div", "list");
-      tnaFirst(vignettes).forEach(function (e) {
-        var pk = pkgsOf(e)[0] || "";
-        l2.appendChild(linkItem(pk ? pk + " · Article" : "Article", e.title, e.blurb, e.url, "↗"));
-      });
-      g2.appendChild(l2); view.appendChild(g2);
-    }
-    if (blogs.length) {
-      var g3 = el("div", "write-group");
-      g3.appendChild(secHead("", "Blog posts & more", "longer-form writing on saqr.me & sonsoles.me"));
-      var l3 = el("div", "list");
-      tnaFirst(blogs).forEach(function (e) {
-        l3.appendChild(linkItem((KIND_LABEL[e.kind] || "Post") + " · " + (SOURCE_LABEL[e.source] || ""), e.title, e.blurb, e.url, "↗"));
-      });
-      g3.appendChild(l3); view.appendChild(g3);
-    }
+    cardGroup("Tutorials", "step-by-step guides — start here", tutorials, { read: "Read the tutorial" });
+    cardGroup("Vignettes & articles", vignettes.length + " reference articles from the package doc sites", vignettes, { read: "Read the article", foot: "Article" });
+    cardGroup("Blog posts & more", "longer-form writing on saqr.me & sonsoles.me", blogs, { read: "Read the post" });
   }
 
   function renderTools(view) {
@@ -832,17 +821,17 @@
     }
 
     var posts = by("post", p.id);
-    // Same reading order as the Writing view: tutorials (as cards) first, then
-    // reference vignettes, then blog posts & other writing, then the book.
+    // Same reading order as the Readings view, every group as cards: tutorials
+    // first, then vignettes/articles, then blog posts, then the book. Here the
+    // package is implied, so each card's badge shows the kind instead.
     dcards(view, "Tutorials", "step-by-step guides — start here",
-      posts.filter(function (e) { return e.kind === "tutorial"; }).map(tutorialCard));
-    dgroup(view, "Vignettes & articles", "from the package documentation site", by("vignette", p.id).map(function (e) {
-      return linkItem("Article", e.title, e.blurb, e.url, "↗");
-    }));
-    dgroup(view, "Blog posts & more", "long-form guides on saqr.me & sonsoles.me",
-      posts.filter(function (e) { return e.kind !== "tutorial" && e.kind !== "news"; }).map(function (e) {
-        return linkItem((KIND_LABEL[e.kind] || "Post") + " · " + (SOURCE_LABEL[e.source] || ""), e.title, e.blurb, e.url, "↗");
-      }));
+      posts.filter(function (e) { return e.kind === "tutorial"; })
+        .map(function (e) { return resourceCard(e, { badge: "Tutorial", read: "Read the tutorial" }); }));
+    dcards(view, "Vignettes & articles", "from the package documentation site",
+      by("vignette", p.id).map(function (e) { return resourceCard(e, { badge: "Article", read: "Read the article", foot: "" }); }));
+    dcards(view, "Blog posts & more", "long-form guides on saqr.me & sonsoles.me",
+      posts.filter(function (e) { return e.kind !== "tutorial" && e.kind !== "news"; })
+        .map(function (e) { return resourceCard(e, { badge: KIND_LABEL[e.kind] || "Post", read: "Read the post" }); }));
     dgroup(view, "In the Book", "relevant chapters of lamethods.org", by("chapter", p.id).map(chapterRow));
   }
   function dgroup(view, title, hint, items) {
