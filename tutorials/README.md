@@ -3,6 +3,9 @@
 Self-hosted tutorials, served by GitHub Pages at
 `https://dynasite.org/tutorials/<package>/<slug>.html`.
 
+> Full reference (architecture, build commands, limits): **[../docs/TUTORIALS.md](../docs/TUTORIALS.md)**.
+> This file is the at-the-folder quick start.
+
 **The folder is the source of truth.** Every `tutorials/<package>/<slug>.html`
 is auto-registered as a tutorial — no `sources.json` editing. Its title and
 description are read from the file's own `<head>` (the `title:` and

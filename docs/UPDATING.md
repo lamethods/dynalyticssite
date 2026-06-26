@@ -20,13 +20,19 @@ The **Studio** below is a *local* editing tool you run only while making changes
 
 | Kind | What | Where it comes from | Edit it? |
 |------|------|---------------------|----------|
-| **Curated** | About text, Newsletter, **News**, **People**, **Papers**, **Tools**, package seed metadata, tutorials/blog **posts**, book volumes | hand-written in `build/sources.json` | ✅ yes — this is what you change |
+| **Curated** | About text, Newsletter, **News**, **People**, **Papers**, **Tools**, package seed metadata, blog **posts**, book volumes | hand-written in `build/sources.json` | ✅ yes — this is what you change |
+| **Self-hosted tutorials** | the tutorial HTML pages under `tutorials/<package>/` | auto-discovered from the folder (title/description read from each file's `<head>`) | ✅ yes — **drop a file in the folder**, see [TUTORIALS.md](./TUTORIALS.md) |
 | **Harvested** | package title/description/version, vignette/article lists, book **chapter** pages + abstracts | auto-pulled from local `DESCRIPTION` files, CRAN, and live `pkgdown` / `lamethods` sitemaps | ⚠️ only via a full re-harvest |
 
 The five sections the Studio edits — **About, News, People, Papers, Tools** —
 are pure curated content and recompile **instantly with no network**. Anything
 touching packages or chapters needs a full **re-harvest** (hits the network and
 needs the sibling package repos checked out next to this one).
+
+**Tutorials are self-hosted**, not linked out: each `tutorials/<package>/<slug>.html`
+is auto-registered (no `sources.json` entry). To add one, drop the HTML in the
+package folder and run `npm run tutorials` (offline) — full guide in
+**[docs/TUTORIALS.md](./TUTORIALS.md)**.
 
 ---
 
@@ -133,12 +139,14 @@ Best for bulk edits, programmatic changes, or when you're already in an editor.
 Escape hatches: `"no_github": true`, `"exclude_articles": ["slug"]`,
 `"docs": null` (no pkgdown site).
 
-**Posts** (tutorials / blogs / news links) — `posts[]`:
+**Posts** (off-site blog / article / news links) — `posts[]`:
 ```json
 { "title": "…", "url": "https://…", "desc": "…",
-  "packages": ["tna"], "source": "sonsoles.me", "kind": "tutorial" }
+  "packages": ["tna"], "source": "sonsoles.me", "kind": "blog" }
 ```
-`kind` ∈ `tutorial | blog | news | article`.
+`kind` ∈ `blog | news | article`. **Tutorials are no longer listed here** —
+they are self-hosted and auto-discovered from `tutorials/<package>/`
+(see [TUTORIALS.md](./TUTORIALS.md)).
 
 **Book volumes** — `book_volumes[]` (chapters auto-harvested from `sitemap`):
 `id, title, blurb, cover, code_repo, springer_doi_base?, base, sitemap,
