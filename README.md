@@ -56,11 +56,16 @@ The build is **Node** (no dependencies — uses built-in `fetch`; needs Node ≥
 ```bash
 npm run build     # node build/harvest.mjs   -> catalog.json + assets/catalog.js (links UNVERIFIED)
 npm run verify    # node build/verify_links.mjs -> annotates status; exits non-zero on any BROKEN
+npm run analytics # injects the shared Google Analytics include into all HTML pages
 npm run all       # build + verify
 ```
 
 To **view**, just open `index.html` (the catalog is embedded in `assets/catalog.js`,
 so no server is needed). `npm run serve` starts one if you prefer.
+
+Google Analytics lives in `assets/analytics.js`. When adding a new standalone
+HTML page, run `npm run analytics`; `npm run build` and `npm run all` do this
+automatically.
 
 ## Updating content
 

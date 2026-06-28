@@ -5,10 +5,11 @@
   "type": "module",
   "description": "Resource hub for the Saqr / López-Pernas R ecosystem (the Dynalytics software layer).",
   "scripts": {
-    "build": "node build/harvest.mjs && node build/stamp-assets.mjs",
+    "build": "node build/harvest.mjs && node build/inject-analytics.mjs && node build/stamp-assets.mjs",
     "verify": "node build/verify_links.mjs",
+    "analytics": "node build/inject-analytics.mjs",
     "stamp": "node build/stamp-assets.mjs",
-    "all": "node build/harvest.mjs && node build/verify_links.mjs && node build/stamp-assets.mjs",
+    "all": "node build/harvest.mjs && node build/verify_links.mjs && node build/inject-analytics.mjs && node build/stamp-assets.mjs",
     "serve": "python3 -m http.server 8777",
     "studio": "node server.mjs",
     "tutorials": "node --input-type=module -e \"import('./build/curated.mjs').then(m=>console.log(m.regenCurated(process.cwd())))\""
