@@ -7,9 +7,9 @@
   var KIND_LABEL = { tutorial: "Tutorial", blog: "Blog", news: "News", article: "Article" };
   var SOURCE_LABEL = { "saqr.me": "saqr.me", "sonsoles.me": "sonsoles.me", "dynasite": "Dynalytics" };
   var NAV = [
-    { route: "", label: "Overview" },
+    { route: "", label: "Packages" },
+    { route: "about", label: "About" },
     { route: "people", label: "People" },
-    { route: "packages", label: "Packages" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
     { route: "writing", label: "Readings" },
@@ -17,6 +17,30 @@
     { route: "news", label: "News" }
   ];
   var TITLE_BASE = "Dynalytics";
+  var PAK_ROUTES = {
+    tna: "/tna/",
+    cograph: "/cograph/",
+    htna: "/htna/",
+    Nestimate: "/Nestimate/",
+    snakeplot: "/Snakeplot/",
+    cooccure: "/cooccure/",
+    bibnets: "/bibnets-pkg/",
+    transitiontrees: "/transitiontrees/",
+    codyna: "/codyna/",
+    lagdynamics: "/lagdynamics/",
+    Saqrmisc: "/Saqrmisc/",
+    Saqrlab: "/Saqrlab/",
+    psychnet: "/psychnet-pkg/",
+    tsn: "/tsn/"
+  };
+  var PAK_KIND = {
+    transitiontrees: "docs snapshot",
+    Saqrmisc: "docs snapshot",
+    codyna: "package page",
+    Saqrlab: "package page",
+    psychnet: "package page",
+    tsn: "package page"
+  };
 
   var S = { all: [], byId: {}, packages: [], about: null };
 
@@ -117,9 +141,10 @@
     if (mw) { setActive("writing"); setTitle("Readings"); renderWriting(view, mw[1] || "tutorials"); return; }
     var r = (h === "" || h === "/") ? "" : h;
     setActive(r);
-    var labels = { packages: "Packages", tools: "Tools", chapters: "Book chapters", writing: "Readings", papers: "Selected articles", news: "News", people: "People" };
+    var labels = { about: "About", packages: "Packages", tools: "Tools", chapters: "Book chapters", writing: "Readings", papers: "Selected articles", news: "News", people: "People" };
     setTitle(labels[r] || "");
-    if (r === "packages") renderPackages(view);
+    if (r === "about") renderDynalyticsOverview(view);
+    else if (r === "packages") renderPackages(view);
     else if (r === "tools") renderTools(view);
     else if (r === "chapters") renderChapters(view);
     else if (r === "writing") renderWriting(view);
@@ -166,9 +191,70 @@
     row.appendChild(meta);
     return row;
   }
+  function pakRoute(p) {
+    return PAK_ROUTES[p.id] || (p.links && p.links.docs) || p.url || "#/pkg/" + encodeURIComponent(p.id);
+  }
+  function pkgName(p) {
+    return String(p.title || p.id).split("—")[0].trim() || p.id;
+  }
+  function pkgKind(p) {
+    return PAK_KIND[p.id] || "pkgdown";
+  }
+  function packageCard(p) {
+    var a = el("a", "pkg-card");
+    a.href = pakRoute(p);
+    var kind = pkgKind(p);
+    var version = p.cran_version || p.version || "";
+    var title = esc(pkgName(p));
+    var desc = esc(p.blurb || subtitleOf(p));
+    var tags = (p.tags || []).slice(0, 4).map(function (t) { return '<span>' + esc(t) + "</span>"; }).join("");
+    a.innerHTML =
+      '<div class="pkg-card-top">' +
+        '<div class="pkg-card-icon"></div>' +
+        '<div class="pkg-card-meta">' +
+          '<span>' + esc(kind) + "</span>" +
+          (version ? '<span>' + esc(version) + "</span>" : "") +
+        "</div>" +
+      "</div>" +
+      '<div class="pkg-card-main">' +
+        "<h2>" + title + "</h2>" +
+        "<p>" + desc + "</p>" +
+      "</div>" +
+      '<div class="pkg-card-tags">' + tags + "</div>" +
+      '<div class="pkg-card-foot">' +
+        '<span class="pkg-route">' + esc(pakRoute(p)) + "</span>" +
+        '<span class="pkg-open">Open docs</span>' +
+      "</div>";
+    a.querySelector(".pkg-card-icon").appendChild(makeIcon(p));
+    return a;
+  }
 
   /* ---------- views ---------- */
   function renderOverview(view) {
+    view.innerHTML = "";
+    var packages = S.packages.slice();
+    var pkgdown = packages.filter(function (p) { return pkgKind(p) === "pkgdown"; }).length;
+    var snapshots = packages.filter(function (p) { return pkgKind(p) === "docs snapshot"; }).length;
+    var pages = packages.filter(function (p) { return pkgKind(p) === "package page"; }).length;
+
+    var hero = el("section", "pkg-home");
+    hero.innerHTML =
+      '<p class="pkg-kicker">pak.dynasite.org</p>' +
+      "<h1>R package documentation</h1>" +
+      '<p class="pkg-lead">A single card index for the Dynalytics package ecosystem: pkgdown sites, documentation snapshots, and generated package pages served from this host.</p>' +
+      '<div class="pkg-stats">' +
+        '<div><strong>' + packages.length + "</strong><span>package routes</span></div>" +
+        '<div><strong>' + pkgdown + "</strong><span>pkgdown sites</span></div>" +
+        '<div><strong>' + (snapshots + pages) + "</strong><span>snapshots and pages</span></div>" +
+      "</div>";
+    view.appendChild(hero);
+
+    var grid = el("div", "pkg-card-grid");
+    packages.forEach(function (p) { grid.appendChild(packageCard(p)); });
+    view.appendChild(grid);
+  }
+
+  function renderDynalyticsOverview(view) {
     view.innerHTML = "";
     var body = el("div");
     renderAbout(body);
