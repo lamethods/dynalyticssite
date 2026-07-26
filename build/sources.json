@@ -388,7 +388,7 @@
       "dir": "htna",
       "owner": "sonsoleslp",
       "docs": "https://pak.dynasite.org/htna/",
-      "cran": false,
+      "cran": true,
       "tags": [
         "network",
         "TNA",
@@ -489,7 +489,7 @@
       "dir": "lagdynamics",
       "owner": "mohsaqr",
       "docs": "https://pak.dynasite.org/lagdynamics/",
-      "cran": false,
+      "cran": true,
       "tags": [
         "sequence",
         "lag-sequential",
@@ -513,7 +513,7 @@
     {
       "name": "Saqrlab",
       "dir": "Saqrlab",
-      "owner": null,
+      "owner": "mohsaqr",
       "docs": "https://pak.dynasite.org/Saqrlab/",
       "cran": false,
       "tags": [

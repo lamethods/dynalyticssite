@@ -10,6 +10,7 @@
     { route: "", label: "Overview" },
     { route: "people", label: "People" },
     { route: "packages", label: "Packages" },
+    { href: "packages.html", label: "Package sites" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
     { route: "writing", label: "Readings" },
@@ -96,7 +97,10 @@
     var nav = document.getElementById("nav"); if (!nav) return;
     nav.innerHTML = "";
     NAV.forEach(function (n) {
-      var a = el("a", "navlink"); a.href = "#/" + n.route; a.textContent = n.label; a.setAttribute("data-route", n.route);
+      var a = el("a", "navlink");
+      a.href = n.href || ("#/" + n.route);
+      a.textContent = n.label;
+      if (n.route != null) a.setAttribute("data-route", n.route);
       nav.appendChild(a);
     });
   }

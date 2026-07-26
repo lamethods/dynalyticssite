@@ -137,7 +137,7 @@ Best for bulk edits, programmatic changes, or when you're already in an editor.
 **Packages** — `packages[]` (the rest is harvested from each `DESCRIPTION`):
 ```json
 { "name": "tna", "dir": "tna", "owner": "sonsoleslp",
-  "docs": "https://sonsoles.me/tna/", "cran": true,
+  "docs": "https://pak.dynasite.org/tna/", "cran": true,
   "tags": ["network","TNA"], "logo": "https://…" }
 ```
 Escape hatches: `"no_github": true`, `"exclude_articles": ["slug"]`,
@@ -166,9 +166,9 @@ titles{ slug: "Chapter Title" }`.
 - **The site loads `assets/catalog.js`, not `sources.json`.** If your edit
   doesn't show, you forgot to recompile (step 2 above) or to commit the
   regenerated files.
-- **CSS changes need a cache-bust.** After editing `assets/style.css`, bump the
-  `?v=N` query in `index.html` (and `studio/index.html`) so returning visitors
-  get it.
+- **CSS and app changes need a cache-bust.** Run `npm run stamp` (also included
+  in `npm run build` and `npm run all`) so returning visitors receive the
+  updated shared assets.
 - **`saqr.me` 403s bots.** Link verification sends a Chrome User-Agent on
   purpose — don't "fix" that.
 - **Never commit** `.studio-auth.json` (gitignored) or session artifacts

@@ -525,12 +525,14 @@
       "blurb": "Implements the Heterogeneous Transition Network Analysis (HTNA) method described by López-Pernas et al. (2026). The method is an extension of transition network analysis (TNA) where actions or events belong to two or more distinct actor types (e.g. Human and AI),preserving the actor type partition on the resulting network. Provides a thin, focused API on top of the 'Nestimate' estimation engine and the 'cograph' rendering engine, so downstream bootstrap, permutation, reliability, centrality, and plotting functions treat each actor's codes as a distinct node group.",
       "url": "https://pak.dynasite.org/htna/",
       "links": {
+        "cran": "https://CRAN.R-project.org/package=htna",
         "github": "https://github.com/sonsoleslp/htna",
         "docs": "https://pak.dynasite.org/htna/",
         "reference": "https://pak.dynasite.org/htna/reference/",
         "articles": "https://pak.dynasite.org/htna/articles/"
       },
       "logo": "https://sonsoles.me/htna/logo.png",
+      "cran_version": "0.1.0",
       "version": "0.3.1",
       "authors": [
         "Sonsoles López-Pernas",
@@ -544,7 +546,7 @@
         "heterogeneous",
         "human-AI"
       ],
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-07-26"
     },
     {
@@ -1375,11 +1377,13 @@
       "blurb": "A modern, tidy toolkit for lag sequential analysis and lag transition networks of categorical event and sequence data. It provides an accessible, unified workflow for fitting, inspecting, visualising, and comparing lagged transition patterns, with tidy outputs throughout. Includes confirmatory tools for uncertainty, robustness, and group differences, including bootstrap intervals, analytic certainty, split-half reliability, case-drop stability, permutation tests, and Bayesian group comparisons. Supports long-format event-log import, import from common sequence and state-sequence objects, multi-lag analysis, structural-zero constraints, transition and initial probabilities, plotting of transition structures, and a directed transfer-entropy measure. The lag sequential analysis framework follows Sackett and others (1979).",
       "url": "https://pak.dynasite.org/lagdynamics/",
       "links": {
+        "cran": "https://CRAN.R-project.org/package=lagdynamics",
         "github": "https://github.com/mohsaqr/lagdynamics",
         "docs": "https://pak.dynasite.org/lagdynamics/",
         "reference": "https://pak.dynasite.org/lagdynamics/reference/",
         "articles": "https://pak.dynasite.org/lagdynamics/articles/"
       },
+      "cran_version": "0.32",
       "version": "0.32",
       "authors": [
         "Mohammed Saqr",
@@ -1392,7 +1396,7 @@
         "transition",
         "tidy"
       ],
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-07-26"
     },
     {
@@ -1613,7 +1617,7 @@
       "authors": [
         "Mohammed Saqr"
       ],
-      "owner": null,
+      "owner": "mohsaqr",
       "tags": [
         "simulation",
         "TNA",
@@ -1632,7 +1636,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/bootstrap-power.html"
       },
-      "owner": null,
+      "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
         "article",
@@ -1654,7 +1658,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/htna-mlna.html"
       },
-      "owner": null,
+      "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
         "article",
@@ -1676,7 +1680,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/introduction.html"
       },
-      "owner": null,
+      "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
         "article",
@@ -1698,7 +1702,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/learning-states.html"
       },
-      "owner": null,
+      "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
         "article",
@@ -1720,7 +1724,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/simulation-guide.html"
       },
-      "owner": null,
+      "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
         "article",
@@ -1742,7 +1746,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/tna-workflow.html"
       },
-      "owner": null,
+      "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
         "article",
@@ -2491,7 +2495,7 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-07-26"
     },
     {
@@ -2965,7 +2969,7 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-07-26"
     },
     {
@@ -4218,7 +4222,7 @@
   ],
   "verified_at": "2026-07-26",
   "link_summary": {
-    "verified": 226,
+    "verified": 228,
     "redirect": 61,
     "broken": 0
   }
