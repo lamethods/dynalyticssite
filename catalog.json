@@ -2549,7 +2549,7 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "VERIFIED",
+      "status": "REDIRECT",
       "last_checked": "2026-07-26"
     },
     {
@@ -3846,9 +3846,9 @@
       "tag": "Software",
       "title": "CarmNote released: portable analysis in a single HTML file",
       "blurb": "CarmNote is now available: a family of interactive, reproducible notebooks for transition and social network analysis. Each notebook is a self-contained HTML file that runs locally in a browser—even offline—keeping data, analysis, figures, results, and notes together. The first releases include CarmNote TNA and CarmNote SNA, with guided workflows and complete documentation.",
-      "url": "https://lacarm.com/CarmNote/",
+      "url": "https://pak.dynasite.org/carmnotes",
       "links": {
-        "read": "https://lacarm.com/CarmNote/"
+        "read": "https://pak.dynasite.org/carmnotes"
       },
       "tags": [
         "news",
@@ -4240,8 +4240,8 @@
   ],
   "verified_at": "2026-07-26",
   "link_summary": {
-    "verified": 230,
-    "redirect": 60,
+    "verified": 228,
+    "redirect": 62,
     "broken": 0
   }
 }
