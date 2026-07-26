@@ -47,7 +47,8 @@ CNAME                   # custom domain for GitHub Pages: dynalytics.lamethods.o
 there (and ensure its `DESCRIPTION` is reachable under `workspace_root`); to
 correct a doc-site URL, edit its `docs` field. Per-package escape hatches:
 `"no_github": true` (repo not public), `"exclude_articles": ["slug"]` (vignette
-not published to the live site).
+not published to the live site), and `"articles": false` (the pkgdown site has
+no articles section).
 
 ## Build & verify
 

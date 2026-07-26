@@ -226,7 +226,12 @@ async function buildPackage(pkg) {
   const links = {};
   if (pkg.cran) links.cran = `https://CRAN.R-project.org/package=${pkg.name}`;
   if (github) links.github = github;
-  if (docs) { docs = docs.replace(/\/?$/, "/"); links.docs = docs; links.reference = docs + "reference/"; links.articles = docs + "articles/"; }
+  if (docs) {
+    docs = docs.replace(/\/?$/, "/");
+    links.docs = docs;
+    links.reference = docs + "reference/";
+    if (pkg.articles !== false) links.articles = docs + "articles/";
+  }
 
   let cranv = pkg.cran ? await cranVersion(pkg.name) : null;
   if (pkg.cran && !cranv) cranv = d.Version;

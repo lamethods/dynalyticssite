@@ -357,7 +357,7 @@
       "name": "tna",
       "dir": "tna",
       "owner": "sonsoleslp",
-      "docs": "https://sonsoles.me/tna/",
+      "docs": "https://pak.dynasite.org/tna/",
       "cran": true,
       "tags": [
         "network",
@@ -373,7 +373,7 @@
       "name": "cograph",
       "dir": "cograph",
       "owner": "sonsoleslp",
-      "docs": "https://sonsoles.me/cograph/",
+      "docs": "https://pak.dynasite.org/cograph/",
       "cran": true,
       "tags": [
         "network",
@@ -387,7 +387,7 @@
       "name": "htna",
       "dir": "htna",
       "owner": "sonsoleslp",
-      "docs": "https://sonsoles.me/htna/",
+      "docs": "https://pak.dynasite.org/htna/",
       "cran": false,
       "tags": [
         "network",
@@ -401,7 +401,7 @@
       "name": "Nestimate",
       "dir": "Nestimate",
       "owner": "mohsaqr",
-      "docs": "https://saqr.me/Nestimate/",
+      "docs": "https://pak.dynasite.org/Nestimate/",
       "cran": true,
       "tags": [
         "network",
@@ -419,7 +419,7 @@
       "name": "snakeplot",
       "dir": "Snakeplot",
       "owner": "mohsaqr",
-      "docs": "https://saqr.me/Snakeplot/",
+      "docs": "https://pak.dynasite.org/Snakeplot/",
       "cran": true,
       "tags": [
         "visualization",
@@ -433,7 +433,7 @@
       "name": "cooccure",
       "dir": "cooccure",
       "owner": "mohsaqr",
-      "docs": "https://saqr.me/cooccure/",
+      "docs": "https://pak.dynasite.org/cooccure/",
       "cran": true,
       "tags": [
         "network",
@@ -441,13 +441,13 @@
         "similarity",
         "jaccard"
       ],
-      "logo": "https://saqr.me/cooccure/logo.png"
+      "logo": "https://pak.dynasite.org/cooccure/logo.png"
     },
     {
       "name": "bibnets",
       "dir": "bibnets",
       "owner": "mohsaqr",
-      "docs": "https://saqr.me/bibnets-pkg/",
+      "docs": "https://pak.dynasite.org/bibnets-pkg/",
       "cran": true,
       "tags": [
         "bibliometric",
@@ -461,7 +461,7 @@
       "name": "transitiontrees",
       "dir": "transitiontrees",
       "owner": "mohsaqr",
-      "docs": null,
+      "docs": "https://pak.dynasite.org/transitiontrees/",
       "cran": true,
       "tags": [
         "sequence",
@@ -474,7 +474,7 @@
       "name": "codyna",
       "dir": "CodynaJS",
       "owner": "santikka",
-      "docs": null,
+      "docs": "https://pak.dynasite.org/codyna/",
       "cran": true,
       "tags": [
         "complexity",
@@ -488,7 +488,7 @@
       "name": "lagdynamics",
       "dir": "lagdynamics",
       "owner": "mohsaqr",
-      "docs": null,
+      "docs": "https://pak.dynasite.org/lagdynamics/",
       "cran": false,
       "tags": [
         "sequence",
@@ -501,7 +501,7 @@
       "name": "Saqrmisc",
       "dir": "Saqrmisc",
       "owner": "mohsaqr",
-      "docs": null,
+      "docs": "https://pak.dynasite.org/Saqrmisc/",
       "cran": false,
       "tags": [
         "utilities",
@@ -514,7 +514,7 @@
       "name": "Saqrlab",
       "dir": "Saqrlab",
       "owner": null,
-      "docs": null,
+      "docs": "https://pak.dynasite.org/Saqrlab/",
       "cran": false,
       "tags": [
         "simulation",
@@ -524,10 +524,10 @@
       ]
     },
     {
-      "name": "psychnet",
-      "dir": "psychnet",
+      "name": "psychnets",
+      "dir": "psychnets",
       "owner": "mohsaqr",
-      "docs": null,
+      "docs": "https://pak.dynasite.org/psychnets/",
       "cran": false,
       "tags": [
         "psychometric",
@@ -541,7 +541,8 @@
       "name": "tsn",
       "dir": "tsn-main",
       "owner": "santikka",
-      "docs": null,
+      "docs": "https://pak.dynasite.org/tsn/",
+      "articles": false,
       "cran": false,
       "tags": [
         "time-series",
@@ -665,7 +666,7 @@
       "tna"
     ],
     "ch19-psychological-networks": [
-      "psychnet"
+      "psychnets"
     ],
     "ch12-cds": [
       "codyna"

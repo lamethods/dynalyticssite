@@ -141,7 +141,8 @@ Best for bulk edits, programmatic changes, or when you're already in an editor.
   "tags": ["network","TNA"], "logo": "https://…" }
 ```
 Escape hatches: `"no_github": true`, `"exclude_articles": ["slug"]`,
-`"docs": null` (no pkgdown site).
+`"articles": false` (pkgdown site has no articles section), and `"docs": null`
+(no pkgdown site).
 
 **Blogs / posts** (off-site blog / article / news links) — `posts[]`. Edited in
 the Studio's **Blogs** tab; **curated and instant** (a curated-only regen rebuilds
