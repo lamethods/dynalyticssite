@@ -280,6 +280,13 @@
       "title": "Transition Network Analysis introduced at LAK ’25",
       "blurb": "The foundational TNA paper — a framework for modelling, visualising, and identifying the temporal patterns of learners and learning processes.",
       "url": "https://doi.org/10.1145/3706468.3706513"
+    },
+    {
+      "date": "2026-07-26",
+      "tag": "Software",
+      "title": "CarmNote released: portable analysis in a single HTML file",
+      "blurb": "CarmNote is now available: a family of interactive, reproducible notebooks for transition and social network analysis. Each notebook is a self-contained HTML file that runs locally in a browser—even offline—keeping data, analysis, figures, results, and notes together. The first releases include CarmNote TNA and CarmNote SNA, with guided workflows and complete documentation.",
+      "url": "https://lacarm.com/CarmNote/"
     }
   ],
   "tools": [
