@@ -440,7 +440,7 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
 .filter-chip .fc-n { opacity: .55; margin-left: 6px; }
 
 /* ---------- package sites directory ---------- */
-.site-page .logo-mark { display: block; }
+.site-page .logo-mark { display: block; cursor: pointer; }
 .site-page .site-kicker {
   margin: 0 0 6px; font-family: var(--mono); font-size: 10.5px; line-height: 1.3;
   letter-spacing: .09em; text-transform: uppercase; color: var(--fg3);
