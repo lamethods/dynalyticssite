@@ -33,6 +33,7 @@ grey = local/unpublished).
 index.html              # the whole UI (loads assets/catalog.js, d3, chord, app)
 package-sites.html      # direct Package sites directory (served at /package-sites)
 packages.html           # compatibility redirect to /package-sites
+carmnotes.html          # CarmNote family overview (served at /carmnotes)
 catalog.json            # GENERATED — do not hand-edit; rerun the build
 assets/
   app.js  package-sites.js  style.css  chord.js  d3.min.js  catalog.js

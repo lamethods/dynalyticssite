@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script src="assets/analytics.js?v=abb318d9" data-dynasite-analytics="G-M4WK9QTCB5"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CarmNotes — Dynalytics</title>
+  <link rel="canonical" href="/carmnotes" />
+  <meta name="description" content="CarmNote portable, reproducible, single-file computational notebooks for transition and social network analysis." />
+  <meta name="theme-color" content="#ffffff" id="theme-color" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("dyna-theme");
+        document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css?v=3d2f23eb" />
+</head>
+<body class="site-page">
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <a class="logo-mark" href="index.html#/" aria-label="Dynalytics overview">
+          <img src="assets/logo-dynalytics.png" alt="" />
+        </a>
+        <div class="brand-text">
+          <p class="site-kicker">Portable computational notebooks</p>
+          <h1 class="headline"><a href="/carmnotes">CarmNotes</a></h1>
+          <p class="subhead">Contained analysis software that travels as a single HTML file.</p>
+        </div>
+        <div class="mast-tools">
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark"></button>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="navlink" href="index.html#/">Overview</a>
+        <a class="navlink" href="index.html#/packages">Packages</a>
+        <a class="navlink" href="package-sites">Package sites</a>
+        <a class="navlink active" href="carmnotes" aria-current="page">CarmNotes</a>
+        <a class="navlink" href="index.html#/writing/articles">Articles</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="carm-hero" aria-labelledby="carm-heading">
+        <div>
+          <p class="site-kicker">Analysis without installation</p>
+          <h2 id="carm-heading">A notebook you can carry, open, and reproduce.</h2>
+        </div>
+        <div class="carm-hero-copy">
+          <p>CarmNote is a family of interactive notebooks for statistical and network analysis. Each notebook is a self-contained HTML file that runs in the browser—even offline—with the analysis, results, and narrative kept together.</p>
+          <div class="carm-actions">
+            <a class="carm-action primary" href="https://lacarm.com/CarmNote/">Explore CarmNote ↗</a>
+            <a class="carm-action" href="https://github.com/mohsaqr/CarmNote-TNA">View source ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="carm-principles" aria-label="CarmNote principles">
+        <div class="carm-principle"><strong>Contained</strong><span>Data, analysis, figures, and notes stay in one portable document.</span></div>
+        <div class="carm-principle"><strong>Architecture-driven</strong><span>Every notebook is built around a clear analytical workflow.</span></div>
+        <div class="carm-principle"><strong>Runnable</strong><span>Open it in a modern browser and work locally, with no server required.</span></div>
+        <div class="carm-principle"><strong>Model-based</strong><span>Purpose-built methods turn raw relational and sequential data into evidence.</span></div>
+      </section>
+
+      <section class="carm-section" aria-labelledby="notebooks-heading">
+        <div class="carm-section-head">
+          <h2 id="notebooks-heading">Choose your notebook.</h2>
+          <p>Start in the browser, read the documentation, or download a release for fully offline use.</p>
+        </div>
+        <div class="carm-card-grid">
+          <article class="site-card">
+            <div class="site-card-top">
+              <div class="site-identity">
+                <div class="site-logo carm-monogram" aria-hidden="true">T</div>
+                <div>
+                  <h3 class="site-name">CarmNote TNA</h3>
+                  <p class="site-title">Transition and sequence analysis</p>
+                </div>
+              </div>
+              <span class="site-status development">Notebook</span>
+            </div>
+            <p class="site-description">Build transition networks, describe and compare sequences, discover patterns, test groups, and explore higher-order structure in one reproducible workspace.</p>
+            <div class="site-card-facts"><span>Offline capable</span><span>Single HTML file</span></div>
+            <div class="site-card-links">
+              <a class="site-link primary" href="https://lacarm.com/CarmNote/tna/">Open notebook <span class="site-link-arrow">↗</span></a>
+              <a class="site-link" href="https://lacarm.com/CarmNote/tna/docs/">Documentation <span class="site-link-arrow">↗</span></a>
+              <a class="site-link" href="https://github.com/mohsaqr/CarmNote-TNA">Source <span class="site-link-arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="site-card">
+            <div class="site-card-top">
+              <div class="site-identity">
+                <div class="site-logo carm-monogram" aria-hidden="true">S</div>
+                <div>
+                  <h3 class="site-name">CarmNote SNA</h3>
+                  <p class="site-title">Social network analysis</p>
+                </div>
+              </div>
+              <span class="site-status development">Notebook</span>
+            </div>
+            <p class="site-description">Move from edge lists to network structure, visualisation, centrality, communities, and reporting in a portable browser-based analysis document.</p>
+            <div class="site-card-facts"><span>Offline capable</span><span>Single HTML file</span></div>
+            <div class="site-card-links">
+              <a class="site-link primary" href="https://lacarm.com/CarmNote/sna/">Open notebook <span class="site-link-arrow">↗</span></a>
+              <a class="site-link" href="https://lacarm.com/CarmNote/sna/docs/">Documentation <span class="site-link-arrow">↗</span></a>
+              <a class="site-link" href="https://github.com/mohsaqr/CarmNote-SNA">Source <span class="site-link-arrow">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <p class="carm-note"><strong>Private by design.</strong> CarmNotes run locally in your browser. You can keep the notebook, its data, and its working state together without sending the analysis to a hosted computation service.</p>
+    </main>
+
+    <footer class="foot">
+      <div>CarmNote · Part of the Dynalytics ecosystem</div>
+      <div><a href="https://lacarm.com/CarmNote/">Canonical CarmNote site ↗</a></div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var button = document.getElementById("theme-toggle");
+      var meta = document.getElementById("theme-color");
+      var current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      function apply(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        if (meta) meta.setAttribute("content", theme === "dark" ? "#0c0c0d" : "#ffffff");
+      }
+      apply(current);
+      if (button) button.addEventListener("click", function () {
+        current = current === "dark" ? "light" : "dark";
+        apply(current);
+        try { localStorage.setItem("dyna-theme", current); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>

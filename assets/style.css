@@ -551,6 +551,74 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
   .site-status { display: inline-block; margin: 12px 0 0 61px; }
 }
 
+/* ---------- CarmNotes overview ---------- */
+.carm-hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .52fr); gap: 54px;
+  align-items: end; padding: 54px 0 42px; border-bottom: 1px solid var(--fg);
+}
+.carm-hero h2 {
+  max-width: 13ch; margin: 0; font-family: var(--display);
+  font-size: clamp(38px, 6.7vw, 68px); font-weight: 600; letter-spacing: -.045em; line-height: .98;
+}
+.carm-hero-copy { align-self: end; }
+.carm-hero-copy p {
+  margin: 0 0 22px; color: var(--fg2); font-size: 15.5px; line-height: 1.65;
+}
+.carm-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.carm-action {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 40px;
+  padding: 9px 15px; border: 1px solid var(--fg); font-family: var(--mono);
+  font-size: 10.5px; letter-spacing: .04em; color: var(--fg); transition: background .15s, color .15s;
+}
+.carm-action.primary, .carm-action:hover { background: var(--fg); color: var(--bg); }
+.carm-principles {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid var(--fg);
+}
+.carm-principle { padding: 24px 18px 25px 0; }
+.carm-principle + .carm-principle { padding-left: 18px; border-left: 1px solid var(--line); }
+.carm-principle strong {
+  display: block; margin-bottom: 8px; font-family: var(--display); font-size: 20px; font-weight: 600;
+}
+.carm-principle span { color: var(--fg3); font-size: 12.5px; line-height: 1.5; }
+.carm-section { padding-top: 40px; }
+.carm-section-head {
+  display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 18px;
+}
+.carm-section-head h2 {
+  margin: 0; font-family: var(--display); font-size: clamp(29px, 4vw, 42px);
+  font-weight: 600; letter-spacing: -.025em;
+}
+.carm-section-head p { max-width: 52ch; margin: 0; color: var(--fg2); font-size: 13.5px; line-height: 1.55; }
+.carm-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.carm-card-grid .site-description { min-height: 0; -webkit-line-clamp: unset; }
+.carm-monogram {
+  border: 1px solid var(--line); font-family: var(--display); font-size: 25px; font-weight: 600;
+}
+.carm-note {
+  margin: 34px 0 0; padding: 21px 0; border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line); color: var(--fg2); font-size: 13.5px; line-height: 1.6;
+}
+.carm-note strong { color: var(--fg); }
+
+@media (max-width: 760px) {
+  .carm-hero { grid-template-columns: 1fr; gap: 26px; }
+  .carm-principles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .carm-principle:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .carm-principle:nth-child(4) { border-top: 1px solid var(--line); }
+  .carm-card-grid { grid-template-columns: 1fr; }
+  .carm-section-head { display: block; }
+  .carm-section-head p { margin-top: 10px; }
+}
+@media (max-width: 480px) {
+  .carm-hero { padding-top: 36px; }
+  .carm-principles { grid-template-columns: 1fr; }
+  .carm-principle, .carm-principle + .carm-principle {
+    padding: 17px 0; border-left: 0; border-top: 1px solid var(--line);
+  }
+  .carm-principle:first-child { border-top: 0; }
+}
+
 /* ---------- writing view ---------- */
 .write-group { margin-top: 26px; }
 .write-group + .write-group { margin-top: 40px; }

@@ -11,6 +11,7 @@
     { route: "people", label: "People" },
     { route: "packages", label: "Packages" },
     { href: "package-sites", label: "Package sites" },
+    { href: "carmnotes", label: "CarmNotes" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
     { route: "writing", label: "Readings" },
