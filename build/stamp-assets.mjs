@@ -4,7 +4,7 @@
    their <link>/<script> tags in each public shell, so a changed file always
    serves fresh on GitHub Pages without anyone hand-editing a version number.
 
-   The shared style plus each page's app script are stamped.
+   The shared style, catalog data, and each page's app script are stamped.
    The vendored, stable d3.min.js / chord.js are loaded unversioned by app.js
    so the double-click-offline path keeps working. */
 
@@ -20,10 +20,10 @@ const hash = (rel) =>
 const stamps = {
   "assets/style.css": hash("assets/style.css"),
   "assets/app.js": hash("assets/app.js"),
-  "assets/package-sites.js": hash("assets/package-sites.js")
+  "assets/catalog.js": hash("assets/catalog.js")
 };
 const pages = {
-  "index.html": ["assets/style.css", "assets/app.js"],
+  "index.html": ["assets/style.css", "assets/catalog.js", "assets/app.js"],
   "carmnotes.html": ["assets/style.css"]
 };
 
