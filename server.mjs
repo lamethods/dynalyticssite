@@ -10,7 +10,7 @@
 // Re-harvest -> full network harvest + link verify (for package/chapter changes).
 
 import { createServer } from "node:http";
-import { readFile, writeFile, readFileSync } from "node:fs";
+import { readFile, writeFile, readFileSync, statSync } from "node:fs";
 import { readFile as readFileP } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { extname, join, normalize, resolve, dirname } from "node:path";
@@ -64,7 +64,12 @@ function serveStatic(res, baseDir, relPath, fallbackIndex = false) {
   if (rel === "/" || rel === "") rel = "/index.html";
   const full = normalize(join(baseDir, rel));
   if (!full.startsWith(resolve(baseDir))) return send(res, 403, "Forbidden");
-  const target = existsSync(full) && !full.endsWith("/") ? full : (fallbackIndex ? join(baseDir, "index.html") : full);
+  const isFile = (path) => {
+    try { return statSync(path).isFile(); } catch { return false; }
+  };
+  const clean = full.replace(/\/+$/, "");
+  const target = [full, clean + ".html", join(full, "index.html")].find(isFile)
+    || (fallbackIndex ? join(baseDir, "index.html") : full);
   readFile(target, (err, buf) => {
     if (err) return send(res, 404, "Not found");
     send(res, 200, buf, { "Content-Type": MIME[extname(target)] || "application/octet-stream",

@@ -10,7 +10,7 @@
     { route: "", label: "Overview" },
     { route: "people", label: "People" },
     { route: "packages", label: "Packages" },
-    { href: "packages.html", label: "Package sites" },
+    { href: "package-sites", label: "Package sites" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
     { route: "writing", label: "Readings" },

@@ -7,7 +7,7 @@ verified** at build time and weekly via CI.
 
 Open `index.html` (served over HTTP) and start typing. No backend or build step
 is needed to *view* it; the page reads the generated `assets/catalog.js` and
-searches it client-side. `packages.html` is the direct **Package sites**
+searches it client-side. `/package-sites` is the direct **Package sites**
 directory, with links to every hosted documentation site, its articles,
 function reference, CRAN release, and source repository.
 
@@ -31,7 +31,8 @@ grey = local/unpublished).
 
 ```
 index.html              # the whole UI (loads assets/catalog.js, d3, chord, app)
-packages.html           # direct Package sites directory (loads the same catalog)
+package-sites.html      # direct Package sites directory (served at /package-sites)
+packages.html           # compatibility redirect to /package-sites
 catalog.json            # GENERATED — do not hand-edit; rerun the build
 assets/
   app.js  package-sites.js  style.css  chord.js  d3.min.js  catalog.js
@@ -68,9 +69,20 @@ npm run all       # build + verify
 To **view**, just open `index.html` (the catalog is embedded in `assets/catalog.js`,
 so no server is needed). `npm run serve` starts one if you prefer.
 
-Google Analytics lives in `assets/analytics.js`. When adding a new standalone
-HTML page, run `npm run analytics`; `npm run build` and `npm run all` do this
-automatically.
+Google Analytics lives in `assets/analytics.js` and uses measurement ID
+`G-M4WK9QTCB5`. When adding a new standalone HTML page, run
+`npm run analytics`; `npm run build` and `npm run all` do this automatically.
+The injector can also cover a generated static tree such as a pkgdown site:
+
+```bash
+node build/inject-analytics.mjs \
+  --root /srv/www/pak.dynasite.org/tna \
+  --src https://pak.dynasite.org/assets/analytics.js
+node build/inject-analytics.mjs --root /srv/www/pak.dynasite.org/tna --check
+```
+
+The package-site updater runs this injection after every static deployment, so
+new and regenerated reference and article pages retain Analytics coverage.
 
 ## Updating content
 

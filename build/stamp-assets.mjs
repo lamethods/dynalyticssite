@@ -24,7 +24,7 @@ const stamps = {
 };
 const pages = {
   "index.html": ["assets/style.css", "assets/app.js"],
-  "packages.html": ["assets/style.css", "assets/package-sites.js"]
+  "package-sites.html": ["assets/style.css", "assets/package-sites.js"]
 };
 
 let changed = 0;
