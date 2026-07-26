@@ -31,8 +31,8 @@ grey = local/unpublished).
 
 ```
 index.html              # the whole UI (loads assets/catalog.js, d3, chord, app)
-package-sites.html      # direct Package sites directory (served at /package-sites)
-packages.html           # compatibility redirect to /package-sites
+package-sites.html      # redirects /package-sites into the primary routed view
+packages.html           # compatibility redirect into the same routed view
 carmnotes.html          # CarmNote family overview (served at /carmnotes)
 catalog.json            # GENERATED — do not hand-edit; rerun the build
 assets/

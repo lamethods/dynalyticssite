@@ -10,7 +10,7 @@
     { route: "", label: "Overview" },
     { route: "people", label: "People" },
     { route: "packages", label: "Packages" },
-    { href: "package-sites", label: "Package sites" },
+    { route: "package-sites", label: "Package sites" },
     { href: "carmnotes", label: "CarmNotes" },
     { route: "tools", label: "Tools" },
     { route: "chapters", label: "Chapters" },
@@ -122,9 +122,10 @@
     if (mw) { setActive("writing"); setTitle("Readings"); renderWriting(view, mw[1] || "tutorials"); return; }
     var r = (h === "" || h === "/") ? "" : h;
     setActive(r);
-    var labels = { packages: "Packages", tools: "Tools", chapters: "Book chapters", writing: "Readings", papers: "Selected articles", news: "News", people: "People" };
+    var labels = { packages: "Packages", "package-sites": "Package sites", tools: "Tools", chapters: "Book chapters", writing: "Readings", papers: "Selected articles", news: "News", people: "People" };
     setTitle(labels[r] || "");
     if (r === "packages") renderPackages(view);
+    else if (r === "package-sites") renderPackageSites(view);
     else if (r === "tools") renderTools(view);
     else if (r === "chapters") renderChapters(view);
     else if (r === "writing") renderWriting(view);
@@ -385,6 +386,185 @@
     var idx = el("div", "index");
     list.forEach(function (p) { idx.appendChild(packageRow(p)); });
     view.appendChild(idx);
+  }
+
+  /* ---------- package documentation sites ---------- */
+  function packageSiteLink(parent, href, label, primary) {
+    if (!href) return;
+    var link = el("a", "site-link" + (primary ? " primary" : ""));
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.appendChild(document.createTextNode(label + " "));
+    link.appendChild(el("span", "site-link-arrow", "↗"));
+    parent.appendChild(link);
+  }
+
+  function packageSiteCard(entry, articleCount) {
+    var card = el("article", "site-card clickable");
+    var docs = entry.links.docs;
+    card.tabIndex = 0;
+    card.setAttribute("role", "link");
+    card.setAttribute("aria-label", "Open the " + entry.id + " package website");
+
+    function openSite() {
+      var opened = window.open(docs, "_blank");
+      if (opened) opened.opener = null;
+      else location.href = docs;
+    }
+    card.addEventListener("click", function (event) {
+      if (event.target.closest("a, button, input")) return;
+      openSite();
+    });
+    card.addEventListener("keydown", function (event) {
+      if (event.target !== card || (event.key !== "Enter" && event.key !== " ")) return;
+      event.preventDefault();
+      openSite();
+    });
+
+    var top = el("div", "site-card-top");
+    var identity = el("div", "site-identity");
+    var logo = el("div", "site-logo");
+    if (entry.logo) {
+      var image = el("img");
+      image.src = entry.logo;
+      image.alt = "";
+      image.loading = "lazy";
+      image.onerror = function () {
+        logo.classList.add("mono");
+        logo.textContent = monogram(entry.id);
+      };
+      logo.appendChild(image);
+    } else {
+      logo.classList.add("mono");
+      logo.textContent = monogram(entry.id);
+    }
+    identity.appendChild(logo);
+    var names = el("div");
+    names.appendChild(el("h3", "site-name", esc(entry.id)));
+    names.appendChild(el("p", "site-title", esc(subtitleOf(entry))));
+    identity.appendChild(names);
+    top.appendChild(identity);
+
+    var onCran = Boolean(entry.links.cran);
+    var badge = el("span", "site-status " + (onCran ? "cran" : "development"));
+    badge.textContent = onCran ? "CRAN " + (entry.cran_version || "") : "Development";
+    top.appendChild(badge);
+    card.appendChild(top);
+
+    card.appendChild(el("p", "site-description", esc(entry.blurb || "")));
+    var facts = el("div", "site-card-facts");
+    facts.appendChild(el("span", "", "v" + (entry.version || "—")));
+    facts.appendChild(el("span", "", articleCount ? articleCount + (articleCount === 1 ? " article" : " articles") : "Reference only"));
+    card.appendChild(facts);
+
+    var links = el("div", "site-card-links");
+    packageSiteLink(links, docs, "Open package site", true);
+    if (articleCount && entry.links.articles) packageSiteLink(links, entry.links.articles, "Articles", false);
+    packageSiteLink(links, entry.links.reference, "Reference", false);
+    packageSiteLink(links, entry.links.cran, "CRAN", false);
+    packageSiteLink(links, entry.links.github, "Source", false);
+    card.appendChild(links);
+    return card;
+  }
+
+  function renderPackageSites(view) {
+    view.innerHTML = "";
+    var packages = S.packages.filter(function (entry) {
+      return entry.links && entry.links.docs;
+    });
+    var articleCounts = {};
+    ofType("vignette").forEach(function (entry) {
+      pkgsOf(entry).forEach(function (id) {
+        articleCounts[id] = (articleCounts[id] || 0) + 1;
+      });
+    });
+    var cranCount = packages.filter(function (entry) { return Boolean(entry.links.cran); }).length;
+    var articleSiteCount = packages.filter(function (entry) { return Boolean(articleCounts[entry.id]); }).length;
+
+    view.appendChild(secHead(
+      "",
+      "Package sites",
+      packages.length + " documentation sites · " + cranCount + " on CRAN · " + articleSiteCount + " with articles"
+    ));
+    view.appendChild(el(
+      "p",
+      "directory-intro",
+      "Open a card anywhere to visit the package website, or use its direct links for articles, function reference, CRAN, and source code."
+    ));
+
+    var tools = el("div", "site-tools integrated");
+    var search = el("label", "site-search");
+    search.appendChild(el("span", "", "Find a package"));
+    var input = el("input");
+    input.type = "search";
+    input.placeholder = "Search names, topics, or descriptions";
+    input.autocomplete = "off";
+    search.appendChild(input);
+    tools.appendChild(search);
+
+    var filters = el("div", "filters");
+    var filterDefs = [
+      ["all", "All", packages.length],
+      ["cran", "On CRAN", cranCount],
+      ["development", "Development", packages.length - cranCount],
+      ["articles", "With articles", articleSiteCount]
+    ];
+    filterDefs.forEach(function (definition, index) {
+      var button = el("button", "filter-chip" + (index === 0 ? " active" : ""));
+      button.type = "button";
+      button.setAttribute("data-filter", definition[0]);
+      button.innerHTML = esc(definition[1]) + ' <span class="fc-n">' + definition[2] + "</span>";
+      filters.appendChild(button);
+    });
+    tools.appendChild(filters);
+    view.appendChild(tools);
+
+    var grid = el("div", "site-grid integrated");
+    var empty = el("p", "site-empty", "No package sites match this filter.");
+    empty.hidden = true;
+    view.appendChild(grid);
+    view.appendChild(empty);
+
+    var activeFilter = "all";
+    var query = "";
+    packages.sort(function (a, b) {
+      return (a.links.cran ? 0 : 1) - (b.links.cran ? 0 : 1)
+        || a.id.localeCompare(b.id, undefined, { sensitivity: "base" });
+    });
+
+    function renderCards() {
+      grid.innerHTML = "";
+      var shown = packages.filter(function (entry) {
+        var onCran = Boolean(entry.links.cran);
+        var articles = articleCounts[entry.id] || 0;
+        if (activeFilter === "cran" && !onCran) return false;
+        if (activeFilter === "development" && onCran) return false;
+        if (activeFilter === "articles" && !articles) return false;
+        if (!query) return true;
+        return [entry.id, entry.title, entry.blurb, (entry.tags || []).join(" ")]
+          .join(" ").toLowerCase().indexOf(query) >= 0;
+      });
+      shown.forEach(function (entry) {
+        grid.appendChild(packageSiteCard(entry, articleCounts[entry.id] || 0));
+      });
+      empty.hidden = shown.length !== 0;
+    }
+
+    filters.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-filter]");
+      if (!button) return;
+      activeFilter = button.getAttribute("data-filter");
+      filters.querySelectorAll(".filter-chip").forEach(function (chip) {
+        chip.classList.toggle("active", chip === button);
+      });
+      renderCards();
+    });
+    input.addEventListener("input", function () {
+      query = input.value.trim().toLowerCase();
+      renderCards();
+    });
+    renderCards();
   }
 
   // Order a list so TNA-related items lead, otherwise keeping the harvested order.

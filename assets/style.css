@@ -493,6 +493,10 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
   border: 1px solid var(--line); background: var(--card); transition: border-color .15s, transform .15s;
 }
 .site-card:hover { border-color: var(--fg); transform: translateY(-2px); }
+.site-card.clickable { cursor: pointer; }
+.site-card.clickable:focus-visible {
+  border-color: var(--fg); outline: 2px solid var(--fg); outline-offset: 3px;
+}
 .site-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
 .site-identity { display: flex; align-items: center; gap: 13px; min-width: 0; }
 .site-logo {
@@ -533,9 +537,17 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
 }
 .site-link { font-family: var(--mono); font-size: 10.5px; color: var(--fg3); }
 .site-link:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
-.site-link.primary { color: var(--fg); font-weight: 700; }
+.site-link.primary {
+  padding: 7px 10px; background: var(--fg); color: var(--bg); font-weight: 700;
+}
+.site-link.primary:hover { color: var(--bg); text-decoration: none; }
 .site-link-arrow { font-size: 10px; }
 .site-empty { padding: 56px 0; text-align: center; color: var(--fg3); }
+.directory-intro {
+  max-width: 68ch; margin: 22px 0 0; color: var(--fg2); font-size: 14px; line-height: 1.6;
+}
+.site-tools.integrated { padding-top: 20px; }
+.site-grid.integrated { margin-top: 8px; }
 
 @media (max-width: 760px) {
   .sites-hero { grid-template-columns: 1fr; align-items: start; }
