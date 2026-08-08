@@ -51,9 +51,9 @@
     ]
   },
   "counts": {
-    "total": 230,
+    "total": 237,
     "packages": 18,
-    "vignettes": 99,
+    "vignettes": 106,
     "posts": 20,
     "chapters": 44,
     "news": 21
@@ -64,13 +64,13 @@
       "type": "package",
       "title": "tna — Transition Network Analysis (TNA)",
       "blurb": "Provides tools for performing Transition Network Analysis (TNA) to study relational dynamics, including functions for building and plotting TNA models, calculating centrality measures, and identifying dominant events and patterns. TNA statistical techniques (e.g., bootstrapping and permutation tests) ensure the reliability of observed insights and confirm that identified dynamics are meaningful.",
-      "url": "https://sonsoles.me/tna/",
+      "url": "https://pak.dynasite.org/tna/",
       "links": {
         "cran": "https://CRAN.R-project.org/package=tna",
         "github": "https://github.com/sonsoleslp/tna",
-        "docs": "https://sonsoles.me/tna/",
-        "reference": "https://sonsoles.me/tna/reference/",
-        "articles": "https://sonsoles.me/tna/articles/"
+        "docs": "https://pak.dynasite.org/tna/",
+        "reference": "https://pak.dynasite.org/tna/reference/",
+        "articles": "https://pak.dynasite.org/tna/articles/"
       },
       "logo": "https://sonsoles.me/tna/logo.png",
       "cran_version": "1.2.3",
@@ -97,9 +97,9 @@
       "type": "vignette",
       "title": "Attention TNA",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/atna.html",
+      "url": "https://pak.dynasite.org/tna/articles/atna.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/atna.html"
+        "article": "https://pak.dynasite.org/tna/articles/atna.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -119,9 +119,9 @@
       "type": "vignette",
       "title": "Finding cliques and communities with tna",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/communities_and_cliques.html",
+      "url": "https://pak.dynasite.org/tna/articles/communities_and_cliques.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/communities_and_cliques.html"
+        "article": "https://pak.dynasite.org/tna/articles/communities_and_cliques.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -141,9 +141,9 @@
       "type": "vignette",
       "title": "A showcase of the main tna functions",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/complete_tutorial.html",
+      "url": "https://pak.dynasite.org/tna/articles/complete_tutorial.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/complete_tutorial.html"
+        "article": "https://pak.dynasite.org/tna/articles/complete_tutorial.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -163,9 +163,9 @@
       "type": "vignette",
       "title": "Frequency-based TNA",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/ftna.html",
+      "url": "https://pak.dynasite.org/tna/articles/ftna.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/ftna.html"
+        "article": "https://pak.dynasite.org/tna/articles/ftna.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -185,9 +185,9 @@
       "type": "vignette",
       "title": "Using grouped sequence data with tna",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/grouped_sequences.html",
+      "url": "https://pak.dynasite.org/tna/articles/grouped_sequences.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/grouped_sequences.html"
+        "article": "https://pak.dynasite.org/tna/articles/grouped_sequences.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -207,9 +207,9 @@
       "type": "vignette",
       "title": "tna — R Package Documentation",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/new-docs.html",
+      "url": "https://pak.dynasite.org/tna/articles/new-docs.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/new-docs.html"
+        "article": "https://pak.dynasite.org/tna/articles/new-docs.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -229,9 +229,9 @@
       "type": "vignette",
       "title": "How to prepare data for tna",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/prepare_data.html",
+      "url": "https://pak.dynasite.org/tna/articles/prepare_data.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/prepare_data.html"
+        "article": "https://pak.dynasite.org/tna/articles/prepare_data.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -251,9 +251,9 @@
       "type": "vignette",
       "title": "Getting started with the tna package",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://sonsoles.me/tna/articles/tna.html",
+      "url": "https://pak.dynasite.org/tna/articles/tna.html",
       "links": {
-        "article": "https://sonsoles.me/tna/articles/tna.html"
+        "article": "https://pak.dynasite.org/tna/articles/tna.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -1985,10 +1985,13 @@
       "type": "package",
       "title": "idiographic — Person-Specific (Idiographic) and Heterogeneous Complex Networks",
       "blurb": "Person-specific and within-person network estimation from intensive longitudinal and panel data. Estimators include ordinary vector autoregression (VAR), graphical vector autoregression (graphical VAR), multilevel vector autoregression (mlVAR), rolling ordinary and graphical VAR, native Bayesian VAR and multilevel Bayesian VAR, unified Structural Equation Modeling (uSEM), and Group Iterative Multiple Model Estimation (GIMME). All estimators are native clean-room implementations. All functions are validated against authoritative literature. Also provides preprocessing audits, edge-stability diagnostics, model-comparison reports, and rolling forecast validation. Methods are described in and.",
-      "url": "https://CRAN.R-project.org/package=idiographic",
+      "url": "https://pak.dynasite.org/idiographic/",
       "links": {
         "cran": "https://CRAN.R-project.org/package=idiographic",
-        "github": "https://github.com/mohsaqr/idiographic"
+        "github": "https://github.com/mohsaqr/idiographic",
+        "docs": "https://pak.dynasite.org/idiographic/",
+        "reference": "https://pak.dynasite.org/idiographic/reference/",
+        "articles": "https://pak.dynasite.org/idiographic/articles/"
       },
       "cran_version": "0.3.2",
       "version": "0.3.2",
@@ -2012,10 +2015,10 @@
       "id": "idiographic::bayesian-var-dsem",
       "type": "vignette",
       "title": "6. Bayesian VAR and DSEM",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/bayesian-var-dsem.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/bayesian-var-dsem.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/bayesian-var-dsem.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/bayesian-var-dsem.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2034,10 +2037,10 @@
       "id": "idiographic::clean-room-methods",
       "type": "vignette",
       "title": "10. Clean-room design",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/clean-room-methods.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/clean-room-methods.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/clean-room-methods.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/clean-room-methods.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2056,10 +2059,10 @@
       "id": "idiographic::gimme",
       "type": "vignette",
       "title": "8. GIMME",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/gimme.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/gimme.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/gimme.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/gimme.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2078,10 +2081,10 @@
       "id": "idiographic::graphical-var",
       "type": "vignette",
       "title": "4. Graphical VAR",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/graphical-var.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/graphical-var.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/graphical-var.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/graphical-var.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2100,10 +2103,10 @@
       "id": "idiographic::idiographic",
       "type": "vignette",
       "title": "1. idiographic",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/idiographic.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/idiographic.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/idiographic.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/idiographic.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2122,10 +2125,10 @@
       "id": "idiographic::mlvar",
       "type": "vignette",
       "title": "5. Multilevel VAR",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/mlvar.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/mlvar.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/mlvar.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/mlvar.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2144,10 +2147,10 @@
       "id": "idiographic::ordinary-var",
       "type": "vignette",
       "title": "3. Ordinary VAR",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/ordinary-var.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/ordinary-var.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/ordinary-var.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/ordinary-var.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2166,10 +2169,10 @@
       "id": "idiographic::preprocessing",
       "type": "vignette",
       "title": "2. Preprocessing",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/preprocessing.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/preprocessing.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/preprocessing.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/preprocessing.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2188,10 +2191,10 @@
       "id": "idiographic::rolling-networks",
       "type": "vignette",
       "title": "9. Rolling networks",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/rolling-networks.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/rolling-networks.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/rolling-networks.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/rolling-networks.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2210,10 +2213,10 @@
       "id": "idiographic::usem",
       "type": "vignette",
       "title": "7. Unified SEM",
-      "blurb": "Article from the idiographic package.",
-      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/usem.html",
+      "blurb": "Article on the idiographic documentation site.",
+      "url": "https://pak.dynasite.org/idiographic/articles/usem.html",
       "links": {
-        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/usem.html"
+        "article": "https://pak.dynasite.org/idiographic/articles/usem.html"
       },
       "owner": "mohsaqr",
       "tags": [
@@ -2716,9 +2719,12 @@
       "type": "package",
       "title": "VaSStra — Simple Variables to States to Sequences to Trajectories",
       "blurb": "A small, pipe-friendly implementation of the VaSSTra workflow for longitudinal multivariate data. It provides explicit steps to turn variables into states, states into aligned sequences, and sequences into trajectory groups, followed by tidy trajectory descriptions. A single call runs the complete analysis with transparent, overridable automation of data roles and cluster counts, and an evaluation verb compares the fitted clustering against its alternatives. 'Nestimate' provides the default sequence-clustering backend and all sequence plots. No 'TraMineR' dependency is required.",
-      "url": "https://github.com/mohsaqr/VaSStra",
+      "url": "https://pak.dynasite.org/VaSStra/",
       "links": {
-        "github": "https://github.com/mohsaqr/VaSStra"
+        "github": "https://github.com/mohsaqr/VaSStra",
+        "docs": "https://pak.dynasite.org/VaSStra/",
+        "reference": "https://pak.dynasite.org/VaSStra/reference/",
+        "articles": "https://pak.dynasite.org/VaSStra/articles/"
       },
       "version": "0.3.0",
       "authors": [
@@ -2737,13 +2743,82 @@
       "last_checked": "2026-08-08"
     },
     {
+      "id": "VaSStra::flow-plots",
+      "type": "vignette",
+      "title": "Flow Plots: Where the Movement Goes",
+      "blurb": "Article on the VaSStra documentation site.",
+      "url": "https://pak.dynasite.org/VaSStra/articles/flow-plots.html",
+      "links": {
+        "article": "https://pak.dynasite.org/VaSStra/articles/flow-plots.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "VaSStra",
+        "article",
+        "sequence"
+      ],
+      "packages": [
+        "VaSStra"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "VaSStra::get-started",
+      "type": "vignette",
+      "title": "VaSStra in Four Simple Steps",
+      "blurb": "Article on the VaSStra documentation site.",
+      "url": "https://pak.dynasite.org/VaSStra/articles/get-started.html",
+      "links": {
+        "article": "https://pak.dynasite.org/VaSStra/articles/get-started.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "VaSStra",
+        "article",
+        "sequence"
+      ],
+      "packages": [
+        "VaSStra"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "VaSStra::vasstra-tutorial",
+      "type": "vignette",
+      "title": "VaSStra Tutorial: Variables, States, Sequences, Trajectories",
+      "blurb": "Article on the VaSStra documentation site.",
+      "url": "https://pak.dynasite.org/VaSStra/articles/vasstra-tutorial.html",
+      "links": {
+        "article": "https://pak.dynasite.org/VaSStra/articles/vasstra-tutorial.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "VaSStra",
+        "article",
+        "sequence"
+      ],
+      "packages": [
+        "VaSStra"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
       "id": "sbert",
       "type": "package",
       "title": "sbert — Sentence Embeddings with 'Sentence-BERT' Models",
       "blurb": "Computes sentence embeddings in R without requiring 'Python' by running revision-pinned 'Sentence-BERT' models through 'ONNX Runtime'. Implements model-specific tokenization, attention-mask-aware mean pooling, L2 normalization, cosine similarity, deterministic semantic topic clustering, and class-based term weighting following Reimers and Gurevych (2019). Topic models are evaluated with intrinsic coherence (UMass and normalized pointwise mutual information) and diversity metrics, and summarized with deterministic base-graphics visualizations. Model files are downloaded only after an explicit user request and are stored outside the package library.",
-      "url": "https://github.com/mohsaqr/sbert",
+      "url": "https://pak.dynasite.org/sbert/",
       "links": {
-        "github": "https://github.com/mohsaqr/sbert"
+        "github": "https://github.com/mohsaqr/sbert",
+        "docs": "https://pak.dynasite.org/sbert/",
+        "reference": "https://pak.dynasite.org/sbert/reference/",
+        "articles": "https://pak.dynasite.org/sbert/articles/"
       },
       "version": "0.5.2",
       "authors": [
@@ -2758,6 +2833,94 @@
         "onnx"
       ],
       "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "sbert::levebee_vignette",
+      "type": "vignette",
+      "title": "Semantic Topics in Levebee AI Mathematics Feedback — an sbert Tutorial",
+      "blurb": "Article on the sbert documentation site.",
+      "url": "https://pak.dynasite.org/sbert/articles/levebee_vignette.html",
+      "links": {
+        "article": "https://pak.dynasite.org/sbert/articles/levebee_vignette.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "sbert",
+        "article",
+        "NLP"
+      ],
+      "packages": [
+        "sbert"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "sbert::mcse_abstract_30_topics",
+      "type": "vignette",
+      "title": "MCSE Abstract Topics",
+      "blurb": "Article on the sbert documentation site.",
+      "url": "https://pak.dynasite.org/sbert/articles/mcse_abstract_30_topics.html",
+      "links": {
+        "article": "https://pak.dynasite.org/sbert/articles/mcse_abstract_30_topics.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "sbert",
+        "article",
+        "NLP"
+      ],
+      "packages": [
+        "sbert"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "sbert::python-free-sbert",
+      "type": "vignette",
+      "title": "Python-Free Sentence-BERT in R",
+      "blurb": "Article on the sbert documentation site.",
+      "url": "https://pak.dynasite.org/sbert/articles/python-free-sbert.html",
+      "links": {
+        "article": "https://pak.dynasite.org/sbert/articles/python-free-sbert.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "sbert",
+        "article",
+        "NLP"
+      ],
+      "packages": [
+        "sbert"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "sbert::topic-modeling",
+      "type": "vignette",
+      "title": "Topic Modeling: A Tutorial",
+      "blurb": "Article on the sbert documentation site.",
+      "url": "https://pak.dynasite.org/sbert/articles/topic-modeling.html",
+      "links": {
+        "article": "https://pak.dynasite.org/sbert/articles/topic-modeling.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "sbert",
+        "article",
+        "NLP"
+      ],
+      "packages": [
+        "sbert"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -5073,7 +5236,7 @@
   ],
   "verified_at": "2026-08-08",
   "link_summary": {
-    "verified": 274,
+    "verified": 290,
     "redirect": 53,
     "broken": 3
   }
