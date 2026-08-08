@@ -51,9 +51,9 @@
     ]
   },
   "counts": {
-    "total": 228,
+    "total": 230,
     "packages": 18,
-    "vignettes": 97,
+    "vignettes": 99,
     "posts": 20,
     "chapters": 44,
     "news": 21
@@ -64,13 +64,13 @@
       "type": "package",
       "title": "tna — Transition Network Analysis (TNA)",
       "blurb": "Provides tools for performing Transition Network Analysis (TNA) to study relational dynamics, including functions for building and plotting TNA models, calculating centrality measures, and identifying dominant events and patterns. TNA statistical techniques (e.g., bootstrapping and permutation tests) ensure the reliability of observed insights and confirm that identified dynamics are meaningful.",
-      "url": "https://pak.dynasite.org/tna/",
+      "url": "https://sonsoles.me/tna/",
       "links": {
         "cran": "https://CRAN.R-project.org/package=tna",
         "github": "https://github.com/sonsoleslp/tna",
-        "docs": "https://pak.dynasite.org/tna/",
-        "reference": "https://pak.dynasite.org/tna/reference/",
-        "articles": "https://pak.dynasite.org/tna/articles/"
+        "docs": "https://sonsoles.me/tna/",
+        "reference": "https://sonsoles.me/tna/reference/",
+        "articles": "https://sonsoles.me/tna/articles/"
       },
       "logo": "https://sonsoles.me/tna/logo.png",
       "cran_version": "1.2.3",
@@ -93,13 +93,35 @@
       "last_checked": "2026-08-08"
     },
     {
+      "id": "tna::atna",
+      "type": "vignette",
+      "title": "Attention TNA",
+      "blurb": "Article on the tna documentation site.",
+      "url": "https://sonsoles.me/tna/articles/atna.html",
+      "links": {
+        "article": "https://sonsoles.me/tna/articles/atna.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "tna",
+        "article",
+        "network"
+      ],
+      "packages": [
+        "tna"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
       "id": "tna::communities_and_cliques",
       "type": "vignette",
       "title": "Finding cliques and communities with tna",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://pak.dynasite.org/tna/articles/communities_and_cliques.html",
+      "url": "https://sonsoles.me/tna/articles/communities_and_cliques.html",
       "links": {
-        "article": "https://pak.dynasite.org/tna/articles/communities_and_cliques.html"
+        "article": "https://sonsoles.me/tna/articles/communities_and_cliques.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -119,9 +141,9 @@
       "type": "vignette",
       "title": "A showcase of the main tna functions",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://pak.dynasite.org/tna/articles/complete_tutorial.html",
+      "url": "https://sonsoles.me/tna/articles/complete_tutorial.html",
       "links": {
-        "article": "https://pak.dynasite.org/tna/articles/complete_tutorial.html"
+        "article": "https://sonsoles.me/tna/articles/complete_tutorial.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -139,11 +161,11 @@
     {
       "id": "tna::ftna",
       "type": "vignette",
-      "title": "Frequency-based tna",
+      "title": "Frequency-based TNA",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://pak.dynasite.org/tna/articles/ftna.html",
+      "url": "https://sonsoles.me/tna/articles/ftna.html",
       "links": {
-        "article": "https://pak.dynasite.org/tna/articles/ftna.html"
+        "article": "https://sonsoles.me/tna/articles/ftna.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -163,9 +185,31 @@
       "type": "vignette",
       "title": "Using grouped sequence data with tna",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://pak.dynasite.org/tna/articles/grouped_sequences.html",
+      "url": "https://sonsoles.me/tna/articles/grouped_sequences.html",
       "links": {
-        "article": "https://pak.dynasite.org/tna/articles/grouped_sequences.html"
+        "article": "https://sonsoles.me/tna/articles/grouped_sequences.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "tna",
+        "article",
+        "network"
+      ],
+      "packages": [
+        "tna"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tna::new-docs",
+      "type": "vignette",
+      "title": "tna — R Package Documentation",
+      "blurb": "Article on the tna documentation site.",
+      "url": "https://sonsoles.me/tna/articles/new-docs.html",
+      "links": {
+        "article": "https://sonsoles.me/tna/articles/new-docs.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -185,9 +229,9 @@
       "type": "vignette",
       "title": "How to prepare data for tna",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://pak.dynasite.org/tna/articles/prepare_data.html",
+      "url": "https://sonsoles.me/tna/articles/prepare_data.html",
       "links": {
-        "article": "https://pak.dynasite.org/tna/articles/prepare_data.html"
+        "article": "https://sonsoles.me/tna/articles/prepare_data.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -207,9 +251,9 @@
       "type": "vignette",
       "title": "Getting started with the tna package",
       "blurb": "Article on the tna documentation site.",
-      "url": "https://pak.dynasite.org/tna/articles/tna.html",
+      "url": "https://sonsoles.me/tna/articles/tna.html",
       "links": {
-        "article": "https://pak.dynasite.org/tna/articles/tna.html"
+        "article": "https://sonsoles.me/tna/articles/tna.html"
       },
       "owner": "sonsoleslp",
       "tags": [
@@ -2647,7 +2691,7 @@
       "blurb": "Constructs distance, visibility, and state-transition networks from univariate time series. The core constructor provides whole-series and sliding-window distance networks, natural and horizontal visibility graphs following Lacasa et al. (2008) and Luque et al. (2009), and optional state aggregation. Companion verbs expose discretization, trend classification, and an optional bridge to the 'Nestimate' transition-network models. Core network construction uses only packages distributed with R.",
       "url": "https://pak.dynasite.org/tsn/",
       "links": {
-        "github": "https://github.com/santikka/tsn",
+        "github": "https://github.com/mohsaqr/tsn",
         "docs": "https://pak.dynasite.org/tsn/",
         "reference": "https://pak.dynasite.org/tsn/reference/"
       },
@@ -2714,6 +2758,454 @@
         "onnx"
       ],
       "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::alluvial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Alluvial plots for transition analysis",
+      "blurb": "Generating transition plots in R with ggalluvial",
+      "url": "tutorials/tna/alluvial.html",
+      "links": {
+        "post": "tutorials/tna/alluvial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-tutorial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
+      "blurb": "A modern approach to rigorous analysis of behavioral processes",
+      "url": "tutorials/tna/tna-tutorial.html",
+      "links": {
+        "post": "tutorials/tna/tna-tutorial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::cograph::visualization",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Data visualization for research",
+      "blurb": "My favorite figures from my papers that are my own creation",
+      "url": "tutorials/cograph/visualization.html",
+      "links": {
+        "post": "tutorials/cograph/visualization.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "cograph"
+      ],
+      "tags": [
+        "tutorial",
+        "cograph"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::codyna::codyna-seq-tutorial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
+      "blurb": "A Tutorial on dynamics of behavior with codyna",
+      "url": "tutorials/codyna/codyna-seq-tutorial.html",
+      "links": {
+        "post": "tutorials/codyna/codyna-seq-tutorial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "codyna"
+      ],
+      "tags": [
+        "tutorial",
+        "codyna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::vasstra",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "The VaSSTra method",
+      "blurb": "From Variables to States to Sequences to Trajectories",
+      "url": "tutorials/tna/vasstra.html",
+      "links": {
+        "post": "tutorials/tna/vasstra.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-bern",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Bern Workshop Resources",
+      "blurb": "A curated hub of R packages, Python ports, interactive apps, hands-on tutorials, and references for the Bern Transition Network Analysis workshop.",
+      "url": "tutorials/tna/tna-bern.html",
+      "links": {
+        "post": "tutorials/tna/tna-bern.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-clustering",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Clustering: Discovering and Analysis of Clusters",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-clustering.html",
+      "links": {
+        "post": "tutorials/tna/tna-clustering.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-data",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Data Preparation: A Comprehensive Guide to prepare_data()",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-data.html",
+      "links": {
+        "post": "tutorials/tna/tna-data.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-group",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Group Analysis: Analysis and Comparison of Groups",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-group.html",
+      "links": {
+        "post": "tutorials/tna/tna-group.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-compare",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Model Comparison: A Comprehensive Guide to Network Comparison",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-compare.html",
+      "links": {
+        "post": "tutorials/tna/tna-compare.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::1::dynalytics-a-framework-",
+      "type": "post",
+      "kind": "blog",
+      "title": "Dynalytics: A Framework for Rigorous Analytics of Dynamical Systems",
+      "blurb": "An overarching framework and methodological ecosystem for the analysis and rigorous validation of dynamical systems — unifying transition, co-occurrence, psychological, and higher-order networks under a single confirmatory philosophy.",
+      "url": "https://saqr.me/blog/2026/dynalytics-framework/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/dynalytics-framework/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "tna",
+        "cooccure",
+        "psychnets",
+        "Nestimate"
+      ],
+      "tags": [
+        "blog",
+        "tna",
+        "cooccure",
+        "psychnets",
+        "Nestimate"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::2::cograph-complex-network",
+      "type": "post",
+      "kind": "blog",
+      "title": "cograph: Complex Network Analysis and Visualization",
+      "blurb": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
+      "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/cograph-network-visualization/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "cograph"
+      ],
+      "tags": [
+        "blog",
+        "cograph"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::3::human-ai-interaction-a-",
+      "type": "post",
+      "kind": "blog",
+      "title": "Human–AI Interaction: A Transition Network Analysis with cograph",
+      "blurb": "Sequential analysis of 13,002 turns across 429 human–AI coding sessions, mapped with TNA and cograph.",
+      "url": "https://saqr.me/blog/2026/human-ai-interaction-cograph/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/human-ai-interaction-cograph/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "tna",
+        "cograph"
+      ],
+      "tags": [
+        "blog",
+        "tna",
+        "cograph"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::4::jtna-for-transition-netw",
+      "type": "post",
+      "kind": "blog",
+      "title": "JTNA for Transition Network Analysis",
+      "blurb": "Statistical rigour for sequential behavioural analysis — now in jamovi via JTNA.",
+      "url": "https://saqr.me/blog/2026/jtna-transition-network-analysis/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/jtna-transition-network-analysis/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "blog",
+        "tna"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::5::precision-education-is-t",
+      "type": "post",
+      "kind": "blog",
+      "title": "Precision Education is the Answer",
+      "blurb": "Beyond group averages: a case for precision education.",
+      "url": "https://saqr.me/blog/2026/precision-education/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/precision-education/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "blog",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::6::rohy-ai-powered-virtual",
+      "type": "post",
+      "kind": "blog",
+      "title": "Rohy: AI-Powered Virtual Patient Simulator",
+      "blurb": "An open-source medical simulation platform with AI-driven patient conversations.",
+      "url": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "blog",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::7::book-learning-analytics",
+      "type": "post",
+      "kind": "news",
+      "title": "Book: Learning Analytics Methods and Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R.",
+      "url": "https://sonsoles.me/posts/labook/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/labook/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::8::isila-funding-from-era",
+      "type": "post",
+      "kind": "news",
+      "title": "ISILA — Funding from Erasmus+",
+      "blurb": "Early-intervention learning-analytics methods for quality and sustainability.",
+      "url": "https://sonsoles.me/posts/isila/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/isila/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::9::iglue-new-funding-from",
+      "type": "post",
+      "kind": "news",
+      "title": "IGLUE — New Funding from Erasmus+",
+      "blurb": "Game-based learning using escape rooms.",
+      "url": "https://sonsoles.me/posts/iglue/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/iglue/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::10::cretic-funding-from-th",
+      "type": "post",
+      "kind": "news",
+      "title": "CRETIC — Funding from the Research Council of Finland",
+      "blurb": "Optimising clinical reasoning in time-critical scenarios.",
+      "url": "https://sonsoles.me/posts/cretic/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/cretic/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -3731,226 +4223,6 @@
       "last_checked": "2026-08-08"
     },
     {
-      "id": "tutorial::tna::alluvial",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Alluvial plots for transition analysis",
-      "blurb": "Generating transition plots in R with ggalluvial",
-      "url": "tutorials/tna/alluvial.html",
-      "links": {
-        "post": "tutorials/tna/alluvial.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::tna::tna-tutorial",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
-      "blurb": "A modern approach to rigorous analysis of behavioral processes",
-      "url": "tutorials/tna/tna-tutorial.html",
-      "links": {
-        "post": "tutorials/tna/tna-tutorial.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::cograph::visualization",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Data visualization for research",
-      "blurb": "My favorite figures from my papers that are my own creation",
-      "url": "tutorials/cograph/visualization.html",
-      "links": {
-        "post": "tutorials/cograph/visualization.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "cograph"
-      ],
-      "tags": [
-        "tutorial",
-        "cograph"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::codyna::codyna-seq-tutorial",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
-      "blurb": "A Tutorial on dynamics of behavior with codyna",
-      "url": "tutorials/codyna/codyna-seq-tutorial.html",
-      "links": {
-        "post": "tutorials/codyna/codyna-seq-tutorial.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "codyna"
-      ],
-      "tags": [
-        "tutorial",
-        "codyna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::tna::vasstra",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "The VaSSTra method",
-      "blurb": "From Variables to States to Sequences to Trajectories",
-      "url": "tutorials/tna/vasstra.html",
-      "links": {
-        "post": "tutorials/tna/vasstra.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::tna::tna-bern",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Bern Workshop Resources",
-      "blurb": "A curated hub of R packages, Python ports, interactive apps, hands-on tutorials, and references for the Bern Transition Network Analysis workshop.",
-      "url": "tutorials/tna/tna-bern.html",
-      "links": {
-        "post": "tutorials/tna/tna-bern.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::tna::tna-clustering",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Clustering: Discovering and Analysis of Clusters",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-clustering.html",
-      "links": {
-        "post": "tutorials/tna/tna-clustering.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::tna::tna-data",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Data Preparation: A Comprehensive Guide to prepare_data()",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-data.html",
-      "links": {
-        "post": "tutorials/tna/tna-data.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::tna::tna-group",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Group Analysis: Analysis and Comparison of Groups",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-group.html",
-      "links": {
-        "post": "tutorials/tna/tna-group.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "tutorial::tna::tna-compare",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Model Comparison: A Comprehensive Guide to Network Comparison",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-compare.html",
-      "links": {
-        "post": "tutorials/tna/tna-compare.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-08-08"
-    },
-    {
       "id": "paper::1",
       "type": "paper",
       "title": "Dynalytics: The Birth of a Framework for Rigorous Analytics of Dynamical Systems",
@@ -4241,6 +4513,48 @@
       "last_checked": "2026-08-08"
     },
     {
+      "id": "book::book1",
+      "type": "book",
+      "title": "Vol 1 — LA Methods & Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
+      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
+      "url": "https://lamethods.github.io/book1/",
+      "links": {
+        "read": "https://lamethods.github.io/book1/",
+        "code": "https://github.com/lamethods/code"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book1"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "book::book2",
+      "type": "book",
+      "title": "Vol 2 — Advanced LA Methods",
+      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
+      "cover": "https://lamethods.org/book2/cover2.jpg",
+      "url": "https://lamethods.github.io/book2/",
+      "links": {
+        "read": "https://lamethods.github.io/book2/",
+        "code": "https://github.com/lamethods/code2"
+      },
+      "chapters": 22,
+      "owner": "saqr/lopez-pernas",
+      "tags": [
+        "book",
+        "lamethods",
+        "book2"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
       "id": "news::1",
       "type": "news",
       "date": "2026-08-07",
@@ -4327,7 +4641,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -4363,7 +4677,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -4381,7 +4695,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -4471,7 +4785,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -4489,7 +4803,7 @@
         "news",
         "software"
       ],
-      "status": "REDIRECT",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -4619,234 +4933,6 @@
       "last_checked": "2026-08-08"
     },
     {
-      "id": "post::1::dynalytics-a-framework-f",
-      "type": "post",
-      "kind": "blog",
-      "title": "Dynalytics: A Framework for Rigorous Analytics of Dynamical Systems",
-      "blurb": "An overarching framework and methodological ecosystem for the analysis and rigorous validation of dynamical systems — unifying transition, co-occurrence, psychological, and higher-order networks under a single confirmatory philosophy.",
-      "url": "https://saqr.me/blog/2026/dynalytics-framework/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/dynalytics-framework/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "tna",
-        "cooccure",
-        "psychnets",
-        "Nestimate"
-      ],
-      "tags": [
-        "blog",
-        "tna",
-        "cooccure",
-        "psychnets",
-        "Nestimate"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::2::cograph-complex-network-",
-      "type": "post",
-      "kind": "blog",
-      "title": "cograph: Complex Network Analysis and Visualization",
-      "blurb": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
-      "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/cograph-network-visualization/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "cograph"
-      ],
-      "tags": [
-        "blog",
-        "cograph"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::3::human-ai-interaction-a-t",
-      "type": "post",
-      "kind": "blog",
-      "title": "Human–AI Interaction: A Transition Network Analysis with cograph",
-      "blurb": "Sequential analysis of 13,002 turns across 429 human–AI coding sessions, mapped with TNA and cograph.",
-      "url": "https://saqr.me/blog/2026/human-ai-interaction-cograph/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/human-ai-interaction-cograph/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "tna",
-        "cograph"
-      ],
-      "tags": [
-        "blog",
-        "tna",
-        "cograph"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::4::jtna-for-transition-netw",
-      "type": "post",
-      "kind": "blog",
-      "title": "JTNA for Transition Network Analysis",
-      "blurb": "Statistical rigour for sequential behavioural analysis — now in jamovi via JTNA.",
-      "url": "https://saqr.me/blog/2026/jtna-transition-network-analysis/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/jtna-transition-network-analysis/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "blog",
-        "tna"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::5::precision-education-is-t",
-      "type": "post",
-      "kind": "blog",
-      "title": "Precision Education is the Answer",
-      "blurb": "Beyond group averages: a case for precision education.",
-      "url": "https://saqr.me/blog/2026/precision-education/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/precision-education/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "blog",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::6::rohy-ai-powered-virtual-",
-      "type": "post",
-      "kind": "blog",
-      "title": "Rohy: AI-Powered Virtual Patient Simulator",
-      "blurb": "An open-source medical simulation platform with AI-driven patient conversations.",
-      "url": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "blog",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::7::book-learning-analytics-",
-      "type": "post",
-      "kind": "news",
-      "title": "Book: Learning Analytics Methods and Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R.",
-      "url": "https://sonsoles.me/posts/labook/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/labook/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::8::isila-funding-from-erasm",
-      "type": "post",
-      "kind": "news",
-      "title": "ISILA — Funding from Erasmus+",
-      "blurb": "Early-intervention learning-analytics methods for quality and sustainability.",
-      "url": "https://sonsoles.me/posts/isila/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/isila/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::9::iglue-new-funding-from-e",
-      "type": "post",
-      "kind": "news",
-      "title": "IGLUE — New Funding from Erasmus+",
-      "blurb": "Game-based learning using escape rooms.",
-      "url": "https://sonsoles.me/posts/iglue/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/iglue/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "post::10::cretic-funding-from-the-",
-      "type": "post",
-      "kind": "news",
-      "title": "CRETIC — Funding from the Research Council of Finland",
-      "blurb": "Optimising clinical reasoning in time-critical scenarios.",
-      "url": "https://sonsoles.me/posts/cretic/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/cretic/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-08-08"
-    },
-    {
       "id": "person::saqr",
       "type": "person",
       "title": "Mohammed Saqr",
@@ -4908,48 +4994,6 @@
         "site": "https://www.eduoliveira.com/"
       },
       "status": "BROKEN",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "book::book1",
-      "type": "book",
-      "title": "Vol 1 — LA Methods & Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R — data, statistics, visualization, clustering, sequence analysis, and networks.",
-      "cover": "https://lamethods.org/book1/1712067211600.jpeg",
-      "url": "https://lamethods.github.io/book1/",
-      "links": {
-        "read": "https://lamethods.github.io/book1/",
-        "code": "https://github.com/lamethods/code"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book1"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-08-08"
-    },
-    {
-      "id": "book::book2",
-      "type": "book",
-      "title": "Vol 2 — Advanced LA Methods",
-      "blurb": "Advanced Learning Analytics Methods: AI and explainable AI, LLMs and NLP, complex systems, and advanced transition network analysis.",
-      "cover": "https://lamethods.org/book2/cover2.jpg",
-      "url": "https://lamethods.github.io/book2/",
-      "links": {
-        "read": "https://lamethods.github.io/book2/",
-        "code": "https://github.com/lamethods/code2"
-      },
-      "chapters": 22,
-      "owner": "saqr/lopez-pernas",
-      "tags": [
-        "book",
-        "lamethods",
-        "book2"
-      ],
-      "status": "REDIRECT",
       "last_checked": "2026-08-08"
     },
     {
@@ -5029,7 +5073,7 @@
   ],
   "verified_at": "2026-08-08",
   "link_summary": {
-    "verified": 272,
+    "verified": 274,
     "redirect": 53,
     "broken": 3
   }

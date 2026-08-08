@@ -392,7 +392,8 @@
       "name": "tna",
       "dir": "tna",
       "owner": "sonsoleslp",
-      "docs": "https://pak.dynasite.org/tna/",
+      "_docs_note": "TEMPORARY: pak.dynasite.org/tna/ is serving a 14-month-old build of tna 0.6.0 because the server clone tracks the dead mohsaqr/tna_exp fork (fixed in dynasite-infra c9a47bb, but /opt/repos/tna still needs repointing by hand). sonsoles.me/tna is the same package's healthy gh-pages site. Switch back to pak once the server clone is fixed.",
+      "docs": "https://sonsoles.me/tna/",
       "cran": true,
       "tags": [
         "network",
@@ -550,6 +551,8 @@
       "name": "idiographic",
       "dir": "idiographic",
       "owner": "mohsaqr",
+      "_docs_note": "Set docs to https://pak.dynasite.org/idiographic/ once the server clone exists. Until then docs must stay false: the DESCRIPTION now lists the pak URL, so leaving this unset makes harvest derive a docs site that 404s. With it false, the 10 vignettes are surfaced from CRAN instead.",
+      "docs": false,
       "cran": true,
       "tags": [
         "idiographic",
@@ -633,6 +636,8 @@
       "dir": "SBERT",
       "owner": "mohsaqr",
       "github": "https://github.com/mohsaqr/sbert",
+      "_docs_note": "Set docs to https://pak.dynasite.org/sbert/ once the server clone exists, which will surface its 4 articles. Until then docs must stay false: the DESCRIPTION now lists the pak URL, so leaving this unset makes harvest derive a docs site that 404s.",
+      "docs": false,
       "cran": false,
       "tags": [
         "NLP",
