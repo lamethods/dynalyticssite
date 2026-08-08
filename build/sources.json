@@ -171,6 +171,13 @@
   "news": [
     {
       "date": "2026-08-07",
+      "tag": "Book",
+      "title": "TNA 2026 proceedings published by Springer",
+      "blurb": "Innovations in Analytics of Learning Dynamics — the proceedings of the First International Workshop on Transition Network Analysis, held in Bergen, Norway on 27 April 2026 — is out in Springer's Communications in Computer and Information Science series. Fourteen papers span person-specific and heterogeneous TNA, student–AI interaction dynamics, co-occurrence networks, change-point and period segmentation, and the Dynalytics framework itself. Edited by Mohammed Saqr, Kamila Misiejuk and Sonsoles López-Pernas.",
+      "url": "https://link.springer.com/book/10.1007/978-3-032-34157-0"
+    },
+    {
+      "date": "2026-08-07",
       "tag": "Software",
       "title": "litReview is on CRAN",
       "blurb": "Summarising graphs for literature reviews and evidence syntheses. Starting from one row per study, litReview builds publication-ready bar, stacked bar, histogram, waffle, donut, treemap, alluvial, trend, co-occurrence, UpSet, tree, and study-by-criteria matrix figures, plus world maps and formatted summary tables. Every plot is a plain ggplot2 object, and a Shiny app builds figures without writing code.",
