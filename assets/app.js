@@ -574,6 +574,19 @@
       return (pkgsOf(a).indexOf("tna") >= 0 ? 0 : 1) - (pkgsOf(b).indexOf("tna") >= 0 ? 0 : 1);
     });
   }
+  // Newest first. Articles carry the last-modified date of their source vignette,
+  // tutorials the date of their HTML in this repo, blog posts nothing — so items
+  // without a date sort last, and ties (a package whose vignettes all landed in
+  // one commit) fall back to the TNA-first ordering rather than shuffling.
+  function recentFirst(list) {
+    var rank = {};
+    tnaFirst(list).forEach(function (e, i) { rank[e.id] = i; });
+    return list.slice().sort(function (a, b) {
+      var da = a.date || "", db = b.date || "";
+      if (da !== db) return (db ? 1 : 0) - (da ? 1 : 0) || db.localeCompare(da);
+      return rank[a.id] - rank[b.id];
+    });
+  }
   // Resource card — a book-chapter-style card (chap/chap-grid) for ANY reading:
   // tutorial, vignette/article, or blog post. The chapter-number slot carries a
   // badge; opts let each context choose what the badge, read-label, and footer
@@ -594,6 +607,8 @@
     cl.appendChild(read);
     var foot = opts.foot != null ? opts.foot : (e.source ? (SOURCE_LABEL[e.source] || e.source) : "");
     if (foot) cl.appendChild(el("span", "chlink", esc(foot)));
+    // makes the newest-first ordering legible rather than arbitrary-looking
+    if (e.date) cl.appendChild(el("span", "chlink meta", esc(fmtDate(e.date))));
     card.appendChild(cl);
     return card;
   }
@@ -633,7 +648,7 @@
     g.appendChild(secHead("", active.c.label, active.c.hint));
     if (active.items.length) {
       var grid = el("div", "chap-grid");
-      tnaFirst(active.items).forEach(function (e) { grid.appendChild(resourceCard(e, active.c.opts)); });
+      recentFirst(active.items).forEach(function (e) { grid.appendChild(resourceCard(e, active.c.opts)); });
       g.appendChild(grid);
     } else {
       g.appendChild(el("div", "empty", "Nothing here yet."));

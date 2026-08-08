@@ -9,6 +9,20 @@
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { execFileSync } from "node:child_process";
+
+// Last-modified date for a tracked file, as an ISO day. Git is the honest source
+// here — mtime reflects when the working copy was checked out, not when the
+// content changed. Falls back to mtime for files git doesn't know about yet.
+export function fileDate(root, rel) {
+  try {
+    const out = execFileSync("git", ["log", "-1", "--format=%cI", "--", rel],
+      { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+    if (out) return out.slice(0, 10);
+  } catch {}
+  try { return statSync(join(root, rel)).mtime.toISOString().slice(0, 10); } catch {}
+  return null;
+}
 
 // the entry types the Studio owns and can rebuild offline
 export const CURATED_TYPES = ["paper", "tool", "news", "person"];
@@ -80,6 +94,7 @@ export function tutorialEntries(root) {
       out.push({
         id: `tutorial::${pkg}::${slug}`, type: "post", kind: "tutorial",
         title: title || slug, blurb: desc, url, links: { post: url },
+        date: fileDate(root, url),
         owner: null, source: "dynasite", packages: [pkg],
         tags: ["tutorial", pkg], status: "UNVERIFIED", last_checked: null
       });

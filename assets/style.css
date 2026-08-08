@@ -112,6 +112,8 @@ a { color: inherit; text-decoration: none; }
 .chlink .m { color: inherit; }
 .chlink:hover { color: var(--fg); }
 .chlink.primary { color: var(--fg); }
+/* date chip on Readings cards — present to explain the newest-first order, not to compete */
+.chlink.meta { margin-left: auto; opacity: .75; }
 .chlink.primary:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* tutorial cards reuse .chap, but the number slot holds a package badge */

@@ -932,7 +932,7 @@
       "affiliation": "University of Eastern Finland",
       "blurb": "Research on precision education, transition network analysis, and complex systems in learning.",
       "url": "https://saqr.me",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/prof_pic-480-copy.png"
+      "photo": "assets/people/saqr.jpg"
     },
     {
       "id": "lopez-pernas",
@@ -941,7 +941,7 @@
       "affiliation": "University of Eastern Finland",
       "blurb": "Learning analytics, sequence and network methods, and reproducible research software.",
       "url": "https://sonsoles.me",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/headshot.jpg"
+      "photo": "assets/people/lopez-pernas.jpg"
     },
     {
       "id": "misiejuk",
@@ -950,7 +950,7 @@
       "affiliation": "FernUniversität in Hagen",
       "blurb": "Studies human–AI collaboration, quantitative ethnography, and learning analytics methods.",
       "url": "https://kamilamisiejuk.com/",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/kamila-misiejuk-hw_500x600.jpg"
+      "photo": "assets/people/misiejuk.jpg"
     },
     {
       "id": "oliveira",
@@ -959,7 +959,7 @@
       "affiliation": "The University of Melbourne",
       "blurb": "Research on AI in education, learning analytics and natural language processing.",
       "url": "https://www.eduoliveira.com/",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2026/03/image.png"
+      "photo": "assets/people/oliveira.png"
     }
   ]
 }

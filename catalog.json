@@ -101,6 +101,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/atna.html"
       },
+      "date": "2026-03-03",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -123,6 +124,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/communities_and_cliques.html"
       },
+      "date": "2025-10-20",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -145,6 +147,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/complete_tutorial.html"
       },
+      "date": "2026-03-03",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -167,6 +170,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/ftna.html"
       },
+      "date": "2026-04-17",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -189,6 +193,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/grouped_sequences.html"
       },
+      "date": "2026-04-26",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -211,6 +216,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/new-docs.html"
       },
+      "date": "2026-04-17",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -233,6 +239,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/prepare_data.html"
       },
+      "date": "2025-07-14",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -255,6 +262,7 @@
       "links": {
         "article": "https://pak.dynasite.org/tna/articles/tna.html"
       },
+      "date": "2026-03-03",
       "owner": "sonsoleslp",
       "tags": [
         "tna",
@@ -307,6 +315,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/introduction.html"
       },
+      "date": "2026-06-28",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -329,6 +338,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/centrality-catalogue.html"
       },
+      "date": "2026-06-28",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -351,6 +361,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/why-cograph.html"
       },
+      "date": "2026-06-28",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -373,6 +384,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/plotting-tna-models.html"
       },
+      "date": "2026-05-20",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -395,6 +407,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/mcml-examples.html"
       },
+      "date": "2026-05-20",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -417,6 +430,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/qgraph-to-splot.html"
       },
+      "date": "2026-05-20",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -439,6 +453,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/bootstrap-forest.html"
       },
+      "date": "2026-04-24",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -461,6 +476,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/cograph-tutorial-plotting.html"
       },
+      "date": "2026-07-27",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -483,6 +499,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/cograph-tutorial-mcml.html"
       },
+      "date": "2026-05-20",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -505,6 +522,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/cograph-tutorial-communities.html"
       },
+      "date": "2026-05-20",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -527,6 +545,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/cograph-tutorial-nestimate.html"
       },
+      "date": "2026-06-11",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -549,6 +568,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cograph/articles/cograph-tutorial-simplicial.html"
       },
+      "date": "2026-04-24",
       "owner": "sonsoleslp",
       "tags": [
         "cograph",
@@ -602,6 +622,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/htna.html"
       },
+      "date": "2026-06-25",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -624,6 +645,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/input-formats.html"
       },
+      "date": "2026-07-20",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -646,6 +668,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/grouped.html"
       },
+      "date": "2026-06-25",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -668,6 +691,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/frequencies-and-mosaic.html"
       },
+      "date": "2026-06-03",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -690,6 +714,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/sequence-plots.html"
       },
+      "date": "2026-06-20",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -712,6 +737,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/sequence-comparison.html"
       },
+      "date": "2026-06-25",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -734,6 +760,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/multigroup.html"
       },
+      "date": "2026-06-03",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -756,6 +783,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/clustering.html"
       },
+      "date": "2026-07-28",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -778,6 +806,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/markov-order.html"
       },
+      "date": "2026-06-25",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -800,6 +829,7 @@
       "links": {
         "article": "https://pak.dynasite.org/htna/articles/model-assessment.html"
       },
+      "date": "2026-06-25",
       "owner": "sonsoleslp",
       "tags": [
         "htna",
@@ -854,6 +884,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/transition-networks.html"
       },
+      "date": "2026-05-22",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -876,6 +907,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/sequence-comparison.html"
       },
+      "date": "2026-05-20",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -898,6 +930,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/sequence-plots.html"
       },
+      "date": "2026-05-20",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -920,6 +953,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/clustering.html"
       },
+      "date": "2026-07-21",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -942,6 +976,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/markov-stability.html"
       },
+      "date": "2026-05-20",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -964,6 +999,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/cograph-tutorial-nestimate.html"
       },
+      "date": "2026-06-11",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -986,6 +1022,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/cograph-tutorial-simplicial.html"
       },
+      "date": "2026-06-17",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -1008,6 +1045,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Nestimate/articles/tutorial_model_assessment.html"
       },
+      "date": "2026-06-17",
       "owner": "mohsaqr",
       "tags": [
         "Nestimate",
@@ -1060,6 +1098,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Snakeplot/articles/survey-snake-plots.html"
       },
+      "date": "2026-03-10",
       "owner": "mohsaqr",
       "tags": [
         "snakeplot",
@@ -1113,6 +1152,7 @@
       "links": {
         "article": "https://pak.dynasite.org/cooccure/articles/imdb-tutorial.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "cooccure",
@@ -1165,6 +1205,7 @@
       "links": {
         "article": "https://pak.dynasite.org/bibnets-pkg/articles/bibnets.html"
       },
+      "date": "2026-06-18",
       "owner": "mohsaqr",
       "tags": [
         "bibnets",
@@ -1187,6 +1228,7 @@
       "links": {
         "article": "https://pak.dynasite.org/bibnets-pkg/articles/reading-data.html"
       },
+      "date": "2026-06-18",
       "owner": "mohsaqr",
       "tags": [
         "bibnets",
@@ -1209,6 +1251,7 @@
       "links": {
         "article": "https://pak.dynasite.org/bibnets-pkg/articles/attention.html"
       },
+      "date": "2026-06-18",
       "owner": "mohsaqr",
       "tags": [
         "bibnets",
@@ -1231,6 +1274,7 @@
       "links": {
         "article": "https://pak.dynasite.org/bibnets-pkg/articles/parsing-author-names.html"
       },
+      "date": "2026-05-16",
       "owner": "mohsaqr",
       "tags": [
         "bibnets",
@@ -1282,6 +1326,7 @@
       "links": {
         "article": "https://pak.dynasite.org/transitiontrees/articles/advanced-analysis.html"
       },
+      "date": "2026-06-08",
       "owner": "mohsaqr",
       "tags": [
         "transitiontrees",
@@ -1304,6 +1349,7 @@
       "links": {
         "article": "https://pak.dynasite.org/transitiontrees/articles/analysis-case.html"
       },
+      "date": "2026-06-08",
       "owner": "mohsaqr",
       "tags": [
         "transitiontrees",
@@ -1326,6 +1372,7 @@
       "links": {
         "article": "https://pak.dynasite.org/transitiontrees/articles/ecosystem-compatibility.html"
       },
+      "date": "2026-06-08",
       "owner": "mohsaqr",
       "tags": [
         "transitiontrees",
@@ -1348,6 +1395,7 @@
       "links": {
         "article": "https://pak.dynasite.org/transitiontrees/articles/getting-started.html"
       },
+      "date": "2026-06-08",
       "owner": "mohsaqr",
       "tags": [
         "transitiontrees",
@@ -1370,6 +1418,7 @@
       "links": {
         "article": "https://pak.dynasite.org/transitiontrees/articles/visualization.html"
       },
+      "date": "2026-06-08",
       "owner": "mohsaqr",
       "tags": [
         "transitiontrees",
@@ -1423,6 +1472,7 @@
       "links": {
         "article": "https://pak.dynasite.org/codyna/articles/codyna.html"
       },
+      "date": "2026-02-23",
       "owner": "santikka",
       "tags": [
         "codyna",
@@ -1474,6 +1524,7 @@
       "links": {
         "article": "https://pak.dynasite.org/lagdynamics/articles/intro.html"
       },
+      "date": "2026-07-11",
       "owner": "mohsaqr",
       "tags": [
         "lagdynamics",
@@ -1496,6 +1547,7 @@
       "links": {
         "article": "https://pak.dynasite.org/lagdynamics/articles/lagdynamics.html"
       },
+      "date": "2026-07-11",
       "owner": "mohsaqr",
       "tags": [
         "lagdynamics",
@@ -1518,6 +1570,7 @@
       "links": {
         "article": "https://pak.dynasite.org/lagdynamics/articles/interop.html"
       },
+      "date": "2026-07-11",
       "owner": "mohsaqr",
       "tags": [
         "lagdynamics",
@@ -1540,6 +1593,7 @@
       "links": {
         "article": "https://pak.dynasite.org/lagdynamics/articles/workflow.html"
       },
+      "date": "2026-07-11",
       "owner": "mohsaqr",
       "tags": [
         "lagdynamics",
@@ -1562,6 +1616,7 @@
       "links": {
         "article": "https://pak.dynasite.org/lagdynamics/articles/lag-transition-networks.html"
       },
+      "date": "2026-07-11",
       "owner": "mohsaqr",
       "tags": [
         "lagdynamics",
@@ -1584,6 +1639,7 @@
       "links": {
         "article": "https://pak.dynasite.org/lagdynamics/articles/confirmatory.html"
       },
+      "date": "2026-07-11",
       "owner": "mohsaqr",
       "tags": [
         "lagdynamics",
@@ -1606,6 +1662,7 @@
       "links": {
         "article": "https://pak.dynasite.org/lagdynamics/articles/plotting.html"
       },
+      "date": "2026-07-11",
       "owner": "mohsaqr",
       "tags": [
         "lagdynamics",
@@ -1659,6 +1716,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/litReview.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1681,6 +1739,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/bar.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1703,6 +1762,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/stacked-bar.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1725,6 +1785,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/histogram.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1747,6 +1808,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/waffle.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1769,6 +1831,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/pie.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1791,6 +1854,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/overlap.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1813,6 +1877,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/upset.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1835,6 +1900,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/trend.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1857,6 +1923,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/map.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1879,6 +1946,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/alluvial.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1901,6 +1969,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/treemap.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1923,6 +1992,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/matrix.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1945,6 +2015,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/tree.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -1967,6 +2038,7 @@
       "links": {
         "article": "https://sonsoles.me/litReview/articles/table.html"
       },
+      "date": "2026-07-30",
       "owner": "sonsoleslp",
       "tags": [
         "litReview",
@@ -2020,6 +2092,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/bayesian-var-dsem.html"
       },
+      "date": "2026-07-23",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2042,6 +2115,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/clean-room-methods.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2064,6 +2138,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/gimme.html"
       },
+      "date": "2026-07-23",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2086,6 +2161,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/graphical-var.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2108,6 +2184,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/idiographic.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2130,6 +2207,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/mlvar.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2152,6 +2230,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/ordinary-var.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2174,6 +2253,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/preprocessing.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2196,6 +2276,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/rolling-networks.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2218,6 +2299,7 @@
       "links": {
         "article": "https://pak.dynasite.org/idiographic/articles/usem.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "idiographic",
@@ -2266,6 +2348,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrmisc/articles/Saqrmisc-introduction.html"
       },
+      "date": "2026-01-16",
       "owner": "mohsaqr",
       "tags": [
         "Saqrmisc",
@@ -2314,6 +2397,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/bootstrap-power.html"
       },
+      "date": "2026-02-08",
       "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
@@ -2336,6 +2420,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/htna-mlna.html"
       },
+      "date": "2026-02-08",
       "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
@@ -2358,6 +2443,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/introduction.html"
       },
+      "date": "2026-02-08",
       "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
@@ -2380,6 +2466,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/learning-states.html"
       },
+      "date": "2026-02-08",
       "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
@@ -2402,6 +2489,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/simulation-guide.html"
       },
+      "date": "2026-02-08",
       "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
@@ -2424,6 +2512,7 @@
       "links": {
         "article": "https://pak.dynasite.org/Saqrlab/articles/tna-workflow.html"
       },
+      "date": "2026-07-05",
       "owner": "mohsaqr",
       "tags": [
         "Saqrlab",
@@ -2476,6 +2565,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/gaussian-graphical-models.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2498,6 +2588,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/ggm-model-selection.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2520,6 +2611,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/group-networks-from-event-data.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2542,6 +2634,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/information-filtering-networks.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2564,6 +2657,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/ising-networks.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2586,6 +2680,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/mixed-graphical-models.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2608,6 +2703,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/network-reliability.html"
       },
+      "date": "2026-08-07",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2630,6 +2726,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/relative-importance-networks.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2652,6 +2749,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/visualizing-networks.html"
       },
+      "date": "2026-07-22",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2674,6 +2772,7 @@
       "links": {
         "article": "https://pak.dynasite.org/psychnets/articles/visualizing-with-cograph.html"
       },
+      "date": "2026-07-12",
       "owner": "mohsaqr",
       "tags": [
         "psychnets",
@@ -2751,6 +2850,7 @@
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/flow-plots.html"
       },
+      "date": "2026-07-24",
       "owner": "mohsaqr",
       "tags": [
         "VaSStra",
@@ -2773,6 +2873,7 @@
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/get-started.html"
       },
+      "date": "2026-07-24",
       "owner": "mohsaqr",
       "tags": [
         "VaSStra",
@@ -2795,6 +2896,7 @@
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/vasstra-tutorial.html"
       },
+      "date": "2026-07-24",
       "owner": "mohsaqr",
       "tags": [
         "VaSStra",
@@ -2844,6 +2946,7 @@
       "links": {
         "article": "https://pak.dynasite.org/sbert/articles/levebee_vignette.html"
       },
+      "date": "2026-08-07",
       "owner": "mohsaqr",
       "tags": [
         "sbert",
@@ -2866,6 +2969,7 @@
       "links": {
         "article": "https://pak.dynasite.org/sbert/articles/mcse_abstract_30_topics.html"
       },
+      "date": "2026-08-06",
       "owner": "mohsaqr",
       "tags": [
         "sbert",
@@ -2888,6 +2992,7 @@
       "links": {
         "article": "https://pak.dynasite.org/sbert/articles/python-free-sbert.html"
       },
+      "date": "2026-08-03",
       "owner": "mohsaqr",
       "tags": [
         "sbert",
@@ -2910,6 +3015,7 @@
       "links": {
         "article": "https://pak.dynasite.org/sbert/articles/topic-modeling.html"
       },
+      "date": "2026-08-07",
       "owner": "mohsaqr",
       "tags": [
         "sbert",
@@ -2933,6 +3039,7 @@
       "links": {
         "post": "tutorials/tna/alluvial.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -2955,6 +3062,7 @@
       "links": {
         "post": "tutorials/tna/tna-tutorial.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -2977,6 +3085,7 @@
       "links": {
         "post": "tutorials/cograph/visualization.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -2999,6 +3108,7 @@
       "links": {
         "post": "tutorials/codyna/codyna-seq-tutorial.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -3021,6 +3131,7 @@
       "links": {
         "post": "tutorials/tna/vasstra.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -3043,6 +3154,7 @@
       "links": {
         "post": "tutorials/tna/tna-bern.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -3065,6 +3177,7 @@
       "links": {
         "post": "tutorials/tna/tna-clustering.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -3087,6 +3200,7 @@
       "links": {
         "post": "tutorials/tna/tna-data.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -3109,6 +3223,7 @@
       "links": {
         "post": "tutorials/tna/tna-group.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -3131,6 +3246,7 @@
       "links": {
         "post": "tutorials/tna/tna-compare.html"
       },
+      "date": "2026-07-26",
       "owner": null,
       "source": "dynasite",
       "packages": [
@@ -5104,7 +5220,7 @@
       "affiliation": "University of Eastern Finland",
       "blurb": "Research on precision education, transition network analysis, and complex systems in learning.",
       "url": "https://saqr.me",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/prof_pic-480-copy.png",
+      "photo": "assets/people/saqr.jpg",
       "links": {
         "site": "https://saqr.me"
       },
@@ -5120,11 +5236,11 @@
       "affiliation": "University of Eastern Finland",
       "blurb": "Learning analytics, sequence and network methods, and reproducible research software.",
       "url": "https://sonsoles.me",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/headshot.jpg",
+      "photo": "assets/people/lopez-pernas.jpg",
       "links": {
         "site": "https://sonsoles.me"
       },
-      "status": "BROKEN",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -5136,11 +5252,11 @@
       "affiliation": "FernUniversität in Hagen",
       "blurb": "Studies human–AI collaboration, quantitative ethnography, and learning analytics methods.",
       "url": "https://kamilamisiejuk.com/",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/kamila-misiejuk-hw_500x600.jpg",
+      "photo": "assets/people/misiejuk.jpg",
       "links": {
         "site": "https://kamilamisiejuk.com/"
       },
-      "status": "BROKEN",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -5152,11 +5268,11 @@
       "affiliation": "The University of Melbourne",
       "blurb": "Research on AI in education, learning analytics and natural language processing.",
       "url": "https://www.eduoliveira.com/",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2026/03/image.png",
+      "photo": "assets/people/oliveira.png",
       "links": {
         "site": "https://www.eduoliveira.com/"
       },
-      "status": "BROKEN",
+      "status": "VERIFIED",
       "last_checked": "2026-08-08"
     },
     {
@@ -5236,8 +5352,8 @@
   ],
   "verified_at": "2026-08-08",
   "link_summary": {
-    "verified": 290,
+    "verified": 289,
     "redirect": 53,
-    "broken": 3
+    "broken": 0
   }
 }

@@ -8,7 +8,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { dirname, resolve, join, basename } from "node:path";
 import { fileURLToPath } from "node:url";
-import { paperEntries as buildPapers, toolEntries as buildTools, newsEntries as buildNews, peopleEntries as buildPeople, tutorialEntries as buildTutorials } from "./curated.mjs";
+import { paperEntries as buildPapers, toolEntries as buildTools, newsEntries as buildNews, peopleEntries as buildPeople, tutorialEntries as buildTutorials, fileDate } from "./curated.mjs";
 import { parseAuthors } from "./authors.mjs";
 
 const BUILD = dirname(fileURLToPath(import.meta.url));
@@ -176,6 +176,36 @@ function vignetteTitle(path) {
   return basename(path).replace(/\.[^.]+$/, "").replace(/[-_]/g, " ");
 }
 
+// Map an article slug back to its source vignette in the sibling checkout, so the
+// article can carry a real last-modified date. pkgdown flattens both
+// vignettes/<slug> and vignettes/articles/<slug> into articles/<slug>.html, and a
+// vignette may be .Rmd or .qmd — hence the search rather than one fixed path.
+function vignetteSourceDates(pkg) {
+  const root = join(WORKSPACE, pkg.dir);
+  const dates = {};
+  if (!existsSync(join(root, "vignettes"))) return dates;
+  for (const sub of ["vignettes", join("vignettes", "articles")]) {
+    const dir = join(root, sub);
+    if (!existsSync(dir)) continue;
+    for (const f of readdirSync(dir)) {
+      if (!/\.(Rmd|qmd)$/i.test(f) || /^_/.test(f)) continue;
+      const slug = f.replace(/\.[^.]+$/, "");
+      const d = fileDate(root, `${sub.replace(/\\/g, "/")}/${f}`);
+      // vignettes/ wins over vignettes/articles/ only if it resolves a date
+      if (d && !dates[slug]) dates[slug] = d;
+    }
+  }
+  return dates;
+}
+
+// pkgdown records when the site was last built; used as the per-package fallback
+// date for packages with no local checkout (e.g. litReview).
+async function siteBuiltDate(docs) {
+  const yml = await fetchText(docs + "pkgdown.yml");
+  const m = yml && yml.match(/last_built:\s*(\d{4}-\d{2}-\d{2})/);
+  return m ? m[1] : null;
+}
+
 async function getSiteArticles(docs) {
   const base = docs + "articles/";
   const origin = (docs.match(/^(https?:\/\/[^/]+)/) || [])[1] || "";
@@ -202,7 +232,7 @@ async function getSiteArticles(docs) {
 // `baseUrl + <slug>.html`. Used as the fallback when a live pkgdown articles
 // index can't be scraped, and for CRAN packages that ship no pkgdown site
 // (then baseUrl is CRAN's own hosted vignette path).
-function vignettesFromDir(pkg, baseUrl, excl) {
+function vignettesFromDir(pkg, baseUrl, excl, dates = {}) {
   const vdir = join(WORKSPACE, pkg.dir, "vignettes");
   if (!existsSync(vdir)) return [];
   const out = [];
@@ -213,7 +243,7 @@ function vignettesFromDir(pkg, baseUrl, excl) {
     out.push({
       id: `${pkg.name}::${b}`, type: "vignette", title: vignetteTitle(join(vdir, f)),
       blurb: `Article from the ${pkg.name} package.`,
-      url, links: { article: url },
+      url, links: { article: url }, date: dates[b] ?? null,
       owner: pkg.owner ?? null, tags: [pkg.name, "article", pkg.tags[0]],
       packages: [pkg.name], kind: "article", status: "UNVERIFIED", last_checked: null
     });
@@ -262,6 +292,11 @@ async function buildPackage(pkg) {
   };
 
   const excl = pkg.exclude_articles || [];
+  // Per-article dates so the Readings view can order newest-first. Local source
+  // files are authoritative; the site's own build date covers packages that have
+  // no checkout here (litReview).
+  const srcDates = vignetteSourceDates(pkg);
+  const builtDate = links.articles ? await siteBuiltDate(docs) : null;
   let vig = [];
   if (links.articles) {
     let arts = await getSiteArticles(docs);
@@ -272,7 +307,7 @@ async function buildPackage(pkg) {
         return {
           id: `${pkg.name}::${b}`, type: "vignette", title: a.title,
           blurb: `Article on the ${pkg.name} documentation site.`,
-          url: a.url, links: { article: a.url },
+          url: a.url, links: { article: a.url }, date: srcDates[b] ?? builtDate,
           owner: pkg.owner ?? null, tags: [pkg.name, "article", pkg.tags[0]],
           packages: [pkg.name], kind: "article", status: "UNVERIFIED", last_checked: null
         };
@@ -280,12 +315,12 @@ async function buildPackage(pkg) {
     } else {
       // pkgdown site declared but its articles index couldn't be scraped — fall
       // back to the local vignettes, addressed under the docs site's articles/.
-      vig = vignettesFromDir(pkg, links.articles, excl);
+      vig = vignettesFromDir(pkg, links.articles, excl, srcDates);
     }
   } else if (pkg.cran) {
     // No pkgdown site, but the package is on CRAN — CRAN renders and hosts the
     // vignettes itself, so surface those.
-    vig = vignettesFromDir(pkg, `https://cran.r-project.org/web/packages/${pkg.name}/vignettes/`, excl);
+    vig = vignettesFromDir(pkg, `https://cran.r-project.org/web/packages/${pkg.name}/vignettes/`, excl, srcDates);
   }
   return [pkgEntry, ...vig];
 }
