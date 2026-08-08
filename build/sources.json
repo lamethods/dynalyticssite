@@ -170,6 +170,27 @@
   ],
   "news": [
     {
+      "date": "2026-08-07",
+      "tag": "Software",
+      "title": "litReview is on CRAN",
+      "blurb": "Summarising graphs for literature reviews and evidence syntheses. Starting from one row per study, litReview builds publication-ready bar, stacked bar, histogram, waffle, donut, treemap, alluvial, trend, co-occurrence, UpSet, tree, and study-by-criteria matrix figures, plus world maps and formatted summary tables. Every plot is a plain ggplot2 object, and a Shiny app builds figures without writing code.",
+      "url": "https://CRAN.R-project.org/package=litReview"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "Software",
+      "title": "idiographic is on CRAN",
+      "blurb": "Person-specific and within-person network estimation from intensive longitudinal data. One consistent interface covers ordinary VAR, graphical VAR, multilevel VAR, native Bayesian mlVAR/VAR matching Mplus DSEM, unified SEM, GIMME, and rolling networks — with preprocessing and detrending built in, and a clean-room base-R implementation throughout.",
+      "url": "https://CRAN.R-project.org/package=idiographic"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "Software",
+      "title": "psychnets is on CRAN",
+      "blurb": "Tidy, clean-room psychological network modelling in base R. Gaussian graphical models with a full model-selection battery, Ising networks, mixed graphical models, relative importance networks, information-filtering networks, and group networks from event data — each returning tidy results that plot straight through cograph.",
+      "url": "https://CRAN.R-project.org/package=psychnets"
+    },
+    {
       "date": "2026-05-13",
       "tag": "Software",
       "title": "lagdynamics: modern lag sequential analysis",
@@ -505,6 +526,34 @@
       ]
     },
     {
+      "name": "litReview",
+      "dir": "litReview",
+      "owner": "sonsoleslp",
+      "docs": "https://sonsoles.me/litReview/",
+      "cran": true,
+      "tags": [
+        "literature-review",
+        "visualization",
+        "evidence-synthesis",
+        "ggplot2",
+        "shiny"
+      ]
+    },
+    {
+      "name": "idiographic",
+      "dir": "idiographic",
+      "owner": "mohsaqr",
+      "cran": true,
+      "tags": [
+        "idiographic",
+        "network",
+        "VAR",
+        "mlVAR",
+        "GIMME",
+        "time-series"
+      ]
+    },
+    {
       "name": "Saqrmisc",
       "dir": "Saqrmisc",
       "owner": "mohsaqr",
@@ -535,7 +584,7 @@
       "dir": "psychnets",
       "owner": "mohsaqr",
       "docs": "https://pak.dynasite.org/psychnets/",
-      "cran": false,
+      "cran": true,
       "tags": [
         "psychometric",
         "network",
@@ -557,9 +606,50 @@
         "discretization",
         "kNN"
       ]
+    },
+    {
+      "name": "VaSStra",
+      "dir": "VaSStra",
+      "owner": "mohsaqr",
+      "docs": false,
+      "cran": false,
+      "tags": [
+        "sequence",
+        "trajectory",
+        "clustering",
+        "longitudinal",
+        "lamethods"
+      ]
+    },
+    {
+      "name": "sbert",
+      "dir": "SBERT",
+      "owner": "mohsaqr",
+      "github": "https://github.com/mohsaqr/sbert",
+      "cran": false,
+      "tags": [
+        "NLP",
+        "embeddings",
+        "topic-modeling",
+        "transformers",
+        "onnx"
+      ]
     }
   ],
   "posts": [
+    {
+      "title": "Dynalytics: A Framework for Rigorous Analytics of Dynamical Systems",
+      "url": "https://saqr.me/blog/2026/dynalytics-framework/",
+      "desc": "An overarching framework and methodological ecosystem for the analysis and rigorous validation of dynamical systems — unifying transition, co-occurrence, psychological, and higher-order networks under a single confirmatory philosophy.",
+      "packages": [
+        "tna",
+        "cooccure",
+        "psychnets",
+        "Nestimate"
+      ],
+      "source": "saqr.me",
+      "kind": "blog"
+    },
     {
       "title": "cograph: Complex Network Analysis and Visualization",
       "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
@@ -657,6 +747,7 @@
       "codyna"
     ],
     "ch11-vasstra": [
+      "VaSStra",
       "tna",
       "codyna"
     ],
@@ -688,6 +779,15 @@
     "ch17-tna-clusters": [
       "tna",
       "codyna"
+    ],
+    "ch18-idio": [
+      "idiographic"
+    ],
+    "ch19-three-levels": [
+      "idiographic"
+    ],
+    "ch20-var": [
+      "idiographic"
     ]
   },
   "book_volumes": [

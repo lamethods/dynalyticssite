@@ -4,10 +4,14 @@
   "use strict";
 
   // Primary groups (coloured arc blocks + legend), in ring order.
+  // Keys are catalog package ids — an id that is absent here falls to the grey
+  // "Other" block, and one absent from FOCUS below draws no ribbons at all, so
+  // both tables must be extended whenever a package is added to sources.json.
   var GROUPS = [
-    { key: "networks",  label: "Networks",      color: "#1f5fa8", pkgs: ["tna", "htna", "Nestimate", "cooccure", "cograph", "bibnets", "psychnet"] },
+    { key: "networks",  label: "Networks",      color: "#1f5fa8", pkgs: ["tna", "htna", "Nestimate", "cooccure", "cograph", "bibnets", "psychnets", "idiographic"] },
     { key: "dynamics",  label: "Dynamics",      color: "#c0392b", pkgs: ["codyna", "tsn", "Saqrlab"] },
-    { key: "sequences", label: "Sequences",     color: "#1e8449", pkgs: ["transitiontrees", "lagseq", "snakeplot"] },
+    { key: "sequences", label: "Sequences",     color: "#1e8449", pkgs: ["transitiontrees", "lagdynamics", "snakeplot", "VaSStra"] },
+    { key: "text",      label: "Text & synthesis", color: "#7d3c98", pkgs: ["sbert", "litReview"] },
     { key: "utilities", label: "Utilities",     color: "#7f8c8d", pkgs: ["Saqrmisc"] }
   ];
   var OTHER = { key: "other", label: "Other", color: "#b0b0b0", pkgs: [] };
@@ -20,13 +24,17 @@
     cooccure:        ["networks", "co-occurrence"],
     cograph:         ["networks", "visualization"],
     bibnets:         ["networks", "bibliometrics"],
-    psychnet:        ["networks", "psychometrics"],
+    psychnets:       ["networks", "psychometrics", "validation"],
+    idiographic:     ["networks", "psychometrics", "dynamics", "time series"],
     codyna:          ["dynamics", "sequences", "complexity"],
     tsn:             ["networks", "dynamics", "time series"],
     transitiontrees: ["sequences", "dynamics"],
-    lagseq:          ["sequences", "dynamics", "validation"],
+    lagdynamics:     ["sequences", "dynamics", "validation"],
     snakeplot:       ["sequences", "visualization"],
+    VaSStra:         ["sequences", "clustering", "dynamics"],
     Saqrlab:         ["dynamics", "simulation", "validation"],
+    sbert:           ["text", "embeddings", "clustering"],
+    litReview:       ["text", "bibliometrics", "visualization"],
     Saqrmisc:        ["visualization", "clustering"]
   };
   function titleCase(s) { return s.replace(/\b\w/g, function (c) { return c.toUpperCase(); }); }

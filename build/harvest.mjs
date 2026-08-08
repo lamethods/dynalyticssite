@@ -154,10 +154,17 @@ function cleanBlurb(x) {
   return x.trim();
 }
 
-async function cranVersion(name) {
+// The published DESCRIPTION, as JSON. Same field names as the local DCF file, so
+// the result drops straight into the DESCRIPTION slot for a package that has no
+// sibling checkout (a collaborator's package, or a clone without every repo beside it).
+const cranCache = {};
+async function cranMeta(name) {
+  if (name in cranCache) return cranCache[name];
   const body = await fetchText(`https://crandb.r-pkg.org/${name}`);
-  if (!body) return null;
-  try { return JSON.parse(body).Version || null; } catch { return null; }
+  let meta = null;
+  if (body) { try { const j = JSON.parse(body); if (j?.Package) meta = j; } catch {} }
+  cranCache[name] = meta;
+  return meta;
 }
 
 function vignetteTitle(path) {
@@ -217,10 +224,12 @@ function vignettesFromDir(pkg, baseUrl, excl) {
 // --- packages + articles ---
 async function buildPackage(pkg) {
   const descPath = join(WORKSPACE, pkg.dir, "DESCRIPTION");
-  if (!existsSync(descPath)) { console.warn(`DESCRIPTION not found for ${pkg.name}`); return []; }
-  const d = parseDcf(readFileSync(descPath, "utf8"));
+  const d = existsSync(descPath) ? parseDcf(readFileSync(descPath, "utf8"))
+          : pkg.cran ? await cranMeta(pkg.name) : null;
+  if (!d) { console.warn(`DESCRIPTION not found for ${pkg.name}`); return []; }
   const urls = [...splitUrls(d.URL), ...splitUrls(d.BugReports)];
-  const github = pkg.no_github ? null : githubFromUrls(urls);
+  // `github` in sources.json is for packages whose DESCRIPTION names no repository.
+  const github = pkg.no_github ? null : (pkg.github || githubFromUrls(urls));
   let docs = pkg.docs != null ? pkg.docs : homepageFromUrls(urls);
 
   const links = {};
@@ -233,7 +242,7 @@ async function buildPackage(pkg) {
     if (pkg.articles !== false) links.articles = docs + "articles/";
   }
 
-  let cranv = pkg.cran ? await cranVersion(pkg.name) : null;
+  let cranv = pkg.cran ? (await cranMeta(pkg.name))?.Version || null : null;
   if (pkg.cran && !cranv) cranv = d.Version;
   console.error(`  · ${pkg.name.padEnd(16)} docs=${docs ? "yes" : "no"} cran=${cranv || "-"}`);
 

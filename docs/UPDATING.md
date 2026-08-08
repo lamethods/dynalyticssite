@@ -141,8 +141,19 @@ Best for bulk edits, programmatic changes, or when you're already in an editor.
   "tags": ["network","TNA"], "logo": "https://…" }
 ```
 Escape hatches: `"no_github": true`, `"exclude_articles": ["slug"]`,
-`"articles": false` (pkgdown site has no articles section), and `"docs": null`
-(no pkgdown site).
+`"articles": false` (pkgdown site has no articles section), and `"docs": false`
+(no pkgdown site — omitting `docs` entirely, or setting it to `null`, instead
+falls back to the first non-repository `URL:` in the `DESCRIPTION`, which is only
+what you want when that URL really is a docs site).
+Add `"github": "https://github.com/owner/repo"` when the `DESCRIPTION` names no
+repository in `URL:`/`BugReports:` — otherwise the package gets no source link.
+
+A package with `"cran": true` does **not** need a sibling checkout: when
+`<dir>/DESCRIPTION` is missing, the harvester falls back to the published
+DESCRIPTION on CRAN (`crandb.r-pkg.org`), which carries the same field names.
+That is how `litReview` (owned outside this workspace) is listed. Non-CRAN
+packages still require the local checkout, and `dir` is then the only way to
+find them.
 
 **Blogs / posts** (off-site blog / article / news links) — `posts[]`. Edited in
 the Studio's **Blogs** tab; **curated and instant** (a curated-only regen rebuilds

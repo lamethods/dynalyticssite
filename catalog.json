@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26",
+  "generated_at": "2026-08-08",
   "about": {
     "title": "Dynalytics",
     "tagline": "A framework for the rigorous analytics of dynamical systems.",
@@ -51,12 +51,12 @@
     ]
   },
   "counts": {
-    "total": 193,
-    "packages": 14,
-    "vignettes": 71,
-    "posts": 19,
+    "total": 227,
+    "packages": 18,
+    "vignettes": 97,
+    "posts": 20,
     "chapters": 44,
-    "news": 17
+    "news": 20
   },
   "entries": [
     {
@@ -74,7 +74,7 @@
       },
       "logo": "https://sonsoles.me/tna/logo.png",
       "cran_version": "1.2.3",
-      "version": "1.2.4",
+      "version": "1.3.0",
       "authors": [
         "Mohammed Saqr",
         "Santtu Tikka",
@@ -90,7 +90,7 @@
         "bootstrap"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tna::communities_and_cliques",
@@ -112,7 +112,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tna::complete_tutorial",
@@ -134,7 +134,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tna::ftna",
@@ -156,7 +156,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tna::grouped_sequences",
@@ -178,7 +178,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tna::prepare_data",
@@ -200,7 +200,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tna::tna",
@@ -222,7 +222,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph",
@@ -239,7 +239,7 @@
       },
       "logo": "https://sonsoles.me/cograph/logo.png",
       "cran_version": "2.4.4",
-      "version": "2.4.4",
+      "version": "2.4.5",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -252,7 +252,7 @@
         "multilayer"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::introduction",
@@ -274,7 +274,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::centrality-catalogue",
@@ -296,7 +296,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::why-cograph",
@@ -318,7 +318,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::plotting-tna-models",
@@ -340,7 +340,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::mcml-examples",
@@ -362,7 +362,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::qgraph-to-splot",
@@ -384,7 +384,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::bootstrap-forest",
@@ -406,7 +406,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::cograph-tutorial-plotting",
@@ -428,7 +428,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::cograph-tutorial-mcml",
@@ -450,7 +450,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::cograph-tutorial-communities",
@@ -472,7 +472,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::cograph-tutorial-nestimate",
@@ -494,7 +494,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cograph::cograph-tutorial-simplicial",
@@ -516,7 +516,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna",
@@ -532,7 +532,7 @@
         "articles": "https://pak.dynasite.org/htna/articles/"
       },
       "logo": "https://sonsoles.me/htna/logo.png",
-      "cran_version": "0.1.0",
+      "cran_version": "0.3.1",
       "version": "0.3.1",
       "authors": [
         "Sonsoles López-Pernas",
@@ -547,7 +547,7 @@
         "human-AI"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::htna",
@@ -569,7 +569,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::input-formats",
@@ -591,7 +591,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::grouped",
@@ -613,7 +613,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::frequencies-and-mosaic",
@@ -635,7 +635,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::sequence-plots",
@@ -657,7 +657,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::sequence-comparison",
@@ -679,7 +679,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::multigroup",
@@ -701,7 +701,29 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "htna::clustering",
+      "type": "vignette",
+      "title": "Clustering inputs to build_htna()",
+      "blurb": "Article on the htna documentation site.",
+      "url": "https://pak.dynasite.org/htna/articles/clustering.html",
+      "links": {
+        "article": "https://pak.dynasite.org/htna/articles/clustering.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "htna",
+        "article",
+        "network"
+      ],
+      "packages": [
+        "htna"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::markov-order",
@@ -723,7 +745,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna::model-assessment",
@@ -745,12 +767,12 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate",
       "type": "package",
-      "title": "Nestimate — Network Estimation, Bootstrap, and Higher-Order Analysis",
+      "title": "Nestimate — Dynamic, Probabilistic, and Higher-Order Network Analysis",
       "blurb": "Estimate, compare, and analyze dynamic and psychological networks using a unified interface. Provides transition network analysis estimation (transition, frequency, co-occurrence, attention-weighted) Saqr et al. (2025), psychological network methods (correlation, partial correlation, 'graphical lasso', 'Ising') Saqr, Beck, and Lopez-Pernas (2024), and higher-order network methods including higher-order networks, higher-order network embedding, hyper-path anomaly, and multi-order generative model. Supports bootstrap inference, permutation testing, split-half reliability, centrality stability analysis, mixed Markov models, multi-cluster multi-layer networks and clustering.",
       "url": "https://pak.dynasite.org/Nestimate/",
       "links": {
@@ -762,7 +784,7 @@
       },
       "logo": "https://raw.githubusercontent.com/mohsaqr/Nestimate/main/man/figures/logo.png",
       "cran_version": "0.8.0",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas",
@@ -777,7 +799,7 @@
         "TNA"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::transition-networks",
@@ -799,7 +821,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::sequence-comparison",
@@ -821,7 +843,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::sequence-plots",
@@ -843,7 +865,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::clustering",
@@ -865,7 +887,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::markov-stability",
@@ -887,7 +909,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::cograph-tutorial-nestimate",
@@ -909,7 +931,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::cograph-tutorial-simplicial",
@@ -931,7 +953,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Nestimate::tutorial_model_assessment",
@@ -953,7 +975,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "snakeplot",
@@ -983,7 +1005,7 @@
         "serpentine"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "snakeplot::survey-snake-plots",
@@ -1005,7 +1027,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cooccure",
@@ -1036,7 +1058,7 @@
         "jaccard"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "cooccure::imdb-tutorial",
@@ -1058,7 +1080,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "bibnets",
@@ -1088,7 +1110,7 @@
         "citation"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "bibnets::bibnets",
@@ -1110,7 +1132,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "bibnets::reading-data",
@@ -1132,7 +1154,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "bibnets::attention",
@@ -1154,7 +1176,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "bibnets::parsing-author-names",
@@ -1176,7 +1198,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "transitiontrees",
@@ -1205,7 +1227,7 @@
         "trajectory"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "transitiontrees::advanced-analysis",
@@ -1227,7 +1249,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "transitiontrees::analysis-case",
@@ -1249,7 +1271,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "transitiontrees::ecosystem-compatibility",
@@ -1271,7 +1293,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "transitiontrees::getting-started",
@@ -1293,7 +1315,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "transitiontrees::visualization",
@@ -1315,7 +1337,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "codyna",
@@ -1346,7 +1368,7 @@
         "time-series"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "codyna::codyna",
@@ -1368,7 +1390,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics",
@@ -1397,7 +1419,7 @@
         "tidy"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics::intro",
@@ -1419,7 +1441,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics::lagdynamics",
@@ -1441,7 +1463,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics::interop",
@@ -1463,7 +1485,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics::workflow",
@@ -1485,7 +1507,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics::lag-transition-networks",
@@ -1507,7 +1529,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics::confirmatory",
@@ -1529,7 +1551,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lagdynamics::plotting",
@@ -1551,7 +1573,616 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview",
+      "type": "package",
+      "title": "litReview — Summarizing Graphs for Literature Reviews",
+      "blurb": "Summarizes and visualizes categorical data extracted during literature reviews and evidence syntheses, starting from a data frame with one row per study. Generates publication-ready bar, stacked bar, histogram, waffle, donut, treemap, alluvial, trend, co-occurrence, 'UpSet', tree, and study-by-criteria matrix figures, together with world maps and formatted summary tables. Plot functions return standard 'ggplot2' objects that can be further customized, and an interactive 'Shiny' application is included for building figures without writing code. Aims to help researchers report study characteristics consistently across many publications.",
+      "url": "https://sonsoles.me/litReview/",
+      "links": {
+        "cran": "https://CRAN.R-project.org/package=litReview",
+        "github": "https://github.com/sonsoleslp/litReview",
+        "docs": "https://sonsoles.me/litReview/",
+        "reference": "https://sonsoles.me/litReview/reference/",
+        "articles": "https://sonsoles.me/litReview/articles/"
+      },
+      "cran_version": "1.0.0",
+      "version": "1.0.0",
+      "authors": [
+        "Sonsoles López-Pernas",
+        "Kamila Misiejuk",
+        "Mohammed Saqr"
+      ],
+      "owner": "sonsoleslp",
+      "tags": [
+        "literature-review",
+        "visualization",
+        "evidence-synthesis",
+        "ggplot2",
+        "shiny"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::litReview",
+      "type": "vignette",
+      "title": "Getting Started with litReview",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/litReview.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/litReview.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::bar",
+      "type": "vignette",
+      "title": "Bar charts",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/bar.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/bar.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::stacked-bar",
+      "type": "vignette",
+      "title": "Stacked bar charts",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/stacked-bar.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/stacked-bar.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::histogram",
+      "type": "vignette",
+      "title": "Histograms",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/histogram.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/histogram.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::waffle",
+      "type": "vignette",
+      "title": "Waffle charts",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/waffle.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/waffle.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::pie",
+      "type": "vignette",
+      "title": "Pie and donut charts",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/pie.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/pie.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::overlap",
+      "type": "vignette",
+      "title": "Co-occurrence heatmaps",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/overlap.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/overlap.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::upset",
+      "type": "vignette",
+      "title": "UpSet plots",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/upset.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/upset.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::trend",
+      "type": "vignette",
+      "title": "Trend charts",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/trend.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/trend.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::map",
+      "type": "vignette",
+      "title": "World maps",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/map.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/map.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::alluvial",
+      "type": "vignette",
+      "title": "Alluvial diagrams",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/alluvial.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/alluvial.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::treemap",
+      "type": "vignette",
+      "title": "Treemaps",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/treemap.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/treemap.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::matrix",
+      "type": "vignette",
+      "title": "Coding matrices",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/matrix.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/matrix.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::tree",
+      "type": "vignette",
+      "title": "Tree diagrams",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/tree.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/tree.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "litReview::table",
+      "type": "vignette",
+      "title": "Summary tables",
+      "blurb": "Article on the litReview documentation site.",
+      "url": "https://sonsoles.me/litReview/articles/table.html",
+      "links": {
+        "article": "https://sonsoles.me/litReview/articles/table.html"
+      },
+      "owner": "sonsoleslp",
+      "tags": [
+        "litReview",
+        "article",
+        "literature-review"
+      ],
+      "packages": [
+        "litReview"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic",
+      "type": "package",
+      "title": "idiographic — Person-Specific (Idiographic) and Heterogeneous Complex Networks",
+      "blurb": "Person-specific and within-person network estimation from intensive longitudinal and panel data. Estimators include ordinary vector autoregression (VAR), graphical vector autoregression (graphical VAR), multilevel vector autoregression (mlVAR), rolling ordinary and graphical VAR, native Bayesian VAR and multilevel Bayesian VAR, unified Structural Equation Modeling (uSEM), and Group Iterative Multiple Model Estimation (GIMME). All estimators are native clean-room implementations. All functions are validated against authoritative literature. Also provides preprocessing audits, edge-stability diagnostics, model-comparison reports, and rolling forecast validation. Methods are described in and.",
+      "url": "https://CRAN.R-project.org/package=idiographic",
+      "links": {
+        "cran": "https://CRAN.R-project.org/package=idiographic",
+        "github": "https://github.com/mohsaqr/idiographic"
+      },
+      "cran_version": "0.3.2",
+      "version": "0.3.2",
+      "authors": [
+        "Mohammed Saqr",
+        "Sonsoles López-Pernas"
+      ],
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "network",
+        "VAR",
+        "mlVAR",
+        "GIMME",
+        "time-series"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::bayesian-var-dsem",
+      "type": "vignette",
+      "title": "6. Bayesian VAR and DSEM",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/bayesian-var-dsem.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/bayesian-var-dsem.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::clean-room-methods",
+      "type": "vignette",
+      "title": "10. Clean-room design",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/clean-room-methods.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/clean-room-methods.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::gimme",
+      "type": "vignette",
+      "title": "8. GIMME",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/gimme.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/gimme.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::graphical-var",
+      "type": "vignette",
+      "title": "4. Graphical VAR",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/graphical-var.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/graphical-var.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::idiographic",
+      "type": "vignette",
+      "title": "1. idiographic",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/idiographic.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/idiographic.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::mlvar",
+      "type": "vignette",
+      "title": "5. Multilevel VAR",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/mlvar.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/mlvar.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::ordinary-var",
+      "type": "vignette",
+      "title": "3. Ordinary VAR",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/ordinary-var.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/ordinary-var.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::preprocessing",
+      "type": "vignette",
+      "title": "2. Preprocessing",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/preprocessing.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/preprocessing.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::rolling-networks",
+      "type": "vignette",
+      "title": "9. Rolling networks",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/rolling-networks.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/rolling-networks.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "idiographic::usem",
+      "type": "vignette",
+      "title": "7. Unified SEM",
+      "blurb": "Article from the idiographic package.",
+      "url": "https://cran.r-project.org/web/packages/idiographic/vignettes/usem.html",
+      "links": {
+        "article": "https://cran.r-project.org/web/packages/idiographic/vignettes/usem.html"
+      },
+      "owner": "mohsaqr",
+      "tags": [
+        "idiographic",
+        "article",
+        "idiographic"
+      ],
+      "packages": [
+        "idiographic"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrmisc",
@@ -1565,7 +2196,7 @@
         "reference": "https://pak.dynasite.org/Saqrmisc/reference/",
         "articles": "https://pak.dynasite.org/Saqrmisc/articles/"
       },
-      "version": "0.9.1",
+      "version": "0.9.2",
       "authors": [
         "Mohammed Saqr"
       ],
@@ -1577,7 +2208,7 @@
         "MoEClust"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrmisc::Saqrmisc-introduction",
@@ -1599,7 +2230,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrlab",
@@ -1625,7 +2256,7 @@
         "markov"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrlab::bootstrap-power",
@@ -1647,7 +2278,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrlab::htna-mlna",
@@ -1669,7 +2300,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrlab::introduction",
@@ -1691,7 +2322,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrlab::learning-states",
@@ -1713,7 +2344,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrlab::simulation-guide",
@@ -1735,7 +2366,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "Saqrlab::tna-workflow",
@@ -1757,7 +2388,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets",
@@ -1766,12 +2397,14 @@
       "blurb": "Provides clean-room implementations for estimating psychometric network models, including correlation and partial-correlation networks, Gaussian graphical models with extended Bayesian information criterion (EBIC) regularization, nonparanormal and stepwise selection variants, information-filtering networks (the triangulated maximally filtered graph and the local-global inverse covariance), relative-importance networks, and Ising and mixed graphical models. All methods are implemented from first principles in base R without compiled dependencies and return consistent, tidy outputs. Functions are designed to be transparent and report optimization diagnostics where applicable. For Gaussian graphical models, the graphical lasso stationarity (Karush-Kuhn-Tucker) residual quantifies the deviation of the estimated solution from the optimum of the corresponding convex optimization problem.",
       "url": "https://pak.dynasite.org/psychnets/",
       "links": {
+        "cran": "https://CRAN.R-project.org/package=psychnets",
         "github": "https://github.com/mohsaqr/psychnets",
         "docs": "https://pak.dynasite.org/psychnets/",
         "reference": "https://pak.dynasite.org/psychnets/reference/",
         "articles": "https://pak.dynasite.org/psychnets/articles/"
       },
-      "version": "0.4.3",
+      "cran_version": "0.4.3",
+      "version": "0.5.0",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -1784,8 +2417,8 @@
         "ising",
         "base-r"
       ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::gaussian-graphical-models",
@@ -1807,7 +2440,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::ggm-model-selection",
@@ -1829,7 +2462,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::group-networks-from-event-data",
@@ -1851,7 +2484,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::information-filtering-networks",
@@ -1873,7 +2506,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::ising-networks",
@@ -1895,7 +2528,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::mixed-graphical-models",
@@ -1917,7 +2550,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::network-reliability",
@@ -1939,7 +2572,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::relative-importance-networks",
@@ -1961,7 +2594,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::visualizing-networks",
@@ -1983,7 +2616,7 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "psychnets::visualizing-with-cograph",
@@ -2005,13 +2638,13 @@
       ],
       "kind": "article",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tsn",
       "type": "package",
       "title": "tsn — Time-Series Network Construction",
-      "blurb": "Constructs distance and visibility networks directly from univariate time series. A single entry point provides whole-series and sliding-window distance networks, natural and horizontal visibility graphs, and optional state aggregation with uniform tidy outputs. Runtime computation uses only packages distributed with R.",
+      "blurb": "Constructs distance, visibility, and state-transition networks from univariate time series. The core constructor provides whole-series and sliding-window distance networks, natural and horizontal visibility graphs following Lacasa et al. (2008) and Luque et al. (2009), and optional state aggregation. Companion verbs expose discretization, trend classification, and an optional bridge to the 'Nestimate' transition-network models. Core network construction uses only packages distributed with R.",
       "url": "https://pak.dynasite.org/tsn/",
       "links": {
         "github": "https://github.com/santikka/tsn",
@@ -2032,7 +2665,504 @@
         "kNN"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "VaSStra",
+      "type": "package",
+      "title": "VaSStra — Simple Variables to States to Sequences to Trajectories",
+      "blurb": "A small, pipe-friendly implementation of the VaSSTra workflow for longitudinal multivariate data. It provides explicit steps to turn variables into states, states into aligned sequences, and sequences into trajectory groups, followed by tidy trajectory descriptions. A single call runs the complete analysis with transparent, overridable automation of data roles and cluster counts, and an evaluation verb compares the fitted clustering against its alternatives. 'Nestimate' provides the default sequence-clustering backend and all sequence plots. No 'TraMineR' dependency is required.",
+      "url": "https://github.com/mohsaqr/VaSStra",
+      "links": {
+        "github": "https://github.com/mohsaqr/VaSStra"
+      },
+      "version": "0.3.0",
+      "authors": [
+        "Mohammed Saqr",
+        "Sonsoles López-Pernas"
+      ],
+      "owner": "mohsaqr",
+      "tags": [
+        "sequence",
+        "trajectory",
+        "clustering",
+        "longitudinal",
+        "lamethods"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "sbert",
+      "type": "package",
+      "title": "sbert — Sentence Embeddings with 'Sentence-BERT' Models",
+      "blurb": "Computes sentence embeddings in R without requiring 'Python' by running revision-pinned 'Sentence-BERT' models through 'ONNX Runtime'. Implements model-specific tokenization, attention-mask-aware mean pooling, L2 normalization, cosine similarity, deterministic semantic topic clustering, and class-based term weighting following Reimers and Gurevych (2019). Topic models are evaluated with intrinsic coherence (UMass and normalized pointwise mutual information) and diversity metrics, and summarized with deterministic base-graphics visualizations. Model files are downloaded only after an explicit user request and are stored outside the package library.",
+      "url": "https://github.com/mohsaqr/sbert",
+      "links": {
+        "github": "https://github.com/mohsaqr/sbert"
+      },
+      "version": "0.5.2",
+      "authors": [
+        "Mohammed Saqr"
+      ],
+      "owner": "mohsaqr",
+      "tags": [
+        "NLP",
+        "embeddings",
+        "topic-modeling",
+        "transformers",
+        "onnx"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::alluvial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Alluvial plots for transition analysis",
+      "blurb": "Generating transition plots in R with ggalluvial",
+      "url": "tutorials/tna/alluvial.html",
+      "links": {
+        "post": "tutorials/tna/alluvial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-tutorial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
+      "blurb": "A modern approach to rigorous analysis of behavioral processes",
+      "url": "tutorials/tna/tna-tutorial.html",
+      "links": {
+        "post": "tutorials/tna/tna-tutorial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::cograph::visualization",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Data visualization for research",
+      "blurb": "My favorite figures from my papers that are my own creation",
+      "url": "tutorials/cograph/visualization.html",
+      "links": {
+        "post": "tutorials/cograph/visualization.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "cograph"
+      ],
+      "tags": [
+        "tutorial",
+        "cograph"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::codyna::codyna-seq-tutorial",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
+      "blurb": "A Tutorial on dynamics of behavior with codyna",
+      "url": "tutorials/codyna/codyna-seq-tutorial.html",
+      "links": {
+        "post": "tutorials/codyna/codyna-seq-tutorial.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "codyna"
+      ],
+      "tags": [
+        "tutorial",
+        "codyna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::vasstra",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "The VaSSTra method",
+      "blurb": "From Variables to States to Sequences to Trajectories",
+      "url": "tutorials/tna/vasstra.html",
+      "links": {
+        "post": "tutorials/tna/vasstra.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-bern",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Bern Workshop Resources",
+      "blurb": "A curated hub of R packages, Python ports, interactive apps, hands-on tutorials, and references for the Bern Transition Network Analysis workshop.",
+      "url": "tutorials/tna/tna-bern.html",
+      "links": {
+        "post": "tutorials/tna/tna-bern.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-clustering",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Clustering: Discovering and Analysis of Clusters",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-clustering.html",
+      "links": {
+        "post": "tutorials/tna/tna-clustering.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-data",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Data Preparation: A Comprehensive Guide to prepare_data()",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-data.html",
+      "links": {
+        "post": "tutorials/tna/tna-data.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-group",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Group Analysis: Analysis and Comparison of Groups",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-group.html",
+      "links": {
+        "post": "tutorials/tna/tna-group.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "tutorial::tna::tna-compare",
+      "type": "post",
+      "kind": "tutorial",
+      "title": "TNA Model Comparison: A Comprehensive Guide to Network Comparison",
+      "blurb": "Companion Tutorial for Transition Network Analysis",
+      "url": "tutorials/tna/tna-compare.html",
+      "links": {
+        "post": "tutorials/tna/tna-compare.html"
+      },
+      "owner": null,
+      "source": "dynasite",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "tutorial",
+        "tna"
+      ],
+      "status": "LOCAL",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::1::dynalytics-a-framework-",
+      "type": "post",
+      "kind": "blog",
+      "title": "Dynalytics: A Framework for Rigorous Analytics of Dynamical Systems",
+      "blurb": "An overarching framework and methodological ecosystem for the analysis and rigorous validation of dynamical systems — unifying transition, co-occurrence, psychological, and higher-order networks under a single confirmatory philosophy.",
+      "url": "https://saqr.me/blog/2026/dynalytics-framework/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/dynalytics-framework/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "tna",
+        "cooccure",
+        "psychnets",
+        "Nestimate"
+      ],
+      "tags": [
+        "blog",
+        "tna",
+        "cooccure",
+        "psychnets",
+        "Nestimate"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::2::cograph-complex-network",
+      "type": "post",
+      "kind": "blog",
+      "title": "cograph: Complex Network Analysis and Visualization",
+      "blurb": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
+      "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/cograph-network-visualization/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "cograph"
+      ],
+      "tags": [
+        "blog",
+        "cograph"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::3::human-ai-interaction-a-",
+      "type": "post",
+      "kind": "blog",
+      "title": "Human–AI Interaction: A Transition Network Analysis with cograph",
+      "blurb": "Sequential analysis of 13,002 turns across 429 human–AI coding sessions, mapped with TNA and cograph.",
+      "url": "https://saqr.me/blog/2026/human-ai-interaction-cograph/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/human-ai-interaction-cograph/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "tna",
+        "cograph"
+      ],
+      "tags": [
+        "blog",
+        "tna",
+        "cograph"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::4::jtna-for-transition-netw",
+      "type": "post",
+      "kind": "blog",
+      "title": "JTNA for Transition Network Analysis",
+      "blurb": "Statistical rigour for sequential behavioural analysis — now in jamovi via JTNA.",
+      "url": "https://saqr.me/blog/2026/jtna-transition-network-analysis/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/jtna-transition-network-analysis/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "tna"
+      ],
+      "tags": [
+        "blog",
+        "tna"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::5::precision-education-is-t",
+      "type": "post",
+      "kind": "blog",
+      "title": "Precision Education is the Answer",
+      "blurb": "Beyond group averages: a case for precision education.",
+      "url": "https://saqr.me/blog/2026/precision-education/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/precision-education/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "blog",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::6::rohy-ai-powered-virtual",
+      "type": "post",
+      "kind": "blog",
+      "title": "Rohy: AI-Powered Virtual Patient Simulator",
+      "blurb": "An open-source medical simulation platform with AI-driven patient conversations.",
+      "url": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/",
+      "links": {
+        "post": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/"
+      },
+      "owner": "mohsaqr",
+      "source": "saqr.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "blog",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::7::book-learning-analytics",
+      "type": "post",
+      "kind": "news",
+      "title": "Book: Learning Analytics Methods and Tutorials",
+      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R.",
+      "url": "https://sonsoles.me/posts/labook/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/labook/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::8::isila-funding-from-era",
+      "type": "post",
+      "kind": "news",
+      "title": "ISILA — Funding from Erasmus+",
+      "blurb": "Early-intervention learning-analytics methods for quality and sustainability.",
+      "url": "https://sonsoles.me/posts/isila/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/isila/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::9::iglue-new-funding-from",
+      "type": "post",
+      "kind": "news",
+      "title": "IGLUE — New Funding from Erasmus+",
+      "blurb": "Game-based learning using escape rooms.",
+      "url": "https://sonsoles.me/posts/iglue/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/iglue/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "post::10::cretic-funding-from-th",
+      "type": "post",
+      "kind": "news",
+      "title": "CRETIC — Funding from the Research Council of Finland",
+      "blurb": "Optimising clinical reasoning in time-critical scenarios.",
+      "url": "https://sonsoles.me/posts/cretic/index.html",
+      "links": {
+        "post": "https://sonsoles.me/posts/cretic/index.html"
+      },
+      "owner": "sonsoleslp",
+      "source": "sonsoles.me",
+      "packages": [
+        "general"
+      ],
+      "tags": [
+        "news",
+        "general"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch01-intro",
@@ -2053,8 +3183,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch02-data",
@@ -2075,8 +3205,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch03-intro-r",
@@ -2099,7 +3229,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch04-data-cleaning",
@@ -2122,7 +3252,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch05-basic-stats",
@@ -2145,7 +3275,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch06-data-visualization",
@@ -2168,7 +3298,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch07-prediction",
@@ -2191,7 +3321,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch08-clustering",
@@ -2214,7 +3344,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch09-model-based-clustering",
@@ -2237,7 +3367,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch10-sequence-analysis",
@@ -2262,7 +3392,7 @@
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch11-vasstra",
@@ -2283,12 +3413,13 @@
         "book"
       ],
       "packages": [
+        "VaSStra",
         "tna",
         "codyna"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch12-markov",
@@ -2313,7 +3444,7 @@
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch13-multichannel",
@@ -2336,7 +3467,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch14-process-mining",
@@ -2359,7 +3490,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch15-sna",
@@ -2384,7 +3515,7 @@
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch16-community",
@@ -2409,7 +3540,7 @@
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch17-temporal-networks",
@@ -2434,7 +3565,7 @@
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch18-ena-ona",
@@ -2457,7 +3588,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch19-psychological-networks",
@@ -2482,7 +3613,7 @@
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch20-factor-analysis",
@@ -2505,7 +3636,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch21-sem",
@@ -2528,7 +3659,7 @@
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book1::ch22-conclusion",
@@ -2549,8 +3680,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch01-intro",
@@ -2571,7 +3702,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch02-AIxAI",
@@ -2592,7 +3723,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch03-prediction",
@@ -2614,7 +3745,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch04-classification",
@@ -2636,7 +3767,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch05-regularization",
@@ -2658,7 +3789,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch06-xai-global",
@@ -2680,7 +3811,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch07-xai-local",
@@ -2702,7 +3833,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch08-llms",
@@ -2723,7 +3854,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch09-nlp",
@@ -2745,7 +3876,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch10-bert",
@@ -2767,7 +3898,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch11-llmsxai",
@@ -2789,7 +3920,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch12-cds",
@@ -2812,7 +3943,7 @@
       ],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch13-ega",
@@ -2834,7 +3965,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch14-rqa",
@@ -2856,7 +3987,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch15-tna",
@@ -2880,7 +4011,7 @@
       ],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch16-ftna",
@@ -2905,7 +4036,7 @@
       ],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch17-tna-clusters",
@@ -2930,7 +4061,7 @@
       ],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch18-idio",
@@ -2948,10 +4079,12 @@
         "chapter",
         "book"
       ],
-      "packages": [],
+      "packages": [
+        "idiographic"
+      ],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch19-three-levels",
@@ -2970,10 +4103,12 @@
         "chapter",
         "book"
       ],
-      "packages": [],
+      "packages": [
+        "idiographic"
+      ],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch20-var",
@@ -2992,10 +4127,12 @@
         "chapter",
         "book"
       ],
-      "packages": [],
+      "packages": [
+        "idiographic"
+      ],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch21-mle",
@@ -3017,7 +4154,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book2::ch22-automl",
@@ -3039,227 +4176,7 @@
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::alluvial",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Alluvial plots for transition analysis",
-      "blurb": "Generating transition plots in R with ggalluvial",
-      "url": "tutorials/tna/alluvial.html",
-      "links": {
-        "post": "tutorials/tna/alluvial.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::tna-tutorial",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "An Updated Comprehensive Tutorial on Transition Network Analysis (TNA)",
-      "blurb": "A modern approach to rigorous analysis of behavioral processes",
-      "url": "tutorials/tna/tna-tutorial.html",
-      "links": {
-        "post": "tutorials/tna/tna-tutorial.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::cograph::visualization",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Data visualization for research",
-      "blurb": "My favorite figures from my papers that are my own creation",
-      "url": "tutorials/cograph/visualization.html",
-      "links": {
-        "post": "tutorials/cograph/visualization.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "cograph"
-      ],
-      "tags": [
-        "tutorial",
-        "cograph"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::codyna::codyna-seq-tutorial",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "Sequence Patterns, Outcomes, and Indices with codyna",
-      "blurb": "A Tutorial on dynamics of behavior with codyna",
-      "url": "tutorials/codyna/codyna-seq-tutorial.html",
-      "links": {
-        "post": "tutorials/codyna/codyna-seq-tutorial.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "codyna"
-      ],
-      "tags": [
-        "tutorial",
-        "codyna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::vasstra",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "The VaSSTra method",
-      "blurb": "From Variables to States to Sequences to Trajectories",
-      "url": "tutorials/tna/vasstra.html",
-      "links": {
-        "post": "tutorials/tna/vasstra.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::tna-bern",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Bern Workshop Resources",
-      "blurb": "A curated hub of R packages, Python ports, interactive apps, hands-on tutorials, and references for the Bern Transition Network Analysis workshop.",
-      "url": "tutorials/tna/tna-bern.html",
-      "links": {
-        "post": "tutorials/tna/tna-bern.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::tna-clustering",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Clustering: Discovering and Analysis of Clusters",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-clustering.html",
-      "links": {
-        "post": "tutorials/tna/tna-clustering.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::tna-data",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Data Preparation: A Comprehensive Guide to prepare_data()",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-data.html",
-      "links": {
-        "post": "tutorials/tna/tna-data.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::tna-group",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Group Analysis: Analysis and Comparison of Groups",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-group.html",
-      "links": {
-        "post": "tutorials/tna/tna-group.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "tutorial::tna::tna-compare",
-      "type": "post",
-      "kind": "tutorial",
-      "title": "TNA Model Comparison: A Comprehensive Guide to Network Comparison",
-      "blurb": "Companion Tutorial for Transition Network Analysis",
-      "url": "tutorials/tna/tna-compare.html",
-      "links": {
-        "post": "tutorials/tna/tna-compare.html"
-      },
-      "owner": null,
-      "source": "dynasite",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "tutorial",
-        "tna"
-      ],
-      "status": "LOCAL",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::1",
@@ -3274,7 +4191,7 @@
       "year": "2026",
       "venue": "SSRN preprint",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::2",
@@ -3289,7 +4206,7 @@
       "year": "2025",
       "venue": "LAK ’25 · ACM (pp. 351–361)",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::3",
@@ -3304,7 +4221,7 @@
       "year": "2025",
       "venue": "Applied Psychological Measurement (pp. 326–328)",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::4",
@@ -3319,7 +4236,7 @@
       "year": "2025",
       "venue": "IEEE Transactions on Learning Technologies",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::5",
@@ -3334,7 +4251,7 @@
       "year": "2025",
       "venue": "Koli Calling ’25 · ACM",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::6",
@@ -3349,7 +4266,7 @@
       "year": "2026",
       "venue": "Computers in Human Behavior Reports",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::7",
@@ -3364,7 +4281,7 @@
       "year": "2025",
       "venue": "CSCL 2025 · ISLS (pp. 276–280)",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::8",
@@ -3379,7 +4296,7 @@
       "year": "2026",
       "venue": "ICSLE 2025",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::9",
@@ -3394,7 +4311,7 @@
       "year": "2025",
       "venue": "ICQE 2025 · Springer (pp. 147–161)",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::10",
@@ -3409,7 +4326,7 @@
       "year": "2025",
       "venue": "SSRN preprint",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::11",
@@ -3424,7 +4341,7 @@
       "year": "2025",
       "venue": "SSRN preprint",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::12",
@@ -3439,7 +4356,7 @@
       "year": "2026",
       "venue": "The Internet and Higher Education, 70, 101087",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::13",
@@ -3454,7 +4371,7 @@
       "year": "2026",
       "venue": "Journal of Computer Assisted Learning",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "paper::14",
@@ -3469,7 +4386,7 @@
       "year": "2026",
       "venue": "arXiv preprint",
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tool::tnapy",
@@ -3488,7 +4405,7 @@
         "networks"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tool::jtna",
@@ -3509,7 +4426,7 @@
         "no-code"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tool::dynalytics-app",
@@ -3529,7 +4446,7 @@
         "no-code"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "tool::tna-app",
@@ -3549,577 +4466,7 @@
         "no-code"
       ],
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::1",
-      "type": "news",
-      "date": "2026-05-13",
-      "tag": "Software",
-      "title": "lagdynamics: modern lag sequential analysis",
-      "blurb": "A tidy, pipe-friendly toolkit for lag sequential analysis of categorical event sequences. A single lsa() constructor fits classical, two-cell, bidirectional, and dominance engines; every result reads through a tidy verb; and a full confirmatory battery — bootstrap, Dirichlet–Multinomial certainty, split-half reliability, case-drop stability, permutation and Bayesian group comparison — quantifies the evidence behind each edge.",
-      "url": "https://github.com/mohsaqr/lagdynamics",
-      "links": {
-        "read": "https://github.com/mohsaqr/lagdynamics"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::2",
-      "type": "news",
-      "date": "2026-04-25",
-      "tag": "Software",
-      "title": "htna: Heterogeneous Transition Network Analysis in R",
-      "blurb": "The R package behind the Heterogeneous TNA papers. It models sequences that mix two or more actor groups (e.g. human and AI) within one interaction — a thin API over the Nestimate and cograph engines builds a transition network across the combined sequence while preserving the actor partition, so bootstrap, permutation, reliability, centrality and plotting treat each actor's codes as a distinct node group.",
-      "url": "https://sonsoles.me/htna/",
-      "links": {
-        "read": "https://sonsoles.me/htna/"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::3",
-      "type": "news",
-      "date": "2026-03-17",
-      "tag": "Software",
-      "title": "Nestimate: one engine for dynamic & psychological networks",
-      "blurb": "An R package to estimate, compare, and analyse dynamic and psychological networks through a unified interface — transition, frequency, co-occurrence and attention-weighted TNA estimation, psychometric methods (correlation, partial correlation, graphical lasso, Ising), and higher-order network methods — with bootstrap inference, permutation testing, split-half reliability, and centrality-stability analysis.",
-      "url": "https://github.com/mohsaqr/Nestimate",
-      "links": {
-        "read": "https://github.com/mohsaqr/Nestimate"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::4",
-      "type": "news",
-      "date": "2026-03-08",
-      "tag": "Software",
-      "title": "snakeplot: serpentine plots for long timelines",
-      "blurb": "A new R package for visualising long timelines, extended sequences, and temporally chained survey or experience-sampling data as intuitive serpentine ('snake') plots — with distribution bars, tick-mark plots, inter-item correlation arcs, faceted multi-construct panels, and time-of-day positioning for ecological momentary assessment data.",
-      "url": "https://github.com/mohsaqr/snakeplot",
-      "links": {
-        "read": "https://github.com/mohsaqr/snakeplot"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::5",
-      "type": "news",
-      "date": "2025-07-26",
-      "tag": "Software",
-      "title": "Saqrmisc: miscellaneous tools for data analysis",
-      "blurb": "A new R package of miscellaneous functions for data processing, statistical analysis, and visualisation — including model-based clustering with MoEClust, comparison plots with built-in statistical testing, and mosaic-plot analysis for categorical variables, wrapped in robust error handling and a friendly interface.",
-      "url": "https://github.com/mohsaqr/Saqrmisc",
-      "links": {
-        "read": "https://github.com/mohsaqr/Saqrmisc"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::6",
-      "type": "news",
-      "date": "2026-06-24",
-      "tag": "Paper",
-      "title": "Heterogeneous TNA: how AI feedback helps or hinders learning",
-      "blurb": "Out now in the Journal of Computer Assisted Learning. López-Pernas, Misiejuk & Saqr use Heterogeneous TNA to trace how first-grade students engage with real-time AI feedback while solving multimodal mathematics tasks — showing, process by process, when the feedback supports learning and when it gets in the way.",
-      "url": "https://doi.org/10.1002/jcal.70285",
-      "links": {
-        "read": "https://doi.org/10.1002/jcal.70285"
-      },
-      "tags": [
-        "news",
-        "paper"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::7",
-      "type": "news",
-      "date": "2026-04-29",
-      "tag": "Preprint",
-      "title": "Heterogeneous TNA: unpacking ‘vibe coding’ in student–AI programming",
-      "blurb": "A new preprint applies Heterogeneous TNA to 19,418 interaction turns from 110 undergraduates, framing AI-assisted ‘vibe coding’ as help-seeking. Top performers engage in instrumental inquiry and exploration that elicits tutor-like AI responses, while low performers fall into more passive patterns — a process-level contrast only the heterogeneous model surfaces.",
-      "url": "https://arxiv.org/abs/2604.27134",
-      "links": {
-        "read": "https://arxiv.org/abs/2604.27134"
-      },
-      "tags": [
-        "news",
-        "preprint"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::8",
-      "type": "news",
-      "date": "2026-06-18",
-      "tag": "Software",
-      "title": "transitiontrees is on CRAN",
-      "blurb": "Now available from CRAN, transitiontrees analyses how states follow one another and where pathways branch or converge. It models trajectories with variable-order prediction suffix trees — in both frequency- and prediction-based forms — and visualises them as transition trees, radial sunbursts, heatmaps, and forward-trajectory trees.",
-      "url": "https://CRAN.R-project.org/package=transitiontrees",
-      "links": {
-        "read": "https://CRAN.R-project.org/package=transitiontrees"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "REDIRECT",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::9",
-      "type": "news",
-      "date": "2026-04-16",
-      "tag": "Software",
-      "title": "cooccure: co-occurrence networks from any data",
-      "blurb": "A new R package that builds co-occurrence networks from delimited fields, long/bipartite tables, binary matrices, or wide sequences. It returns tidy edge tables with eight similarity measures — including Jaccard, cosine, and association strength — plus scaling, thresholding, splitting, and multi-format export.",
-      "url": "https://github.com/mohsaqr/cooccure",
-      "links": {
-        "read": "https://github.com/mohsaqr/cooccure"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::10",
-      "type": "news",
-      "date": "2026-04-15",
-      "tag": "Software",
-      "title": "bibnets: bibliometric networks in R",
-      "blurb": "A new R package for importing, constructing, and exporting bibliometric networks — reading Scopus, Web of Science, OpenAlex, Crossref, Lens, Dimensions, BibTeX and RIS exports. It goes beyond standard co-networks with attention-weighted edges, position-aware counting, temporal windows, disparity-filter backbones, and historiographs.",
-      "url": "https://github.com/mohsaqr/bibnets",
-      "links": {
-        "read": "https://github.com/mohsaqr/bibnets"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::11",
-      "type": "news",
-      "date": "2026-06-21",
-      "tag": "Paper",
-      "title": "The Dynalytics framework paper is out",
-      "blurb": "The preprint introducing Dynalytics — its family of models, the confirmatory testing battery, and the scientific-contract philosophy — is now available on SSRN.",
-      "url": "https://doi.org/10.2139/ssrn.6832584",
-      "links": {
-        "read": "https://doi.org/10.2139/ssrn.6832584"
-      },
-      "tags": [
-        "news",
-        "paper"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::12",
-      "type": "news",
-      "date": "2026-02-01",
-      "tag": "Paper",
-      "title": "Cognitive offloading in student–AI collaboration",
-      "blurb": "A longitudinal analysis of prompting strategies and cognitive offloading in student–AI collaboration, published in Computers in Human Behavior Reports.",
-      "url": "https://doi.org/10.1016/j.chbr.2026.101130",
-      "links": {
-        "read": "https://doi.org/10.1016/j.chbr.2026.101130"
-      },
-      "tags": [
-        "news",
-        "paper"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::13",
-      "type": "news",
-      "date": "2026-01-10",
-      "tag": "Software",
-      "title": "JTNA brings Transition Network Analysis to jamovi",
-      "blurb": "A point-and-click desktop module puts the full TNA workflow — build, plot, and statistically test transition networks — in the hands of non-programmers.",
-      "url": "https://sonsoles.me/extra/JTNA.html",
-      "links": {
-        "read": "https://sonsoles.me/extra/JTNA.html"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::14",
-      "type": "news",
-      "date": "2025-09-15",
-      "tag": "Funding",
-      "title": "CRETIC funded by the Research Council of Finland",
-      "blurb": "A new project on optimising clinical reasoning in time-critical scenarios, using learning-analytics methods from the ecosystem.",
-      "url": "https://sonsoles.me/posts/cretic/index.html",
-      "links": {
-        "read": "https://sonsoles.me/posts/cretic/index.html"
-      },
-      "tags": [
-        "news",
-        "funding"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::15",
-      "type": "news",
-      "date": "2025-06-10",
-      "tag": "Funding",
-      "title": "ISILA and IGLUE: two new Erasmus+ projects",
-      "blurb": "Erasmus+ funding for early-intervention learning analytics (ISILA) and game-based escape-room learning (IGLUE).",
-      "url": "https://sonsoles.me/posts/isila/index.html",
-      "links": {
-        "read": "https://sonsoles.me/posts/isila/index.html"
-      },
-      "tags": [
-        "news",
-        "funding"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::16",
-      "type": "news",
-      "date": "2025-03-30",
-      "tag": "Paper",
-      "title": "Transition Network Analysis introduced at LAK ’25",
-      "blurb": "The foundational TNA paper — a framework for modelling, visualising, and identifying the temporal patterns of learners and learning processes.",
-      "url": "https://doi.org/10.1145/3706468.3706513",
-      "links": {
-        "read": "https://doi.org/10.1145/3706468.3706513"
-      },
-      "tags": [
-        "news",
-        "paper"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "news::17",
-      "type": "news",
-      "date": "2026-07-26",
-      "tag": "Software",
-      "title": "CarmNote released: portable analysis in a single HTML file",
-      "blurb": "CarmNote is now available: a family of interactive, reproducible notebooks for transition and social network analysis. Each notebook is a self-contained HTML file that runs locally in a browser—even offline—keeping data, analysis, figures, results, and notes together. The first releases include CarmNote TNA and CarmNote SNA, with guided workflows and complete documentation.",
-      "url": "https://pak.dynasite.org/carmnotes",
-      "links": {
-        "read": "https://pak.dynasite.org/carmnotes"
-      },
-      "tags": [
-        "news",
-        "software"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::1::cograph-complex-network-",
-      "type": "post",
-      "kind": "blog",
-      "title": "cograph: Complex Network Analysis and Visualization",
-      "blurb": "A modern R package for analysis, visualization and manipulation of complex networks with publication-ready output.",
-      "url": "https://saqr.me/blog/2026/cograph-network-visualization/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/cograph-network-visualization/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "cograph"
-      ],
-      "tags": [
-        "blog",
-        "cograph"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::2::human-ai-interaction-a-t",
-      "type": "post",
-      "kind": "blog",
-      "title": "Human–AI Interaction: A Transition Network Analysis with cograph",
-      "blurb": "Sequential analysis of 13,002 turns across 429 human–AI coding sessions, mapped with TNA and cograph.",
-      "url": "https://saqr.me/blog/2026/human-ai-interaction-cograph/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/human-ai-interaction-cograph/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "tna",
-        "cograph"
-      ],
-      "tags": [
-        "blog",
-        "tna",
-        "cograph"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::3::jtna-for-transition-netw",
-      "type": "post",
-      "kind": "blog",
-      "title": "JTNA for Transition Network Analysis",
-      "blurb": "Statistical rigour for sequential behavioural analysis — now in jamovi via JTNA.",
-      "url": "https://saqr.me/blog/2026/jtna-transition-network-analysis/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/jtna-transition-network-analysis/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "tna"
-      ],
-      "tags": [
-        "blog",
-        "tna"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::4::precision-education-is-t",
-      "type": "post",
-      "kind": "blog",
-      "title": "Precision Education is the Answer",
-      "blurb": "Beyond group averages: a case for precision education.",
-      "url": "https://saqr.me/blog/2026/precision-education/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/precision-education/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "blog",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::5::rohy-ai-powered-virtual-",
-      "type": "post",
-      "kind": "blog",
-      "title": "Rohy: AI-Powered Virtual Patient Simulator",
-      "blurb": "An open-source medical simulation platform with AI-driven patient conversations.",
-      "url": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/",
-      "links": {
-        "post": "https://saqr.me/blog/2026/rohy-virtual-patient-simulator/"
-      },
-      "owner": null,
-      "source": "saqr.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "blog",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::6::book-learning-analytics-",
-      "type": "post",
-      "kind": "news",
-      "title": "Book: Learning Analytics Methods and Tutorials",
-      "blurb": "Learning Analytics Methods and Tutorials: a practical guide using R.",
-      "url": "https://sonsoles.me/posts/labook/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/labook/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::7::isila-funding-from-erasm",
-      "type": "post",
-      "kind": "news",
-      "title": "ISILA — Funding from Erasmus+",
-      "blurb": "Early-intervention learning-analytics methods for quality and sustainability.",
-      "url": "https://sonsoles.me/posts/isila/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/isila/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::8::iglue-new-funding-from-e",
-      "type": "post",
-      "kind": "news",
-      "title": "IGLUE — New Funding from Erasmus+",
-      "blurb": "Game-based learning using escape rooms.",
-      "url": "https://sonsoles.me/posts/iglue/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/iglue/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "post::9::cretic-funding-from-the-",
-      "type": "post",
-      "kind": "news",
-      "title": "CRETIC — Funding from the Research Council of Finland",
-      "blurb": "Optimising clinical reasoning in time-critical scenarios.",
-      "url": "https://sonsoles.me/posts/cretic/index.html",
-      "links": {
-        "post": "https://sonsoles.me/posts/cretic/index.html"
-      },
-      "owner": null,
-      "source": "sonsoles.me",
-      "packages": [
-        "general"
-      ],
-      "tags": [
-        "news",
-        "general"
-      ],
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "person::saqr",
-      "type": "person",
-      "title": "Mohammed Saqr",
-      "name": "Mohammed Saqr",
-      "role": "Professor of Learning Analytics and AI",
-      "affiliation": "University of Eastern Finland",
-      "blurb": "Research on precision education, transition network analysis, and complex systems in learning.",
-      "url": "https://saqr.me",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/prof_pic-480-copy.png",
-      "links": {
-        "site": "https://saqr.me"
-      },
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "person::lopez-pernas",
-      "type": "person",
-      "title": "Sonsoles López-Pernas",
-      "name": "Sonsoles López-Pernas",
-      "role": "Academy Research Fellow",
-      "affiliation": "University of Eastern Finland",
-      "blurb": "Learning analytics, sequence and network methods, and reproducible research software.",
-      "url": "https://sonsoles.me",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/headshot.jpg",
-      "links": {
-        "site": "https://sonsoles.me"
-      },
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "person::misiejuk",
-      "type": "person",
-      "title": "Kamila Misiejuk",
-      "name": "Kamila Misiejuk",
-      "role": "Postdoctoral Researcher (CATALPA)",
-      "affiliation": "FernUniversität in Hagen",
-      "blurb": "Studies human–AI collaboration, quantitative ethnography, and learning analytics methods.",
-      "url": "https://kamilamisiejuk.com/",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/kamila-misiejuk-hw_500x600.jpg",
-      "links": {
-        "site": "https://kamilamisiejuk.com/"
-      },
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
-    },
-    {
-      "id": "person::oliveira",
-      "type": "person",
-      "title": "Eduardo Oliveira",
-      "name": "Eduardo Oliveira",
-      "role": "Senior Lecturer",
-      "affiliation": "The University of Melbourne",
-      "blurb": "Research on AI in education, learning analytics and natural language processing.",
-      "url": "https://www.eduoliveira.com/",
-      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2026/03/image.png",
-      "links": {
-        "site": "https://www.eduoliveira.com/"
-      },
-      "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book::book1",
@@ -4140,7 +4487,7 @@
         "book1"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "book::book2",
@@ -4161,7 +4508,431 @@
         "book2"
       ],
       "status": "REDIRECT",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::1",
+      "type": "news",
+      "date": "2026-08-07",
+      "tag": "Software",
+      "title": "litReview is on CRAN",
+      "blurb": "Summarising graphs for literature reviews and evidence syntheses. Starting from one row per study, litReview builds publication-ready bar, stacked bar, histogram, waffle, donut, treemap, alluvial, trend, co-occurrence, UpSet, tree, and study-by-criteria matrix figures, plus world maps and formatted summary tables. Every plot is a plain ggplot2 object, and a Shiny app builds figures without writing code.",
+      "url": "https://CRAN.R-project.org/package=litReview",
+      "links": {
+        "read": "https://CRAN.R-project.org/package=litReview"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::2",
+      "type": "news",
+      "date": "2026-08-03",
+      "tag": "Software",
+      "title": "idiographic is on CRAN",
+      "blurb": "Person-specific and within-person network estimation from intensive longitudinal data. One consistent interface covers ordinary VAR, graphical VAR, multilevel VAR, native Bayesian mlVAR/VAR matching Mplus DSEM, unified SEM, GIMME, and rolling networks — with preprocessing and detrending built in, and a clean-room base-R implementation throughout.",
+      "url": "https://CRAN.R-project.org/package=idiographic",
+      "links": {
+        "read": "https://CRAN.R-project.org/package=idiographic"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::3",
+      "type": "news",
+      "date": "2026-07-30",
+      "tag": "Software",
+      "title": "psychnets is on CRAN",
+      "blurb": "Tidy, clean-room psychological network modelling in base R. Gaussian graphical models with a full model-selection battery, Ising networks, mixed graphical models, relative importance networks, information-filtering networks, and group networks from event data — each returning tidy results that plot straight through cograph.",
+      "url": "https://CRAN.R-project.org/package=psychnets",
+      "links": {
+        "read": "https://CRAN.R-project.org/package=psychnets"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::4",
+      "type": "news",
+      "date": "2026-05-13",
+      "tag": "Software",
+      "title": "lagdynamics: modern lag sequential analysis",
+      "blurb": "A tidy, pipe-friendly toolkit for lag sequential analysis of categorical event sequences. A single lsa() constructor fits classical, two-cell, bidirectional, and dominance engines; every result reads through a tidy verb; and a full confirmatory battery — bootstrap, Dirichlet–Multinomial certainty, split-half reliability, case-drop stability, permutation and Bayesian group comparison — quantifies the evidence behind each edge.",
+      "url": "https://github.com/mohsaqr/lagdynamics",
+      "links": {
+        "read": "https://github.com/mohsaqr/lagdynamics"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::5",
+      "type": "news",
+      "date": "2026-04-25",
+      "tag": "Software",
+      "title": "htna: Heterogeneous Transition Network Analysis in R",
+      "blurb": "The R package behind the Heterogeneous TNA papers. It models sequences that mix two or more actor groups (e.g. human and AI) within one interaction — a thin API over the Nestimate and cograph engines builds a transition network across the combined sequence while preserving the actor partition, so bootstrap, permutation, reliability, centrality and plotting treat each actor's codes as a distinct node group.",
+      "url": "https://sonsoles.me/htna/",
+      "links": {
+        "read": "https://sonsoles.me/htna/"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::6",
+      "type": "news",
+      "date": "2026-03-17",
+      "tag": "Software",
+      "title": "Nestimate: one engine for dynamic & psychological networks",
+      "blurb": "An R package to estimate, compare, and analyse dynamic and psychological networks through a unified interface — transition, frequency, co-occurrence and attention-weighted TNA estimation, psychometric methods (correlation, partial correlation, graphical lasso, Ising), and higher-order network methods — with bootstrap inference, permutation testing, split-half reliability, and centrality-stability analysis.",
+      "url": "https://github.com/mohsaqr/Nestimate",
+      "links": {
+        "read": "https://github.com/mohsaqr/Nestimate"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::7",
+      "type": "news",
+      "date": "2026-03-08",
+      "tag": "Software",
+      "title": "snakeplot: serpentine plots for long timelines",
+      "blurb": "A new R package for visualising long timelines, extended sequences, and temporally chained survey or experience-sampling data as intuitive serpentine ('snake') plots — with distribution bars, tick-mark plots, inter-item correlation arcs, faceted multi-construct panels, and time-of-day positioning for ecological momentary assessment data.",
+      "url": "https://github.com/mohsaqr/snakeplot",
+      "links": {
+        "read": "https://github.com/mohsaqr/snakeplot"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::8",
+      "type": "news",
+      "date": "2025-07-26",
+      "tag": "Software",
+      "title": "Saqrmisc: miscellaneous tools for data analysis",
+      "blurb": "A new R package of miscellaneous functions for data processing, statistical analysis, and visualisation — including model-based clustering with MoEClust, comparison plots with built-in statistical testing, and mosaic-plot analysis for categorical variables, wrapped in robust error handling and a friendly interface.",
+      "url": "https://github.com/mohsaqr/Saqrmisc",
+      "links": {
+        "read": "https://github.com/mohsaqr/Saqrmisc"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::9",
+      "type": "news",
+      "date": "2026-06-24",
+      "tag": "Paper",
+      "title": "Heterogeneous TNA: how AI feedback helps or hinders learning",
+      "blurb": "Out now in the Journal of Computer Assisted Learning. López-Pernas, Misiejuk & Saqr use Heterogeneous TNA to trace how first-grade students engage with real-time AI feedback while solving multimodal mathematics tasks — showing, process by process, when the feedback supports learning and when it gets in the way.",
+      "url": "https://doi.org/10.1002/jcal.70285",
+      "links": {
+        "read": "https://doi.org/10.1002/jcal.70285"
+      },
+      "tags": [
+        "news",
+        "paper"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::10",
+      "type": "news",
+      "date": "2026-04-29",
+      "tag": "Preprint",
+      "title": "Heterogeneous TNA: unpacking ‘vibe coding’ in student–AI programming",
+      "blurb": "A new preprint applies Heterogeneous TNA to 19,418 interaction turns from 110 undergraduates, framing AI-assisted ‘vibe coding’ as help-seeking. Top performers engage in instrumental inquiry and exploration that elicits tutor-like AI responses, while low performers fall into more passive patterns — a process-level contrast only the heterogeneous model surfaces.",
+      "url": "https://arxiv.org/abs/2604.27134",
+      "links": {
+        "read": "https://arxiv.org/abs/2604.27134"
+      },
+      "tags": [
+        "news",
+        "preprint"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::11",
+      "type": "news",
+      "date": "2026-06-18",
+      "tag": "Software",
+      "title": "transitiontrees is on CRAN",
+      "blurb": "Now available from CRAN, transitiontrees analyses how states follow one another and where pathways branch or converge. It models trajectories with variable-order prediction suffix trees — in both frequency- and prediction-based forms — and visualises them as transition trees, radial sunbursts, heatmaps, and forward-trajectory trees.",
+      "url": "https://CRAN.R-project.org/package=transitiontrees",
+      "links": {
+        "read": "https://CRAN.R-project.org/package=transitiontrees"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "REDIRECT",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::12",
+      "type": "news",
+      "date": "2026-04-16",
+      "tag": "Software",
+      "title": "cooccure: co-occurrence networks from any data",
+      "blurb": "A new R package that builds co-occurrence networks from delimited fields, long/bipartite tables, binary matrices, or wide sequences. It returns tidy edge tables with eight similarity measures — including Jaccard, cosine, and association strength — plus scaling, thresholding, splitting, and multi-format export.",
+      "url": "https://github.com/mohsaqr/cooccure",
+      "links": {
+        "read": "https://github.com/mohsaqr/cooccure"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::13",
+      "type": "news",
+      "date": "2026-04-15",
+      "tag": "Software",
+      "title": "bibnets: bibliometric networks in R",
+      "blurb": "A new R package for importing, constructing, and exporting bibliometric networks — reading Scopus, Web of Science, OpenAlex, Crossref, Lens, Dimensions, BibTeX and RIS exports. It goes beyond standard co-networks with attention-weighted edges, position-aware counting, temporal windows, disparity-filter backbones, and historiographs.",
+      "url": "https://github.com/mohsaqr/bibnets",
+      "links": {
+        "read": "https://github.com/mohsaqr/bibnets"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::14",
+      "type": "news",
+      "date": "2026-06-21",
+      "tag": "Paper",
+      "title": "The Dynalytics framework paper is out",
+      "blurb": "The preprint introducing Dynalytics — its family of models, the confirmatory testing battery, and the scientific-contract philosophy — is now available on SSRN.",
+      "url": "https://doi.org/10.2139/ssrn.6832584",
+      "links": {
+        "read": "https://doi.org/10.2139/ssrn.6832584"
+      },
+      "tags": [
+        "news",
+        "paper"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::15",
+      "type": "news",
+      "date": "2026-02-01",
+      "tag": "Paper",
+      "title": "Cognitive offloading in student–AI collaboration",
+      "blurb": "A longitudinal analysis of prompting strategies and cognitive offloading in student–AI collaboration, published in Computers in Human Behavior Reports.",
+      "url": "https://doi.org/10.1016/j.chbr.2026.101130",
+      "links": {
+        "read": "https://doi.org/10.1016/j.chbr.2026.101130"
+      },
+      "tags": [
+        "news",
+        "paper"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::16",
+      "type": "news",
+      "date": "2026-01-10",
+      "tag": "Software",
+      "title": "JTNA brings Transition Network Analysis to jamovi",
+      "blurb": "A point-and-click desktop module puts the full TNA workflow — build, plot, and statistically test transition networks — in the hands of non-programmers.",
+      "url": "https://sonsoles.me/extra/JTNA.html",
+      "links": {
+        "read": "https://sonsoles.me/extra/JTNA.html"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::17",
+      "type": "news",
+      "date": "2025-09-15",
+      "tag": "Funding",
+      "title": "CRETIC funded by the Research Council of Finland",
+      "blurb": "A new project on optimising clinical reasoning in time-critical scenarios, using learning-analytics methods from the ecosystem.",
+      "url": "https://sonsoles.me/posts/cretic/index.html",
+      "links": {
+        "read": "https://sonsoles.me/posts/cretic/index.html"
+      },
+      "tags": [
+        "news",
+        "funding"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::18",
+      "type": "news",
+      "date": "2025-06-10",
+      "tag": "Funding",
+      "title": "ISILA and IGLUE: two new Erasmus+ projects",
+      "blurb": "Erasmus+ funding for early-intervention learning analytics (ISILA) and game-based escape-room learning (IGLUE).",
+      "url": "https://sonsoles.me/posts/isila/index.html",
+      "links": {
+        "read": "https://sonsoles.me/posts/isila/index.html"
+      },
+      "tags": [
+        "news",
+        "funding"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::19",
+      "type": "news",
+      "date": "2025-03-30",
+      "tag": "Paper",
+      "title": "Transition Network Analysis introduced at LAK ’25",
+      "blurb": "The foundational TNA paper — a framework for modelling, visualising, and identifying the temporal patterns of learners and learning processes.",
+      "url": "https://doi.org/10.1145/3706468.3706513",
+      "links": {
+        "read": "https://doi.org/10.1145/3706468.3706513"
+      },
+      "tags": [
+        "news",
+        "paper"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "news::20",
+      "type": "news",
+      "date": "2026-07-26",
+      "tag": "Software",
+      "title": "CarmNote released: portable analysis in a single HTML file",
+      "blurb": "CarmNote is now available: a family of interactive, reproducible notebooks for transition and social network analysis. Each notebook is a self-contained HTML file that runs locally in a browser—even offline—keeping data, analysis, figures, results, and notes together. The first releases include CarmNote TNA and CarmNote SNA, with guided workflows and complete documentation.",
+      "url": "https://pak.dynasite.org/carmnotes",
+      "links": {
+        "read": "https://pak.dynasite.org/carmnotes"
+      },
+      "tags": [
+        "news",
+        "software"
+      ],
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "person::saqr",
+      "type": "person",
+      "title": "Mohammed Saqr",
+      "name": "Mohammed Saqr",
+      "role": "Professor of Learning Analytics and AI",
+      "affiliation": "University of Eastern Finland",
+      "blurb": "Research on precision education, transition network analysis, and complex systems in learning.",
+      "url": "https://saqr.me",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/prof_pic-480-copy.png",
+      "links": {
+        "site": "https://saqr.me"
+      },
+      "status": "VERIFIED",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "person::lopez-pernas",
+      "type": "person",
+      "title": "Sonsoles López-Pernas",
+      "name": "Sonsoles López-Pernas",
+      "role": "Academy Research Fellow",
+      "affiliation": "University of Eastern Finland",
+      "blurb": "Learning analytics, sequence and network methods, and reproducible research software.",
+      "url": "https://sonsoles.me",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/headshot.jpg",
+      "links": {
+        "site": "https://sonsoles.me"
+      },
+      "status": "BROKEN",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "person::misiejuk",
+      "type": "person",
+      "title": "Kamila Misiejuk",
+      "name": "Kamila Misiejuk",
+      "role": "Postdoctoral Researcher (CATALPA)",
+      "affiliation": "FernUniversität in Hagen",
+      "blurb": "Studies human–AI collaboration, quantitative ethnography, and learning analytics methods.",
+      "url": "https://kamilamisiejuk.com/",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2025/10/kamila-misiejuk-hw_500x600.jpg",
+      "links": {
+        "site": "https://kamilamisiejuk.com/"
+      },
+      "status": "BROKEN",
+      "last_checked": "2026-08-08"
+    },
+    {
+      "id": "person::oliveira",
+      "type": "person",
+      "title": "Eduardo Oliveira",
+      "name": "Eduardo Oliveira",
+      "role": "Senior Lecturer",
+      "affiliation": "The University of Melbourne",
+      "blurb": "Research on AI in education, learning analytics and natural language processing.",
+      "url": "https://www.eduoliveira.com/",
+      "photo": "https://sites.uef.fi/learning-analytics/wp-content/uploads/sites/444/2026/03/image.png",
+      "links": {
+        "site": "https://www.eduoliveira.com/"
+      },
+      "status": "BROKEN",
+      "last_checked": "2026-08-08"
     },
     {
       "id": "htna-index",
@@ -4179,7 +4950,7 @@
         "link": "https://sonsoles.me/htna/index.html"
       },
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "lamethods-home",
@@ -4197,7 +4968,7 @@
         "link": "https://lamethods.org/"
       },
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "saqr-site",
@@ -4216,7 +4987,7 @@
         "link": "https://saqr.me/"
       },
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     },
     {
       "id": "sonsoles-site",
@@ -4235,13 +5006,13 @@
         "link": "https://sonsoles.me/"
       },
       "status": "VERIFIED",
-      "last_checked": "2026-07-26"
+      "last_checked": "2026-08-08"
     }
   ],
-  "verified_at": "2026-07-26",
+  "verified_at": "2026-08-08",
   "link_summary": {
-    "verified": 228,
-    "redirect": 62,
-    "broken": 0
+    "verified": 271,
+    "redirect": 53,
+    "broken": 3
   }
 }
