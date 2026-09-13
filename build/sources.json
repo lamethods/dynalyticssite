@@ -606,7 +606,6 @@
       "dir": "tsn-main",
       "owner": "santikka",
       "docs": "https://pak.dynasite.org/tsn/",
-      "articles": false,
       "cran": false,
       "tags": [
         "time-series",
@@ -642,6 +641,48 @@
         "topic-modeling",
         "transformers",
         "onnx"
+      ]
+    },
+    {
+      "name": "hypernets",
+      "dir": "hypernets",
+      "owner": "mohsaqr",
+      "docs": "https://pak.dynasite.org/hypernets/",
+      "cran": false,
+      "tags": [
+        "higher-order",
+        "hypergraph",
+        "network",
+        "memory-networks",
+        "text"
+      ]
+    },
+    {
+      "name": "simulab",
+      "dir": "simulab",
+      "owner": "mohsaqr",
+      "docs": "https://pak.dynasite.org/simulab/",
+      "cran": false,
+      "tags": [
+        "simulation",
+        "synthetic-data",
+        "study-design",
+        "ground-truth",
+        "network"
+      ]
+    },
+    {
+      "name": "Dynet",
+      "dir": "temporal",
+      "owner": "mohsaqr",
+      "docs": "https://pak.dynasite.org/Dynet/",
+      "cran": false,
+      "tags": [
+        "temporal",
+        "network",
+        "dynamic",
+        "longitudinal",
+        "base-r"
       ]
     }
   ],

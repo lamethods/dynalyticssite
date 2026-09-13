@@ -418,6 +418,34 @@ const catalog = {
   entries
 };
 
+// --- taxonomy guard -------------------------------------------------------
+// assets/chord.js carries a hand-maintained package taxonomy (GROUPS + FOCUS)
+// that the ecosystem map draws from. It is NOT derived from the catalog, so a
+// package added to sources.json but not to both tables renders as a grey,
+// unconnected arc — a silent, output-only failure. Fail the build instead.
+const chordSrc = readFileSync(join(ROOT, "assets", "chord.js"), "utf8");
+const grouped = new Set(
+  [...chordSrc.matchAll(/pkgs:\s*\[([^\]]*)\]/g)]
+    .flatMap((m) => [...m[1].matchAll(/"([^"]+)"/g)].map((x) => x[1]))
+);
+const focusBlock = chordSrc.match(/var FOCUS = \{([\s\S]*?)\n\s*\};/);
+const focused = new Set(
+  focusBlock ? [...focusBlock[1].matchAll(/^\s*([A-Za-z0-9_.]+):/gm)].map((m) => m[1]) : []
+);
+const orphans = packageEntries
+  .filter((p) => p.type === "package")
+  .map((p) => p.id)
+  .filter((id) => !grouped.has(id) || !focused.has(id))
+  .map((id) => `${id} (${!grouped.has(id) ? "GROUPS" : ""}${!grouped.has(id) && !focused.has(id) ? " + " : ""}${!focused.has(id) ? "FOCUS" : ""})`);
+if (orphans.length) {
+  console.error(
+    `\nassets/chord.js taxonomy is missing ${orphans.length} package(s):\n  ` +
+    orphans.join("\n  ") +
+    `\nAdd each to GROUPS[].pkgs and to FOCUS in assets/chord.js, then rebuild.\n`
+  );
+  process.exit(1);
+}
+
 writeFileSync(join(ROOT, "catalog.json"), JSON.stringify(catalog, null, 2) + "\n");
 writeFileSync(join(ROOT, "assets", "catalog.js"), "window.CATALOG = " + JSON.stringify(catalog) + ";\n");
 console.log(`Wrote catalog.json\n  total=${entries.length} packages=${count("package")} vignettes=${count("vignette")} posts=${count("post")} chapters=${count("chapter")}`);
