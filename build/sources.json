@@ -673,7 +673,7 @@
     },
     {
       "name": "Dynet",
-      "dir": "temporal",
+      "dir": "temporal-next",
       "owner": "mohsaqr",
       "docs": "https://pak.dynasite.org/Dynet/",
       "cran": false,
@@ -682,6 +682,21 @@
         "network",
         "dynamic",
         "longitudinal",
+        "base-r"
+      ]
+    },
+    {
+      "name": "latents",
+      "dir": "multiLPA",
+      "owner": "mohsaqr",
+      "docs": "https://pak.dynasite.org/latents/",
+      "cran": false,
+      "tags": [
+        "latent profile",
+        "latent class",
+        "latent transition",
+        "mixture",
+        "multilevel",
         "base-r"
       ]
     }

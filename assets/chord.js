@@ -10,7 +10,7 @@
   var GROUPS = [
     { key: "networks",  label: "Networks",      color: "#1f5fa8", pkgs: ["tna", "htna", "Nestimate", "cooccure", "cograph", "bibnets", "psychnets", "idiographic", "hypernets", "Dynet"] },
     { key: "dynamics",  label: "Dynamics",      color: "#c0392b", pkgs: ["codyna", "tsn", "Saqrlab", "simulab"] },
-    { key: "sequences", label: "Sequences",     color: "#1e8449", pkgs: ["transitiontrees", "lagdynamics", "snakeplot", "VaSStra"] },
+    { key: "sequences", label: "Sequences",     color: "#1e8449", pkgs: ["transitiontrees", "lagdynamics", "snakeplot", "VaSStra", "latents"] },
     { key: "text",      label: "Text & synthesis", color: "#7d3c98", pkgs: ["sbert", "litReview"] },
     { key: "utilities", label: "Utilities",     color: "#7f8c8d", pkgs: ["Saqrmisc"] }
   ];
@@ -38,7 +38,8 @@
     Saqrmisc:        ["visualization", "clustering"],
     hypernets:       ["networks", "higher-order", "sequences", "text"],
     Dynet:           ["networks", "dynamics", "time series"],
-    simulab:         ["simulation", "validation", "networks", "sequences"]
+    simulab:         ["simulation", "validation", "networks", "sequences"],
+    latents:         ["clustering", "dynamics", "sequences", "psychometrics"]
   };
   function titleCase(s) { return s.replace(/\b\w/g, function (c) { return c.toUpperCase(); }); }
   function focusOf(id) { return FOCUS[id] || []; }
