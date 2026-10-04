@@ -687,7 +687,7 @@
     },
     {
       "name": "latents",
-      "dir": "multiLPA",
+      "dir": "latents",
       "owner": "mohsaqr",
       "docs": "https://pak.dynasite.org/latents/",
       "cran": false,
