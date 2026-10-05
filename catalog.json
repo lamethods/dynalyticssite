@@ -3613,7 +3613,7 @@
         "reference": "https://pak.dynasite.org/sbert/reference/",
         "articles": "https://pak.dynasite.org/sbert/articles/"
       },
-      "version": "0.5.5",
+      "version": "0.5.6",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
