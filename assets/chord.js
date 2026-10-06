@@ -8,7 +8,7 @@
   // "Other" block, and one absent from FOCUS below draws no ribbons at all, so
   // both tables must be extended whenever a package is added to sources.json.
   var GROUPS = [
-    { key: "networks",  label: "Networks",      color: "#1f5fa8", pkgs: ["tna", "htna", "Nestimate", "cooccure", "cograph", "bibnets", "psychnets", "idiographic", "hypernets", "Dynet"] },
+    { key: "networks",  label: "Networks",      color: "#1f5fa8", pkgs: ["tna", "htna", "Nestimate", "cooccure", "cograph", "bibnets", "psychnets", "idiographic", "hypernets", "hypergraphs", "Dynet"] },
     { key: "dynamics",  label: "Dynamics",      color: "#c0392b", pkgs: ["codyna", "tsn", "Saqrlab", "simulab"] },
     { key: "sequences", label: "Sequences",     color: "#1e8449", pkgs: ["transitiontrees", "lagdynamics", "snakeplot", "VaSStra", "latents"] },
     { key: "text",      label: "Text & synthesis", color: "#7d3c98", pkgs: ["sbert", "litReview"] },
@@ -37,6 +37,7 @@
     litReview:       ["text", "bibliometrics", "visualization"],
     Saqrmisc:        ["visualization", "clustering"],
     hypernets:       ["networks", "higher-order", "sequences", "text"],
+    hypergraphs:     ["networks", "higher-order", "sequences", "text"],
     Dynet:           ["networks", "dynamics", "time series"],
     simulab:         ["simulation", "validation", "networks", "sequences"],
     latents:         ["clustering", "dynamics", "sequences", "psychometrics"]

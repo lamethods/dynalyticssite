@@ -658,6 +658,20 @@
       ]
     },
     {
+      "name": "hypergraphs",
+      "dir": "hypergraphs",
+      "owner": "mohsaqr",
+      "docs": "https://pak.dynasite.org/hypergraphs/",
+      "cran": false,
+      "tags": [
+        "higher-order",
+        "hypergraph",
+        "network",
+        "memory-networks",
+        "text"
+      ]
+    },
+    {
       "name": "simulab",
       "dir": "simulab",
       "owner": "mohsaqr",
