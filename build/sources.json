@@ -562,19 +562,6 @@
       ]
     },
     {
-      "name": "Saqrmisc",
-      "dir": "Saqrmisc",
-      "owner": "mohsaqr",
-      "docs": "https://pak.dynasite.org/Saqrmisc/",
-      "cran": false,
-      "tags": [
-        "utilities",
-        "clustering",
-        "visualization",
-        "MoEClust"
-      ]
-    },
-    {
       "name": "Saqrlab",
       "dir": "Saqrlab",
       "owner": "mohsaqr",
@@ -644,20 +631,6 @@
       ]
     },
     {
-      "name": "hypernets",
-      "dir": "hypernets",
-      "owner": "mohsaqr",
-      "docs": "https://pak.dynasite.org/hypernets/",
-      "cran": false,
-      "tags": [
-        "higher-order",
-        "hypergraph",
-        "network",
-        "memory-networks",
-        "text"
-      ]
-    },
-    {
       "name": "hypergraphs",
       "dir": "hypergraphs",
       "owner": "mohsaqr",
@@ -686,11 +659,25 @@
       ]
     },
     {
+      "name": "dynarules",
+      "dir": "dynarules",
+      "owner": "mohsaqr",
+      "docs": "https://pak.dynasite.org/dynarules/",
+      "cran": false,
+      "tags": [
+        "association-rules",
+        "sequential-patterns",
+        "apriori",
+        "event-log",
+        "temporal"
+      ]
+    },
+    {
       "name": "Dynet",
       "dir": "temporal-next",
       "owner": "mohsaqr",
       "docs": "https://pak.dynasite.org/Dynet/",
-      "cran": false,
+      "cran": true,
       "tags": [
         "temporal",
         "network",
