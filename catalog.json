@@ -51,9 +51,9 @@
     ]
   },
   "counts": {
-    "total": 301,
-    "packages": 22,
-    "vignettes": 166,
+    "total": 294,
+    "packages": 21,
+    "vignettes": 160,
     "posts": 20,
     "chapters": 44,
     "news": 21
@@ -291,7 +291,7 @@
       },
       "logo": "https://sonsoles.me/cograph/logo.png",
       "cran_version": "2.7.2",
-      "version": "2.7.6",
+      "version": "2.7.7",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -2820,170 +2820,6 @@
       "last_checked": null
     },
     {
-      "id": "Saqrlab",
-      "type": "package",
-      "title": "Saqrlab — Simulation and Analysis for Temporal Network Analysis",
-      "blurb": "A data-simulation laboratory for temporal network analysis (TNA) and behavioural-science methods research. Generates synthetic datasets whose generating parameters are known, so an estimator can be scored against the truth that produced the data. Two entry points are provided. The explicit-parameter simulators take the ground truth as arguments and return a 'saqr_sim' object carrying both the data and those parameters: t-test, ANOVA, correlation, cluster, regression, latent profile, latent class, factor analysis, multilevel, latent growth, item response, survival, hidden Markov and VAR(1) longitudinal models. The random-parameter entry point simulate_data derives structure and data jointly from a seed for stress and robustness testing, with optional injection of edge cases, and returns a bare data frame. Companion tools simulate TNA sequences, transition matrices and network structures, inject MCAR/MAR/MNAR missingness, and score parameter recovery.",
-      "url": "https://pak.dynasite.org/Saqrlab/",
-      "links": {
-        "github": "https://github.com/mohsaqr/Saqrlab",
-        "docs": "https://pak.dynasite.org/Saqrlab/",
-        "reference": "https://pak.dynasite.org/Saqrlab/reference/",
-        "articles": "https://pak.dynasite.org/Saqrlab/articles/"
-      },
-      "version": "0.4.1",
-      "authors": [
-        "Mohammed Saqr"
-      ],
-      "owner": "mohsaqr",
-      "tags": [
-        "simulation",
-        "TNA",
-        "synthetic-data",
-        "markov"
-      ],
-      "status": "UNVERIFIED",
-      "last_checked": null
-    },
-    {
-      "id": "Saqrlab::bootstrap-power",
-      "type": "vignette",
-      "title": "Bootstrap and Power Analysis",
-      "blurb": "Article on the Saqrlab documentation site.",
-      "url": "https://pak.dynasite.org/Saqrlab/articles/bootstrap-power.html",
-      "links": {
-        "article": "https://pak.dynasite.org/Saqrlab/articles/bootstrap-power.html"
-      },
-      "date": "2026-10-08",
-      "owner": "mohsaqr",
-      "tags": [
-        "Saqrlab",
-        "article",
-        "simulation"
-      ],
-      "packages": [
-        "Saqrlab"
-      ],
-      "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
-    },
-    {
-      "id": "Saqrlab::htna-mlna",
-      "type": "vignette",
-      "title": "Hierarchical and Multilevel Network Analysis",
-      "blurb": "Article on the Saqrlab documentation site.",
-      "url": "https://pak.dynasite.org/Saqrlab/articles/htna-mlna.html",
-      "links": {
-        "article": "https://pak.dynasite.org/Saqrlab/articles/htna-mlna.html"
-      },
-      "date": "2026-10-08",
-      "owner": "mohsaqr",
-      "tags": [
-        "Saqrlab",
-        "article",
-        "simulation"
-      ],
-      "packages": [
-        "Saqrlab"
-      ],
-      "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
-    },
-    {
-      "id": "Saqrlab::introduction",
-      "type": "vignette",
-      "title": "Introduction to Saqrlab",
-      "blurb": "Article on the Saqrlab documentation site.",
-      "url": "https://pak.dynasite.org/Saqrlab/articles/introduction.html",
-      "links": {
-        "article": "https://pak.dynasite.org/Saqrlab/articles/introduction.html"
-      },
-      "date": "2026-10-08",
-      "owner": "mohsaqr",
-      "tags": [
-        "Saqrlab",
-        "article",
-        "simulation"
-      ],
-      "packages": [
-        "Saqrlab"
-      ],
-      "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
-    },
-    {
-      "id": "Saqrlab::learning-states",
-      "type": "vignette",
-      "title": "Learning States Reference",
-      "blurb": "Article on the Saqrlab documentation site.",
-      "url": "https://pak.dynasite.org/Saqrlab/articles/learning-states.html",
-      "links": {
-        "article": "https://pak.dynasite.org/Saqrlab/articles/learning-states.html"
-      },
-      "date": "2026-10-08",
-      "owner": "mohsaqr",
-      "tags": [
-        "Saqrlab",
-        "article",
-        "simulation"
-      ],
-      "packages": [
-        "Saqrlab"
-      ],
-      "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
-    },
-    {
-      "id": "Saqrlab::simulation-guide",
-      "type": "vignette",
-      "title": "Complete Simulation Guide",
-      "blurb": "Article on the Saqrlab documentation site.",
-      "url": "https://pak.dynasite.org/Saqrlab/articles/simulation-guide.html",
-      "links": {
-        "article": "https://pak.dynasite.org/Saqrlab/articles/simulation-guide.html"
-      },
-      "date": "2026-10-08",
-      "owner": "mohsaqr",
-      "tags": [
-        "Saqrlab",
-        "article",
-        "simulation"
-      ],
-      "packages": [
-        "Saqrlab"
-      ],
-      "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
-    },
-    {
-      "id": "Saqrlab::tna-workflow",
-      "type": "vignette",
-      "title": "End-to-End TNA Workflow",
-      "blurb": "Article on the Saqrlab documentation site.",
-      "url": "https://pak.dynasite.org/Saqrlab/articles/tna-workflow.html",
-      "links": {
-        "article": "https://pak.dynasite.org/Saqrlab/articles/tna-workflow.html"
-      },
-      "date": "2026-10-08",
-      "owner": "mohsaqr",
-      "tags": [
-        "Saqrlab",
-        "article",
-        "simulation"
-      ],
-      "packages": [
-        "Saqrlab"
-      ],
-      "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
-    },
-    {
       "id": "psychnets",
       "type": "package",
       "title": "psychnets — Tidy Clean-Room Psychological Network Modeling",
@@ -3661,7 +3497,7 @@
         "reference": "https://pak.dynasite.org/hypergraphs/reference/",
         "articles": "https://pak.dynasite.org/hypergraphs/articles/"
       },
-      "version": "0.7.3",
+      "version": "0.7.4",
       "authors": [
         "Mohammed Saqr"
       ],

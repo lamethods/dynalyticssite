@@ -9,7 +9,7 @@
   // both tables must be extended whenever a package is added to sources.json.
   var GROUPS = [
     { key: "networks",  label: "Networks",      color: "#1f5fa8", pkgs: ["tna", "htna", "Nestimate", "cooccure", "cograph", "bibnets", "psychnets", "idiographic", "hypergraphs", "Dynet"] },
-    { key: "dynamics",  label: "Dynamics",      color: "#c0392b", pkgs: ["codyna", "tsn", "Saqrlab", "simulab", "dynarules"] },
+    { key: "dynamics",  label: "Dynamics",      color: "#c0392b", pkgs: ["codyna", "tsn", "simulab", "dynarules"] },
     { key: "sequences", label: "Sequences",     color: "#1e8449", pkgs: ["transitiontrees", "lagdynamics", "snakeplot", "VaSStra", "latents"] },
     { key: "text",      label: "Text & synthesis", color: "#7d3c98", pkgs: ["sbert", "litReview"] }
   ];
@@ -31,7 +31,6 @@
     lagdynamics:     ["sequences", "dynamics", "validation"],
     snakeplot:       ["sequences", "visualization"],
     VaSStra:         ["sequences", "clustering", "dynamics"],
-    Saqrlab:         ["dynamics", "simulation", "validation"],
     sbert:           ["text", "embeddings", "clustering"],
     litReview:       ["text", "bibliometrics", "visualization"],
     hypergraphs:     ["networks", "higher-order", "sequences", "text"],

@@ -562,19 +562,6 @@
       ]
     },
     {
-      "name": "Saqrlab",
-      "dir": "Saqrlab",
-      "owner": "mohsaqr",
-      "docs": "https://pak.dynasite.org/Saqrlab/",
-      "cran": false,
-      "tags": [
-        "simulation",
-        "TNA",
-        "synthetic-data",
-        "markov"
-      ]
-    },
-    {
       "name": "psychnets",
       "dir": "psychnets",
       "owner": "mohsaqr",
