@@ -15,3 +15,4 @@ tmp/
 
 # studio (local editor) — secret/credentials never committed
 .studio-auth.json
+.playwright-mcp/
