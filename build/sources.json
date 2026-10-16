@@ -170,6 +170,55 @@
   ],
   "news": [
     {
+      "date": "2026-10-16",
+      "tag": "Software",
+      "title": "latents is on CRAN",
+      "blurb": "Multilevel latent profile, latent class and latent transition models for continuous, categorical and mixed-type variables, estimated by expectation-maximization with missing-data handling and standard and robust standard errors. Model selection uses information criteria, entropy, classification diagnostics and a parametric bootstrap likelihood ratio test; covariates enter through three-step methods that correct for classification error, and latent transition models plug straight into tna.",
+      "url": "https://CRAN.R-project.org/package=latents"
+    },
+    {
+      "date": "2026-10-16",
+      "tag": "Website",
+      "title": "Search the whole ecosystem, down to every function",
+      "blurb": "The Dynalytics search (press / or ⌘K) now covers all 1,605 documented functions across 21 packages, alongside packages, articles, tutorials, book chapters, papers and people. It forgives typos and accents, matches parts of function names, and filters results by type; a search can be shared as a link.",
+      "url": "https://dynasite.org/?q=bootstrap"
+    },
+    {
+      "date": "2026-10-15",
+      "tag": "Software",
+      "title": "simulab is on CRAN",
+      "blurb": "Simulates a wide variety of data shapes, sizes and distributions with known parameters, so their recovery can be tested: declared variables with treatment assignment and missing values, correlated and clustered data, latent profile, class, factor and item response models, longitudinal and multilevel processes, survival times with competing risks, state sequences, and static, bipartite, multiplex, temporal and transition networks. Simulated transition networks are native tna models.",
+      "url": "https://CRAN.R-project.org/package=simulab"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "Software",
+      "title": "Dynet is on CRAN",
+      "blurb": "Tidy temporal network analysis: build, analyse and visualise networks from interval data, instantaneous contacts, threaded interactions such as forum or chat data, and co-presence logs. Every analysis returns a tidy data frame — time-varying centrality, graph-level structure, edge formation and dissolution, burstiness, time-respecting paths, reachability and mixing — with network visualisations and animations over time.",
+      "url": "https://CRAN.R-project.org/package=Dynet"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "Software",
+      "title": "New CRAN releases: tna 1.3.1, cograph 2.7.2 and Nestimate 0.9.24",
+      "blurb": "Three of the core packages have new versions on CRAN: tna 1.3.1 (28 September), cograph 2.7.2 (30 September) and Nestimate 0.9.24 (7 October). Update with install.packages(c(\"tna\", \"cograph\", \"Nestimate\")); each documentation site lists what changed.",
+      "url": "https://dynasite.org/#/package-sites"
+    },
+    {
+      "date": "2026-07-21",
+      "tag": "Software",
+      "title": "lagdynamics is on CRAN",
+      "blurb": "A modern, tidy toolkit for lag sequential analysis and lag transition networks of categorical event and sequence data, with confirmatory tools for uncertainty, robustness and group differences: bootstrap intervals, analytic certainty, split-half reliability, case-drop stability, permutation tests and Bayesian group comparisons.",
+      "url": "https://CRAN.R-project.org/package=lagdynamics"
+    },
+    {
+      "date": "2026-07-06",
+      "tag": "Software",
+      "title": "htna is on CRAN",
+      "blurb": "Heterogeneous Transition Network Analysis extends TNA to events from two or more distinct actor types — for example human and AI — and keeps that partition in the network, so bootstrap, permutation, reliability, centrality and plotting treat each actor's codes as a distinct node group.",
+      "url": "https://CRAN.R-project.org/package=htna"
+    },
+    {
       "date": "2026-08-07",
       "tag": "Book",
       "title": "TNA 2026 proceedings published by Springer",

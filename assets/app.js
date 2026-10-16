@@ -962,7 +962,7 @@
       fields: {
         name: name,
         title: e.title || "",
-        tags: [(e.tags || []).join(" "), pkgsOf(e).join(" "), e.kind, e.owner, authors, e.venue, e.year, e.role, e.affiliation, e.volume]
+        tags: [(e.tags || []).join(" "), pkgsOf(e).join(" "), e.kind, e.tag, e.owner, authors, e.venue, e.year, e.role, e.affiliation, e.volume]
           .filter(Boolean).join(" "),
         text: e.blurb || ""
       }
