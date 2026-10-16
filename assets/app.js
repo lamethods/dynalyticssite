@@ -27,6 +27,13 @@
   function pkgsOf(e) { var p = e.packages; return !p ? [] : (Array.isArray(p) ? p : [p]); }
   function by(type, id) { return S.all.filter(function (e) { return e.type === type && pkgsOf(e).indexOf(id) >= 0; }); }
   function ofType(t) { return S.all.filter(function (e) { return e.type === t; }); }
+  // exact id first; then case-insensitively, so links made before a rename that only
+  // changed case (VaSStra -> VaSSTra) still resolve
+  function packageById(id) {
+    if (S.byId[id] && S.byId[id].type === "package") return S.byId[id];
+    var low = String(id).toLowerCase();
+    return S.packages.filter(function (p) { return p.id.toLowerCase() === low; })[0] || null;
+  }
   function subtitleOf(p) { var t = p.title || ""; var i = t.indexOf("—"); return i >= 0 ? t.slice(i + 1).trim() : (p.blurb || ""); }
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   function fmtDate(d) { var m = String(d || "").match(/^(\d{4})-(\d{2})/); return m ? MONTHS[(+m[2]) - 1] + " " + m[1] : (d || ""); }
@@ -54,6 +61,7 @@
     S.all.forEach(function (e) { S.byId[e.id] = e; });
     S.packages = S.all.filter(function (e) { return e.type === "package"; });
     S.about = cat.about || null;
+    S.functionsVersion = cat.functions_version || "";
     var gen = document.getElementById("generated");
     if (gen) gen.textContent = cat.verified_at || cat.generated_at || "";
     buildNav();
@@ -115,7 +123,8 @@
     var view = document.getElementById("view");
     window.scrollTo(0, 0);
     var m = h.match(/^pkg\/([^/]+)(?:\/(tutorials|articles|blogs|book))?$/);
-    if (m && S.byId[decodeURIComponent(m[1])]) { setActive(null); var pk = S.byId[decodeURIComponent(m[1])]; setTitle(pk.id); renderPackage(view, pk, m[2]); return; }
+    var pk = m && packageById(decodeURIComponent(m[1]));
+    if (pk) { setActive(null); setTitle(pk.id); renderPackage(view, pk, m[2]); return; }
     var mp = h.match(/^people\/(.+)$/);
     if (mp) { setActive("people"); setTitle("People"); renderPeople(view, decodeURIComponent(mp[1])); return; }
     var mw = h.match(/^writing(?:\/(tutorials|articles|blogs))?$/);
@@ -527,7 +536,7 @@
     view.appendChild(empty);
 
     var activeFilter = "all";
-    var query = "";
+    var query = [];
     packages.sort(function (a, b) {
       return (a.links.cran ? 0 : 1) - (b.links.cran ? 0 : 1)
         || a.id.localeCompare(b.id, undefined, { sensitivity: "base" });
@@ -541,9 +550,9 @@
         if (activeFilter === "cran" && !onCran) return false;
         if (activeFilter === "development" && onCran) return false;
         if (activeFilter === "articles" && !articles) return false;
-        if (!query) return true;
-        return [entry.id, entry.title, entry.blurb, (entry.tags || []).join(" ")]
-          .join(" ").toLowerCase().indexOf(query) >= 0;
+        if (!query.length) return true;
+        var hay = fold([entry.id, entry.title, entry.blurb, (entry.tags || []).join(" "), (entry.authors || []).join(" ")].join(" "));
+        return query.every(function (t) { return hay.indexOf(t) >= 0; });
       });
       shown.forEach(function (entry) {
         grid.appendChild(packageSiteCard(entry, articleCounts[entry.id] || 0));
@@ -561,7 +570,7 @@
       renderCards();
     });
     input.addEventListener("input", function () {
-      query = input.value.trim().toLowerCase();
+      query = queryTokens(input.value);
       renderCards();
     });
     renderCards();
@@ -863,23 +872,71 @@
   }
 
   /* ---------- search command palette (⌘K / /) ---------- */
+  // A small field-weighted search engine over the catalog plus every package's
+  // function reference (assets/functions.js, loaded on first use). It folds case
+  // and accents ("lopez" finds López-Pernas), knows identifiers ("build model"
+  // finds build_model()), matches prefixes while typing, and tolerates a typo
+  // (one edit; two for words of 8+ letters), so "bootsrap" still finds bootstrap.
   var TYPE_LABEL = {
-    package: "Package", person: "Person", paper: "Paper", news: "News",
+    package: "Package", person: "Person", paper: "Paper", news: "News", "function": "Function",
     tool: "Tool", vignette: "Article", post: "Tutorial", chapter: "Chapter",
     book: "Book", docsite: "Doc site", site: "Site"
   };
-  var TYPE_RANK = { package: 0, person: 1, paper: 2, tool: 3, post: 4, chapter: 5, vignette: 6, news: 7, book: 8, docsite: 9, site: 9 };
-  var TYPE_BOOST = { package: 1, person: 0.8, tool: 0.4, paper: 0.3 };
-  var _cmdkIndex = null, _cmdk = null, _cmdkActive = 0, _cmdkRows = [];
+  var TYPE_PLURAL = {
+    package: "Packages", "function": "Functions", vignette: "Articles", post: "Tutorials & posts",
+    chapter: "Chapters", paper: "Papers", person: "People", tool: "Tools", news: "News", book: "Books", site: "Sites"
+  };
+  var TYPE_RANK = { package: 0, "function": 1, person: 2, paper: 3, tool: 4, post: 5, chapter: 6, vignette: 7, news: 8, book: 9, docsite: 10, site: 10 };
+  // Percent added to an item's match score. Multiplicative on purpose: an additive
+  // boost let a package that merely mentions a word in its blurb outrank a function
+  // named after it. A boost scales relevance; it never substitutes for it.
+  var TYPE_BOOST = { package: 30, person: 20, tool: 10, paper: 8, "function": 5, post: 5, vignette: 5, chapter: 3 };
+  var FIELD_WEIGHT = { name: 10, title: 6, tags: 3, text: 1 };
+  var STOPWORDS = { a: 1, an: 1, and: 1, the: 1, of: 1, "for": 1, "in": 1, to: 1, "with": 1, on: 1, by: 1, how: 1, is: 1, r: 1 };
+  var SUGGESTIONS = ["splot", "bootstrap", "sequence analysis", "López-Pernas", "psychological network", "latent profile"];
+  var RESULT_LIMIT = 60;
+  var _idx = null, _cmdk = null, _cmdkActive = 0, _cmdkRows = [], _cmdkFilter = "all";
+  var _fnState = "idle";
 
-  function buildSearchIndex() {
-    _cmdkIndex = S.all.map(function (e) {
-      var name = e.name || "";
-      var hay = [e.title, name, e.blurb, (e.tags || []).join(" "), e.type, e.kind, e.authors, e.owner]
-        .filter(Boolean).join(" ").toLowerCase();
-      return { e: e, hay: hay, title: (e.title || name || e.id || "").toLowerCase() };
+  function fold(s) { return String(s == null ? "" : s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function trimWord(w) { return w.replace(/^[._]+|[._]+$/g, ""); }
+  // whole identifiers (build_model, splot.netobject) plus their parts
+  function wordsOf(s) {
+    var out = [];
+    fold(s).split(/[^a-z0-9_.]+/).forEach(function (w) {
+      w = trimWord(w);
+      if (!w) return;
+      out.push(w);
+      if (/[._]/.test(w)) w.split(/[._]+/).forEach(function (p) { if (p) out.push(p); });
     });
+    return out;
   }
+  function queryTokens(q) {
+    var all = fold(q).split(/[^a-z0-9_.]+/).map(trimWord).filter(Boolean);
+    var content = all.filter(function (w) { return !STOPWORDS[w]; });
+    return content.length ? content : all;
+  }
+  // Damerau–Levenshtein (optimal string alignment) distance, true when <= k.
+  // Exits as soon as a whole row exceeds k, so non-matches are cheap.
+  function withinEdits(a, b, k) {
+    if (Math.abs(a.length - b.length) > k) return false;
+    var prev2 = null, prev = [], cur, i, j;
+    for (j = 0; j <= b.length; j++) prev[j] = j;
+    for (i = 1; i <= a.length; i++) {
+      cur = [i];
+      var rowMin = i;
+      for (j = 1; j <= b.length; j++) {
+        var v = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) v = Math.min(v, prev2[j - 2] + 1);
+        cur[j] = v;
+        if (v < rowMin) rowMin = v;
+      }
+      if (rowMin > k) return false;
+      prev2 = prev; prev = cur;
+    }
+    return prev[b.length] <= k;
+  }
+
   function searchTarget(e) {
     if (e.type === "package") return { hash: "#/pkg/" + encodeURIComponent(e.id) };
     if (e.type === "person") return { hash: "#/people/" + encodeURIComponent(e.id) };
@@ -887,53 +944,212 @@
     return { url: url };
   }
   function searchSub(e) {
-    if (e.type === "package") return subtitleOf(e);
+    if (e.type === "package") return subtitleOf(e) + (e.links && e.links.cran ? " · on CRAN" : "");
     if (e.type === "person") return [e.role, e.affiliation].filter(Boolean).join(" · ");
     if (e.type === "chapter") return e.volume ? e.volume.replace(/—.*/, "").trim() + " · " + (e.blurb || "") : (e.blurb || "");
+    if (e.type === "vignette") return pkgsOf(e).join(", ") + " · article";
     return e.blurb || "";
   }
+  function entryItem(e) {
+    var name = e.type === "package" ? e.id : (e.name || "");
+    var authors = Array.isArray(e.authors) ? e.authors.join(" ") : e.authors;
+    return {
+      type: e.type === "docsite" ? "site" : e.type,
+      title: e.title || e.name || e.id,
+      sub: searchSub(e),
+      target: searchTarget(e),
+      keys: [fold(name || e.title || e.id)],
+      fields: {
+        name: name,
+        title: e.title || "",
+        tags: [(e.tags || []).join(" "), pkgsOf(e).join(" "), e.kind, e.owner, authors, e.venue, e.year, e.role, e.affiliation, e.volume]
+          .filter(Boolean).join(" "),
+        text: e.blurb || ""
+      }
+    };
+  }
+  // f = { p: package, n: [aliases], t: topic title, u: page under <docs>/reference/ }
+  function functionItem(f) {
+    var pkg = S.byId[f.p], ref = pkg && pkg.links && pkg.links.reference;
+    if (!ref || !f.n || !f.n.length) return null;
+    var bare = f.n.map(function (n) { return n.replace(/\(\)$/, ""); });
+    var main = f.n[Math.max(0, bare.indexOf(f.u.replace(/\.html$/, "")))];
+    var others = f.n.filter(function (n) { return n !== main; });
+    return {
+      type: "function",
+      title: main,
+      sub: f.p + " · " + f.t + (others.length ? " · also " + others.slice(0, 4).join(", ") + (others.length > 4 ? "…" : "") : ""),
+      target: { url: ref + f.u },
+      keys: bare.map(fold),
+      fields: { name: f.n.join(" "), title: f.t, tags: f.p, text: "" }
+    };
+  }
+  function buildSearchIndex() {
+    var items = S.all.map(entryItem)
+      .concat((window.DYNASITE_FUNCTIONS || []).map(functionItem).filter(Boolean));
+    // inverted index: word -> { itemIndex: heaviest field weight it appears in }
+    var vocab = Object.create(null);
+    items.forEach(function (it, i) {
+      Object.keys(FIELD_WEIGHT).forEach(function (field) {
+        var w = FIELD_WEIGHT[field];
+        wordsOf(it.fields[field]).forEach(function (word) {
+          var post = vocab[word] || (vocab[word] = Object.create(null));
+          if (!(post[i] >= w)) post[i] = w;
+        });
+      });
+      it.phrase = fold(it.title + " " + it.fields.title);
+    });
+    _idx = { items: items, vocab: vocab, words: Object.keys(vocab) };
+  }
+  // every vocabulary word a query token can stand for, with a match quality in (0, 1]
+  function tokenMatches(tok, isLast) {
+    var k = tok.length >= 8 ? 2 : (tok.length >= 4 ? 1 : 0);
+    var out = [];
+    _idx.words.forEach(function (w) {
+      var q = 0;
+      if (w === tok) q = 1;
+      else if (w.indexOf(tok) === 0) q = isLast ? 0.85 : 0.7;      // still typing
+      else if (tok.length >= 3 && w.indexOf(tok) > 0) q = 0.4;     // inside a word
+      else if (k && withinEdits(tok, w, k)) q = 0.45;              // a typo
+      if (q) out.push([w, q]);
+    });
+    return out;
+  }
+  function browseItems() {
+    return _idx.items.filter(function (it) { return it.type === "package" || it.type === "person" || it.type === "tool"; });
+  }
+  // -> { items: ranked hits, partial: true when no item matched every word }
   function runSearch(q) {
-    q = (q || "").trim().toLowerCase();
-    var items;
-    if (!q) {
-      // empty query → a useful default browse: packages, then people, then tools
-      items = _cmdkIndex.filter(function (it) { return ["package", "person", "tool"].indexOf(it.e.type) >= 0; });
-    } else {
-      var toks = q.split(/\s+/);
-      items = _cmdkIndex.map(function (it) {
-        var score = 0;
-        for (var i = 0; i < toks.length; i++) {
-          var t = toks[i];
-          if (it.hay.indexOf(t) < 0) return null;        // AND across tokens
-          // widely spaced tiers so a title match always beats a blurb/tag match,
-          // and the small per-type boost only breaks near-ties.
-          score += it.title.indexOf(t) === 0 ? 10 : (it.title.indexOf(t) >= 0 ? 6 : 2);
-        }
-        return { it: it, score: score + (TYPE_BOOST[it.e.type] || 0) };
-      }).filter(Boolean)
-        .sort(function (a, b) { return b.score - a.score || (TYPE_RANK[a.it.e.type] - TYPE_RANK[b.it.e.type]); })
-        .map(function (x) { return x.it; });
+    var toks = queryTokens(q);
+    if (!toks.length) return { items: browseItems(), toks: [], partial: false };
+    var perToken = toks.map(function (t, ti) {
+      var best = Object.create(null);
+      tokenMatches(t, ti === toks.length - 1).forEach(function (m) {
+        var post = _idx.vocab[m[0]];
+        for (var i in post) { var s = post[i] * m[1]; if (!(best[i] >= s)) best[i] = s; }
+      });
+      return best;
+    });
+    var score = Object.create(null), hits = Object.create(null);
+    perToken.forEach(function (best) {
+      for (var i in best) { score[i] = (score[i] || 0) + best[i]; hits[i] = (hits[i] || 0) + 1; }
+    });
+    var ids = Object.keys(score).filter(function (i) { return hits[i] === toks.length; });
+    var partial = false;
+    if (!ids.length && toks.length > 1) {
+      // nothing has every word: fall back to items matching most of them, and say so
+      partial = true;
+      ids = Object.keys(score).filter(function (i) { return hits[i] >= Math.ceil(toks.length / 2); });
     }
-    return items.slice(0, 40);
+    var whole = fold(q).trim().replace(/\(\)$/, ""), joined = toks.join(" ");
+    return {
+      toks: toks, partial: partial,
+      items: ids.map(function (i) {
+        var it = _idx.items[i], s = score[i] * (1 + (TYPE_BOOST[it.type] || 0) / 100);
+        if (it.keys.indexOf(whole) >= 0 || it.keys.indexOf(joined) >= 0) s += 40;          // exact name
+        else if (it.keys.some(function (k) { return k.indexOf(joined) === 0; })) s += 8;    // name begins with it
+        if (toks.length > 1 && it.phrase.indexOf(joined) >= 0) s += 6;                     // phrase in title
+        return { it: it, s: s };
+      }).sort(function (a, b) {
+        return b.s - a.s || (TYPE_RANK[a.it.type] - TYPE_RANK[b.it.type]) || a.it.title.localeCompare(b.it.title);
+      }).map(function (x) { return x.it; })
+    };
+  }
+  // wrap the query's words in <mark>; only when folding kept the text's length,
+  // so positions in the folded copy are positions in the original
+  function highlight(text, toks) {
+    text = String(text == null ? "" : text);
+    var f = fold(text), marks = [], i, k;
+    toks = toks.filter(function (t) { return t.length >= 2; });
+    if (f.length !== text.length || !toks.length) return esc(text);
+    toks.forEach(function (t) {
+      var from = 0;
+      while ((i = f.indexOf(t, from)) >= 0) { for (k = i; k < i + t.length; k++) marks[k] = true; from = i + t.length; }
+    });
+    var out = "", open = false;
+    for (i = 0; i < text.length; i++) {
+      if (marks[i] && !open) { out += "<mark>"; open = true; }
+      if (!marks[i] && open) { out += "</mark>"; open = false; }
+      out += esc(text[i]);
+    }
+    return out + (open ? "</mark>" : "");
+  }
+
+  function loadFunctions() {
+    if (window.DYNASITE_FUNCTIONS) { _fnState = "ready"; return; }
+    if (_fnState === "loading" || _fnState === "failed") return;
+    _fnState = "loading";
+    var s = document.createElement("script");
+    s.src = "assets/functions.js" + (S.functionsVersion ? "?v=" + S.functionsVersion : "");
+    s.async = true;
+    s.onload = function () { _fnState = "ready"; _idx = null; refreshCmdK(); };
+    s.onerror = function () { _fnState = "failed"; refreshCmdK(); };
+    document.head.appendChild(s);
+  }
+
+  // Analytics: one `search` event per settled query, one `select_content` per opened result.
+  var _trackTimer = null, _lastTracked = "";
+  function trackSearch(q) {
+    clearTimeout(_trackTimer);
+    q = String(q || "").trim();
+    if (q.length < 2 || typeof window.gtag !== "function") return;
+    _trackTimer = setTimeout(function () {
+      if (q === _lastTracked) return;
+      _lastTracked = q;
+      window.gtag("event", "search", { search_term: q });
+    }, 1200);
+  }
+
+  function refreshCmdK() {
+    if (!_cmdk) return;
+    renderCmdkResults(_cmdk.querySelector(".cmdk-input").value);
   }
   function renderCmdkResults(q) {
+    if (!_idx) buildSearchIndex();
     var box = _cmdk.querySelector(".cmdk-results");
-    box.innerHTML = "";
+    var bar = _cmdk.querySelector(".cmdk-filters");
+    var meta = _cmdk.querySelector(".cmdk-meta");
+    box.innerHTML = ""; bar.innerHTML = "";
     _cmdkRows = []; _cmdkActive = 0;
-    var hits = runSearch(q);
-    if (!hits.length) { box.appendChild(el("div", "cmdk-empty", "No matches for “" + esc(q) + "”")); return; }
-    hits.forEach(function (it, i) {
-      var e = it.e, tgt = searchTarget(e);
-      var row = el("div", "cmdk-item" + (i === 0 ? " active" : ""));
+    var res = runSearch(q);
+
+    // filter chips, one per result type present
+    var counts = {};
+    res.items.forEach(function (it) { counts[it.type] = (counts[it.type] || 0) + 1; });
+    var types = Object.keys(counts).sort(function (a, b) { return TYPE_RANK[a] - TYPE_RANK[b]; });
+    if (_cmdkFilter !== "all" && !counts[_cmdkFilter]) _cmdkFilter = "all";
+    if (res.toks.length && types.length > 1) {
+      [["all", "All", res.items.length]].concat(types.map(function (t) { return [t, TYPE_PLURAL[t] || t, counts[t]]; }))
+        .forEach(function (c) {
+          var chip = el("button", "cmdk-chip" + (c[0] === _cmdkFilter ? " active" : ""),
+            esc(c[1]) + ' <span class="fc-n">' + c[2] + "</span>");
+          chip.type = "button";
+          chip.setAttribute("data-filter", c[0]);
+          bar.appendChild(chip);
+        });
+    }
+    bar.hidden = !bar.childNodes.length;
+
+    var shown = _cmdkFilter === "all" ? res.items : res.items.filter(function (it) { return it.type === _cmdkFilter; });
+    var fnNote = _fnState === "loading" ? " · loading function index…" : (_fnState === "failed" ? " · function index unavailable" : "");
+    meta.innerHTML = res.toks.length
+      ? (shown.length ? shown.length + " result" + (shown.length === 1 ? "" : "s") + (shown.length > RESULT_LIMIT ? " · showing the best " + RESULT_LIMIT : "") : "")
+        + (res.partial ? ' · <span class="cmdk-warn">no result has every word — showing the closest</span>' : "") + fnNote
+      : "Try " + SUGGESTIONS.map(function (s) { return '<button type="button" class="cmdk-try">' + esc(s) + "</button>"; }).join(" ") + fnNote;
+
+    if (!shown.length) { box.appendChild(el("div", "cmdk-empty", "No matches for “" + esc(q) + "”")); return; }
+    shown.slice(0, RESULT_LIMIT).forEach(function (it, i) {
+      var row = el("div", "cmdk-item" + (i === 0 ? " active" : "") + (it.type === "function" ? " fn" : ""));
+      row.setAttribute("role", "option");
       row.innerHTML =
-        '<span class="ci-type">' + esc(TYPE_LABEL[e.type] || e.type) + "</span>" +
-        '<span class="ci-main"><span class="ci-title">' + esc(e.title || e.name || e.id) + "</span>" +
-        '<span class="ci-sub">' + esc(searchSub(e)) + "</span></span>" +
-        '<span class="ci-go">' + (tgt.hash ? "→" : "↗") + "</span>";
-      row.addEventListener("click", function () { activateTarget(tgt); });
+        '<span class="ci-type">' + esc(TYPE_LABEL[it.type] || it.type) + "</span>" +
+        '<span class="ci-main"><span class="ci-title">' + highlight(it.title, res.toks) + "</span>" +
+        '<span class="ci-sub">' + highlight(it.sub, res.toks) + "</span></span>" +
+        '<span class="ci-go">' + (it.target.hash ? "→" : "↗") + "</span>";
+      row.addEventListener("click", function () { activateResult(it); });
       row.addEventListener("mousemove", function () { setActiveRow(i); });
       box.appendChild(row);
-      _cmdkRows.push({ row: row, tgt: tgt });
+      _cmdkRows.push({ row: row, it: it });
     });
   }
   function setActiveRow(i) {
@@ -942,39 +1158,61 @@
     _cmdkRows.forEach(function (r, j) { r.row.classList.toggle("active", j === _cmdkActive); });
     _cmdkRows[_cmdkActive].row.scrollIntoView({ block: "nearest" });
   }
-  function activateTarget(tgt) {
+  function activateResult(it) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "select_content", { content_type: it.type, item_id: it.title });
+    }
+    var tgt = it.target;
     closeCmdK();
     if (tgt.hash) location.hash = tgt.hash;
     else if (tgt.url) window.open(tgt.url, "_blank", "noopener");
   }
-  function openCmdK() {
-    if (!_cmdkIndex) buildSearchIndex();
+  function cycleFilter(step) {
+    var chips = _cmdk.querySelectorAll(".cmdk-chip");
+    if (!chips.length) return;
+    var keys = Array.prototype.map.call(chips, function (c) { return c.getAttribute("data-filter"); });
+    _cmdkFilter = keys[(keys.indexOf(_cmdkFilter) + step + keys.length) % keys.length];
+    refreshCmdK();
+  }
+  function openCmdK(initial) {
+    loadFunctions();
     if (!_cmdk) {
       _cmdk = el("div", "cmdk");
       _cmdk.innerHTML =
         '<div class="cmdk-box" role="dialog" aria-label="Search">' +
           '<div class="cmdk-inputwrap">' +
             '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
-            '<input class="cmdk-input" type="text" placeholder="Search packages, people, papers, chapters…" aria-label="Search" autocomplete="off" spellcheck="false">' +
+            '<input class="cmdk-input" type="text" placeholder="Search packages, functions, people, papers, chapters…" aria-label="Search" autocomplete="off" spellcheck="false">' +
             '<span class="cmdk-hint">esc</span>' +
           "</div>" +
-          '<div class="cmdk-results"></div>' +
-          '<div class="cmdk-foot"><span><b>↑↓</b> navigate</span><span><b>↵</b> open</span><span><b>esc</b> close</span></div>' +
+          '<div class="cmdk-filters" hidden></div>' +
+          '<div class="cmdk-meta"></div>' +
+          '<div class="cmdk-results" role="listbox"></div>' +
+          '<div class="cmdk-foot"><span><b>↑↓</b> navigate</span><span><b>↵</b> open</span><span><b>tab</b> filter</span><span><b>esc</b> close</span></div>' +
         "</div>";
       document.body.appendChild(_cmdk);
       var input = _cmdk.querySelector(".cmdk-input");
-      input.addEventListener("input", function () { renderCmdkResults(input.value); });
-      _cmdk.addEventListener("click", function (ev) { if (ev.target === _cmdk) closeCmdK(); });
+      input.addEventListener("input", function () { _cmdkFilter = "all"; renderCmdkResults(input.value); trackSearch(input.value); });
+      _cmdk.addEventListener("click", function (ev) {
+        if (ev.target === _cmdk) { closeCmdK(); return; }
+        var chip = ev.target.closest(".cmdk-chip");
+        if (chip) { _cmdkFilter = chip.getAttribute("data-filter"); refreshCmdK(); input.focus(); return; }
+        var t = ev.target.closest(".cmdk-try");
+        if (t) { input.value = t.textContent; _cmdkFilter = "all"; renderCmdkResults(input.value); trackSearch(input.value); input.focus(); }
+      });
       _cmdk.addEventListener("keydown", function (ev) {
         if (ev.key === "Escape") { ev.preventDefault(); closeCmdK(); }
         else if (ev.key === "ArrowDown") { ev.preventDefault(); setActiveRow(_cmdkActive + 1); }
         else if (ev.key === "ArrowUp") { ev.preventDefault(); setActiveRow(_cmdkActive - 1); }
-        else if (ev.key === "Enter") { ev.preventDefault(); if (_cmdkRows[_cmdkActive]) activateTarget(_cmdkRows[_cmdkActive].tgt); }
+        else if (ev.key === "Tab") { ev.preventDefault(); cycleFilter(ev.shiftKey ? -1 : 1); }
+        else if (ev.key === "Enter") { ev.preventDefault(); if (_cmdkRows[_cmdkActive]) activateResult(_cmdkRows[_cmdkActive].it); }
       });
     }
     var inp = _cmdk.querySelector(".cmdk-input");
-    inp.value = "";
-    renderCmdkResults("");
+    inp.value = initial || "";
+    _cmdkFilter = "all";
+    renderCmdkResults(inp.value);
+    if (initial) trackSearch(initial);
     document.body.style.overflow = "hidden";
     requestAnimationFrame(function () { _cmdk.classList.add("show"); inp.focus(); });
   }
@@ -986,7 +1224,10 @@
   }
   function initSearch() {
     var btn = document.getElementById("search-open");
-    if (btn) btn.addEventListener("click", openCmdK);
+    if (btn) {
+      btn.addEventListener("click", function () { openCmdK(); });
+      btn.addEventListener("pointerenter", loadFunctions);   // warm the index before the click
+    }
     document.addEventListener("keydown", function (ev) {
       var mod = ev.metaKey || ev.ctrlKey;
       if (mod && (ev.key === "k" || ev.key === "K")) { ev.preventDefault(); openCmdK(); return; }
@@ -996,6 +1237,10 @@
         ev.preventDefault(); openCmdK();
       }
     });
+    // shareable searches: https://dynasite.org/?q=bootstrap
+    var q = null;
+    try { q = new URLSearchParams(location.search).get("q"); } catch (e) {}
+    if (q) openCmdK(q);
   }
 
   /* ---------- package dossier ---------- */

@@ -22,7 +22,7 @@ const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const analyticsPath = join(repoRoot, "assets", "analytics.js");
 const version = createHash("sha256").update(readFileSync(analyticsPath)).digest("hex").slice(0, 8);
 const measurementId = "G-M4WK9QTCB5";
-const skipDirs = new Set([".git", "node_modules"]);
+const skipDirs = new Set([".git", "node_modules", "tmp"]);  // tmp/ is gitignored scratch
 
 let root = repoRoot;
 let publicSrc = null;

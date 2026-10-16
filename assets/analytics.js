@@ -1,5 +1,11 @@
 // Google Analytics site tag.
+// Shared by dynasite.org, every pak.dynasite.org package site (injected by nginx
+// sub_filter) and the proxied Shiny apps. Idempotent: a page that ends up with
+// the include twice still sends one page view.
 (function () {
+  if (window.__dynasiteAnalytics) return;
+  window.__dynasiteAnalytics = true;
+
   var measurementId = "G-M4WK9QTCB5";
   var script = document.createElement("script");
 

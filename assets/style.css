@@ -421,14 +421,33 @@ a.item:hover .ititle { text-decoration: underline; text-underline-offset: 2px; }
 .cmdk-item .ci-type { font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase;
   color: var(--fg3); flex: 0 0 70px; padding-top: 3px; }
 .cmdk-item .ci-main { min-width: 0; flex: 1 1 auto; }
-.cmdk-item .ci-title { font-size: 15px; font-weight: 600; color: var(--fg); line-height: 1.3;
+.cmdk-item .ci-title { display: block; font-size: 15px; font-weight: 600; color: var(--fg); line-height: 1.3;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cmdk-item .ci-sub { font-size: 12.5px; color: var(--fg2); margin-top: 1px;
+.cmdk-item .ci-sub { display: block; font-size: 12.5px; color: var(--fg2); margin-top: 1px;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cmdk-item .ci-go { font-family: var(--mono); font-size: 11px; color: var(--fg3); flex: 0 0 auto; align-self: center; }
 .cmdk-foot { display: flex; gap: 16px; padding: 9px 16px; border-top: 1px solid var(--line);
   font-family: var(--mono); font-size: 10.5px; color: var(--fg3); }
 .cmdk-foot b { color: var(--fg2); font-weight: 400; }
+/* fixed rows of the column-flex box: only the results list may shrink and scroll */
+.cmdk-inputwrap, .cmdk-filters, .cmdk-meta, .cmdk-foot { flex: none; }
+.cmdk-results { flex: 1 1 auto; min-height: 0; }
+.cmdk-filters { display: flex; gap: 6px; padding: 10px 14px 0; overflow-x: auto; scrollbar-width: none; }
+.cmdk-filters[hidden] { display: none; }
+.cmdk-chip { flex: 0 0 auto; font-family: var(--mono); font-size: 11px; padding: 4px 10px; border-radius: 999px;
+  border: 1px solid var(--line); background: none; color: var(--fg2); cursor: pointer; white-space: nowrap; }
+.cmdk-chip:hover { border-color: var(--fg2); color: var(--fg); }
+.cmdk-chip.active { border-color: var(--fg); background: var(--fg); color: var(--bg); }
+.cmdk-chip .fc-n { opacity: .65; margin-left: 2px; }
+.cmdk-meta { padding: 8px 18px 2px; font-family: var(--mono); font-size: 11px; color: var(--fg3); line-height: 1.9; }
+.cmdk-meta:empty { display: none; }
+.cmdk-warn { color: var(--fg2); }
+.cmdk-try { font: inherit; color: var(--fg2); background: none; border: 1px dashed var(--line); border-radius: 999px;
+  padding: 1px 8px; margin: 0 2px; cursor: pointer; }
+.cmdk-try:hover { color: var(--fg); border-color: var(--fg2); }
+.cmdk-item mark { background: none; color: inherit; font-weight: 700; text-decoration: underline;
+  text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+.cmdk-item.fn .ci-title { font-family: var(--mono); font-size: 13.5px; }
 @media (max-width: 560px) { .cmdk-item .ci-type { display: none; } .cmdk { padding-top: 6vh; } }
 
 /* ---------- tag / focus filter (packages) ---------- */

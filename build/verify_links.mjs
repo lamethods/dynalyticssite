@@ -24,16 +24,21 @@ async function once(url, method) {
   } catch (e) { return { error: e.message || String(e) }; } finally { clearTimeout(t); }
 }
 async function checkUrl(url) {
-  // DOIs: doi.org 30x-redirects to the publisher, which often 403s bots even though the
-  // DOI itself is valid. A redirect from doi.org means it resolves — don't follow into the block.
-  if (/^https?:\/\/(dx\.)?doi\.org\//i.test(url)) {
+  // DOIs: ask the DOI registry itself. Following doi.org's redirect lands on publishers
+  // that 403 bots, and since 2026-10 doi.org also 403s a spoofed browser User-Agent, so
+  // neither the redirect nor the landing page says anything about the DOI. The Handle
+  // API does: responseCode 1 = registered, 100 = no such DOI.
+  const doi = url.match(/^https?:\/\/(?:dx\.)?doi\.org\/(10\.[^?#]+)/i);
+  if (doi) {
     const ac = new AbortController();
     const t = setTimeout(() => ac.abort(), 20000);
     try {
-      const r = await fetch(url, { method: "GET", headers: { "User-Agent": UA }, redirect: "manual", signal: ac.signal });
-      clearTimeout(t);
-      return r.status < 400 ? { status: "VERIFIED", code: r.status } : { status: "BROKEN", detail: r.status };
-    } catch (e) { clearTimeout(t); return { status: "BROKEN", detail: e.message || String(e) }; }
+      const r = await fetch(`https://doi.org/api/handles/${doi[1]}`, { headers: { "User-Agent": "dynasite-linkcheck/1.0 (+https://dynasite.org)" }, signal: ac.signal });
+      const code = r.ok || r.status === 404 ? (await r.json())?.responseCode : null;
+      if (code === 1) return { status: "VERIFIED", code: r.status };
+      return { status: "BROKEN", detail: code != null ? `DOI responseCode ${code}` : r.status };
+    } catch (e) { return { status: "BROKEN", detail: e.message || String(e) }; }
+    finally { clearTimeout(t); }
   }
   let r = await once(url, "HEAD");
   if (r.error || [403, 405, 501].includes(r.status)) {

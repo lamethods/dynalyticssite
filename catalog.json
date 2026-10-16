@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08",
+  "generated_at": "2026-10-16",
   "about": {
     "title": "Dynalytics",
     "tagline": "A framework for the rigorous analytics of dynamical systems.",
@@ -51,13 +51,15 @@
     ]
   },
   "counts": {
-    "total": 294,
+    "total": 296,
     "packages": 21,
-    "vignettes": 160,
+    "vignettes": 162,
     "posts": 20,
     "chapters": 44,
-    "news": 21
+    "news": 21,
+    "functions": 1605
   },
+  "functions_version": "7f9edffc",
   "entries": [
     {
       "id": "tna",
@@ -74,7 +76,7 @@
       },
       "logo": "https://sonsoles.me/tna/logo.png",
       "cran_version": "1.3.1",
-      "version": "1.4.0",
+      "version": "1.3.1",
       "authors": [
         "Mohammed Saqr",
         "Santtu Tikka",
@@ -89,8 +91,8 @@
         "centrality",
         "bootstrap"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::atna",
@@ -112,8 +114,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::communities_and_cliques",
@@ -135,8 +137,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::complete_tutorial",
@@ -158,8 +160,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::ftna",
@@ -181,8 +183,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::grouped_sequences",
@@ -204,8 +206,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::new-docs",
@@ -227,8 +229,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::prepare_data",
@@ -250,8 +252,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tna::tna",
@@ -273,8 +275,8 @@
         "tna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph",
@@ -291,7 +293,7 @@
       },
       "logo": "https://sonsoles.me/cograph/logo.png",
       "cran_version": "2.7.2",
-      "version": "2.7.7",
+      "version": "2.7.8",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -303,8 +305,8 @@
         "graph",
         "multilayer"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::introduction",
@@ -326,8 +328,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::centrality-catalogue",
@@ -349,8 +351,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::centrality-zoo-lookup",
@@ -372,8 +374,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::why-cograph",
@@ -395,8 +397,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::plotting-tna-models",
@@ -418,8 +420,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::mcml-examples",
@@ -441,8 +443,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::qgraph-to-splot",
@@ -464,8 +466,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::bootstrap-forest",
@@ -487,8 +489,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::cograph-tutorial-plotting",
@@ -510,8 +512,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::cograph-tutorial-mcml",
@@ -533,8 +535,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::cograph-tutorial-communities",
@@ -556,8 +558,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::cograph-tutorial-nestimate",
@@ -579,8 +581,8 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cograph::cograph-tutorial-simplicial",
@@ -602,14 +604,14 @@
         "cograph"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna",
       "type": "package",
       "title": "htna — Heterogeneous Transition Network Analysis",
-      "blurb": "Implements the Heterogeneous Transition Network Analysis (HTNA) method described by López-Pernas et al. (2026). The method is an extension of transition network analysis (TNA) where actions or events belong to two or more distinct actor types (e.g. Human and AI),preserving the actor type partition on the resulting network. Provides a thin, focused API on top of the 'Nestimate' estimation engine and the 'cograph' rendering engine, so downstream bootstrap, permutation, reliability, centrality, and plotting functions treat each actor's codes as a distinct node group.",
+      "blurb": "Implements the Heterogeneous Transition Network Analysis (HTNA) method described by López-Pernas et al. (2026). The method is an extension of transition network analysis (TNA) where actions or events belong to two or more distinct actor types (e.g. Human and AI), preserving the actor type partition on the resulting network. Provides a thin, focused API on top of the 'Nestimate' estimation engine and the 'cograph' rendering engine, so downstream bootstrap, permutation, reliability, centrality, and plotting functions treat each actor's codes as a distinct node group.",
       "url": "https://pak.dynasite.org/htna/",
       "links": {
         "cran": "https://CRAN.R-project.org/package=htna",
@@ -633,8 +635,8 @@
         "heterogeneous",
         "human-AI"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::htna",
@@ -656,8 +658,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::input-formats",
@@ -679,8 +681,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::grouped",
@@ -702,8 +704,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::frequencies-and-mosaic",
@@ -725,8 +727,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::sequence-plots",
@@ -748,8 +750,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::sequence-comparison",
@@ -771,8 +773,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::multigroup",
@@ -794,8 +796,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::clustering",
@@ -817,8 +819,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::markov-order",
@@ -840,8 +842,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna::model-assessment",
@@ -863,8 +865,8 @@
         "htna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate",
@@ -881,7 +883,7 @@
       },
       "logo": "https://raw.githubusercontent.com/mohsaqr/Nestimate/main/man/figures/logo.png",
       "cran_version": "0.9.24",
-      "version": "0.9.24",
+      "version": "0.9.26",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas",
@@ -895,8 +897,8 @@
         "psychometric",
         "TNA"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::transition-entropy",
@@ -918,8 +920,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::transition-networks",
@@ -941,8 +943,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::sequence-comparison",
@@ -964,8 +966,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::sequence-plots",
@@ -987,8 +989,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::clustering",
@@ -1010,8 +1012,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::markov-stability",
@@ -1033,8 +1035,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::cograph-tutorial-nestimate",
@@ -1056,8 +1058,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::cograph-tutorial-simplicial",
@@ -1079,8 +1081,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::tutorial_model_assessment",
@@ -1102,8 +1104,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::permutation-nested-data",
@@ -1125,8 +1127,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Nestimate::compare-networks",
@@ -1148,8 +1150,8 @@
         "Nestimate"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "snakeplot",
@@ -1178,8 +1180,8 @@
         "ESM",
         "serpentine"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "snakeplot::survey-snake-plots",
@@ -1201,8 +1203,8 @@
         "snakeplot"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cooccure",
@@ -1219,7 +1221,7 @@
       },
       "logo": "https://pak.dynasite.org/cooccure/logo.png",
       "cran_version": "0.4.0",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas",
@@ -1232,8 +1234,8 @@
         "similarity",
         "jaccard"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "cooccure::imdb-tutorial",
@@ -1255,8 +1257,8 @@
         "cooccure"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "bibnets",
@@ -1272,7 +1274,7 @@
         "articles": "https://pak.dynasite.org/bibnets-pkg/articles/"
       },
       "cran_version": "0.6.0",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -1285,8 +1287,8 @@
         "openalex",
         "citation"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "bibnets::bibnets",
@@ -1308,8 +1310,8 @@
         "bibnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "bibnets::reading-data",
@@ -1331,8 +1333,8 @@
         "bibnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "bibnets::attention",
@@ -1354,8 +1356,8 @@
         "bibnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "bibnets::parsing-author-names",
@@ -1377,14 +1379,14 @@
         "bibnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "transitiontrees",
       "type": "package",
-      "title": "transitiontrees — Transition Trajectories and Dynamics of Variable-Length Pathways or Sequences",
-      "blurb": "Analyzes transition trajectories in event, sequence, and ordered data, focusing on how states follow one another, how far processes unfold, and where pathways branch or converge. Trajectories are modeled using variable-order prediction suffix trees, implemented in both frequency-based and prediction-based forms. The framework includes multiple pruning, validation, and smoothing techniques to ensure model robustness. Visualization options include transition trees, radial sunburst diagrams, transition heatmaps, and forward trajectory trees.",
+      "title": "transitiontrees — Pathway Trees and Predictive Pathway Discovery in Sequence Data",
+      "blurb": "Discovers, ranks, and interprets predictive pathways in categorical sequence data. Fits a variable-depth pathway tree and exposes a pathway-centric application programming interface: most common pathways, most predictively divergent pathways, sharpest pathways, modal-flip diagnostics, and next-state predictions. Multiple pruning criteria (likelihood-ratio G-squared, Kullback-Leibler divergence, and the Akaike and Bayesian information criteria), smoothing for unseen contexts, and sequence sampling are supported. The fit and predictive surface are validated to machine precision against an independent external reference implementation of the model.",
       "url": "https://pak.dynasite.org/transitiontrees/",
       "links": {
         "cran": "https://CRAN.R-project.org/package=transitiontrees",
@@ -1396,8 +1398,7 @@
       "cran_version": "0.1.2",
       "version": "0.1.2",
       "authors": [
-        "Mohammed Saqr",
-        "Sonsoles López-Pernas"
+        "Mohammed Saqr"
       ],
       "owner": "mohsaqr",
       "tags": [
@@ -1406,8 +1407,8 @@
         "transition",
         "trajectory"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "transitiontrees::advanced-analysis",
@@ -1429,8 +1430,8 @@
         "transitiontrees"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "transitiontrees::analysis-case",
@@ -1452,8 +1453,8 @@
         "transitiontrees"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "transitiontrees::ecosystem-compatibility",
@@ -1475,8 +1476,8 @@
         "transitiontrees"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "transitiontrees::getting-started",
@@ -1498,8 +1499,8 @@
         "transitiontrees"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "transitiontrees::visualization",
@@ -1521,8 +1522,8 @@
         "transitiontrees"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "codyna",
@@ -1552,8 +1553,8 @@
         "early-warning",
         "time-series"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "codyna::codyna",
@@ -1575,8 +1576,8 @@
         "codyna"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics",
@@ -1604,8 +1605,8 @@
         "transition",
         "tidy"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics::intro",
@@ -1627,8 +1628,8 @@
         "lagdynamics"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics::lagdynamics",
@@ -1650,8 +1651,8 @@
         "lagdynamics"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics::interop",
@@ -1673,8 +1674,8 @@
         "lagdynamics"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics::workflow",
@@ -1696,8 +1697,8 @@
         "lagdynamics"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics::lag-transition-networks",
@@ -1719,8 +1720,8 @@
         "lagdynamics"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics::confirmatory",
@@ -1742,8 +1743,8 @@
         "lagdynamics"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lagdynamics::plotting",
@@ -1765,8 +1766,8 @@
         "lagdynamics"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview",
@@ -1796,8 +1797,8 @@
         "ggplot2",
         "shiny"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::litReview",
@@ -1819,8 +1820,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::bar",
@@ -1842,8 +1843,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::stacked-bar",
@@ -1865,8 +1866,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::histogram",
@@ -1888,8 +1889,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::waffle",
@@ -1911,8 +1912,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::pie",
@@ -1934,8 +1935,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::overlap",
@@ -1957,8 +1958,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::upset",
@@ -1980,8 +1981,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::trend",
@@ -2003,8 +2004,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::map",
@@ -2026,8 +2027,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::alluvial",
@@ -2049,8 +2050,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::treemap",
@@ -2072,8 +2073,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::matrix",
@@ -2095,8 +2096,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::tree",
@@ -2118,8 +2119,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "litReview::table",
@@ -2141,8 +2142,8 @@
         "litReview"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic",
@@ -2172,8 +2173,8 @@
         "GIMME",
         "time-series"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::bayesian-var-dsem",
@@ -2195,8 +2196,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::clean-room-methods",
@@ -2218,8 +2219,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::correlate-persons",
@@ -2241,8 +2242,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::describe-persons",
@@ -2264,8 +2265,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::find-subgroups",
@@ -2287,8 +2288,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-effects",
@@ -2310,8 +2311,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-glm",
@@ -2333,8 +2334,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-heterogeneity",
@@ -2356,8 +2357,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-lm",
@@ -2379,8 +2380,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-ml",
@@ -2402,8 +2403,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-rolling",
@@ -2425,8 +2426,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-subgroups",
@@ -2448,8 +2449,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::fit-within-between",
@@ -2471,8 +2472,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::gimme",
@@ -2494,8 +2495,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::graphical-var",
@@ -2517,8 +2518,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::idiographic",
@@ -2540,8 +2541,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::mlvar",
@@ -2563,8 +2564,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::ordinary-var",
@@ -2586,8 +2587,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::pool-coefs",
@@ -2609,8 +2610,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::preprocess-panel",
@@ -2632,8 +2633,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::preprocessing",
@@ -2655,8 +2656,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::rolling-networks",
@@ -2678,8 +2679,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::shrink-coefs",
@@ -2701,8 +2702,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::statistical-workflows",
@@ -2724,8 +2725,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::test-subgroups",
@@ -2747,8 +2748,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::unified-workflow",
@@ -2770,8 +2771,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::usem",
@@ -2793,8 +2794,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "idiographic::variance-components",
@@ -2816,8 +2817,8 @@
         "idiographic"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets",
@@ -2833,7 +2834,7 @@
         "articles": "https://pak.dynasite.org/psychnets/articles/"
       },
       "cran_version": "0.5.2",
-      "version": "0.6.0",
+      "version": "0.5.2",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -2846,8 +2847,8 @@
         "ising",
         "base-r"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::gaussian-graphical-models",
@@ -2869,8 +2870,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::ggm-model-selection",
@@ -2892,8 +2893,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::group-networks-from-event-data",
@@ -2915,8 +2916,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::information-filtering-networks",
@@ -2938,8 +2939,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::ising-networks",
@@ -2961,8 +2962,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::mixed-graphical-models",
@@ -2984,8 +2985,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::network-reliability",
@@ -3007,8 +3008,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::relative-importance-networks",
@@ -3030,8 +3031,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::visualizing-networks",
@@ -3053,8 +3054,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "psychnets::visualizing-with-cograph",
@@ -3076,8 +3077,8 @@
         "psychnets"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tsn",
@@ -3104,8 +3105,8 @@
         "discretization",
         "kNN"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tsn::constructing-time-series-networks",
@@ -3127,8 +3128,8 @@
         "tsn"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tsn::plotting-time-series-networks",
@@ -3150,8 +3151,8 @@
         "tsn"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tsn::nestimate-workflow",
@@ -3173,8 +3174,8 @@
         "tsn"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tsn::group-models",
@@ -3196,8 +3197,8 @@
         "tsn"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tsn::nestimate-compatibility",
@@ -3219,22 +3220,22 @@
         "tsn"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
-      "id": "VaSStra",
+      "id": "VaSSTra",
       "type": "package",
-      "title": "VaSStra — Simple Variables to States to Sequences to Trajectories",
+      "title": "VaSSTra — Simple Variables to States to Sequences to Trajectories",
       "blurb": "A small, pipe-friendly implementation of the VaSSTra workflow for longitudinal multivariate data. It provides explicit steps to turn variables into states, states into aligned sequences, and sequences into trajectory groups, followed by tidy trajectory descriptions. A single call runs the complete analysis with transparent, overridable automation of data roles and cluster counts, and an evaluation verb compares the fitted clustering against its alternatives. 'Nestimate' provides the default sequence-clustering backend and all sequence plots. No 'TraMineR' dependency is required.",
       "url": "https://pak.dynasite.org/VaSStra/",
       "links": {
-        "github": "https://github.com/mohsaqr/VaSStra",
+        "github": "https://github.com/sonsoleslp/vasstra",
         "docs": "https://pak.dynasite.org/VaSStra/",
         "reference": "https://pak.dynasite.org/VaSStra/reference/",
         "articles": "https://pak.dynasite.org/VaSStra/articles/"
       },
-      "version": "0.3.0",
+      "version": "0.4.0",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -3247,14 +3248,14 @@
         "longitudinal",
         "lamethods"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
-      "id": "VaSStra::get-started",
+      "id": "VaSSTra::get-started",
       "type": "vignette",
       "title": "Getting started with VaSSTra",
-      "blurb": "Article on the VaSStra documentation site.",
+      "blurb": "Article on the VaSSTra documentation site.",
       "url": "https://pak.dynasite.org/VaSStra/articles/get-started.html",
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/get-started.html"
@@ -3262,22 +3263,22 @@
       "date": "2026-07-24",
       "owner": "mohsaqr",
       "tags": [
-        "VaSStra",
+        "VaSSTra",
         "article",
         "sequence"
       ],
       "packages": [
-        "VaSStra"
+        "VaSSTra"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
-      "id": "VaSStra::vasstra-tutorial",
+      "id": "VaSSTra::vasstra-tutorial",
       "type": "vignette",
       "title": "VaSSTra Tutorial: Variables, States, Sequences, Trajectories",
-      "blurb": "Article on the VaSStra documentation site.",
+      "blurb": "Article on the VaSSTra documentation site.",
       "url": "https://pak.dynasite.org/VaSStra/articles/vasstra-tutorial.html",
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/vasstra-tutorial.html"
@@ -3285,22 +3286,22 @@
       "date": "2026-07-24",
       "owner": "mohsaqr",
       "tags": [
-        "VaSStra",
+        "VaSSTra",
         "article",
         "sequence"
       ],
       "packages": [
-        "VaSStra"
+        "VaSSTra"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
-      "id": "VaSStra::flow-plots",
+      "id": "VaSSTra::flow-plots",
       "type": "vignette",
       "title": "Flow Plots",
-      "blurb": "Article on the VaSStra documentation site.",
+      "blurb": "Article on the VaSSTra documentation site.",
       "url": "https://pak.dynasite.org/VaSStra/articles/flow-plots.html",
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/flow-plots.html"
@@ -3308,22 +3309,22 @@
       "date": "2026-07-24",
       "owner": "mohsaqr",
       "tags": [
-        "VaSStra",
+        "VaSSTra",
         "article",
         "sequence"
       ],
       "packages": [
-        "VaSStra"
+        "VaSSTra"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
-      "id": "VaSStra::plot-review",
+      "id": "VaSSTra::plot-review",
       "type": "vignette",
       "title": "Plotting the results",
-      "blurb": "Article on the VaSStra documentation site.",
+      "blurb": "Article on the VaSSTra documentation site.",
       "url": "https://pak.dynasite.org/VaSStra/articles/plot-review.html",
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/plot-review.html"
@@ -3331,22 +3332,22 @@
       "date": "2026-08-25",
       "owner": "mohsaqr",
       "tags": [
-        "VaSStra",
+        "VaSSTra",
         "article",
         "sequence"
       ],
       "packages": [
-        "VaSStra"
+        "VaSSTra"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
-      "id": "VaSStra::clustering-algorithms",
+      "id": "VaSSTra::clustering-algorithms",
       "type": "vignette",
       "title": "Clustering Algorithms in VaSSTra",
-      "blurb": "Article on the VaSStra documentation site.",
+      "blurb": "Article on the VaSSTra documentation site.",
       "url": "https://pak.dynasite.org/VaSStra/articles/clustering-algorithms.html",
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/clustering-algorithms.html"
@@ -3354,22 +3355,22 @@
       "date": "2026-08-25",
       "owner": "mohsaqr",
       "tags": [
-        "VaSStra",
+        "VaSSTra",
         "article",
         "sequence"
       ],
       "packages": [
-        "VaSStra"
+        "VaSSTra"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
-      "id": "VaSStra::standardization",
+      "id": "VaSSTra::standardization",
       "type": "vignette",
       "title": "Standardization: how it changes the states",
-      "blurb": "Article on the VaSStra documentation site.",
+      "blurb": "Article on the VaSSTra documentation site.",
       "url": "https://pak.dynasite.org/VaSStra/articles/standardization.html",
       "links": {
         "article": "https://pak.dynasite.org/VaSStra/articles/standardization.html"
@@ -3377,22 +3378,22 @@
       "date": "2026-08-25",
       "owner": "mohsaqr",
       "tags": [
-        "VaSStra",
+        "VaSSTra",
         "article",
         "sequence"
       ],
       "packages": [
-        "VaSStra"
+        "VaSSTra"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "sbert",
       "type": "package",
       "title": "sbert — Topic Modeling with 'Sentence-BERT' Embeddings",
-      "blurb": "Builds semantic topic models from 'Sentence-BERT' embeddings. Sentence embeddings are computed in several modes with models run on the Open Neural Network Exchange ('ONNX') Runtime, including multilingual and long-context encoders and a fast static model. Topics are labelled with class-based term weighting that can be retuned without refitting. Candidate topic counts and document granularities (whole documents, sentences, clauses, or phrases) can be compared side by side, and fitted models assign topics to new documents, give soft memberships and per-document topic mixtures. The package offers coherence and diversity metrics and visualizations.",
+      "blurb": "Builds semantic topic models from 'Sentence-BERT' embeddings. Sentence embeddings are computed in several modes with models run on the Open Neural Network Exchange ('ONNX') Runtime, including multilingual and long-context encoders and a fast static model. Topics are labeled with class-based term weighting that can be retuned without refitting. Candidate topic counts and document granularities (whole documents, sentences, clauses, or phrases) can be compared side by side, and fitted models assign topics to new documents, give soft memberships and per-document topic mixtures. The package offers coherence and diversity metrics and visualizations.",
       "url": "https://pak.dynasite.org/sbert/",
       "links": {
         "github": "https://github.com/mohsaqr/sbert",
@@ -3400,7 +3401,7 @@
         "reference": "https://pak.dynasite.org/sbert/reference/",
         "articles": "https://pak.dynasite.org/sbert/articles/"
       },
-      "version": "0.5.7",
+      "version": "0.5.8",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -3413,8 +3414,8 @@
         "transformers",
         "onnx"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "sbert::covid_topics",
@@ -3425,7 +3426,7 @@
       "links": {
         "article": "https://pak.dynasite.org/sbert/articles/covid_topics.html"
       },
-      "date": "2026-09-05",
+      "date": "2026-10-09",
       "owner": "mohsaqr",
       "tags": [
         "sbert",
@@ -3436,13 +3437,13 @@
         "sbert"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "sbert::math_vignette",
       "type": "vignette",
-      "title": "Semantic Topics in AI-powereed Mathematics Feedback",
+      "title": "Semantic Topics in AI-Powered Mathematics Feedback",
       "blurb": "Article on the sbert documentation site.",
       "url": "https://pak.dynasite.org/sbert/articles/math_vignette.html",
       "links": {
@@ -3459,8 +3460,8 @@
         "sbert"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "sbert::parallel",
@@ -3482,8 +3483,8 @@
         "sbert"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs",
@@ -3497,7 +3498,7 @@
         "reference": "https://pak.dynasite.org/hypergraphs/reference/",
         "articles": "https://pak.dynasite.org/hypergraphs/articles/"
       },
-      "version": "0.7.4",
+      "version": "0.7.5",
       "authors": [
         "Mohammed Saqr"
       ],
@@ -3509,8 +3510,8 @@
         "memory-networks",
         "text"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::hypergraphs",
@@ -3532,8 +3533,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::covid-topics",
@@ -3555,8 +3556,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::topic-mixtures",
@@ -3578,8 +3579,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::text-hypergraphs",
@@ -3601,8 +3602,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::text-constructions",
@@ -3624,8 +3625,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::hypergat-classification",
@@ -3647,8 +3648,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::legal-hypergraphs",
@@ -3670,8 +3671,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::argentina-tribunals",
@@ -3693,8 +3694,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "hypergraphs::benchmarks",
@@ -3716,8 +3717,8 @@
         "hypergraphs"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "simulab",
@@ -3726,11 +3727,13 @@
       "blurb": "Generates a wide variety of data, in different shapes, sample sizes, distributions and parameters. The parameters are either drawn at random or set in advance, and in both cases they are stored with the data, so they are known and their recovery can be tested. Generators cover declared variables with treatment assignment and missing values, correlated and clustered data, latent profile, latent class, factor and item response models, longitudinal and multilevel processes, survival times with competing risks, sequences of states, and static, bipartite, multiplex, temporal and transition networks. Every generator returns batches of reproducible data sets for the evaluation of statistical methods, the testing of models and software, and teaching; simulated transition networks are native 'tna' models.",
       "url": "https://pak.dynasite.org/simulab/",
       "links": {
+        "cran": "https://CRAN.R-project.org/package=simulab",
         "github": "https://github.com/mohsaqr/simulab",
         "docs": "https://pak.dynasite.org/simulab/",
         "reference": "https://pak.dynasite.org/simulab/reference/",
         "articles": "https://pak.dynasite.org/simulab/articles/"
       },
+      "cran_version": "0.4.10",
       "version": "0.4.10",
       "authors": [
         "Mohammed Saqr",
@@ -3744,8 +3747,8 @@
         "ground-truth",
         "network"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "simulab::getting-started",
@@ -3767,8 +3770,8 @@
         "simulab"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "dynarules",
@@ -3779,8 +3782,7 @@
       "links": {
         "github": "https://github.com/mohsaqr/dynarules",
         "docs": "https://pak.dynasite.org/dynarules/",
-        "reference": "https://pak.dynasite.org/dynarules/reference/",
-        "articles": "https://pak.dynasite.org/dynarules/articles/"
+        "reference": "https://pak.dynasite.org/dynarules/reference/"
       },
       "version": "0.5.2",
       "authors": [
@@ -3794,8 +3796,8 @@
         "event-log",
         "temporal"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Dynet",
@@ -3811,7 +3813,7 @@
         "articles": "https://pak.dynasite.org/Dynet/articles/"
       },
       "cran_version": "0.5.1",
-      "version": "0.7.1",
+      "version": "0.7.3",
       "authors": [
         "Mohammed Saqr"
       ],
@@ -3823,8 +3825,8 @@
         "longitudinal",
         "base-r"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Dynet::dynet",
@@ -3846,8 +3848,8 @@
         "Dynet"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Dynet::building-networks",
@@ -3869,8 +3871,8 @@
         "Dynet"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Dynet::function-catalogue",
@@ -3892,8 +3894,8 @@
         "Dynet"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Dynet::animating",
@@ -3915,8 +3917,8 @@
         "Dynet"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Dynet::ch17-temporal-networks",
@@ -3938,8 +3940,8 @@
         "Dynet"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "Dynet::thought-chains",
@@ -3961,8 +3963,8 @@
         "Dynet"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents",
@@ -3971,12 +3973,14 @@
       "blurb": "Provides functions for fitting multilevel latent profile analysis, latent class, and latent transition models for continuous, categorical, and mixed-type variables. Models are estimated by expectation-maximization, handle missing data, and provide standard and robust standard errors. Model selection is supported by information criteria, entropy, classification diagnostics, and a parametric bootstrap likelihood ratio test. Covariates can be related to latent class membership using three-step methods with correction for classification error. Latent transition models estimate transitions between latent profiles across ordered occasions and are compatible with the 'tna' package for network and sequence analysis. The multilevel mixture formulation follows Vermunt (2003).",
       "url": "https://pak.dynasite.org/latents/",
       "links": {
+        "cran": "https://CRAN.R-project.org/package=latents",
         "github": "https://github.com/mohsaqr/latents",
         "docs": "https://pak.dynasite.org/latents/",
         "reference": "https://pak.dynasite.org/latents/reference/",
         "articles": "https://pak.dynasite.org/latents/articles/"
       },
-      "version": "0.9.23",
+      "cran_version": "0.9.21",
+      "version": "0.9.34",
       "authors": [
         "Mohammed Saqr",
         "Sonsoles López-Pernas"
@@ -3990,8 +3994,8 @@
         "multilevel",
         "base-r"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::lpa",
@@ -4002,7 +4006,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/lpa.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4013,8 +4017,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::lca",
@@ -4025,7 +4029,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/lca.html"
       },
-      "date": "2026-10-06",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4036,8 +4040,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::lta",
@@ -4048,7 +4052,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/lta.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4059,8 +4063,31 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
+    },
+    {
+      "id": "latents::enumeration",
+      "type": "vignette",
+      "title": "Class enumeration",
+      "blurb": "Article on the latents documentation site.",
+      "url": "https://pak.dynasite.org/latents/articles/enumeration.html",
+      "links": {
+        "article": "https://pak.dynasite.org/latents/articles/enumeration.html"
+      },
+      "date": "2026-10-15",
+      "owner": "mohsaqr",
+      "tags": [
+        "latents",
+        "article",
+        "latent profile"
+      ],
+      "packages": [
+        "latents"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::workflow-lpa",
@@ -4082,8 +4109,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::workflow-lca",
@@ -4105,8 +4132,31 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
+    },
+    {
+      "id": "latents::class-enumeration",
+      "type": "vignette",
+      "title": "Class enumeration in mixture models",
+      "blurb": "Article on the latents documentation site.",
+      "url": "https://pak.dynasite.org/latents/articles/class-enumeration.html",
+      "links": {
+        "article": "https://pak.dynasite.org/latents/articles/class-enumeration.html"
+      },
+      "date": "2026-10-16",
+      "owner": "mohsaqr",
+      "tags": [
+        "latents",
+        "article",
+        "latent profile"
+      ],
+      "packages": [
+        "latents"
+      ],
+      "kind": "article",
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::evaluation",
@@ -4117,7 +4167,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/evaluation.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4128,8 +4178,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::covariates",
@@ -4140,7 +4190,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/covariates.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4151,8 +4201,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::mixture-regression",
@@ -4163,7 +4213,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/mixture-regression.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4174,8 +4224,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::trajectory-classes",
@@ -4186,7 +4236,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/trajectory-classes.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4197,8 +4247,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::growth-mixture",
@@ -4209,7 +4259,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/growth-mixture.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4220,8 +4270,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::additive",
@@ -4232,7 +4282,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/additive.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4243,8 +4293,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::case-engagement-profiles",
@@ -4255,7 +4305,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/case-engagement-profiles.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4266,8 +4316,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::case-engagement-evaluation",
@@ -4278,7 +4328,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/case-engagement-evaluation.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4289,8 +4339,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::case-engagement-covariates",
@@ -4301,7 +4351,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/case-engagement-covariates.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4312,8 +4362,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::case-engagement-transitions",
@@ -4324,7 +4374,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/case-engagement-transitions.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4335,8 +4385,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "latents::case-esm-lca",
@@ -4347,7 +4397,7 @@
       "links": {
         "article": "https://pak.dynasite.org/latents/articles/case-esm-lca.html"
       },
-      "date": "2026-10-05",
+      "date": "2026-10-16",
       "owner": "mohsaqr",
       "tags": [
         "latents",
@@ -4358,8 +4408,8 @@
         "latents"
       ],
       "kind": "article",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::alluvial",
@@ -4381,8 +4431,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::tna-tutorial",
@@ -4404,8 +4454,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::cograph::visualization",
@@ -4427,8 +4477,8 @@
         "tutorial",
         "cograph"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::codyna::codyna-seq-tutorial",
@@ -4450,8 +4500,8 @@
         "tutorial",
         "codyna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::vasstra",
@@ -4473,8 +4523,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::tna-bern",
@@ -4496,8 +4546,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::tna-clustering",
@@ -4519,8 +4569,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::tna-data",
@@ -4542,8 +4592,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::tna-group",
@@ -4565,8 +4615,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tutorial::tna::tna-compare",
@@ -4588,8 +4638,8 @@
         "tutorial",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "LOCAL",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::1::dynalytics-a-framework-",
@@ -4616,8 +4666,8 @@
         "psychnets",
         "Nestimate"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::2::cograph-complex-network",
@@ -4638,8 +4688,8 @@
         "blog",
         "cograph"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::3::human-ai-interaction-a-",
@@ -4662,8 +4712,8 @@
         "tna",
         "cograph"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::4::jtna-for-transition-netw",
@@ -4684,8 +4734,8 @@
         "blog",
         "tna"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::5::precision-education-is-t",
@@ -4706,8 +4756,8 @@
         "blog",
         "general"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::6::rohy-ai-powered-virtual",
@@ -4728,8 +4778,8 @@
         "blog",
         "general"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::7::book-learning-analytics",
@@ -4750,8 +4800,8 @@
         "news",
         "general"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::8::isila-funding-from-era",
@@ -4772,8 +4822,8 @@
         "news",
         "general"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::9::iglue-new-funding-from",
@@ -4794,8 +4844,8 @@
         "news",
         "general"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "post::10::cretic-funding-from-th",
@@ -4816,8 +4866,8 @@
         "news",
         "general"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch01-intro",
@@ -4838,8 +4888,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch02-data",
@@ -4860,8 +4910,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch03-intro-r",
@@ -4883,8 +4933,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch04-data-cleaning",
@@ -4906,8 +4956,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch05-basic-stats",
@@ -4929,8 +4979,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch06-data-visualization",
@@ -4952,8 +5002,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch07-prediction",
@@ -4975,8 +5025,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch08-clustering",
@@ -4998,8 +5048,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch09-model-based-clustering",
@@ -5021,8 +5071,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch10-sequence-analysis",
@@ -5046,8 +5096,8 @@
         "codyna"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch11-vasstra",
@@ -5068,13 +5118,13 @@
         "book"
       ],
       "packages": [
-        "VaSStra",
+        "VaSSTra",
         "tna",
         "codyna"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch12-markov",
@@ -5098,8 +5148,8 @@
         "tna"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch13-multichannel",
@@ -5121,8 +5171,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch14-process-mining",
@@ -5144,8 +5194,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch15-sna",
@@ -5169,8 +5219,8 @@
         "cograph"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch16-community",
@@ -5194,8 +5244,8 @@
         "cograph"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch17-temporal-networks",
@@ -5219,8 +5269,8 @@
         "tna"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch18-ena-ona",
@@ -5242,8 +5292,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch19-psychological-networks",
@@ -5267,8 +5317,8 @@
         "psychnets"
       ],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch20-factor-analysis",
@@ -5290,8 +5340,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch21-sem",
@@ -5313,8 +5363,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book1::ch22-conclusion",
@@ -5335,8 +5385,8 @@
       ],
       "packages": [],
       "volume": "Vol 1 — LA Methods & Tutorials",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch01-intro",
@@ -5356,8 +5406,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch02-AIxAI",
@@ -5377,8 +5427,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch03-prediction",
@@ -5399,8 +5449,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch04-classification",
@@ -5421,8 +5471,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch05-regularization",
@@ -5443,8 +5493,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch06-xai-global",
@@ -5465,8 +5515,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch07-xai-local",
@@ -5487,8 +5537,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch08-llms",
@@ -5508,8 +5558,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch09-nlp",
@@ -5530,8 +5580,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch10-bert",
@@ -5552,8 +5602,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch11-llmsxai",
@@ -5574,8 +5624,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch12-cds",
@@ -5597,8 +5647,8 @@
         "codyna"
       ],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch13-ega",
@@ -5619,8 +5669,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch14-rqa",
@@ -5641,8 +5691,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch15-tna",
@@ -5665,8 +5715,8 @@
         "tna"
       ],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch16-ftna",
@@ -5690,8 +5740,8 @@
         "Nestimate"
       ],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch17-tna-clusters",
@@ -5715,8 +5765,8 @@
         "codyna"
       ],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch18-idio",
@@ -5738,8 +5788,8 @@
         "idiographic"
       ],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch19-three-levels",
@@ -5762,8 +5812,8 @@
         "idiographic"
       ],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch20-var",
@@ -5786,8 +5836,8 @@
         "idiographic"
       ],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch21-mle",
@@ -5808,8 +5858,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book2::ch22-automl",
@@ -5830,8 +5880,8 @@
       ],
       "packages": [],
       "volume": "Vol 2 — Advanced LA Methods",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::1",
@@ -5845,8 +5895,8 @@
       "authors": "Saqr, López-Pernas & Misiejuk",
       "year": "2026",
       "venue": "SSRN preprint",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::2",
@@ -5860,8 +5910,8 @@
       "authors": "Saqr, López-Pernas, Törmänen, Kaliisa, Misiejuk & Tikka",
       "year": "2025",
       "venue": "LAK ’25 · ACM (pp. 351–361)",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::3",
@@ -5875,8 +5925,8 @@
       "authors": "Tikka, López-Pernas & Saqr",
       "year": "2025",
       "venue": "Applied Psychological Measurement (pp. 326–328)",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::4",
@@ -5890,8 +5940,8 @@
       "authors": "López-Pernas, Misiejuk, Kaliisa & Saqr",
       "year": "2025",
       "venue": "IEEE Transactions on Learning Technologies",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::5",
@@ -5905,8 +5955,8 @@
       "authors": "López-Pernas, Misiejuk, Oliveira & Saqr",
       "year": "2025",
       "venue": "Koli Calling ’25 · ACM",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::6",
@@ -5920,8 +5970,8 @@
       "authors": "Misiejuk, López-Pernas, Kaliisa & Saqr",
       "year": "2026",
       "venue": "Computers in Human Behavior Reports",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::7",
@@ -5935,8 +5985,8 @@
       "authors": "Saqr, Misiejuk, Törmänen, Kaliisa, Tikka & López-Pernas",
       "year": "2025",
       "venue": "CSCL 2025 · ISLS (pp. 276–280)",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::8",
@@ -5950,8 +6000,8 @@
       "authors": "López-Pernas, Girault, Tikka & Saqr",
       "year": "2026",
       "venue": "ICSLE 2025",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::9",
@@ -5965,8 +6015,8 @@
       "authors": "Misiejuk, Kaliisa, López-Pernas & Saqr",
       "year": "2025",
       "venue": "ICQE 2025 · Springer (pp. 147–161)",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::10",
@@ -5980,8 +6030,8 @@
       "authors": "López-Pernas, Misiejuk, Tikka & Saqr",
       "year": "2025",
       "venue": "SSRN preprint",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::11",
@@ -5995,8 +6045,8 @@
       "authors": "López-Pernas, Tikka, Misiejuk, Oliveira & Saqr",
       "year": "2025",
       "venue": "SSRN preprint",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::12",
@@ -6010,8 +6060,8 @@
       "authors": "Saqr, Misiejuk & López-Pernas",
       "year": "2026",
       "venue": "The Internet and Higher Education, 70, 101087",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::13",
@@ -6025,8 +6075,8 @@
       "authors": "López-Pernas, Misiejuk & Saqr",
       "year": "2026",
       "venue": "Journal of Computer Assisted Learning",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "paper::14",
@@ -6040,8 +6090,8 @@
       "authors": "Rinja, Oliveira, López-Pernas, Saqr, Specht & Misiejuk",
       "year": "2026",
       "venue": "arXiv preprint",
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tool::tnapy",
@@ -6059,8 +6109,8 @@
         "TNA",
         "networks"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tool::jtna",
@@ -6080,8 +6130,8 @@
         "gui",
         "no-code"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tool::dynalytics-app",
@@ -6100,8 +6150,8 @@
         "dynalytics",
         "no-code"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "tool::tna-app",
@@ -6120,8 +6170,8 @@
         "TNA",
         "no-code"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book::book1",
@@ -6141,8 +6191,8 @@
         "lamethods",
         "book1"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "book::book2",
@@ -6162,8 +6212,8 @@
         "lamethods",
         "book2"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::1",
@@ -6180,8 +6230,8 @@
         "news",
         "book"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::2",
@@ -6198,8 +6248,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::3",
@@ -6216,8 +6266,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::4",
@@ -6234,8 +6284,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::5",
@@ -6252,8 +6302,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::6",
@@ -6270,8 +6320,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::7",
@@ -6288,8 +6338,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::8",
@@ -6306,8 +6356,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::9",
@@ -6324,8 +6374,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::10",
@@ -6342,8 +6392,8 @@
         "news",
         "paper"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::11",
@@ -6360,8 +6410,8 @@
         "news",
         "preprint"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::12",
@@ -6378,8 +6428,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "REDIRECT",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::13",
@@ -6396,8 +6446,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::14",
@@ -6414,8 +6464,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::15",
@@ -6432,8 +6482,8 @@
         "news",
         "paper"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::16",
@@ -6450,8 +6500,8 @@
         "news",
         "paper"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::17",
@@ -6468,8 +6518,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::18",
@@ -6486,8 +6536,8 @@
         "news",
         "funding"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::19",
@@ -6504,8 +6554,8 @@
         "news",
         "funding"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::20",
@@ -6522,8 +6572,8 @@
         "news",
         "paper"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "news::21",
@@ -6540,8 +6590,8 @@
         "news",
         "software"
       ],
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "person::saqr",
@@ -6556,8 +6606,8 @@
       "links": {
         "site": "https://saqr.me"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "person::lopez-pernas",
@@ -6572,8 +6622,8 @@
       "links": {
         "site": "https://sonsoles.me"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "person::misiejuk",
@@ -6588,8 +6638,8 @@
       "links": {
         "site": "https://kamilamisiejuk.com/"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "person::oliveira",
@@ -6604,8 +6654,8 @@
       "links": {
         "site": "https://www.eduoliveira.com/"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "htna-index",
@@ -6622,8 +6672,8 @@
       "links": {
         "link": "https://sonsoles.me/htna/index.html"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "lamethods-home",
@@ -6640,8 +6690,8 @@
       "links": {
         "link": "https://lamethods.org/"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "saqr-site",
@@ -6659,8 +6709,8 @@
       "links": {
         "link": "https://saqr.me/"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     },
     {
       "id": "sonsoles-site",
@@ -6678,8 +6728,14 @@
       "links": {
         "link": "https://sonsoles.me/"
       },
-      "status": "UNVERIFIED",
-      "last_checked": null
+      "status": "VERIFIED",
+      "last_checked": "2026-10-16"
     }
-  ]
+  ],
+  "verified_at": "2026-10-16",
+  "link_summary": {
+    "verified": 359,
+    "redirect": 55,
+    "broken": 0
+  }
 }

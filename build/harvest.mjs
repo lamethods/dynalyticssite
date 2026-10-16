@@ -5,9 +5,11 @@
 // Sources: each package's local DESCRIPTION + build/sources.json + live pkgdown
 // articles index + live lamethods book sitemaps + curated posts/books/papers.
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync, realpathSync } from "node:fs";
 import { dirname, resolve, join, basename } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { paperEntries as buildPapers, toolEntries as buildTools, newsEntries as buildNews, peopleEntries as buildPeople, tutorialEntries as buildTutorials, fileDate } from "./curated.mjs";
 import { parseAuthors } from "./authors.mjs";
 
@@ -167,6 +169,51 @@ async function cranMeta(name) {
   return meta;
 }
 
+// The committed DESCRIPTION, not the working tree. Sibling checkouts routinely carry
+// unpublished WIP — a version bump, a retitle, a package rename — and harvesting the
+// file directly put those on the public site (hypergraphs' rename produced a 404 link,
+// 2026-10-05). Prefer the upstream-tracking ref (as fresh as the last fetch), then
+// HEAD; fall back to the file only for a directory that is not a git checkout.
+// `ref` (sources.json) names the published branch when it is not the local upstream —
+// e.g. a checkout whose origin is a personal fork while the docs build from another remote.
+const git = (cwd, args) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] });
+function committedDescription(dir, ref) {
+  const root = join(WORKSPACE, dir);
+  if (!existsSync(root)) return null;
+  // Only trust git when `dir` is its own repository: in a plain folder, git walks up
+  // to the enclosing workspace repo and would return ITS DESCRIPTION.
+  let ownRepo = false;
+  try { ownRepo = realpathSync(git(root, ["rev-parse", "--show-toplevel"]).trim()) === realpathSync(root); } catch {}
+  for (const r of ownRepo ? [ref, "@{upstream}", "HEAD"].filter(Boolean) : []) {
+    try { return { fields: parseDcf(git(root, ["show", `${r}:DESCRIPTION`])), source: r }; }
+    catch { if (r === ref) { console.error(`sources.json ref "${ref}" not found in ${dir} (git fetch it)`); process.exit(1); } }
+  }
+  const p = join(root, "DESCRIPTION");
+  return existsSync(p) ? { fields: parseDcf(readFileSync(p, "utf8")), source: "working tree" } : null;
+}
+
+// Every documented topic on a pkgdown site's reference index, for site search.
+// pkgdown renders one <dt> per topic — a <code><a href="topic.html">alias()</a></code>
+// per alias — followed by a <dd> holding the topic title. Compact rows:
+// { p: package, n: [aliases], t: title, u: page relative to <docs>/reference/ }.
+async function getReferenceTopics(pkgName, docs) {
+  const base = docs + "reference/";
+  const html = (await fetchText(base + "index.html")) || (await fetchText(base));
+  if (!html) return [];
+  const clean = (s) => decodeEntities(s.replace(/<[^>]*>/g, "")).replace(/\s+/g, " ").trim();
+  const seen = new Set(), out = [];
+  for (const m of html.matchAll(/<dt\b[^>]*>([\s\S]*?)<\/dt>\s*<dd\b[^>]*>([\s\S]*?)<\/dd>/gi)) {
+    const links = [...m[1].matchAll(/<a\b[^>]*href="([^"#?]+\.html)"[^>]*>([\s\S]*?)<\/a>/gi)];
+    if (!links.length) continue;
+    const u = links[0][1].replace(/^\.\//, "");
+    if (/^(https?:|\/|\.\.)/.test(u) || seen.has(u)) continue;
+    seen.add(u);
+    const n = [...new Set(links.filter((l) => l[1].replace(/^\.\//, "") === u).map((l) => clean(l[2])))].filter(Boolean);
+    out.push({ p: pkgName, n, t: clean(m[2]), u });
+  }
+  return out;
+}
+
 function vignetteTitle(path) {
   const head = readFileSync(path, "utf8").split(/\r?\n/).slice(0, 40);
   const t = head.find((l) => /^title:\s*/.test(l));
@@ -211,7 +258,7 @@ async function getSiteArticles(docs) {
   const origin = (docs.match(/^(https?:\/\/[^/]+)/) || [])[1] || "";
   let html = await fetchText(base + "index.html");
   if (!html) html = await fetchText(base);
-  if (!html) return [];
+  if (!html) return null;   // no articles index on the site (or unreachable)
   const re = /<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
   const seen = new Set(), out = [];
   let m;
@@ -253,10 +300,14 @@ function vignettesFromDir(pkg, baseUrl, excl, dates = {}) {
 
 // --- packages + articles ---
 async function buildPackage(pkg) {
-  const descPath = join(WORKSPACE, pkg.dir, "DESCRIPTION");
-  const d = existsSync(descPath) ? parseDcf(readFileSync(descPath, "utf8"))
-          : pkg.cran ? await cranMeta(pkg.name) : null;
-  if (!d) { console.warn(`DESCRIPTION not found for ${pkg.name}`); return []; }
+  const local = committedDescription(pkg.dir, pkg.ref);
+  const d = local ? local.fields : pkg.cran ? await cranMeta(pkg.name) : null;
+  if (!d) { console.warn(`DESCRIPTION not found for ${pkg.name}`); return { entries: [], topics: [] }; }
+  if (d.Package && d.Package !== pkg.name) {
+    // A renamed package (or a stale `dir`) would publish the wrong name's metadata.
+    console.error(`sources.json: ${pkg.name} -> ${pkg.dir} holds Package: ${d.Package} (${local?.source})`);
+    process.exit(1);
+  }
   const urls = [...splitUrls(d.URL), ...splitUrls(d.BugReports)];
   // `github` in sources.json is for packages whose DESCRIPTION names no repository.
   const github = pkg.no_github ? null : (pkg.github || githubFromUrls(urls));
@@ -274,7 +325,8 @@ async function buildPackage(pkg) {
 
   let cranv = pkg.cran ? (await cranMeta(pkg.name))?.Version || null : null;
   if (pkg.cran && !cranv) cranv = d.Version;
-  console.error(`  · ${pkg.name.padEnd(16)} docs=${docs ? "yes" : "no"} cran=${cranv || "-"}`);
+  const topics = links.reference ? await getReferenceTopics(pkg.name, docs) : [];
+  console.error(`  · ${pkg.name.padEnd(16)} v${(d.Version || "?").padEnd(11)} (${local ? local.source : "CRAN"}) docs=${docs ? "yes" : "no"} cran=${cranv || "-"} topics=${topics.length}`);
 
   const primary = links.docs || links.cran || links.github || null;
   const pkgEntry = {
@@ -298,8 +350,14 @@ async function buildPackage(pkg) {
   const srcDates = vignetteSourceDates(pkg);
   const builtDate = links.articles ? await siteBuiltDate(docs) : null;
   let vig = [];
+  // Whether a site has articles is read off the site, not declared: a package without
+  // them simply has no articles/ index, and gains the link the build after it ships one.
+  let arts = links.articles ? await getSiteArticles(docs) : null;
+  if (links.articles && arts === null) {
+    console.error(`    ${pkg.name}: no articles index at ${links.articles} — no Articles link`);
+    delete links.articles;
+  }
   if (links.articles) {
-    let arts = await getSiteArticles(docs);
     if (arts.length) {
       arts = arts.filter((a) => !excl.includes(basename(a.url).replace(/\.html$/, "")));
       vig = arts.map((a) => {
@@ -313,8 +371,8 @@ async function buildPackage(pkg) {
         };
       });
     } else {
-      // pkgdown site declared but its articles index couldn't be scraped — fall
-      // back to the local vignettes, addressed under the docs site's articles/.
+      // the articles index exists but yielded no links (markup the scraper does not
+      // know) — fall back to the local vignettes, addressed under the site's articles/.
       vig = vignettesFromDir(pkg, links.articles, excl, srcDates);
     }
   } else if (pkg.cran) {
@@ -322,7 +380,7 @@ async function buildPackage(pkg) {
     // vignettes itself, so surface those.
     vig = vignettesFromDir(pkg, `https://cran.r-project.org/web/packages/${pkg.name}/vignettes/`, excl, srcDates);
   }
-  return [pkgEntry, ...vig];
+  return { entries: [pkgEntry, ...vig], topics };
 }
 
 // --- posts ---
@@ -379,9 +437,10 @@ async function buildVolume(vol) {
 }
 
 // --- run ---
-const pkgArrays = [];
-for (const p of src.packages) pkgArrays.push(await buildPackage(p));
-const packageEntries = pkgArrays.flat();
+const built = [];
+for (const p of src.packages) built.push(await buildPackage(p));
+const packageEntries = built.flatMap((b) => b.entries);
+const functionTopics = built.flatMap((b) => b.topics);
 
 const chapterEntries = (await Promise.all(src.book_volumes.map(buildVolume))).flat();
 
@@ -411,10 +470,18 @@ const extraEntries = (src.extra_links || []).map((e) => ({ ...e, links: { link: 
 
 const entries = [...packageEntries, ...tutorialEntries, ...postEntries, ...chapterEntries, ...paperEntries, ...toolEntries, ...bookEntries, ...newsEntries, ...peopleEntries, ...extraEntries];
 const count = (t) => entries.filter((e) => e.type === t).length;
+
+// Function reference topics live in their own file: they are search-only, roughly ten
+// times the size of everything else, and the page loads them lazily on first search.
+// The content hash is the cache key, so a changed index is never served stale.
+const functionsJs = "window.DYNASITE_FUNCTIONS = " + JSON.stringify(functionTopics) + ";\n";
+const functionsVersion = createHash("sha256").update(functionsJs).digest("hex").slice(0, 8);
+
 const catalog = {
   generated_at: today,
   about: src.about,
-  counts: { total: entries.length, packages: count("package"), vignettes: count("vignette"), posts: count("post"), chapters: count("chapter"), news: count("news") },
+  counts: { total: entries.length, packages: count("package"), vignettes: count("vignette"), posts: count("post"), chapters: count("chapter"), news: count("news"), functions: functionTopics.length },
+  functions_version: functionsVersion,
   entries
 };
 
@@ -446,6 +513,18 @@ if (orphans.length) {
   process.exit(1);
 }
 
+// A docs site whose reference index yields nothing is a scrape regression (markup
+// change, broken site), not a package without functions. Fail rather than ship a
+// search that silently cannot find a whole package.
+const topicless = packageEntries
+  .filter((p) => p.type === "package" && p.links.reference && !functionTopics.some((f) => f.p === p.id))
+  .map((p) => p.id);
+if (topicless.length) {
+  console.error(`\nNo reference topics scraped for: ${topicless.join(", ")}\n`);
+  process.exit(1);
+}
+
 writeFileSync(join(ROOT, "catalog.json"), JSON.stringify(catalog, null, 2) + "\n");
 writeFileSync(join(ROOT, "assets", "catalog.js"), "window.CATALOG = " + JSON.stringify(catalog) + ";\n");
-console.log(`Wrote catalog.json\n  total=${entries.length} packages=${count("package")} vignettes=${count("vignette")} posts=${count("post")} chapters=${count("chapter")}`);
+writeFileSync(join(ROOT, "assets", "functions.js"), functionsJs);
+console.log(`Wrote catalog.json + assets/functions.js\n  total=${entries.length} packages=${count("package")} vignettes=${count("vignette")} posts=${count("post")} chapters=${count("chapter")} functions=${functionTopics.length}`);
